@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Report</title>
+<script src="ProjectManagementTool-UI/js/Plugins/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="ProjectManagementTool-UI/js/report.js"></script>
+<script type="text/javascript" src="ProjectManagementTool-UI/js/cookies.js"></script>
+
+<style type="text/css">
+div.tab {
+position:relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width:360px;
+    height:42px;
+    margin-top:42px;
+    margin-bottom:0px;
+    margin-left:840px;
+}
+div.tab a {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+padding:10px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+div.tab a:hover {
+    background-color: #0078D7;
+}
+div.tab a.active {
+    background-color: #ccc;
+}
+.tabcontent {
+    display: none;
+/*     padding: 6px 12px; */
+    border: 1px solid #ccc;
+    border-top: none;
+    color:white;
+}
+</style>
+</head>
+<body>
+<table id="mytable" 	width="1200px"  align="center"    cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<img id="home" src="ProjectManagementTool-UI/css/images1/download.jpg" Style="position:absolute;width:26px;height:32px;margin-left:10px;margin-top:50px" onclick="location.href='projectdashboard.jsp'" />
+
+<div class="tab">
+<span class="tablinks"><a  href="employee.html" style="text-decoration:none ; width:100px;height:42px;" target="iframe_a">Employee</a></span>
+<span class="tablinks"><a  href="project.html" style="text-decoration:none;width:100px;height:42px;" target="iframe_a">Project</a></span>
+<span class="tablinks"><a  href="clientreport.html" style="text-decoration:none;width:100px;height:42px;" target="iframe_a" >Client</a></span>
+
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><iframe style="height:1000px; width:1200px " name="iframe_a" src="employee.html" frameBorder="0">
+
+</iframe></center>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

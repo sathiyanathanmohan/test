@@ -1,0 +1,352 @@
+
+
+
+
+$(document).ready(function(){
+$( window ).load(function() {
+	
+	var user2= checkCookie(decodeURIComponent(document.cookie));
+
+	if(user2!=null){
+		 $('#welcomeuser').append("Welcome "+user2+" !!!") ;
+      load();
+	}
+
+	else{
+		  location.href='index.html';
+	}
+
+	
+});		
+});
+
+
+
+function load()
+{
+	var url = "rest/webservices/getmasterdetails?category=services_offered";
+
+	$.ajax({
+	        type: "GET",
+	        dataType:"json",
+	        url: url,
+	        success: function(data) {
+	            console.log("response:" + data);
+					
+					var object=data.object;
+	            for ( var i in object) {
+
+	            	$("#services")
+	            	.append(' <option value='+object[i].item+'>'+object[i].item+'</option>');	           
+	            	}
+				},
+			error : function(msg) {
+					console.log("User servicesoffered Details not found", msg);
+				}
+			});
+
+	var url = "rest/webservices/getmasterdetails?category=technology";
+	
+	$.ajax({
+	        type: "GET",
+	        dataType:"json",
+	        url: url,
+	        success: function(data) {
+	            console.log("response:" + data);
+					
+					var object=data.object;
+	            for ( var i in object) {
+
+	            	$("#technology")
+					.append(' <option value='+object[i].item+'>'+object[i].item+'</option>');
+	            }
+				},
+				error : function(msg) {
+					console.log("User technology Details not found", msg);
+				}
+			});
+	
+	
+var url = "rest/webservices/getmasterdetails?category=status";
+	
+	$.ajax({
+	        type: "GET",
+	        dataType:"json",
+	        url: url,
+	        success: function(data) {
+	            console.log("response:" + data);
+					
+					var object=data.object;
+	            for ( var i in object) {
+
+	            	$("#projectstatus")
+					.append(' <option value='+object[i].item+'>'+object[i].item+'</option>');
+	            }
+				},
+				error : function(msg) {
+					console.log("User technology Details not found", msg);
+				}
+			});
+	
+var url = "rest/webservices/getallcustomerdetails";
+	
+	$.ajax({
+	        type: "GET",
+	        dataType:"json",
+	        url: url,
+	        success: function(data) {
+	            console.log("response:" + data);
+					
+					var object=data.object;
+	            for ( var i in object) {
+
+	            	$("#customerportfolio")
+					.append(' <option value='+object[i].customer_code+'>'+object[i].customer_code+'</option>');
+	            }
+				},
+				error : function(msg) {
+					console.log("User customer Details not found", msg);
+				}
+			});
+
+	var url = "rest/webservices/getmasterdetails?category=project_manager";
+
+	$.ajax({
+	        type: "GET",
+	        dataType:"json",
+	        url: url,
+	        success: function(data) {
+	            console.log("response:" + data);
+					
+					var object=data.object;
+	            for ( var i in object) {
+
+	            	$("#projectmanager")
+					.append(' <option value="'+object[i].item+'">'+object[i].item+'</option>');
+	            }
+				},
+				error : function(msg) {
+				
+				}
+			});
+	
+	var url = "rest/webservices/getmasterdetails?category=delivery_manager";
+
+	$.ajax({
+	        type: "GET",
+	        dataType:"json",
+	        url: url,
+	        success: function(data) {
+	            console.log("response:" + data);
+					
+					var object=data.object;
+	            for ( var i in object) {
+
+	            	$("#deliverymanager")
+	            	.append(' <option value='+object[i].item+'>'+object[i].item+'</option>');	            
+	            	}
+				},
+				error : function(msg) {
+					console.log("User delivery manager Details not found", msg);
+				}
+			});
+
+	var url = "rest/webservices/getmasterdetails?category=onsite_coordinator";
+
+	$.ajax({
+	        type: "GET",
+	        dataType:"json",
+	        url: url,
+	        success: function(data) {
+	            console.log("response:" + data);
+					
+					var object=data.object;
+	            for ( var i in object) {
+
+	            	$("#onsitecoordinator")
+	            	.append(' <option value='+object[i].item+'>'+object[i].item+'</option>');	           
+	            	}
+				},
+				error : function(msg) {
+					console.log("User onsite_coord Details not found", msg);
+				}
+			});
+	var url = "rest/webservices/getmasterdetails?category=contract_type";
+
+	$.ajax({
+	        type: "GET",
+	        dataType:"json",
+	        url: url,
+	        success: function(data) {
+	            console.log("response:" + data);
+					
+					var object=data.object;
+	            for ( var i in object) {
+
+	            	$("#contracttype")
+					.append(' <option value='+object[i].item+'>'+object[i].item+'</option>');
+	            }
+				},
+				error : function(msg) {
+					console.log("User contract_type Details not found", msg);
+				}
+			});
+	
+	var url = "rest/webservices/getmasterdetails?category=location";
+
+	$.ajax({
+	        type: "GET",
+	        dataType:"json",
+	        url: url,
+	        success: function(data) {
+	            console.log("response:" + data);
+					
+					var object=data.object;
+	            for ( var i in object) {
+
+	            	$("#location")
+	            	.append(' <option value='+object[i].item+'>'+object[i].item+'</option>');	           
+	            	}
+				},
+				error : function(msg) {
+					console.log("User location Details not found", msg);
+				}
+			});
+	var url = "rest/webservices/getmasterdetails?category=center";
+
+	$.ajax({
+	        type: "GET",
+	        dataType:"json",
+	        url: url,
+	        success: function(data) {
+	            console.log("response:" + data);
+					
+					var object=data.object;
+	            for ( var i in object) {
+
+	            	$("#center")
+	            	.append(' <option value='+object[i].item+'>'+object[i].item+'</option>');	         
+	            	}
+				},
+				error : function(msg) {
+					console.log("User center Details not found", msg);
+				}
+			});
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+var str;
+$().ready(function(){
+	$("#technology").change(function(event){
+	if($(this).find('option:selected').hasClass('actived')){		
+	    alert('already selected');
+	}
+	    else{
+	    	  $(this).find('option:selected').addClass('actived');
+	    	  if( $("#tech").text()==' '){	       
+	            str =  $(this).val();
+	           $("#tech").text(str);
+	   	 }else
+	   		 {
+	   		  str= $('#tech').text()+","+$(this).val();
+	   		  $('#tech').text(str);
+	   		 }
+	    	  
+	    }
+	 
+
+	 });
+
+
+	    });
+
+
+
+
+
+$().ready(function(){
+	
+	$("#save").click(function (e){
+	var url = "rest/webservices/createproject";
+	
+	//var exd=$("#projectmanager option:selected").text();
+//alert(exd);
+	
+	
+var myform = document.getElementById("form");
+var data = $("#form").serialize()
+$.ajax({
+	 url: url,
+	    type: 'POST',
+	    data:data,
+	    async:false,
+    success: function (data) {
+    	console.log("response:" + data);
+    	
+    	var object=data;
+    	 
+    		 
+    		 if(object.status==0){
+    		 alert("project created successfully");
+
+    	       location.href='projectdashboard.html';
+    	       }
+    		 else{
+    			 if(object.errorMessage=="Violation of UNIQUE KEY constraint 'unqiue key'. Cannot insert duplicate key in object 'dbo.project_details'.")
+    		{
+    		alert("project code already exits try another name")	;	
+    		 e.preventDefault();    		
+    		 }else{
+    			alert(object.errorMessage);
+    			 e.preventDefault();
+    		}
+    		 
+    		 
+    		 }
+         	    
+        
+    	
+    
+    	
+      
+      
+    	
+    },
+    error: function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr);
+        console.log(thrownError);
+        console.log(ajaxOptions);
+}
+});
+
+	
+	});
+	
+});
+	
+	
+	
+$().ready(function(){
+	
+	$("#cancel").click(function (){
+		
+		location.href='projectdashboard.html';
+	
+
+});
+
+});
+	
+
+
+

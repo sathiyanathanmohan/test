@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="ISO-8859-1">
+<title>Project management Tool</title>
+<link rel="stylesheet" type="text/css" href="ProjectManagementTool-UI/css/Plugins/dataTables.jqueryui.min.css">
+<link rel="stylesheet" href="ProjectManagementTool-UI/css/projectdashboard.css">
+<script src="ProjectManagementTool-UI/js/Plugins/jquery-1.11.1.min.js"></script>
+<script src="ProjectManagementTool-UI/js/Plugins/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="ProjectManagementTool-UI/js/customerdashborad.js"></script>
+ <script src="ProjectManagementTool-UI/js/cookies.js"></script>
+ <script type="text/javascript">
+function goBack() {
+    window.history.back();
+}
+</script>
+</head>
+<body>
+<table width="1005px" align="center"    cellspacing="0" cellpadding="0">
+<tbody>
+	<tr>
+	<td>
+	<div>
+	<h2 id="welcomeuser" align="left" style="margin-top: 30px;"> </h2>
+	<button id="logout" style="margin-left: 857px;margin-top: 30px;"><b>Log Out</b></button>
+<img id="back" src="ProjectManagementTool-UI/css/images1/images.jpg" Style="width:26px;height:28px;margin-top:20px" onclick="goBack()" />
+<img id="home" src="ProjectManagementTool-UI/css/images1/download.jpg" Style="width:26px;height:32px;margin-left:30px;margin-top:10px" onclick="location.href='projectdashboard.html'" />	</div>
+	</td>
+	</tr>
+	
+	<tr>
+	<td>
+	<div id="projectdiv" style="marign-top: 10px;"><p id="projecttitle" style="color:white;margin-top: 15px;">CLIENT LIST</p></div>
+	</td>
+	</tr>
+
+	<tr>
+	<td>
+	<div id="add" style="margin-top: 0px;">
+	<table id="example" class="display">
+	        <thead>
+	            <tr>
+	                <th align="center">SERIAL NO</th>
+	                <th align="center">CUSTOMER CODE</th>
+	                <th align="center">CUSTOMER NAME</th>
+	                <th align="center">LOCATION</th>
+	                <th align="center">VIEW</th>
+	                <th align="center">EDIT</th>
+	               </tr>
+	        </thead>
+	               <tbody id="c1">
+	        </tbody>
+	    </table>
+	   </div>
+	 </td>
+	</tr>
+</tbody>
+</table>
+</body>
+</html>

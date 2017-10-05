@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="ProjectManagementTool-UI/css/Plugins/dataTables.jqueryui.min.css">
+
+
+<script src="ProjectManagementTool-UI/js/Plugins/jquery-1.11.1.min.js"></script>
+<script src="ProjectManagementTool-UI/js/Plugins/jquery.dataTables.min.js"></script> 
+<link rel="stylesheet" href="ProjectManagementTool-UI/css/projectdashboard.css">
+
+<script type="text/javascript" src="ProjectManagementTool-UI/js/empreport.js"></script>
+ <script type="text/javascript" src="ProjectManagementTool-UI/js/cookies.js"></script>
+<!-- <script type="text/javascript" src="ProjectManagementTool-UI/js/projectdashboard.js"></script> -->
+<!-- <script type="text/javascript"> -->
+<!-- // $(document).ready(function() { -->
+<!-- // 	    $('#example').DataTable(); -->
+<!-- // 	} ); -->
+<!-- </script> -->
+
+<style type="text/css">
+#add 
+ { 
+position:relative;
+border: 1px solid black;
+	margin:30px 0px 0px -8px;
+ 	width:1198px;
+	}
+#nav
+	{
+margin:-13px 0px 50px -8px;
+	background-color:#0078D7;
+	width:1200px;
+	height:30px;
+	}
+#title
+	{
+	color:white;font-bold:true;font-size:24px;margin-top:3px;
+	text-align:center;
+	}
+#empid
+{
+margin:0px 0px 0px 0px;
+}
+#empid1
+	{
+	margin:0px 0px 0px 33px;
+	width:175px;
+	height:25px;
+	}
+	
+/* 	#lempname */
+/* 	{ */
+/* 	margin:0px 0px 0px 100px; */
+/* 	} */
+/* 	#empname */
+/* 	{ */
+/* 	margin:0px 0px 0px 7px; */
+/* 	height:20px; */
+/* 	width:170px; */
+/* 	} */
+/* 	#ldesignation */
+/* 	{ */
+/* 	margin:0px 0px 0px 150px; */
+/* 	} */
+/* 	#designation */
+/* 	{ */
+/* 	margin:0px 0px 0px 0px; */
+/* 	height:20px; */
+/* 	width:170px; */
+/* 	} */
+</style>
+</head>
+<body>
+<table id="mytable" 	width="1190px"  align="center"     cellspacing="0" cellpadding="0">
+<tbody>
+	<tr>
+	<td>
+		<div id="nav">
+		<p id="title">EMPLOYEE REPORT</p></div>
+	</td>
+	</tr>
+	
+	<tr>
+	<td>
+		<label id="empid" ><b>Employee ID</b></label>
+		<select id="empid1">
+		<option >Select</option>
+		</select>
+		<img id="excelbutton" src="ProjectManagementTool-UI/css/images1/excel.png"   onclick="tableToExcel('1','2', 'W3C Example Table');" Style="position:absolute;width:35px;height:35px;margin-left:20px;margin-top:-3px"  />
+		
+		</tr>
+		</tbody>
+		</table>
+		<table id='1'>
+		<tbody>
+		<tr>
+		<td><br><br>
+		
+		
+		</td>
+		</tr>
+		<tr>
+		<td Style="color: #0080ff;"  align="left"><label id="lempname" style=""><b>Employee Name: </b></label>
+		<td  align="left"><label id="empname" style=""></label>
+		<td >
+		<td>
+		<td Style="color: #0080ff;"  align="left"><label id="ldesignation" style=""><b>Designation: </b></label>
+		<td ><label id="designation" style=""></label>
+	</tr>
+
+	
+	</tbody>
+	</table>
+	
+	<div id="add" >
+		<table id="2" style="width:1198px;" class="display">
+				        <thead>
+				        
+				            <tr>
+				                <th align="center" style="background-color:#0078D7;color:white;">SERIAL NO</th>
+				                <th align="center" style="background-color:#0078D7;color:white;">PROJECT CODE</th>
+				                <th align="center" style="background-color:#0078D7;color:white;">PROJECT NAME</th>
+				                 <th align="center" style="background-color:#0078D7;color:white;">% OF ALLOCATION</th> 
+				                <th align="center" style="background-color:#0078D7;color:white;">START DATE</th>
+				                <th align="center" style="background-color:#0078D7;color:white;">END DATE</th>
+				               
+				            </tr>
+				        </thead>
+				               <tbody id="c1">
+				        </tbody>
+				    </table>
+	</div>
+	
+<!-- <input type="button" onclick="tableToExcel('1','2', 'W3C Example Table');" value="Export to Excel"/> -->
+</body>
+</html>

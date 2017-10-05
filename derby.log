@@ -1,0 +1,30 @@
+----------------------------------------------------------------
+2017-08-31 07:11:08.812 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-015e-3721-15a8-00000070d350
+on database directory D:\workspace\test\jackrabbit\version\db  
+
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+2017-08-31 07:11:09.361 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance 888c4022-015e-3721-15a8-00000070d350
+on database directory D:\workspace\test\jackrabbit\workspaces\default\db  
+
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+2017-08-31 07:11:09.787 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance 6965c036-015e-3721-15a8-00000070d350
+on database directory D:\workspace\test\jackrabbit\workspaces\security\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2017-08-31 07:11:10.219 GMT:
+Shutting down instance 888c4022-015e-3721-15a8-00000070d350
+----------------------------------------------------------------
+
+2017-08-31 07:11:10.320 GMT:
+Shutting down instance 6965c036-015e-3721-15a8-00000070d350
+----------------------------------------------------------------
+
+2017-08-31 07:11:10.402 GMT:
+Shutting down instance a816c00e-015e-3721-15a8-00000070d350
+----------------------------------------------------------------
