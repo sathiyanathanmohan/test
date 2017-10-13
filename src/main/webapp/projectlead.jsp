@@ -4,23 +4,23 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Project Management Tool</title>
-<script src="ProjectManagementTool-UI/js/Plugins/jquery-3.2.1-jquery.min.js"></script>
+<title>Manager Dashboard</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <link rel="stylesheet" type="text/css" href="ProjectManagementTool-UI/css/Plugins/dataTables.jqueryui.min.css">
 <link rel="stylesheet" href="ProjectManagementTool-UI/css/projectdashboard.css">
 <script src="ProjectManagementTool-UI/js/Plugins/jquery-1.11.1.min.js"></script>
 <script src="ProjectManagementTool-UI/js/Plugins/jquery.dataTables.min.js"></script> 
-<script type="text/javascript" src="ProjectManagementTool-UI/js/empdashboard.js"></script>
-<script type="text/javascript" src="ProjectManagementTool-UI/js/cookies.js"></script>
+<script type="text/javascript" src="ProjectManagementTool-UI/js/projectlead.js"></script>
+ <script type="text/javascript" src="ProjectManagementTool-UI/js/cookies.js"></script>
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
- <style type="text/css">
- body
- {
- font-family:Calibri;
- }
+<style type="text/css">
+body
+{
+font-family:calibri;
+}
 #add 
  { 
 position:relative;
@@ -28,7 +28,64 @@ border: 1px solid black;
 	margin:0px 0px 0px -8px;
  	width:1198px;
 	}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    
+}
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+#emptitle
+{
+color:white;font-bold:true;font-size:24px;margin-top:3px;
+	text-align:center;
+}
 #nav
+	{
+margin:10px 0px 0px -8px;
+	background-color:#0078D7;
+	width:1200px;
+	height:30px;
+	}
+	#nav1
 	{
 margin:50px 0px 0px -8px;
 	background-color:#0078D7;
@@ -37,32 +94,28 @@ margin:50px 0px 0px -8px;
 	}
 #title
 	{
-	color:white;font-bold:true;font-size:24px;margin-top:-30px;
+	color:white;font-bold:true;font-size:24px;margin-top:3px;
 	text-align:center;
 	}
-#empid
-{
-margin:10px 0px 0px 0px;
-}
-select
-	{
-	margin:0px 0px 0px 33px;
-	width:175px;
-	height:25px;
-	}
-	#lempname
+	#lmanagerid
 	{
 	margin:0px 0px 0px 100px;
 	}
-	#empname
+	#lmanagername
 	{
-	margin:0px 0px 0px 7px;
+	margin:0px 0px 0px 150px;
+	height:20px;
+	width:170px;
+	}
+	#managername
+	{
+	margin:0px 0px 0px 0px;
 	height:20px;
 	width:170px;
 	}
 	#ldesignation
 	{
-	margin:0px 0px 0px 150px;
+	margin:0px 0px 0px 200px;
 	}
 	#designation
 	{
@@ -75,10 +128,10 @@ position:relative;
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-    width:380px;
+    width:560px;
     height:40px;
-    margin-top:35px;
-    margin-left:810px;
+    margin-top:15px;
+    margin-left:630px;
 }
 
 /* Style the buttons inside the tab */
@@ -112,16 +165,12 @@ div.tab button.active {
     color:white
 }
 </style>
-<style>
-#chartdiv {
-  width: 100%;
-  height: 500px;
-}
-</style>
+
+
+
+
 </head>
 <body>
-
-
 <%
 String  designation="";
 String designation1="";
@@ -163,9 +212,9 @@ String designation1="";
         if(designation.equalsIgnoreCase("designation"))
         {
         	 
-        	if(designation1.equalsIgnoreCase("project_manager")){
+        	if(designation1.equalsIgnoreCase("associate")){
         		
-         String redirectURL = "managerashboard.jsp";
+         String redirectURL = "empdashboard.jsp";
          response.sendRedirect(redirectURL);
         	}
         	else if(designation1.equalsIgnoreCase("admin")){
@@ -175,9 +224,6 @@ String designation1="";
         	}
         }
       %>
-
-      
-      
 <table id="mytable" 	width="1190px"  align="center"     cellspacing="0" cellpadding="0">
 <tbody>
 
@@ -189,67 +235,128 @@ String designation1="";
 	</div>
 	</td>
 	</tr>
+	 
+	
+     <tr>
+	<td>
+
+        <label id="managerid" ><b>Manager ID:</b></label>
+		<label id="managerid1" ></label>
+		<label id="lmanagername" style=""><b>Manager Name: </b></label>
+		<label id="managername" style=""></label>
+		<label id="ldesignation" style=""><b>Designation: </b></label>
+		<label id="designation" style=""></label>
+    </tr>
+	</td>	
 	
 	
 	<tr>
-	<td>
-		<label id="empid" ><b>Employee ID:</b></label>
-		<label id="empid1" ></label>
-		<label id="lempname" style=""><b>Employee Name: </b></label>
-		<label id="empname" style=""></label>
-		<label id="ldesignation" style=""><b>Designation: </b></label>
-		<label id="designation" style=""></label>
-	</td>
-	</tr>
-	
-    <tr>
 	<td>    
 	     <div class="tab">
-	  <button class="tablinks" onclick="location.href = 'timesheetedit.html';">Timesheet(Entry/View)</button>
+	  <button class="tablinks" onclick="location.href = 'managerviewemp.html';">Timesheet Approval</button>
 	  <button class="tablinks" onclick="location.href = 'cp.jsp';">Change Password</button>
+	   <button class="tablinks" onclick="location.href = 'timesheetedit.html';">Timesheet (Enter/Edit)</button>
 	</div>
 	</td>
-	</tr>  
-	  
-	  
-	  
-	  
-	  
-	  
+	</tr> 
+	
 	<tr>
 	<td>
 		<div id="nav">
-		<p id="title">Employee DashBoard</p></div>
+		<p id="title">Project Manager Dashboard</p></div>
 	</td>
 	</tr>
-	
 	<tr>
 	<td>
-	<div id="add" >
-		<table id="example" style="width:1198px;" class="display">
+	
+	<div id="add" >	
+		
+					<table id="example" style="width:1198px;" class="display">
 				        <thead>
 				            <tr>
 				                <th align="center">SERIAL NO</th>
 				                <th align="center">PROJECT CODE</th>
 				                <th align="center">PROJECT NAME</th>
-				                 <th align="center">PERCENTAGE OF ALLOCATION</th> 
+								<th align="center">LOCATION</th>
 				                <th align="center">START DATE</th>
 				                <th align="center">END DATE</th>
 				                <th align="center">PROJECT MANAGER</th>
-				                 <th align="center">DELIVERY MANAGER</th>
-				            </tr>
+				                <th align="center">DELIVERY MANAGER</th>
+				                <th align="center">ESTIMATION EFFORT</th>
+				                <th align="center">CLIENT CODE</th>
+				                <th align="center">CLIENT NAME</th>
+				                <th align="center">NO OF EMPLOYEES</th>
+				            </tr>  
 				        </thead>
 				               <tbody id="c1">
 				        </tbody>
 				    </table>
-	</div>
-	</td>
-	</tr>
+	    			
+		
+			
+			</td>	
+			</tr>   
+				</div>
+				
+				<tr>
+				<td> 
+				    
+    <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <label id="project_code"><b>Project Code:</b></label>
+   <label id="project_code1"></label>
+    <label Style="margin-left:40px" id="project_name"><b>Project Name:</b></label>
+    <label id="project_name1"></label>
+   
+    <div id="nav1" Style="position:relative;margin-left:2px;width:90%;" ><p id="emptitle" >Employee Title</p></div>
+
+    <table Style="position:relative;margin-top:8px;width:90%"  border="1">
+    <thead>
+    <tr>
+    <th>Serial No<th>Employee Code</th><th>Employee Name</th><th>Percentage of Allocation</th><th>Start Time</th><th>End Time</th></tr>
+    
+    </thead>
+    
+    <tbody id="managerview">
+    
+    </td>
+    </tr>
+    
+   
+    </tbody>
+    </table>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 </tbody>
 </table>
-
-
-
-<canvas id="pie-chart" width="1800" height="450"></canvas>
 </body>
 </html>

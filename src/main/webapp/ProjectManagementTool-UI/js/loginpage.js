@@ -10,11 +10,13 @@ $('#login').click(function(){
 
 var assoicate="associate";
 var manager="project_manager";
+var c=0;
+var pro_manager= '';
 	 var emp_code;
 	var role;
 	 function login(){
-		    var username=$('#username').val();
-		    var password=$('#password').val();
+		 var username=$('#username').val();
+		 var password=$('#password').val();
 //		var data = $("#form").serialize()
 		    var url = "rest/webservices/getlogin?username="+username+"&password="+password;
 //		    alert(url);
@@ -71,9 +73,41 @@ var manager="project_manager";
 								            		 }
 								            	 if(role=="project_manager")
 							            		 {
-//							            		 alert("Project Manager");
-							            		 window.location.href="managerdashboard.jsp";
+								            		 var url3 = "rest/webservices/getallproject";
+								            			
+								            			$.ajax({
+								            			
+								            			        type: "GET",
+								            			        dataType:"json",
+								            			        url: url3,
+								            			        success: function(data) {
+								            			            console.log("response:" + data);
+								            							var object1=data.object;
+								            							c=0;
+								            			            for ( var i in object1) {
+								            			            	pro_manager=object1[i].project_manager;
+								            			            	if(username.toLowerCase() === pro_manager.toLowerCase())
+								            			            		{
+								            			            		c=c+1;
+								            			            		}
+								            			            }
+								            			            if(c>0)
+										            				{
+								            			            	window.location.href="managerdashboard.jsp";
+											            				}
+											            			else
+											            				{
+											            				window.location.href="projectlead.jsp";
+											            				}
+								            						},
+								            						error : function(msg) {
+								            							console.log(" emp_code not found", msg);
+								            						}
+								            					});
+								            			
 							            		 }
+								            	 
+
 								            	 if(role=="admin")
 								            		 
 							            		 {

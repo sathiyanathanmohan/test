@@ -179,19 +179,19 @@ String designation1="";
      <legend><label><b>Developement Details</b></label></legend>
          <label>Center*</label>
          <select id="center" name="center">
-         <option >Select</option>
+         <option value="">Select</option>
          </select>
          <label id="ec">Select center</label>
          <br>
          <label>Location*</label>
          <select id="location" name="location">
-         <option >Select</option>
+         <option value="">Select</option>
          </select>
          <label id="el">Select location</label>
          <br>
          <label>Contract Type*</label>
          <select id="contracttype" name="contracttype">
-         <option >Select</option>
+         <option value="">Select</option>
          </select>
          <label id="ect">Select contract type</label>
          <br>
@@ -203,12 +203,12 @@ String designation1="";
          <br>
          <label>Customer Portfolio*</label>
          <select id="customerportfolio"  name="customerportfolio">
-         <option value="Select">Select</option>
+         <option value="">Select</option>
          </select>
          <label id="ecp">Select customer portfolio</label>
          <label id="servicesl">Services Offered*</label>
          <select id="services" name="services">
-         <option value="Select">Select</option>
+         <option value="">Select</option>
          </select>
          <label id="eso">Select services offered</label>
          <label id="techl">Technology*</label>
@@ -238,7 +238,7 @@ String designation1="";
      <legend><label><b>Customer Details</b></label></legend>
      <label>Customer Code*</label>
          <select id="cc" name="cc" >
-         <option >Select</option>
+         <option value="">Select</option>
          </select>
         
          <label id="customercode"></label>

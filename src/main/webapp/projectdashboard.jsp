@@ -14,14 +14,24 @@
  <script src="ProjectManagementTool-UI/js/cookies.js"></script>
  <script src="ProjectManagementTool-UI/js/Plugins/menuscript.js"></script> 
  <script type="text/javascript">
- $().ready(function(){
- $("#menuicon").click(function(){
- $('#menu').toggle();
- });
- });
+//  $().ready(function(){
+//  $("#menuicon").click(function(){
+//  $('#menu').toggle();
+//  });
+//  });
+//  $().ready(function(){
+// 	 $("#menuicon").hover(function(){
+// 	 $('#menu').toggle();
+// 	 });
+// 	 });
 
 </script>
 <style>
+#menutab:hover  #menu  {
+    display: block;
+    width:500px
+}
+
  #menuicon{ 
 margin-top:2px;
 margin-left:3px;
@@ -118,35 +128,37 @@ String designation1="";
 	<tr>
 	<td>
 	<div id="projectdiv" style="margin-top: 0px;">
+	<div id="menutab">
 	<img id="menuicon" src="ProjectManagementTool-UI/css/images1/10.jpg">
 	<nav id="menu"> 
 	<ul class="parent-menu"> 
-		<li><a href="#">Project &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp >></a> 
+		<li><a href="#">Project &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ></a> 
 		<ul  style="height:40px"> 
 				<li><a href="projectadd.jsp">Project Add</a></li> 
 		</ul> 
 		</li> 
-		<li><a href="#" >Client>></a>
+		<li><a href="#" >Client &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ></a>
 		 <ul style="margin-top:40px;height:80px"> <li><a href="clientadd.jsp" >Client Add</a></li>
 		  <li><a href="clientdashborad.jsp">Client View</a></li> 
 		 </ul>
 		</li> 
-		<li><a href="#">Employee>></a> 
- 		<ul style="margin-top:80px;height:80px"> <li><a href="EmployeeAdd.jsp" >Employee Add</a></li>
+		<li><a href="#">Employee &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ></a> 
+ 		<ul style="margin-top:80px;height:80px"> <li><a href="employeeadd.jsp" >Employee Add</a></li>
  		 <li><a href="EmployeeEdit.jsp">Employee Edit</a></li>  </ul> </li> 
-		<li><a href="#">Timesheet>></a> 
+		<li><a href="#">Timesheet &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ></a> 
 		<ul style="margin-top:120px;height:40px"> <li><a href="managerviewemp.html" >Timesheet Approved</a></li> 
 		</ul>
 		</li> 
 		<li><a href="logincreation.jsp">UserID Creation</a></li> 
 		<li><a href="cp.jsp">Changepassword</a></li> 		
  		<li><a href="reportview.html">Report</a> </li> </ul> </nav> 
+ 		</div>
  
 </div><p id="projecttitle" style="color:white;margin-top: 15px;">Project List</p></div>
 	</td>
 	</tr>
 	<tr>
-	<td>
+	<td> 
 		<div id="add" >
 		
 			<table id="example" style="width:1000px;" class="display">

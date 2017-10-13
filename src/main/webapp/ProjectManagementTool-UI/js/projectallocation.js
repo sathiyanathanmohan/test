@@ -4,7 +4,7 @@ $( window ).load(function() {
 	var user2= checkCookie(decodeURIComponent(document.cookie));
 	var designation=checkCookie3(decodeURIComponent(document.cookie));
 		if(user2!=null){
-			if( designation!='admin')
+			if( designation!='admin'&&designation!='project_manager')
 			{
 			 location.href='timesheetentry.html';
 			}

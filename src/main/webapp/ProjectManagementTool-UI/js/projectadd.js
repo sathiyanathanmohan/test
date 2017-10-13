@@ -1,5 +1,10 @@
 
-
+var rowcount=1;
+var valid1=0;
+var valid2=0;
+var valid3=0;
+var valid4=0;
+var valid5=0;
 $(document).ready(function(){
 $( window ).load(function() {	
 	var user2= checkCookie(decodeURIComponent(document.cookie));
@@ -552,18 +557,16 @@ $().ready(function(){
 			 $('#ect').css('display','none');
 				}
 			});
-	 
+	
 	 $("#startdate").change(function(event){var rowcount=1;
 	 var msgstart='';
 	 var msgend='';
-	 var valid1=0;
-	 var valid2=0;
+ 
 	 var msgeffort='';
 	 var msgon='';
 	 var msgoff='';
-	 var valid3=0;
-	 var valid4=0;
-	 var valid5=0;
+	 valid1=0;
+		valid2=0;
 	 var sum=0;
 	 var start=$('#startdate').val();
 	 var date1=new Date($('#startdate').val());//startdate
@@ -603,14 +606,11 @@ $().ready(function(){
 	 $("#enddate").change(function(event){var rowcount=1;
 	 var msgstart='';
 	 var msgend='';
-	 var valid1=0;
-	 var valid2=0;
+	 valid1=0;
+	valid2=0;
 	 var msgeffort='';
 	 var msgon='';
 	 var msgoff='';
-	 var valid3=0;
-	 var valid4=0;
-	 var valid5=0;
 	 var sum=0;
 	 var start=$('#startdate').val();
 	 var date1=new Date($('#startdate').val());//startdate
@@ -755,14 +755,42 @@ $().ready(function(){
 		 	
 		 }
 	 });
+	 
+	 
+	$().ready(function(){
+		$('#enddate').change(function(){
+			
+			if($('#startdate').val()!=''){
+				
+				
+				var start=new Date($('#startdate').val());
+				var end=new Date($('#enddate').val());
+				
+				var day=dateDifference(start,end);
+				$('#nodays').text('No.of.days         :  '+day);
+				$('#estimationhours').text('Estimation Hours   :'+day*8);
+				$('#effortrequired').val(day*8);
+				
+				
+			}
+			
+			
+			
+			
+		});
+	
+	
+		});
 	 $("#onsite").keyup(function(event){
 		 var onsite=$('#onsite').val();
 		 if(onsite=='')
 		 {
 		 msgon='Enter onsite effort';
+	
 		 $('#eon').text(msgon);
 		 $('#eon').css('display','block');
 		 valid4=0;
+	
 		 }
 		 else if(!$.isNumeric(onsite))
 		 	{
@@ -770,10 +798,12 @@ $().ready(function(){
 		 	$('#eon').text(msgon);
 		 	$('#eon').css('display','block');
 		 	valid4=0;
+			
 		 	}
 		 else
 		 {
 		 	valid4=1;
+			
 		 	$('#eon').css('display','none');
 		 }
 	 });
@@ -781,6 +811,7 @@ $().ready(function(){
 		 var offshore=$('#offshore').val();
 		 if(offshore=='')
 		 {
+		
 		 	valid5=0;
 		 	msgoff='Enter offshore effort';
 		 	$('eoff').text(msgoff);
@@ -788,6 +819,7 @@ $().ready(function(){
 		 }
 		 else if(!$.isNumeric(offshore))
 		 	{
+			
 		 	msgoff='Offshore  must be numeric';
 		 	$('#eoff').text(msgoff);
 		 	$('#eoff').css('display','block');
@@ -797,6 +829,7 @@ $().ready(function(){
 		 else
 		 {
 		 	valid5=1;
+		 	
 		 	$('#eoff').css('display','none');
 		 }
 	 });
@@ -859,14 +892,14 @@ $().ready(function(){
    var rowcount=1;
    var msgstart='';
    var msgend='';
-   var valid1=0;
-   var valid2=0;
+valid1=0;
+ valid2=0;
    var msgeffort='';
    var msgon='';
    var msgoff='';
-   var valid3=0;
-   var valid4=0;
-   var valid5=0;
+ valid3=0;
+ valid4=0;
+valid5=0;
    var sum=0;
    var start=$('#startdate').val();
    var date1=new Date($('#startdate').val());//startdate
@@ -904,6 +937,10 @@ $().ready(function(){
    $('#eon').css('display','block');
    valid4=0;
    }
+   else
+	   {
+	   valid4=1;
+	   }
 
    if(offshore=='')
    {
@@ -912,14 +949,12 @@ $().ready(function(){
    	$('eoff').text(msgoff);
    	$('#eoff').css('display','block');
    }
-
-   if(effortrequired=='')
-   {
-   	msgeffort='Enter effort required'; 
-   	$('#er').text(msgeffort);
-   	$('#er').css('display','block');
-   	valid3=0;
-   }
+   else
+	   {
+	   valid5=1;
+	   }
+ 
+   
    if(center=='Select')
 	{
 	
@@ -1068,13 +1103,47 @@ $('#edm').css('display','none');
 	 	$('#eed').css('display','block');
 	 }
 
-		
+	 var effortrequired=$('#effortrequired').val();
+	 if(effortrequired=='')
+	 {
+	 	msgeffort='Enter effort required';
+	 	$('#er').text(msgeffort);
+	 	$('#er').css('display','block');
+	 	valid3=0;
+	 }
+	 else if(!$.isNumeric(effortrequired))
+	 {
+	 	msgeffort='Effort must be numeric';
+	 	$('#er').text(msgeffort);
+	 	$('#er').css('display','block');
+	 	valid3=0;
+	 	}
+	 else
+	 {
+	 	if(valid4==1&&valid5==1){
+	 		sum=parseInt(onsite)+parseInt(offshore);
+//	 		alert('sum'+sum);
+	 		v1=parseInt(effortrequired);
+	 		if(sum>v1||sum<v1)
+	 			{
+	 			msgeffort='Effort must equal the sum of onsite and offshore';
+	 			$('#er').text(msgeffort);
+	 			$('#er').css('display','block');
+	 			}
+	 		else if(sum==v1)
+	 			{
+	 			$('#er').css('display','none');
+	 			valid3=1;
+	 			}
+	 	}
+	 	
+	 }	
 
 
 
 
 
-
+//alert('valid1'+valid1+'valid2'+valid2+'valid3'+valid3+'valid4'+valid4+'valid5'+valid5);
 
 if(projectcode!=''&&projectname!=''&&center!='Select'&&location!='Select'&&contracttype!='Select'&&projectstatus=='Open'&&customerportfolio!='Select'&&services!='Select'&&technology!='Select'&&projectmanager!='Select'&&deliverymanager!='Select'&&valid1==1&&valid2==1&&valid3==1&&valid4==1&&valid5==1)
 {
@@ -1088,6 +1157,7 @@ if(projectcode!=''&&projectname!=''&&center!='Select'&&location!='Select'&&contr
 		    
 	
 		     var url = "rest/webservices/createproject";
+//		     alert(url);
 		     var myform = document.getElementById("form");
 		     var data = $("#form").serialize()
 		     $.ajax({
@@ -1117,7 +1187,7 @@ if(projectcode!=''&&projectname!=''&&center!='Select'&&location!='Select'&&contr
 		     			        dataType:"json",
 		     			        data:data,
 		     			        url: url,
-		     			        async:false,
+		     		
 		     			        success: function(data) {
 		     			            console.log("response:" + data);
 		     			           
@@ -1126,7 +1196,7 @@ if(projectcode!=''&&projectname!=''&&center!='Select'&&location!='Select'&&contr
 		     							
 		     			            for ( var i in object) {
 		     	                    if(object.status==0){
-		     	                    	alert("contact saved")
+		     	                    
 		     	                    }
 		     	                   
 		     			            		
@@ -1183,7 +1253,7 @@ if(projectcode!=''&&projectname!=''&&center!='Select'&&location!='Select'&&contr
 		    	                          		 
 		    	                          		 if(object.status==0){
 		    	                          			 alert(" file update sucessfully");
-		    	                          		alert("project created successfully");
+		    	                          		
 		    	                          		window.location.href='projectdashboard.jsp'
 
 		    	                          	       }
@@ -1206,7 +1276,7 @@ if(projectcode!=''&&projectname!=''&&center!='Select'&&location!='Select'&&contr
 		    	          
 		    	                    }
 		    	                    });
-		    		
+		         		alert("project created successfully");
 		         	       }
 		         		 else{
 		         			 if(object.errorMessage=="Violation of UNIQUE KEY constraint 'unqiue key'. Cannot insert duplicate key in object 'dbo.project_details'.")

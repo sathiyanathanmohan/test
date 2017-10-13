@@ -57,7 +57,7 @@ $(window).load(function() {
 							myJSON.push(object[i].percentage_allocation);
 								arr=parseInt(object[i].percentage_allocation)+arr;
 					
-									 $("#c1").append('<tr><td>'+k+'<td>'+object[i].project_code+'<td>'+object[i].project_name+'<td align="center">'+object[i].percentage_allocation+'<td>'+object[i].Start_date+'<td>'+object[i].end_date+'</tr>');
+									 $("#c1").append('<tr><td align="center">'+k+'<td align="center">'+object[i].project_code+'<td align="center">'+object[i].project_name+'<td align="center">'+object[i].percentage_allocation+'<td align="center">'+object[i].Start_date+'<td align="center">'+object[i].end_date+'<td align="center">'+object[i].projectmanager_name.toUpperCase()+'<td align="center">'+object[i].deliverymanager_name.toUpperCase()+'</tr>');
 			        
 									 k++;
 			          }

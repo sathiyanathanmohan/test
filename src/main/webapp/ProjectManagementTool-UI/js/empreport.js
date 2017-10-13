@@ -49,9 +49,33 @@ $(window).load(function() {
 });
 });
 
+
+
+
 $().ready(function(){
 	  $('#example').DataTable();
 $('#empid1').change(function() {
+	 var url1 = "rest/webservices/getemployee?emp_code="+$("#empid1").val();
+
+		$.ajax({
+		        type: "GET",
+		        dataType:"json",
+		        url: url1,
+		        success: function(data) {
+		            console.log("response:" + data);
+						
+						var object1=data.object;
+						 $("#empname b").remove();
+							$("#empname").append('<b>'+object1[0].first_name.toUpperCase()+'</b>');
+							
+							$("#designation b").remove();
+							$("#designation").append('<b>'+object1[0].designation.toUpperCase()+'</b>');
+					},
+					error : function(msg) {
+					
+					}
+				});
+		   
 	  var url = "rest/webservices/report?emp_code="+$("#empid1").val();
 	//alert(url);
 	  $.ajax({
@@ -72,11 +96,7 @@ $('#empid1').change(function() {
 					 $("#c1 tr").remove();
 					var k=1;	
 	          for ( var i in object) {
-	        	  $("#empname b").remove();
-					$("#empname").append('<b>'+object[0].first_name.toUpperCase()+'</b>');
-					
-					$("#designation b").remove();
-					$("#designation").append('<b>'+object[0].designation.toUpperCase()+'</b>');
+	        	 
 
 	        		$("#c1").append('<tr><td>'+k+'<td>'+object[i].project_code+'<td>'+object[i].project_name+'<td align="center">'+object[i].percentage_allocation+'<td>'+object[i].Start_date+'<td>'+object[i].end_date+'</tr>');
 	        

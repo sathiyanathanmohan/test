@@ -19,35 +19,35 @@
 #customerdiv      {position:relative;background-color:#0078D7;top:5px;width:1000px;height:25px;} 
  #customertitle    {color:white;font-bold:true;font-size:24px;text-align:center;} 
  #overalldiv       {position:relative;width:998px;top:5px}
- #clientcodel      {position:relative;left:0px;}
- #clientcode       {text-transform: uppercase;position:relative;left:70px;width:230px;height:20px}
- #clientnamel      {position:relative;left:230px;}
- #clientname       {text-transform: capitalize;position:relative;left:260px;width:230px;height:20px}
- #ecc              {display:none;position:absolute;left:198px;top:70px;color:red;font-size:13px;}
- #ecn              {display:none;position:absolute;left:720px;top:70px;color:red;font-size:13px;}
- #websitel          {position:relative;left:0px;top:15px;}
- #website          {position:relative;left:30px;top:15px;width:230px;height:20px}
- #phonenol         {position:relative;left:190px;top:15px;}
- #areacode         {position:relative;left:205px;top:15px;width:40px;height:20px}
- #phoneno          {position:relative;left:205px;top:15px;width:180px;height:20px}
- #ecw              {display:none;position:absolute;right:550px;top:109px;font-size:13px;color:red;left:198px}
- #eac              {display:none;position:absolute;right:195px;top:109px;font-size:13px;color:red;left:686px}
- #epno			   {display:none;position:absolute;top:109px;font-size:13px;color:red;left:770px;}
- #address1l        {position:relative;left:0px;top:0px;}
- #address1         {position:relative;left:50px;top:0px;width:230px;height:20px}
- #address2l        {position:relative;left:210px;top:0px;}
- #address2         {position:relative;left:230px;top:0px;width:230px;height:20px}
- #ea               {display:none;position:absolute;left:198px;top:200px;color:red;font-size:13px;}
- #cityl            {position:relative;left:0px;top:20px;}
- #city             {text-transform: capitalize;position:relative;left:120px;top:20px;width:230px;height:20px}
- #statel           {position:relative;left:280px;top:20px;}
- #state            {text-transform: capitalize;position:relative;left:355px;top:20px;width:230px;height:20px}
- #ec               {display:none;position:absolute;left:198px;top:248px;color:red;font-size:13px;}
- #ecs              {display:none;position:absolute;left:715px;top:248px;color:red;font-size:13px;}
- #countryl         {position:relative;left:0px;top:40px;}
- #country          {text-transform: capitalize;position:relative;left:96px;top:40px;width:230px;height:20px}
- #zipcodel         {position:relative;left:255px;top:40px;}
- #zipcode          {position:relative;left:303px;top:40px;width:230px;height:20px}
+ #clientcodel      {position:absolute;left:50px;top:50px}
+ #clientcode       {text-transform: uppercase;position:absolute;left:200px;width:230px;height:20px;top:45px}
+ #clientnamel      {position:absolute;left:575px;top:50px;}
+ #clientname       {text-transform: capitalize;position:absolute;left:715px;width:230px;height:20px;top:45px}
+ #ecc              {display:none;position:absolute;left:200px;top:73px;color:red;font-size:13px;}
+ #ecn              {display:none;position:absolute;left:717px;top:73px;color:red;font-size:13px;}
+ #websitel          {position:absolute;left:50px;top:93px;}
+ #website          {position:absolute;left:200px;top:89px;width:230px;height:20px}
+ #phonenol         {position:absolute;left:575px;top:93px;}
+ #areacode         {position:absolute;left:715px;top:88px;width:40px;height:20px}
+ #phoneno          {position:absolute;left:763px;top:88px;width:183px;height:20px}
+ #ecw              {display:none;position:absolute;right:550px;top:114px;font-size:13px;color:red;left:200px}
+ #eac              {display:none;position:absolute;right:195px;top:114px;font-size:13px;color:red;left:686px}
+ #epno			   {display:none;position:absolute;top:114px;font-size:13px;color:red;left:770px;}
+ #address1l        {position:absolute;left:50px;top:185px;}
+ #address1         {position:absolute;left:200px;top:180px;width:230px;height:20px}
+ #address2l        {position:absolute;left:575px;top:185px;}
+ #address2         {position:absolute;left:715px;top:180px;width:230px;height:20px}
+ #ea               {display:none;position:absolute;left:198px;top:210px;color:red;font-size:13px;}
+ #cityl            {position:absolute;left:50px;top:230px;}
+ #city             {text-transform: capitalize;position:absolute;left:200px;top:225px;width:230px;height:20px}
+ #statel           {position:absolute;left:575px;top:230px;}
+ #state            {text-transform: capitalize;position:absolute;left:715px;top:225px;width:230px;height:20px}
+ #ec               {display:none;position:absolute;left:198px;top:253px;color:red;font-size:13px;}
+ #ecs              {display:none;position:absolute;left:715px;top:253px;color:red;font-size:13px;}
+ #countryl         {position:absolute;left:50px;top:275px;}
+ #country          {text-transform: capitalize;position:absolute;left:200px;top:270px;width:230px;height:20px;}
+ #zipcodel         {position:absolute;left:575px;top:275px;}
+ #zipcode          {position:absolute;left:715px;top:270px;width:230px;height:20px;}
  #ecountry         {display:none;position:absolute;left:198px;top:295px;color:red;font-size:13px;}
  #ecz              {display:none;position:absolute;left:715px;top:295px;color:red;font-size:13px;}
  #clienttable, th  {border: 1px solid black;border-collapse: collapse;}

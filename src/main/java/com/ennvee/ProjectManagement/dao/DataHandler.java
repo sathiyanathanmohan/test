@@ -401,7 +401,7 @@ public class DataHandler {
 				while(res.next())
 				{
 					emp=new Employeobject();
-	              emp.setid(res.getInt("id"));
+	                emp.setid(res.getInt("id"));
 					emp.setemp_code(res.getString("emp_code"));
 					emp.setfirst_name(res.getString("first_name"));
 					emp.setlast_name(res.getString("last_name"));
@@ -575,12 +575,13 @@ emp.setstatus(1);
 			{
 				pro=new ProjectObject();
 				pro.setid(res.getInt("id"));
-			pro.setproject_code(res.getString("project_code"));
+				pro.setproject_code(res.getString("project_code"));
 			pro.setproject_name(res.getString("project_name"));
 			pro.setproject_description(res.getString("project_description"));
 			pro.setproject_status(res.getString("project_status"));
 			pro.setstart_date(res.getDate("start_date"));
 			pro.setend_date(res.getDate("end_date"));
+			pro.setproject_manager(res.getString("project_manager"));
 			list.add(pro);
 				
 				
@@ -1049,6 +1050,7 @@ emp.setstatus(1);
 				
 				login=new LoginObject();
 				//login.setuser_name(res.getString("user_name"));
+		
 				login.setrole(res.getString("role"));
 				login.setemp_id(res.getString("emp_id"));
 				login.setcreated_date(res.getDate("created_date"));
@@ -2425,6 +2427,7 @@ emp.setstatus(1);
 			con=DatabaseManagement.getConnection();
 			Statement stm=con.createStatement();
 			Statement stm2=con.createStatement();
+			Statement stm3=con.createStatement();
 			ResultSet res=stm.executeQuery(select);
 		
 			while(res.next())
@@ -2438,15 +2441,36 @@ emp.setstatus(1);
 				jo.addProperty("end_date",res.getString("end_date") );
 				jo.addProperty("project_manager",res.getString("project_manager"));
 				
-				String select2="select project_details.project_code,project_details.project_name,project_details.project_description from project_details where project_details.project_code='"+res.getString("project_code")+"'";
+				String select2="select project_details.project_code,project_details.project_name,project_details.project_description,project_details.project_manager as manager,project_details.delivery_manager"
+						+ " from project_details where project_details.project_code='"+res.getString("project_code")+"'";
 				ResultSet res1=stm2.executeQuery(select2);
 				while(res1.next())
 				{
 					jo.addProperty("project_code",res1.getString("project_code"));
 					jo.addProperty("project_name",res1.getString("project_name"));
 					jo.addProperty("project_description",res1.getString("project_description"));
+					jo.addProperty("manager", res1.getString("manager"));
+					jo.addProperty("delivery_manager", res1.getString("delivery_manager"));
+					
 				}
+				
 				res1.close();
+				String select3="select project_details.project_manager,project_details.delivery_manager,employee_details.first_name as projectmanager_name,e.first_name as deliverymanager_name "
+						+ "from project_details,employee_details,employee_details e  "
+						+ "where employee_details.emp_code=project_details.project_manager "
+						+ "and e.emp_code=project_details.delivery_manager and project_details.project_code='"+res.getString("project_code")+"'";
+				
+				ResultSet res2=stm3.executeQuery(select3);
+				while(res2.next())
+				{
+//					jo.addProperty("project_manager",res1.getString("project_manager"));
+//					jo.addProperty("delivery_manager",res1.getString("delivery_manager"));
+					
+					jo.addProperty("projectmanager_name", res2.getString("projectmanager_name"));
+					jo.addProperty("deliverymanager_name", res2.getString("deliverymanager_name"));
+					
+				}
+				res2.close();
 				status.add(jo);
 				
 				
@@ -2592,7 +2616,120 @@ public List<Allocationobject> timesheet_view(String project_manager)
 		
 	}
 
+	//**********************************************************************************************************************
 	
+	
+	public JsonArray reportclient(String cus_code)
+	{
+		
+		JsonObject jo3 = new JsonObject();
+		JsonArray status=new JsonArray();
+		JsonArray status1=new JsonArray();
+		String select="select * from project_details where customer_id='"+cus_code+"'"; 
+		try {
+			Connection con;
+			con=DatabaseManagement.getConnection();
+			Statement stm=con.createStatement();
+			Statement stm2=con.createStatement();
+			ResultSet res=stm.executeQuery(select);
+			Statement stm3=con.createStatement();
+		String select3;
+		int count=0;
+			while(res.next())
+			{
+				JsonObject jo = new JsonObject();
+				jo.addProperty("id", res.getInt("id"));
+				jo.addProperty("project_code",res.getString("project_code") );
+				jo.addProperty("project_name",res.getString("project_name") );
+				jo.addProperty("location",res.getString("location") );
+				select3="select * from customercontactperson_project_mapping where customer_id="+cus_code+" and project_id="+res.getInt("id");
+				ResultSet res3=stm3.executeQuery(select3);
+				count=0;
+				while(res3.next())
+				{
+				count++;	
+				}
+				jo.addProperty("count", count);
+				res3.close();
+				status.add(jo);
+			}
+			res.close();
+			
+		
+		} 
+		
+		catch(NullPointerException e)
+		{
+			System.out.println("prepare statement error");
+			
+			e.printStackTrace();
+		}
+		catch (Exception e) {
+			System.out.println("prepare statement error");
+			
+			e.printStackTrace();
+		}  
+  
+		
+		
+		return status ;
+		
+	}
+	//***************************************************************************************
+	public JsonArray reportclientview(String pro_id,String cus_code)
+	{
+		
+		JsonObject jo3 = new JsonObject();
+		JsonArray status=new JsonArray();
+		JsonArray status1=new JsonArray();
+		String select="select * from customercontactperson_project_mapping where customer_id="+cus_code+" and project_id="+pro_id; 
+		try {
+			Connection con;
+			con=DatabaseManagement.getConnection();
+			Statement stm=con.createStatement();
+			Statement stm2=con.createStatement();
+			ResultSet res=stm.executeQuery(select);
+			Statement stm3=con.createStatement();
+		String select3;
+		int count=0;
+			while(res.next())
+			{
+				JsonObject jo = new JsonObject();
+				jo.addProperty("id", res.getInt("contact_person_id"));
+				select3="select * from customercode_contactperson_mapping where id="+res.getInt("contact_person_id");
+				ResultSet res3=stm3.executeQuery(select3);
+				count=0;
+				while(res3.next())
+				{
+				jo.addProperty("person_name", res3.getString("person_name"));
+				jo.addProperty("contact_number1", res3.getInt("contact_number1"));
+				jo.addProperty("contact_number2", res3.getInt("contact_number2"));
+				jo.addProperty("contact_mail", res3.getString("contact_mail"));
+				}
+				res3.close();
+				status.add(jo);
+			}
+			res.close();	
+		} 
+		
+		catch(NullPointerException e)
+		{
+			System.out.println("prepare statement error");
+			
+			e.printStackTrace();
+		}
+		catch (Exception e) {
+			System.out.println("prepare statement error");
+			
+			e.printStackTrace();
+		}  
+  
+		
+		
+		return status ;
+		
+	}
+	//***************************************************************************************
 	public List<TimeSheetObject> get_timesheet(String  emp_code,Date start_date,Date end_date)
 	{
 		//StatusObject status=new StatusObject();
@@ -2824,9 +2961,10 @@ public List<Allocationobject> timesheet_view(String project_manager)
 			ResultSet res=stm.executeQuery(select);
 			Statement stm3=con.createStatement();
 		String select3;
-			while(res.next())
+			while(res.next()) 
 			{
 				JsonObject jo = new JsonObject();
+				jo.addProperty("id", res.getString("id"));
 				jo.addProperty("project_code",res.getString("project_code") );
 				jo.addProperty("project_name",res.getString("project_name") );
 				jo.addProperty("desigproject_descriptionnation", res.getString("project_description"));
@@ -2835,6 +2973,8 @@ public List<Allocationobject> timesheet_view(String project_manager)
 				jo.addProperty("end_date",res.getString("end_date") );
 				jo.addProperty("location",res.getString("location") );
 				jo.addProperty("effort", res.getString("total_effort"));
+				jo.addProperty("project_manager", res.getString("project_manager"));
+				jo.addProperty("delivery_manager", res.getString("delivery_manager"));
 			//	jo.addProperty("customer_id",res.getInt("customer_id"));
 				select3="select * from customer_portfolio_details where customer_id="+res.getInt("customer_id");
 				ResultSet res3=stm3.executeQuery(select3);
@@ -2858,7 +2998,22 @@ public List<Allocationobject> timesheet_view(String project_manager)
 				res1.close();
 				status.add(jo);
 				
-				
+				String select4="select project_details.project_manager,project_details.delivery_manager,employee_details.first_name as projectmanager_name,e.first_name as deliverymanager_name "
+						+ "from project_details,employee_details,employee_details e  "
+						+ "where employee_details.emp_code=project_details.project_manager "
+						+ "and e.emp_code=project_details.delivery_manager and project_details.project_code='"+res.getString("project_code")+"'";
+				Statement stm4=con.createStatement();
+				ResultSet res6=stm4.executeQuery(select4);
+				while(res6.next())
+				{
+//					jo.addProperty("project_manager",res1.getString("project_manager"));
+//					jo.addProperty("delivery_manager",res1.getString("delivery_manager"));
+					
+					jo.addProperty("projectmanager_name", res6.getString("projectmanager_name"));
+					jo.addProperty("deliverymanager_name", res6.getString("deliverymanager_name"));
+					
+				}
+				res6.close();
 			}
 			res.close();
 		}res5.close();
@@ -3330,11 +3485,79 @@ public JsonArray designation_get(String empcode)
 
 
 
-
-
-
-
-
+	
+	
+	
+	
+	
+	
+	
+	
+	public JsonArray projectmanagername(String emp_code)
+	{
+		
+		JsonArray status=new JsonArray();
+//	String select="select employee_details.first_name as manager_name,employee_details.emp_code as manager_code,project_emp_mapping_details.emp_code,project_emp_mapping_details.emp_name "
+//				+ "from employee_details inner join project_emp_mapping_details on "
+//				+ "employee_details.emp_code=project_emp_mapping_details.project_manager"
+//				+ "where project_emp_mapping_details.emp_code='"+emp_code+"'";
+//	
+	
+	String select="select e.designation as employee_designation,employee_details.first_name as manager_name,employee_details.emp_code as manager_code,project_emp_mapping_details.emp_code,project_emp_mapping_details.emp_name from employee_details, project_emp_mapping_details ,employee_details e where employee_details.emp_code=project_emp_mapping_details.project_manager and e.emp_code=project_emp_mapping_details.emp_code and project_emp_mapping_details.emp_code='"+emp_code+"'";
+	System.out.println(select);
+		try {
+			Connection con;
+			con=DatabaseManagement.getConnection();
+			Statement stm=con.createStatement();
+//			Statement stm2=con.createStatement();
+			ResultSet res=stm.executeQuery(select);
+		
+			while(res.next())
+			{
+				JsonObject jo = new JsonObject();
+				jo.addProperty("emp_code",res.getString("emp_code") );
+				jo.addProperty("manager_name",res.getString("manager_name") );
+				jo.addProperty("emp_name", res.getString("emp_name"));
+				jo.addProperty("manager_code", res.getString("manager_code"));
+				jo.addProperty("designation", res.getString("employee_designation"));
+				
+				
+//				String select2="select employee_details.designation,project_emp_mapping_details.emp_name,project_emp_mapping_details.emp_code "
+//						+ "from employee_details"
+//						+ " inner join project_emp_mapping_details on employee_details.emp_code=project_emp_mapping_details.emp_code "
+//						+ "where project_emp_mapping_details.emp_code='"+emp_code+"'";
+//				ResultSet res1=stm2.executeQuery(select2);
+//				while(res1.next())
+//				{
+//					jo.addProperty("designation", res1.getString("designation"));
+//				}
+//				res1.close();
+				status.add(jo);
+				
+				
+			}
+			res.close();
+			con.close();
+		
+		} 
+		
+		catch(NullPointerException e)
+		{
+			System.out.println("prepare statement error");
+			
+			e.printStackTrace();
+		}
+		catch (Exception e) {
+		System.out.println("prepare statement error");
+			
+		e.printStackTrace();
+		}  
+ 
+		
+		
+		return status ;
+		
+	}
 
 }
 //*************************
