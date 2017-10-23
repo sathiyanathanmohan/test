@@ -274,19 +274,19 @@ String designation1="";
             
             <label id="projectmanagerl">Project Manager*</label>
             <select id="projectmanager" name="projectmanager">
-            <option value="Select">Select</option>
+            <option >Select</option>
             
             </select>
             <label id="epm">Select project manager</label>
             <label id="deliverymanagerl">Delivery Manager*</label>
             <select id="deliverymanager" name="deliverymanager">
-            <option value="Select">Select</option>
+            <option >Select</option>
            
             </select>
              <label id="edm">Select delivery manager</label>
             <label id="">Onsite Co-ordinator</label>
             <select id="onsitecoordinator" name="onsitecoordinator">
-            <option value="Select">Select</option>
+            <option >Select</option>
            
             </select>
             	
@@ -348,7 +348,7 @@ String designation1="";
     </table>
     <img src="ProjectManagementTool-UI/css/images1/addicon.jpg" Style="margin-left:110Px;width:20px;height:20px" id="addfilerow" />
   </div>
-
+  <input type="hidden" value=" " name="emp_code" id="emp_code">   
 </div>
         <div>
  <button id="save">Save</button>
@@ -391,5 +391,3 @@ window.onclick = function(event) {
 </script>
 </body>
 </html>
-
-

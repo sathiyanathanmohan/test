@@ -1,4 +1,5 @@
 
+var rowcount=1;
 
 $(document).ready(function(){
 $( window ).load(function() {	
@@ -231,7 +232,7 @@ var url = "rest/webservices/getmasterdetails?category=customer_portfolio";
 	        url: url,
 	        success: function(data) {
 	            console.log("response:" + data);
-	            
+					
 					var object=data.object;
 	            for ( var i in object) {
 
@@ -266,20 +267,16 @@ var url = "rest/webservices/getmasterdetails?category=customer_portfolio";
 					console.log("User customer Details not found", msg);
 				}
 			});
+	
+	
+	
+
+
 }
 
 $().ready(function(){
 $('#center').change(function() {
 	var centerchange=$("#center").val();
-	$("#location option").remove();
-
-	
-	if(centerchange=='Select')
-	{
-	
-	 $('#ec').css('display','block');
-	 $("#location").append(' <option value="Select">Select</option>');	  
-	}
 	//alert(centerchange);
 	if(centerchange=="Onsite"){
 		
@@ -292,7 +289,7 @@ $('#center').change(function() {
 		        success: function(data) {
 		            console.log("response:" + data);
 		            $("#location option").remove();
-		            $("#location").append(' <option value="Select">Select</option>');	           
+		            $("#location").append(' <option value="">Select</option>');	           
 	            	
 						var object=data.object;
 		            for ( var i in object) {
@@ -306,7 +303,6 @@ $('#center').change(function() {
 					}
 				});
 	}
-	
 if(centerchange=="Offshore"){
 
 	var url = "rest/webservices/getmasterdetails?category=location";
@@ -318,7 +314,7 @@ if(centerchange=="Offshore"){
 	        success: function(data) {
 	            console.log("response:" + data);
 	            $("#location option").remove();
-	            $("#location").append(' <option value="Select">Select</option>');	           
+	            $("#location").append(' <option value="">Select</option>');	           
             	
 					var object=data.object;
 	            for ( var i in object) {
@@ -442,24 +438,6 @@ $().ready(function(){
 
 	    });
 
-
-$().ready(function(){
-	$("#location").change(function(event){
-		var location=$('#location').val();
-		if(location=='Select')
-		{
-		 $('#el').css('display','block');
-
-		}
-		else
-		{
-		$('#el').css('display','none');
-		}
-		
-	});
-});
-
-
 $().ready(function(){
 	$("#center").change(function(event){
 		var center=$('#center').val();
@@ -470,23 +448,16 @@ $().ready(function(){
 		 $('#ec').css('display','block');
 		 
 		}
-		else
-			{
-			$('#ec').css('display','none');
-			}
-		
 
 	if(center=='Onsite')
 	{
-		document.getElementById("onsite").readOnly= false;
+		document.getElementById("onsite").readOnly = false;
 		document.getElementById("offshore").readOnly = true;
 		document.getElementById("offshore").value = '0';		
 	    document.getElementById("onsite").value = '';
 	
 		
-	    
 
-	    	
 	}	
 
 	if(center=='Offshore')
@@ -515,321 +486,7 @@ $().ready(function(){
 	
 });
 
-$().ready(function(){
-	$("#projectcode").keyup(function(event){
-		var projectcode=$('#projectcode').val();
-		   if(projectcode=='')
-		   {
-			   $('#epc').css('display','block');
-		   }
-		   else
-		   {
-			   $('#epc').css('display','none');
-		   }
-			});
-	$("#projectname").keyup(function(event){
-		var projectname=$('#projectname').val();
-			if(projectname=='')
-			{
-				$('#epn').css('display','block');
-			}
-			else
-			{
-				$('#epn').css('display','none');
-			}
-	
-		});
-	 
-	 $("#contracttype").change(function(event){
-		 var con=$('#contracttype').val();
-			
-			if(con=='Select')
-			{
-			$('#ect').css('display','block');
-			}
-			else
-				{
-			 $('#ect').css('display','none');
-				}
-			});
-	 
-	 $("#startdate").change(function(event){var rowcount=1;
-	 var msgstart='';
-	 var msgend='';
-	 var valid1=0;
-	 var valid2=0;
-	 var msgeffort='';
-	 var msgon='';
-	 var msgoff='';
-	 var valid3=0;
-	 var valid4=0;
-	 var valid5=0;
-	 var sum=0;
-	 var start=$('#startdate').val();
-	 var date1=new Date($('#startdate').val());//startdate
-	 var str = $.datepicker.formatDate('yy-mm-dd',date1);//start date
-	 var date2=new Date();
-	  var enddate=$('#enddate').val();
-	 var str1=$.datepicker.formatDate('mm',date2);//current date
-	 var str4=$.datepicker.formatDate('yy-mm-dd',date2);
-	 var str2=$.datepicker.formatDate('mm',date1);//split date
-	 var end=new Date($('#enddate').val());
-	 var str3=$.datepicker.formatDate('yy-mm-dd',end);//end date
-		 var start=$('#startdate').val();
-		 if(!start)
-			{
-			valid1=0;
-			msgstart='Select start date';
-			$('#esd').text(msgstart);
-			$('#esd').css('display','block');
-			}	
-			
-		 
-		else if(str2<str1)
-		{
-			
-			valid1=0;
-			msgstart='Start date not to be a past date';
-			$('#esd').text(msgstart);
-			$('#esd').css('display','block');
-			
-			}
-		else if(str2>=str1)
-			{
-			valid1=1;
-			$('#esd').css('display','none');
-			}
-	 });
-	 $("#enddate").change(function(event){var rowcount=1;
-	 var msgstart='';
-	 var msgend='';
-	 var valid1=0;
-	 var valid2=0;
-	 var msgeffort='';
-	 var msgon='';
-	 var msgoff='';
-	 var valid3=0;
-	 var valid4=0;
-	 var valid5=0;
-	 var sum=0;
-	 var start=$('#startdate').val();
-	 var date1=new Date($('#startdate').val());//startdate
-	 var str = $.datepicker.formatDate('yy-mm-dd',date1);//start date
-	 var date2=new Date();
-	  var enddate=$('#enddate').val();
-	 var str1=$.datepicker.formatDate('mm',date2);//current date
-	 var str4=$.datepicker.formatDate('yy-mm-dd',date2);
-	 var str2=$.datepicker.formatDate('mm',date1);//split date
-	 var end=new Date($('#enddate').val());
-	 var str3=$.datepicker.formatDate('yy-mm-dd',end);//end date
-		 var start=$('#enddate').val();
-			
-			
-		 if(!enddate)
-		 {
-		 valid2=0;
-		 msgend='Select end date';
-		 $('#eed').text(msgend);
-		 $('#eed').css('display','block');
-		 }
-		 else  if(str3>=str4&&str3>str)
-		 	{
-		 	valid2=1;
-		 	$('#eed').css('display','none');
-		 	
-		 	}
 
-		 else if(str3<str4)
-		 {
-		 	valid2=0;
-		 	msgend='End date not to be a past date or current date';
-		 	$('#eed').text(msgend);
-		 	$('#eed').css('display','block');
-		 	
-		 	}
-		 else{
-		 	valid2=0;
-		 	msgend='End date must be greater than start date';
-		 	$('#eed').text(msgend);
-		 	$('#eed').css('display','block');
-		 }
-
-			});
-	 
-	 $("#projectstatus").change(function(event){
-		 var projectstatus=$('#projectstatus').val();
-		
-		 if(projectstatus!='Open')
-		 {
-			
-		  $('#eps').css('display','block');
-         }
-		 else
-		 {
-		 $('#eps').css('display','none');
-		 }
-	 });
-	 
-	 $("#customerportfolio").change(function(event){
-		 var cus=$('#customerportfolio').val();
-		 if(cus=='Select')
-		 {
-		  $('#ecp').css('display','block');
-
-		 }
-		 else
-		 {
-		 $('#ecp').css('display','none');
-		 }
-	 });
-	 $("#services").change(function(event){
-		 var service=$('#services').val();
-		 if(service=='Select')
-		 {
-		  $('#eso').css('display','block');
-
-		 }
-		 else
-		 {
-		 $('#eso').css('display','none');
-		 }
-	 });
-	 $("#technology").change(function(event){
-		 var technology=$('#technology').val();
-		 if(technology=='Select')
-		 {
-		  $('#et').css('display','block');
-
-		 }
-		 else
-		 {
-		 $('#et').css('display','none');
-		 }
-	 });
-	 $("#effortrequired").keyup(function(event){
-		 var effortrequired=$('#effortrequired').val();
-		 if(effortrequired=='')
-		 {
-		  $('#er').css('display','block');
-
-		 }
-		 else
-		 {
-		 $('#er').css('display','none');
-		 }
-	 });
-	 $("#effortrequired").keyup(function(event){
-		 var effortrequired=$('#effortrequired').val();
-		 if(effortrequired=='')
-		 {
-		 	msgeffort='Enter effort required';
-		 	$('#er').text(msgeffort);
-		 	$('#er').css('display','block');
-		 	valid3=0;
-		 }
-		 else if(!$.isNumeric(effortrequired))
-		 {
-		 	msgeffort='Effort must be numeric';
-		 	$('#er').text(msgeffort);
-		 	$('#er').css('display','block');
-		 	valid3=0;
-		 	}
-		 else
-		 {
-		 	if(valid4==1&&valid5==1){
-		 		sum=parseInt(onsite)+parseInt(offshore);
-//		 		alert('sum'+sum);
-		 		v1=parseInt(effortrequired);
-		 		if(sum>v1||sum<v1)
-		 			{
-		 			msgeffort='Effort must equal the sum of onsite and offshore';
-		 			$('#er').text(msgeffort);
-		 			$('#er').css('display','block');
-		 			}
-		 		else if(sum==v1)
-		 			{
-		 			$('#er').css('display','none');
-		 			valid3=1;
-		 			}
-		 	}
-		 	
-		 }
-	 });
-	 $("#onsite").keyup(function(event){
-		 var onsite=$('#onsite').val();
-		 if(onsite=='')
-		 {
-		 msgon='Enter onsite effort';
-		 $('#eon').text(msgon);
-		 $('#eon').css('display','block');
-		 valid4=0;
-		 }
-		 else if(!$.isNumeric(onsite))
-		 	{
-		 	msgon='Onsite  must be numeric';
-		 	$('#eon').text(msgon);
-		 	$('#eon').css('display','block');
-		 	valid4=0;
-		 	}
-		 else
-		 {
-		 	valid4=1;
-		 	$('#eon').css('display','none');
-		 }
-	 });
-	 $("#offshore").keyup(function(event){
-		 var offshore=$('#offshore').val();
-		 if(offshore=='')
-		 {
-		 	valid5=0;
-		 	msgoff='Enter offshore effort';
-		 	$('eoff').text(msgoff);
-		 	$('#eoff').css('display','block');
-		 }
-		 else if(!$.isNumeric(offshore))
-		 	{
-		 	msgoff='Offshore  must be numeric';
-		 	$('#eoff').text(msgoff);
-		 	$('#eoff').css('display','block');
-		 	valid5=0;
-		 	}
-
-		 else
-		 {
-		 	valid5=1;
-		 	$('#eoff').css('display','none');
-		 }
-	 });
-	 
-	 $("#projectmanager").change(function(event){
-		   var projectmanager=$('#projectmanager').val();
-		   if(projectmanager=='Select')
-		   {
-		    $('#epm').css('display','block');
-
-		   }
-		   else
-		   {
-		   $('#epm').css('display','none');
-		   }
-	 });
-	 $("#deliverymanager").change(function(event){
-		   var deliverymanager=$('#deliverymanager').val();
-		   if(deliverymanager=='Select')
-		   {
-		    $('#edm').css('display','block');
-
-		   }
-		   else
-		   {
-		   $('#edm').css('display','none');
-		   }
-		   
-	 });
-	 
-	
-	 
-});
 
 
 
@@ -837,95 +494,62 @@ $().ready(function(){
 
 
 $().ready(function(){
-	
+	var msgstart='';
+	var msgend='';
+	var valid1=0;
+	var valid2=0;
+	var msgeffort='';
+	var msgon='';
+	var msgoff='';
+	var valid3=0;
+	var valid4=0;
+	var valid5=0;
+	var sum=0;
 	
 	$("#save").click(function (event){
-		var projectcode=$('#projectcode').val();
-		var projectname=$('#projectname').val();
-		var effortrequired=$('#effortrequired').val();
-		var onsite=$('#onsite').val();
-		var offshore=$('#offshore').val();
 		var center=$('#center').val();
 	var location=$('#location').val();
 	var con=$('#contracttype').val();
 	var projectstatus=$('#projectstatus').val();
     var cus=$('#customerportfolio').val();
-    var service=$('#services').val();
-    var technology=$('#technology').val();
-   var projectmanager=$('#projectmanager').val();
+   var service=$('#services').val();
+  var technology=$('#technology').val();
+  var projectmanager=$('#projectmanager').val();
    var deliverymanager=$('#deliverymanager').val();
-//   var onsitecoordinator=$('#onsitecoordinator').val();
-   
-   var rowcount=1;
-   var msgstart='';
-   var msgend='';
-   var valid1=0;
-   var valid2=0;
-   var msgeffort='';
-   var msgon='';
-   var msgoff='';
-   var valid3=0;
-   var valid4=0;
-   var valid5=0;
-   var sum=0;
-   var start=$('#startdate').val();
-   var date1=new Date($('#startdate').val());//startdate
-   var str = $.datepicker.formatDate('yy-mm-dd',date1);//start date
-   var date2=new Date();
-    var enddate=$('#enddate').val();
-   var str1=$.datepicker.formatDate('mm',date2);//current date
-   var str4=$.datepicker.formatDate('yy-mm-dd',date2);
-   var str2=$.datepicker.formatDate('mm',date1);//split date
-   var end=new Date($('#enddate').val());
-   var str3=$.datepicker.formatDate('yy-mm-dd',end);//end date
-   
-   
-   if(projectcode=='')
-   {
-   $('#epc').css('display','block');
-   }
-   else
-   	{
-    $('#epc').css('display','none');
-   	}
-   if(projectname=='')
-   {
-   $('#epn').css('display','block');
-   }
-   else
-   	{
-    $('#epn').css('display','none');
-   	}
-
-   if(onsite=='')
-   {
-   msgon='Enter onsite effort';
-   $('#eon').text(msgon);
-   $('#eon').css('display','block');
-   valid4=0;
-   }
-
-   if(offshore=='')
-   {
-   	valid5=0;
-   	msgoff='Enter offshore effort';
-   	$('eoff').text(msgoff);
-   	$('#eoff').css('display','block');
-   }
-
-   if(effortrequired=='')
-   {
-   	msgeffort='Enter effort required'; 
-   	$('#er').text(msgeffort);
-   	$('#er').css('display','block');
-   	valid3=0;
-   }
+  // var onsitecoordinator=$('#onsitecoordinator').val();
    if(center=='Select')
 	{
 	
 	 $('#ec').css('display','block');
 	 
 	}
+//
+//else if(center=='Onsite')
+//{
+//	document.getElementById("offshore").value = '0';
+//	document.getElementById("offshore").readOnly = true;
+//   document.getElementById("onsite").value = '';
+//	document.getElementById("onsite").readOnly = true;
+//	
+//
+//}	
+//
+//else if(center=='Offshore')
+//	{
+//	document.getElementById("onsite").value = '0';
+//	document.getElementById("onsite").readOnly = true;
+//	document.getElementById("offshore").value = '';
+//	document.getElementById("offshore").readOnly = true;
+//
+//	}
+//else if (center=='Both')
+//	{
+//	 document.getElementById("onsite").value = '';
+//	 document.getElementById("onsite").readOnly = true;
+//	 document.getElementById("offshore").value = '';
+//	 document.getElementById("offshore").readOnly = true;
+//		
+//	}
 if(location=='Select')
 {
  $('#el').css('display','block');
@@ -1007,76 +631,163 @@ $('#edm').css('display','none');
 //{
 //$('#eoc').css('display','none');
 //}
-
-
-
-
-	 var start=$('#startdate').val();
-	 if(!start)
-		{
-		valid1=0;
-		msgstart='Select start date';
-		$('#esd').text(msgstart);
-		$('#esd').css('display','block');
-		}	
-		
-	 
-	else if(str2<str1)
+var start=$('#startdate').val();
+var date1=new Date($('#startdate').val());//startdate
+var str = $.datepicker.formatDate('yy-mm-dd',date1);//start date
+var date2=new Date();
+ var enddate=$('#enddate').val();
+var str1=$.datepicker.formatDate('mm',date2);//current date
+var str4=$.datepicker.formatDate('yy-mm-dd',date2);
+var str2=$.datepicker.formatDate('mm',date1);//split date
+var end=new Date($('#enddate').val());
+var str3=$.datepicker.formatDate('yy-mm-dd',end);//end date
+if(str2>=str1)
 	{
-		valid1=0;
-		msgstart='Start date not to be a past month';
-		$('#esd').text(msgstart);
-		$('#esd').css('display','block');
-		
-		}
-	else if(str2>=str1)
-		{
-		valid1=1;
-		$('#esd').css('display','none');
-		}
+	valid1=1;
+	$('#esd').css('display','none');
+	}
+else if(str2<str1)
+{
+	valid1=0;
+	msgstart='Start date not be a past date';
+	$('#esd').text(msgstart);
+	$('#esd').css('display','block');
+	
+	}
+else if(start=='')
+	{
+	valid1=0;
+	msgstart='Please select start date';
+	$('#esd').text(msgstart);
+	$('#esd').css('display','block');
+	}
+if(enddate=='')
+{
+valid2=0;
+msgend='Please select end date';
+$('#eed').text(msgend);
+$('#eed').css('display','block');
+}
+else  if(str3>=str4&&str3>str)
+	{
+	valid2=1;
+	$('#eed').css('display','none');
+	
+	}
+
+else if(str3<str4)
+{
+	valid2=0;
+	msgend='End date not be a past date or current date';
+	$('#eed').text(msgend);
+	$('#eed').css('display','block');
+	
+	}
+else{
+	valid2=0;
+	msgend='End date must be greater then start date';
+	$('#eed').text(msgend);
+	$('#eed').css('display','block');
+}
 
 
-	 var start=$('#enddate').val();
-		
-		
-	 if(!enddate)
-	 {
-	 valid2=0;
-	 msgend='Select end date';
-	 $('#eed').text(msgend);
-	 $('#eed').css('display','block');
-	 }
-	 else  if(str3>=str4&&str3>str)
-	 	{
-	 	valid2=1;
-	 	$('#eed').css('display','none');
-	 	
-	 	}
+var projectcode=$('#projectcode').val();
+var projectname=$('#projectname').val();
+var effortrequired=$('#effortrequired').val();
+var onsite=$('#onsite').val();
+var offshore=$('#offshore').val();
+if(projectcode=='')
+{
+$('#epc').css('display','block');
+}
+else
+	{
+ $('#epc').css('display','none');
+	}
+if(projectname=='')
+{
+$('#epn').css('display','block');
+}
+else
+	{
+ $('#epn').css('display','none');
+	}
 
-	 else if(str3<str4)
-	 {
-	 	valid2=0;
-	 	msgend='End date not to be a past date or current date';
-	 	$('#eed').text(msgend);
-	 	$('#eed').css('display','block');
-	 	
-	 	}
-	 else{
-	 	valid2=0;
-	 	msgend='End date must be greater than start date';
-	 	$('#eed').text(msgend);
-	 	$('#eed').css('display','block');
-	 }
+if(onsite=='')
+{
+msgon='Please enter onsite effort';
+$('#eon').text(msgon);
+$('#eon').css('display','block');
+valid4=0;
+}
+else if(!$.isNumeric(onsite))
+	{
+	msgon='Onsite  must be numeric';
+	$('#eon').text(msgon);
+	$('#eon').css('display','block');
+	valid4=0;
+	}
+else
+{
+	valid4=1;
+	$('#eon').css('display','none');
+}
+if(offshore=='')
+{
+	valid5=0;
+	msgoff='Please enter offshore effort';
+	$('eoff').text(msgoff);
+	$('#eoff').css('display','block');
+}
+else if(!$.isNumeric(offshore))
+	{
+	msgoff='Offshore  must be numeric';
+	$('#eoff').text(msgoff);
+	$('#eoff').css('display','block');
+	valid5=0;
+	}
 
-		
+else
+{
+	valid5=1;
+	$('#eoff').css('display','none');
+}
+if(effortrequired=='')
+{
+	msgeffort='Please enter effort required';
+	$('#er').text(msgeffort);
+	$('#er').css('display','block');
+	valid3=0;
+}
+else if(!$.isNumeric(effortrequired))
+{
+	msgeffort='Effort must be numeric';
+	$('#er').text(msgeffort);
+	$('#er').css('display','block');
+	valid3=0;
+	}
+else
+{
+	if(valid4==1&&valid5==1){
+		sum=parseInt(onsite)+parseInt(offshore);
+//		alert('sum'+sum);
+		v1=parseInt(effortrequired);
+		if(sum>v1||sum<v1)
+			{
+			msgeffort='Effort must equal the sum of onsite and offshore';
+			$('#er').text(msgeffort);
+			$('#er').css('display','block');
+			}
+		else if(sum==v1)
+			{
+			$('#er').css('display','none');
+			valid3=1;
+			}
+	}
+	
+}
 
-
-
-
-
-
-
-if(projectcode!=''&&projectname!=''&&center!='Select'&&location!='Select'&&contracttype!='Select'&&projectstatus=='Open'&&customerportfolio!='Select'&&services!='Select'&&technology!='Select'&&projectmanager!='Select'&&deliverymanager!='Select'&&valid1==1&&valid2==1&&valid3==1&&valid4==1&&valid5==1)
+if(center!='Select'&&location!='Select'&&contracttype!='Select'&&projectstatus=='Open'&&customerportfolio!='Select'&&services!='Select'&&technology!='Select'&&projectmanager!='Select'&&deliverymanager!='Select'&&valid1==1&&valid2==1&&valid3==1&&valid4==1&&valid5==1)
 {
 	
 	
@@ -1117,7 +828,7 @@ if(projectcode!=''&&projectname!=''&&center!='Select'&&location!='Select'&&contr
 		     			        dataType:"json",
 		     			        data:data,
 		     			        url: url,
-		     			        async:false,
+		     			        
 		     			        success: function(data) {
 		     			            console.log("response:" + data);
 		     			           
@@ -1126,7 +837,7 @@ if(projectcode!=''&&projectname!=''&&center!='Select'&&location!='Select'&&contr
 		     							
 		     			            for ( var i in object) {
 		     	                    if(object.status==0){
-		     	                    	alert("contact saved")
+//		     	                    	alert("contact saved")
 		     	                    }
 		     	                   
 		     			            		
@@ -1149,7 +860,6 @@ if(projectcode!=''&&projectname!=''&&center!='Select'&&location!='Select'&&contr
 		     			
 
 		         		
-
 		         		$('input[name="file"]').each(function(index, value) 
 		    	                { 
 		         		
@@ -1182,13 +892,12 @@ if(projectcode!=''&&projectname!=''&&center!='Select'&&location!='Select'&&contr
 		    	                          	 
 		    	                          		 
 		    	                          		 if(object.status==0){
-		    	                          			 alert(" file update sucessfully");
-		    	                          		alert("project created successfully");
-		    	                          		window.location.href='projectdashboard.jsp'
+//		    	                          			 alert(" file update sucessfully");
+		    	                          	
 
 		    	                          	       }
 		    	                          		 else{
-		    	                          			 alert("update  failed");
+		    	                          			 
 		    	                          			event.preventDefault();    		
 		    	                          		 }
 		    	                          		 },
@@ -1203,18 +912,19 @@ if(projectcode!=''&&projectname!=''&&center!='Select'&&location!='Select'&&contr
 		    	                        });
 		    	                   
 		    	              
-		    	          
+		    	           
 		    	                    }
 		    	                    });
-		    		
+		         		alert("project created successfully");
+                  		window.location.href='projectdashboard.jsp'
 		         	       }
 		         		 else{
 		         			 if(object.errorMessage=="Violation of UNIQUE KEY constraint 'unqiue key'. Cannot insert duplicate key in object 'dbo.project_details'.")
 		         		{
-		         		alert("project code already exits try another name");	
+		         		alert("Project code already exists");	
 		         		 e.preventDefault();    		
 		         		 }else{
-		         			alert(object.errorMessage);
+		         			console.log(object.errorMessage);
 		         			 event.preventDefault();
 		         		}
 		         		 
@@ -1320,57 +1030,57 @@ $().ready(function(){
 
 });
 
-//$().ready(function(){
-//$('#startdate').change(function(){
-//	
-//	if($('#enddate').val()!=''){
-//		
-//		
-//		var start=new Date($('#startdate').val());
-//		var end=new Date($('#enddate').val());
-//		
-//		var day=dateDifference(start,end);
-//		$('#nodays').text('No.of.days         :  '+day);
-//		$('#estimationhours').text('Estimation Hours   :'+day*8);
-//		
-//		
-//	}
-//	
-//	
-//	
-//	
-//});
-//
-//
-//});
+$().ready(function(){
+$('#startdate').change(function(){
+	
+	if($('#enddate').val()!=''){
+		
+		
+		var start=new Date($('#startdate').val());
+		var end=new Date($('#enddate').val());
+		
+		var day=dateDifference(start,end);
+		$('#nodays').text('No.of.days         :  '+day);
+		$('#estimationhours').text('Estimation Hours   :'+day*8);
+		
+		
+	}
+	
+	
+	
+	
+});
+
+
+});
 
 
 
 
-//$().ready(function(){
-//	$('#enddate').change(function(){
-//		
-//		if($('#startdate').val()!=''){
-//			
-//			
-//			var start=new Date($('#startdate').val());
-//			var end=new Date($('#enddate').val());
-//			
-//			var day=dateDifference(start,end);
-//			$('#nodays').text('No.of.days         :  '+day);
-//			$('#estimationhours').text('Estimation Hours   :'+day*8);
-//			$('#effortrequired').val(day*8);
-//			
-//			
-//		}
-//		
-//		
-//		
-//		
-//	});
-//
-//
-//	});
+$().ready(function(){
+	$('#enddate').change(function(){
+		
+		if($('#startdate').val()!=''){
+			
+			
+			var start=new Date($('#startdate').val());
+			var end=new Date($('#enddate').val());
+			
+			var day=dateDifference(start,end);
+			$('#nodays').text('No.of.days         :  '+day);
+			$('#estimationhours').text('Estimation Hours   :'+day*8);
+			$('#effortrequired').val(day*8);
+			
+			
+		}
+		
+		
+		
+		
+	});
+
+
+	});
 
 
 function dateDifference(start, end) {
@@ -1587,7 +1297,5 @@ function myFunction66(ll) {
 	var k='#filerow'+ll;
 	   $(k).remove();
 }
-
-
 
 

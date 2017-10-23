@@ -280,8 +280,6 @@ String designation1="";
 								<th align="center">LOCATION</th>
 				                <th align="center">START DATE</th>
 				                <th align="center">END DATE</th>
-				                <th align="center">PROJECT MANAGER</th>
-				                <th align="center">DELIVERY MANAGER</th>
 				                <th align="center">ESTIMATION EFFORT</th>
 				                <th align="center">CLIENT CODE</th>
 				                <th align="center">CLIENT NAME</th>
@@ -316,7 +314,7 @@ String designation1="";
     <table Style="position:relative;margin-top:8px;width:90%"  border="1">
     <thead>
     <tr>
-    <th>Serial No<th>Employee Code</th><th>Employee Name</th><th>Percentage of Allocation</th><th>Start Time</th><th>End Time</th></tr>
+    <th>Serial No<th>Employee Code</th><th>Employee Name</th><th>Percentage of Allocation</th><th>Start Time</th><th>End Time</th><th>Allocate</th></tr>
     
     </thead>
     

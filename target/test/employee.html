@@ -4,12 +4,9 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="ProjectManagementTool-UI/css/Plugins/dataTables.jqueryui.min.css">
-
-
+<link rel="stylesheet" href="ProjectManagementTool-UI/css/projectdashboard.css">
 <script src="ProjectManagementTool-UI/js/Plugins/jquery-1.11.1.min.js"></script>
 <script src="ProjectManagementTool-UI/js/Plugins/jquery.dataTables.min.js"></script> 
-<link rel="stylesheet" href="ProjectManagementTool-UI/css/projectdashboard.css">
-
 <script type="text/javascript" src="ProjectManagementTool-UI/js/empreport.js"></script>
  <script type="text/javascript" src="ProjectManagementTool-UI/js/cookies.js"></script>
 <!-- <script type="text/javascript" src="ProjectManagementTool-UI/js/projectdashboard.js"></script> -->
@@ -43,33 +40,32 @@ margin:-13px 0px 50px -8px;
 {
 margin:0px 0px 0px 0px;
 }
-#empid1
+select
 	{
 	margin:0px 0px 0px 33px;
 	width:175px;
 	height:25px;
 	}
-	
-/* 	#lempname */
-/* 	{ */
-/* 	margin:0px 0px 0px 100px; */
-/* 	} */
-/* 	#empname */
-/* 	{ */
-/* 	margin:0px 0px 0px 7px; */
-/* 	height:20px; */
-/* 	width:170px; */
-/* 	} */
-/* 	#ldesignation */
-/* 	{ */
-/* 	margin:0px 0px 0px 150px; */
-/* 	} */
-/* 	#designation */
-/* 	{ */
-/* 	margin:0px 0px 0px 0px; */
-/* 	height:20px; */
-/* 	width:170px; */
-/* 	} */
+	#lempname
+	{
+	margin:0px 0px 0px 100px;
+	}
+	#empname
+	{
+	margin:0px 0px 0px 7px;
+	height:20px;
+	width:170px;
+	}
+	#ldesignation
+	{
+	margin:0px 0px 0px 150px;
+	}
+	#designation
+	{
+	margin:0px 0px 0px 0px;
+	height:20px;
+	width:170px;
+	}
 </style>
 </head>
 <body>
@@ -86,45 +82,29 @@ margin:0px 0px 0px 0px;
 	<td>
 		<label id="empid" ><b>Employee ID</b></label>
 		<select id="empid1">
-		<option >Select</option>
+		<option>Select</option>
 		</select>
-		<img id="excelbutton" src="ProjectManagementTool-UI/css/images1/excel.png"   onclick="tableToExcel('1','2', 'W3C Example Table');" Style="position:absolute;width:35px;height:35px;margin-left:20px;margin-top:-3px"  />
-		
-		</tr>
-		</tbody>
-		</table>
-		<table id='1'>
-		<tbody>
-		<tr>
-		<td><br><br>
-		
-		
-		</td>
-		</tr>
-		<tr>
-		<td Style="color: #0080ff;"  align="left"><label id="lempname" style=""><b>Employee Name: </b></label>
-		<td  align="left"><label id="empname" style=""></label>
-		<td >
-		<td>
-		<td Style="color: #0080ff;"  align="left"><label id="ldesignation" style=""><b>Designation: </b></label>
-		<td ><label id="designation" style=""></label>
+		<label id="lempname" style=""><b>Employee Name: </b></label>
+		<label id="empname" style=""></label>
+		<label id="ldesignation" style=""><b>Designation: </b></label>
+		<label id="designation" style=""></label>
+	</td>
 	</tr>
 
 	
-	</tbody>
-	</table>
 	
+	<tr>
+	<td>
 	<div id="add" >
-		<table id="2" style="width:1198px;" class="display">
+		<table id="example" style="width:1198px;" class="display">
 				        <thead>
-				        
 				            <tr>
-				                <th align="center" style="background-color:#0078D7;color:white;">SERIAL NO</th>
-				                <th align="center" style="background-color:#0078D7;color:white;">PROJECT CODE</th>
-				                <th align="center" style="background-color:#0078D7;color:white;">PROJECT NAME</th>
-				                 <th align="center" style="background-color:#0078D7;color:white;">% OF ALLOCATION</th> 
-				                <th align="center" style="background-color:#0078D7;color:white;">START DATE</th>
-				                <th align="center" style="background-color:#0078D7;color:white;">END DATE</th>
+				                <th align="center">SERIAL NO</th>
+				                <th align="center">PROJECT CODE</th>
+				                <th align="center">PROJECT NAME</th>
+				                 <th align="center">PERCENTAGE OF ALLOCATION</th> 
+				                <th align="center">START DATE</th>
+				                <th align="center">END DATE</th>
 				               
 				            </tr>
 				        </thead>
@@ -132,7 +112,9 @@ margin:0px 0px 0px 0px;
 				        </tbody>
 				    </table>
 	</div>
-	
-<!-- <input type="button" onclick="tableToExcel('1','2', 'W3C Example Table');" value="Export to Excel"/> -->
+	</td>
+	</tr>
+</tbody>
+</table>
 </body>
 </html>

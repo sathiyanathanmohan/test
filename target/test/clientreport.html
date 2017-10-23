@@ -62,7 +62,7 @@
 	{
 margin:-10px 0px 30px -8px;
 background-color:#0078D7;
-width:1190px;
+width:1100px;
 height:30px;
 position: relative;
 	}
@@ -70,7 +70,7 @@ position: relative;
 	{
 margin:0px 0px 0px -8px;
 	background-color:#0078D7;
-	width:1190px;
+	width:1102px;
 	height:30px;
 	}
 #title
@@ -84,7 +84,7 @@ margin:0px 0px 0px -8px;
 position:relative;
 border: 1px solid black;
 	margin:0px 0px 0px -8px;
- 	width:1190px;
+ 	width:1100px;
 	}
 	#clientid
 	{
@@ -99,7 +99,7 @@ border: 1px solid black;
 	#lclientname
 	{
 	position:relative;
-		left:80px;
+	left:80px;
 	}
 	#clientname
 	{
@@ -139,22 +139,9 @@ color:white;font-bold:true;font-size:24px;margin-top:3px;
 	text-align:center;
 }
 </style>
-<script type="text/javascript">
-var tableToExcel = (function() {
-  var uri = 'data:application/vnd.ms-excel;base64,'
-    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
-    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
-    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
-  return function(table, name) {
-    if (!table.nodeType) table = document.getElementById(table)
-    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
-    window.location.href = uri + base64(format(template, ctx))
-  }
-})()
-</script>
 </head>
 <body>
-<table id="mytable" 	width="1190px"  align="center"     cellspacing="0" cellpadding="0">
+<table id="mytable" 	width="1100px"  align="center"     cellspacing="0" cellpadding="0">
 <tbody>
 	
 	<tr>
@@ -163,8 +150,6 @@ var tableToExcel = (function() {
 		<select  id="clientid1" >
 		<option >Select</option>
 		</select>
-		<img id="excelbutton" src="ProjectManagementTool-UI/css/images1/excel.png"   onclick="tableToExcel('example', 'W3C Example Table')" Style="position:absolute;width:35px;height:36px;margin-left:10px" " />
-		
 		<label id="lclientname" ><b>Client Name :</b></label>
 		<label id="clientname" ></label>
 		<label id="llocation" ><b>Location:</b></label>
@@ -185,7 +170,7 @@ var tableToExcel = (function() {
 	<tr>
 	<td>
 		<div id="add" >
-		<table id="example" style="width:1190px;" class="display">
+		<table id="example" style="width:1100px;" class="display">
 				        <thead>
 				            <tr>
 				                <th align="center">SERIAL NO</th>
@@ -205,19 +190,18 @@ var tableToExcel = (function() {
 	</tr>
 </tbody>
 </table>
-
+<button id="excel" class='excelButton'>EXCEL</button>
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close" id="close">&times;</span>
-    <div id="nav1" Style="position:relative;margin-left:2px;width:90%;" ><p id="emptitle" >Contact Persons</p></div>
+    <div id="nav1" Style="position:relative;margin-left:2px;width:90%;" ><p id="emptitle" >Conduct Persons</p></div>
 
     <table Style="position:relative;margin-top:8px;width:90%"  border="1">
     <thead>
     <tr>
-    <td>
-    <th>Serial No<th>Person Name</th><th>Contact Number1</th><th>Contact Number2</th><th>Mail ID</th></tr>
+    <th>Serial No<th>Person Name</th><th>Conduct Number1</th><th>Conduct Number2</th><th>Mail ID</th></tr>
     
     </thead>
     

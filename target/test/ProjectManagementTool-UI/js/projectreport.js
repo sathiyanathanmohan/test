@@ -69,7 +69,6 @@ $().ready(function(){
 	
 	
 	
-
 	
 	
 	
@@ -130,8 +129,7 @@ $('#projectid1').change(function() {
 		        	   
 		           
 		           }
-
-   $('#2').DataTable();
+		           $('#example').DataTable();
 		 			},
 		 			error : function(msg) {
 		 			
@@ -144,38 +142,19 @@ $('#projectid1').change(function() {
 
 
 
+$().ready(function() {
+	  $("#excel").click(function(e) {
+	    e.preventDefault();
 
+	    //getting data from our table
+	    var data_type = 'data:application/vnd.ms-excel';
+	    var table_div = document.getElementById('table_wrapper');
+	  
+	    var table_html = table_div.outerHTML.replace(/ /g, '%20');
 
-
-
-
-
-
-
-
-var tableToExcel = (function() {
-	  var uri = 'data:application/vnd.ms-excel;base64,'
-	    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
-	    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
-	    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
-	  return function(table,table2, name) {
-		  table = document.getElementById(table)
-	    	table2=document.getElementById(table2)
-var table3=table.innerHTML+table2.innerHTML;
-		  if(window.navigator.userAgent.indexOf("MSIE")>0||window.navigator.userAgent.match(/Trident.*rv\:11\./))
-			  {
-			  var exportIf=document.getElementById("exportIf");
-			  exportIf.document.open("txt/html","replace");
-			  exportIf.document.write(table3);
-			  exportIf.document.close();
-			  exportIf.focus();
-			  exportIf.document.exeCommand("saveAs",true,"project.xls")
-			  }
-
-		  else{
-	    var ctx = {worksheet: name || 'Worksheet', table: table3}
-	    window.location.href = uri + base64(format(template, ctx))
-	   
-		  }
-		  }
-	})();
+	    var a = document.createElement('a');
+	    a.href = data_type + ', ' + table_html;
+	    a.download = 'exported_table_' + Math.floor((Math.random() * 9999999) + 1000000) + '.xls';
+	    a.click();
+	  });
+	});

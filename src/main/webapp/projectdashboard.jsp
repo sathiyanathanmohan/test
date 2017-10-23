@@ -143,10 +143,11 @@ String designation1="";
 		 </ul>
 		</li> 
 		<li><a href="#">Employee &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ></a> 
- 		<ul style="margin-top:80px;height:80px"> <li><a href="employeeadd.jsp" >Employee Add</a></li>
+ 		<ul style="margin-top:80px;height:80px"> <li><a href="EmployeeAdd.jsp" >Employee Add</a></li>
  		 <li><a href="EmployeeEdit.jsp">Employee Edit</a></li>  </ul> </li> 
 		<li><a href="#">Timesheet &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ></a> 
-		<ul style="margin-top:120px;height:40px"> <li><a href="managerviewemp.html" >Timesheet Approved</a></li> 
+		<ul style="margin-top:120px;height:80px"> <li><a href="managerviewemp.html" >Timesheet Approved</a></li> 
+		<li><a href="timesheetview.html">Timesheet View</a></li>
 		</ul>
 		</li> 
 		<li><a href="logincreation.jsp">UserID Creation</a></li> 

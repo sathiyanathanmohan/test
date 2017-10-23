@@ -15,30 +15,30 @@
 <style>
 #welcomeuser       {position:absolute;font-size:20px;margin-top:20px}
 #logout            {position:relative;margin-left:865px;width:130px;height:30px;margin-top:20px;background-color:#0078D7;color:white} 
- #customerdiv      {background-color:#0078D7;margin-top:45px;width:1000px;height:35px;} 
+#customerdiv      {position:relative;background-color:#0078D7;top:5px;width:1000px;height:25px;} 
  #customertitle    {color:white;font-bold:true;font-size:24px;text-align:center;} 
- #overalldiv       {width:998px;margin-top:1px}
-  #clientcodel 	   {position:relative;left:0px;}
- #clientcode       {text-transform: uppercase;position:relative;left:70px;width:230px;height:20px; background: #dddddd; cursor: not-allowed; }
- #clientnamel      {position:relative;left:230px; }
- #clientname       {text-transform: capitalize;position:relative;left:260px;width:230px;height:20px;background: #dddddd; cursor: not-allowed;}
-  #websitel		   {position:relative;left:0px;top:15px;}
- #website          {position:relative;left:30px;top:15px;width:230px;height:20px;background: #dddddd; cursor: not-allowed;}
- #phonenol         {position:relative;left:190px;top:15px;}
-  #areacode        {position:relative;left:205px;top:15px;width:40px;height:20px;background: #dddddd; cursor: not-allowed;}
-#phoneno			{position:relative;left:205px;top:15px;width:180px;height:20px ;background: #dddddd; cursor: not-allowed;}
-#address1l		   {position:relative;left:0px;top:0px;}
- #address1         {position:relative;left:50px;top:0px;width:230px;height:20px;background: #dddddd; cursor: not-allowed; }
- #address2l        {position:relative;left:210px;top:0px;}
- #address2         {position:relative;left:230px;top:0px;width:230px;height:20px;background: #dddddd; cursor: not-allowed;}
-  #cityl		   {position:relative;left:0px;top:20px;}
- #city             {text-transform: capitalize;position:relative;left:120px;top:20px;width:230px;height:20px;background: #dddddd; cursor: not-allowed;}
-#statel            {position:relative;left:280px;top:20px;}
- #state            {text-transform: capitalize;position:relative;left:355px;top:20px;width:230px;height:20px;background: #dddddd; cursor: not-allowed;}
-#countryl          {position:relative;left:0px;top:40px;}
- #country          {text-transform: capitalize;position:relative;left:96px;top:40px;width:230px;height:20px;background: #dddddd; cursor: not-allowed;}
- #zipcodel         {position:relative;left:255px;top:40px;}
- #zipcode          {position:relative;left:303px;top:40px;width:230px;height:20px;background: #dddddd; cursor: not-allowed;}
+ #overalldiv       {position:relative;width:998px;top:5px}
+ #clientcodel      {position:absolute;left:50px;top:50px}
+ #clientcode       {text-transform: uppercase;position:absolute;left:200px;width:230px;height:20px;top:45px; background: #dddddd; cursor: not-allowed; }
+#clientnamel      {position:absolute;left:575px;top:50px;}
+ #clientname       {text-transform: capitalize;position:absolute;left:715px;width:230px;height:20px;top:45px;background: #dddddd; cursor: not-allowed;}
+  #websitel          {position:absolute;left:50px;top:93px;}
+ #website          {position:absolute;left:200px;top:89px;width:230px;height:20px;background: #dddddd; cursor: not-allowed;}
+ #phonenol         {position:absolute;left:575px;top:93px;}
+  #areacode        {position:absolute;left:715px;top:88px;width:40px;height:20px;background: #dddddd; cursor: not-allowed;}
+#phoneno			{position:absolute;left:763px;top:88px;width:183px;height:20px;background: #dddddd; cursor: not-allowed;}
+#address1l        {position:absolute;left:50px;top:185px;}
+ #address1         {position:absolute;left:200px;top:180px;width:230px;height:20px;background: #dddddd; cursor: not-allowed; }
+#address2l        {position:absolute;left:575px;top:185px;}
+ #address2         {position:absolute;left:715px;top:180px;width:230px;height:20px;background: #dddddd; cursor: not-allowed;}
+ #cityl            {position:absolute;left:50px;top:230px;}
+ #city             {text-transform: capitalize;position:absolute;left:200px;top:225px;width:230px;height:20px;background: #dddddd; cursor: not-allowed;}
+#statel           {position:absolute;left:575px;top:230px;}
+ #state            {text-transform: capitalize;position:absolute;left:715px;top:225px;width:230px;height:20px;background: #dddddd; cursor: not-allowed;}
+#countryl         {position:absolute;left:50px;top:275px;}
+ #country          {text-transform: capitalize;position:absolute;left:200px;top:270px;width:230px;height:20px;background: #dddddd; cursor: not-allowed;}
+ #zipcodel         {position:absolute;left:575px;top:275px;}
+ #zipcode          {position:absolute;left:715px;top:270px;width:230px;height:20px;background: #dddddd; cursor: not-allowed;}
 /*  #clienttable, th  {border: 1px solid black;border-collapse: collapse;} */
 #myTable  {
    border-collapse: collapse;
@@ -151,7 +151,7 @@ function goBack() {
 
 <input type="hidden" name="id" id="id" >
 <div >     
-     <fieldset Style="border:1px solid black;margin-top:15px;margin-left:25px;width:925px;height:105px">
+  <fieldset Style="border:1px solid black;margin-top:18px;margin-left:25px;width:925px;height:100px">
      <legend><label ><b>Client Details</b></label></legend>
           
              <label id="clientcodel">Client Code*</label> 
@@ -170,7 +170,7 @@ function goBack() {
 </div>
 
 <div >     
-     <fieldset Style="border:1px solid black;margin-top:15px;margin-left:25px;width:925px;height:150px">
+     <fieldset Style="border:1px solid black;margin-top:15px;margin-left:25px;width:925px;height:150px;">
      <legend><label ><b>Client Address</b></label></legend>
     <label id="address1l">Address Line 1*</label> 
          <input id="address1" maxlength="30" name="address1" type="text" readonly/>

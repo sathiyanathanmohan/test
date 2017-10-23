@@ -93,7 +93,7 @@ $(window).load(function() {
 												   for ( var i in object) {
 								        
 								      
-													   $("#tbody").append('<tr id="'+count+'" onclick="myFunction1(this);"> <td width="14%">'+object[i].person_name+'   </td><td width="23%">'+object[i].mail+' </td><td width="13%">'+object[i].contact_no1+' </td> <td width="13%">'+object[i].contact_no2+' </td><td width="3%" ></tr>');	    
+													   $("#tbody").append('<tr id="'+count+'" onclick="myFunction1(this);"> <td width="14%">'+object[i].person_name+'   </td><td width="23%">'+object[i].mail+' </td><td width="13%">'+object[i].contact_no1+' </td> <td width="13%">'+object[i].contact_no2+' </td></tr>');	    
 													
 													  
 													

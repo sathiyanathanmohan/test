@@ -128,10 +128,8 @@ designation=checkCookie3(decodeURIComponent(document.cookie));
 	 			 						var object=data.object;
 	 			 							
 	 			 		            for ( var i in object) {
-	 			 		            	projectappend=projectappend+'<option value="'+object[i].project_code+'">'+object[i].project_name+'</option>';
-	 			 		            	
+	 			 		            	projectappend=projectappend+'<option value="'+object[i].project_code+'">'+object[i].project_name+'</option>';	
 	 			 		            }
-//	 			 		            alert(projectappend);
 	 			 					},
 	 			 					error : function(msg) {
 	 			 					
@@ -176,11 +174,9 @@ designation=checkCookie3(decodeURIComponent(document.cookie));
 	 		 			 						var object=data.object;
 	 		 			 							
 	 		 			 		            for ( var i in object) {
-//	 		 			 		            	alert(object[i].project_code);
 	 		 			 		            	projectappend=projectappend+'<option value="'+object[i].project_code+'">'+object[i].project_name+'</option>';
 	 		 			 		            	
 	 		 			 		            }
-//	 		 			 		            alert(projectappend);
 	 		 			 					},
 	 		 			 					error : function(msg) {
 	 		 			 					

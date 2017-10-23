@@ -258,7 +258,7 @@ if(zipcode=='')
 			    	var id6=data.id;
 			    		 if(data.status==0){
 			    		 
-		    	
+			    	
 			    	
 			    			
 			    			var url = "rest/webservices/methodName";

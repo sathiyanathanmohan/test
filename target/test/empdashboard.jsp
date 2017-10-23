@@ -17,6 +17,10 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
  <style type="text/css">
+ body
+ {
+ font-family:Calibri;
+ }
 #add 
  { 
 position:relative;
@@ -231,7 +235,8 @@ String designation1="";
 				                 <th align="center">PERCENTAGE OF ALLOCATION</th> 
 				                <th align="center">START DATE</th>
 				                <th align="center">END DATE</th>
-				               
+				                <th align="center">PROJECT MANAGER</th>
+				                 <th align="center">DELIVERY MANAGER</th>
 				            </tr>
 				        </thead>
 				               <tbody id="c1">

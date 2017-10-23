@@ -1,14 +1,20 @@
-
+var valid1=0;
+var valid2=0;
+var valid3=0;
+var valid4=0;
+var valid5=0;
 var currentcenter;
 	var projectid="";
     var fileanme=""; 
 	var row;
 	var c;
 	var t=1;
+	var rowcount=1;
 $(document).ready(function(){
 $(window).load(function() {
 	
 	var user2= checkCookie(decodeURIComponent(document.cookie));
+var login_emp_code=checkCookie2(decodeURIComponent(document.cookie));
 	var designation=checkCookie3(decodeURIComponent(document.cookie));
 	if(user2!=null){
 		if(designation!='project_manager'&&designation!='admin')
@@ -17,6 +23,9 @@ $(window).load(function() {
 		}
 	else{	
    $('#welcomeuser').append("<b>Welcome "+user2+" !!!</b>") ;
+   
+   $('#emp_code').val(login_emp_code);
+   
 //		 $('#welcomeuser').append("Welcome "+user2+" !!!") ;
 		 
 		 var m,n;	 
@@ -911,14 +920,14 @@ $().ready(function(){
 	 $("#startdate").change(function(event){var rowcount=1;
 	 var msgstart='';
 	 var msgend='';
-	 var valid1=0;
-	 var valid2=0;
+	 valid1=0;
+	 valid2=0;
 	 var msgeffort='';
 	 var msgon='';
 	 var msgoff='';
-	 var valid3=0;
-	 var valid4=0;
-	 var valid5=0;
+ valid3=0;
+ valid4=0;
+ valid5=0;
 	 var sum=0;
 	 var start=$('#startdate').val();
 	 var date1=new Date($('#startdate').val());//startdate
@@ -958,14 +967,14 @@ $().ready(function(){
 	 $("#enddate").change(function(event){var rowcount=1;
 	 var msgstart='';
 	 var msgend='';
-	 var valid1=0;
-	 var valid2=0;
+	 valid1=0;
+	 valid2=0;
 	 var msgeffort='';
 	 var msgon='';
 	 var msgoff='';
-	 var valid3=0;
-	 var valid4=0;
-	 var valid5=0;
+ valid3=0;
+ valid4=0;
+valid5=0;
 	 var sum=0;
 	 var start=$('#startdate').val();
 	 var date1=new Date($('#startdate').val());//startdate
@@ -1196,14 +1205,14 @@ $().ready(function(){
 	
 	var msgstart='';
 	var msgend='';
-	var valid1=0;
-	var valid2=0;
+	 valid1=0;
+ valid2=0;
 	var msgeffort='';
 	var msgon='';
 	var msgoff='';
-	var valid3=0;
-	var valid4=0;
-	var valid5=0;
+valid3=0;
+ valid4=0;
+valid5=0;
 	var sum=0;
 $("#save").click(function (event){
 
@@ -1391,7 +1400,7 @@ else
 
 if(onsite=='')
 {
-msgon='Please enter onsite effort';
+msgon='Enter onsite effort';
 $('#eon').text(msgon);
 $('#eon').css('display','block');
 valid4=0;
@@ -1411,7 +1420,7 @@ else
 if(offshore=='')
 {
 	valid5=0;
-	msgoff='Please enter offshore effort';
+	msgoff='Enter offshore effort';
 	$('eoff').text(msgoff);
 	$('#eoff').css('display','block');
 }
@@ -1463,7 +1472,7 @@ else
 	
 }
 
-if(projectcode!==''&&projectname!==''&&center!='Select'&&location!='Select'&&contracttype!='Select'&&customerportfolio!='Select'&&services!='Select'&&projectmanager!='Select'&&deliverymanager!='Select'&&onsitecoordinator!='Select'&&valid2==1&&valid3==1&&valid4==1&&valid5==1)
+if(projectcode!==''&&projectname!==''&&center!=''&&location!=''&&contracttype!=''&&customerportfolio!=''&&services!=''&&projectmanager!='Select'&&deliverymanager!='Select'&&onsitecoordinator!='Select'&&valid2==1&&valid3==1&&valid4==1&&valid5==1)
 {
 //var myform = document.getElementById("form");
 	var url = "rest/webservices/editproject";

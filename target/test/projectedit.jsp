@@ -146,19 +146,19 @@ String designation1="";
      <legend><label><b>Project Details</b></label></legend>
          <label >Project Code* </label>
          <input id="projectcode" maxlength="10" name="projectcode" type="text" />
-         <label id="epc">Enter project code </label>	
+         <label id="epc">Please enter project code </label>	
 		 <br>
  		 <label >Project Name* </label>
   		 <input id="projectname" maxlength="50" name="projectname" type="text" />
-  		 <label id="epn">Enter project name </label>	
+  		 <label id="epn">Please enter project name </label>	
          <br>
       	 <label >Start Date* </label>
 		 <input id="startdate" maxlength="20" name="startdate" type="date" />
-		 <label id="esd">Select start date</label>	
+		 <label id="esd">Please select start date</label>	
          <br>
          <label >End Date* </label>
 		 <input id="enddate" maxlength="20" name="enddate" type="date" />
-		 <label id="eed">Select end date</label>
+		 <label id="eed">Please select end date</label>
 		 <br>
 		 <br>
 <!-- 		 <div id="caldiv"><p id="cal" Style="color:white">Show Days/Hours</p></div> -->
@@ -181,54 +181,54 @@ String designation1="";
          <select id="center" name="center">
          <option >Select</option>
          </select>
-         <label id="ec">Select center</label>
+         <label id="ec">Please select center</label>
          <br>
          <label>Location*</label>
          <select id="location" name="location">
          <option >Select</option>
          </select>
-         <label id="el">Select location</label>
+         <label id="el">Please select location</label>
          <br>
          <label>Contract Type*</label>
          <select id="contracttype" name="contracttype">
          <option >Select</option>
          </select>
-         <label id="ect">Select contract type</label>
+         <label id="ect">Please select contract type</label>
          <br>
          <label>Project Status*</label>
          <select id="projectstatus" name="projectstatus" >
          
          </select>
-          <label id="eps">Select project status as open</label>
+          <label id="eps">Please select project status as open</label>
          <br>
          <label>Customer Portfolio*</label>
          <select id="customerportfolio"  name="customerportfolio">
          <option value="Select">Select</option>
          </select>
-         <label id="ecp">Select customer portfolio</label>
+         <label id="ecp">Please select customer portfolio</label>
          <label id="servicesl">Services Offered*</label>
          <select id="services" name="services">
          <option value="Select">Select</option>
          </select>
-         <label id="eso">Select services offered</label>
+         <label id="eso">Please select services offered</label>
          <label id="techl">Technology*</label>
          <select id="technology" >
          <option value="">Select</option>
          
          </select>
-         <label id="et">Select technology</label>
+         <label id="et">Please select technology</label>
          <textarea id="tech" rows="4" cols="50" name="tech" > </textarea>
          <label id="effortl">Effort Required*</label>
          <input id="effortrequired" maxlength="50" name="effortrequired" type="text" />
             <label id="mandays">Man-days</label>
-         <label id="er">Enter effort required</label>
+         <label id="er">Please enter effort required</label>
       
          <label id="onsitel">Onsite*</label>
          <input id="onsite" name="onsite" maxlength="50" name="name" type="text" />
-         <label id="eon">Enter onsite</label>
+         <label id="eon">Please enter onsite</label>
          <label id="offshorel">offshore*</label>
          <input id="offshore" name="offshore"maxlength="50" name="name" type="text" />
-         <label id="eoff">Enter offshore effort</label>
+         <label id="eoff">Please enter offshore effort</label>
       </fieldset>
 </div>
 
@@ -275,20 +275,20 @@ String designation1="";
             <option value="">Select</option>
             
             </select>
-            <label id="epm">Select project manager</label>
+            <label id="epm">Please select project manager</label>
             <label id="deliverymanagerl">Delivery Manager*</label>
             <select id="deliverymanager" name="deliverymanager">
             <option value="">Select</option>
            
             </select>
-             <label id="edm">Select delivery manager</label>
+             <label id="edm">Please select delivery manager</label>
             <label id="">Onsite Co-ordinator</label>
             <select id="onsitecoordinator" name="onsitecoordinator">
             <option value="">Select</option>
            
             </select>
             	
-            <label id="eoc">Select onsite co-ordinator</label>
+            <label id="eoc">Please select onsite co-ordinator</label>
             
       </fieldset>
 </div>
@@ -356,7 +356,8 @@ String designation1="";
 
 </div>
         <div>
-          <input type="hidden" value="" name="id" id="id">   
+          <input type="hidden" value="" name="id" id="id"> 
+              <input type="hidden" value="" name="emp_code" id="emp_code">       
  
     <button id="save">Save</button>
             <button id="cancel" type="button"><B>Cancel</B></button>

@@ -5,21 +5,14 @@
 
 #menuicon{
     width: 30px;
-    
     height:30px;
 }
 #projectdiv
 	{
-	
-	
 margin-top:30px;
-	
 background-color:#0078D7;
-	
 width:1002px;
-	
 height:35px;
-	
 position: relative;
 	}
 #projecttitle       {position:absolute;left:42%;font-size:23px;top:-12px}

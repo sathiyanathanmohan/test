@@ -55,7 +55,8 @@ $(window).load(function() {
 									 var e=object[i].id;
 						               
 									 //alert('code'+pm);
-									 $("#c1").append('<tr  align="center"><td>'+k+'</td><td>'+object[i].project_code+'</td><td>'+object[i].project_name+'<td align="center">'+object[i].location+'</td><td>'+object[i].start_date+'</td><td>'+object[i].end_date+'</td><td>'+object[i].deliverymanager_name+'</td><td>'+object[i].effort+'</td><td>'+object[i].company_name+'</td><td><a id="view" onclick="show(\'' + pn+ '\',\''+pm+'\');" href="javascript:void(0);">'+object[i].count+'</a>'+'</td><td ><a href="Projectallocation.html?a='+e+'";>Allocate</a></td></tr>');									 k++;
+									 $("#c1").append('<tr  align="center"><td>'+k+'</td><td>'+object[i].project_code+'</td><td>'+object[i].project_name+'<td align="center">'+object[i].location+'</td><td>'+object[i].start_date+'</td><td>'+object[i].end_date+'</td><td>'+object[i].project_manager+'</td><td>'+object[i].delivery_manager+'</td><td>'+object[i].effort+'</td><td>'+object[i].company_name+'</td><td><a id="view" onclick="show(\'' + pn+ '\',\''+pm+'\');" href="javascript:void(0);">'+object[i].count+'</a>'+'</td><td ><a href="Projectallocation.html?a='+e+'";>Allocate</a></td></tr>');
+									 k++;
 								 	}
 						
 								 $('#example').DataTable();

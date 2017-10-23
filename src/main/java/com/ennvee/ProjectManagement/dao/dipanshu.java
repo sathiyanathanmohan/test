@@ -7,7 +7,7 @@ import javax.mail.internet.*;
 public class dipanshu{ 
 public static void main(String[] args) { 
 
-String to="sathiyam503@gmail.com";//change accordingly 
+String to="e.thirumalaikumari@ennvee.net";//change accordingly 
 final String from="sathiyanathan.m@ennvee.net";//change accordingly 
 final String password="Sathiya@1994";//change accordingly 
 

@@ -9,7 +9,7 @@ public class Models {
 
 	public LoginObject login;
 
-	public ProjectObject project;
+	public static ProjectObject project;
 
 	public Employeobject employee;
 
@@ -17,12 +17,27 @@ public class Models {
 
 	public LoginObject oldlogin;
 
-	public ProjectObject oldproject;
+	public static ProjectObject oldproject;
 
 	public Employeobject  oldemployee;
 
 	public Allocationobject oldallocation;
+	public	String log_emp_code="";
 
+	
+	
+
+public void setlog_emp_code(String log_emp_code)
+{
+	this.log_emp_code=log_emp_code;
+}
+
+public String getlog_emp_code()
+{
+	return log_emp_code;
+}
+
+	
 public void setloginobject(LoginObject login)
 {
 	this.login=login;
@@ -38,7 +53,7 @@ public void setprojectobject(ProjectObject project)
 	this.project=project;
 }
 
-public ProjectObject getprojectObject()
+public static ProjectObject getprojectObject()
 {
 	return project;
 }
@@ -78,7 +93,7 @@ public void setoldprojectobject(ProjectObject oldproject)
 	this.oldproject=oldproject;
 }
 
-public ProjectObject getoldprojectObject()
+public static ProjectObject getoldprojectObject()
 {
 	return oldproject;
 }

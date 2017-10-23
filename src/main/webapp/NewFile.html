@@ -1,152 +1,150 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-nav {
-    text-align: right;
-    position: relative;
-    z-index: 1000;
-    float:right;
-    display: inline-block;
-    float: right;
-}
-#logo{
-    display: inline-block;
-    float: left;}
-
-nav ul ul {
-    display: none;
-}
-
-    nav ul li:hover > ul {
-        display: block;
-        position: absolute;
-        z-index: 1000;
-    }
-
-
-nav ul {
-    background: #efefef; 
-    background: linear-gradient(top, #D22525 0%, #5F1414 100%);
-    background: -moz-linear-gradient(top, #D22525 0%, #5F1414 100%);
-    background: -webkit-linear-gradient(top, #D22525 0%,#5F1414 100%);
-    box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
-    padding: 0 20px;
-    border-radius: 10px;  
-    list-style: none;
-    position: relative;
-    display: inline-table;
-}
-    nav ul:after {
-        content: ""; clear: both; display: block;
-    }
-
-    nav ul li {
-        float: left;
-    }
-        nav ul li:hover {
-            background: #4b545f;
-            background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
-            background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
-            background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
-        }
-            nav ul li:hover a {
-                color: #fff;
-            }
-
-        nav ul li a {
-            display: block; padding: 25px 40px;
-            color: #FFF; text-decoration: none;
-        }
-
-
-    nav ul ul {
-        background: #5f6975; border-radius: 0px; padding: 0;
-        position: absolute; top: 100%;z-index: 1000;
-    }
-        nav ul ul li {
-            float: none; 
-            border-top: 1px solid #6b727c;
-            border-bottom: 1px solid #575f6a; position: relative;
-            z-index: 1000;
-        }
-            nav ul ul li a {
-                padding: 15px 40px;
-                color: #fff;
-            }   
-                nav ul ul li a:hover {
-                    background: #4b545f;
-                }
-
-    nav ul ul ul {
-        position: absolute; left: 100%; top:0;
-    }
-
-    .wrapper
-    {
-        overflow: hidden;
-        padding: 0em 0em 5em 0em;
-        background: #FFF;
-        top: 150px;
-        position: absolute;
-        z-index: 0;
-    }
-
-
-</style>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+#welcomeuser       {position:absolute;font-size:20px;margin-top:20px}
+#logout            {position:relative;margin-left:865px;width:130px;height:30px;margin-top:20px;background-color:#0078D7;color:white} 
+#projectdiv        {position:relative;background-color:#0078D7;top:5px;width:1000px;height:30px;} 
+#projecttitle      {color:white;font-bold:true;font-size:24px;text-align:center;} 
+#add               {position:absolute;align:center;width:1000px;border: 1px solid black;top:150px;height:500px}
+#projectdetails    {position:absolute;align:center;width:930px;border: 1px solid black;top:10px;left:20px;height:180px}
+#projectcodel      {position:absolute;left:20px;top:28px}
+#projectcode       {position:absolute;left:170px;top:25x;width:250px;height:20px}
+#projectnamel      {position:absolute;left:20px;top:68px}
+#projectname       {position:absolute;left:170px;top:65px;width:250px;height:20px}
+#startdatel        {position:absolute;left:20px;top:110px}
+#startdate         {position:absolute;left:170px;top:110px}
+#enddatel          {position:absolute;left:20px;top:150px}
+#enddate           {position:absolute;left:170px;top:147px}
+#pdl               {position:absolute;left:540px;top:28px}
+#pd          	   {text-transform: capitalize;position:absolute;left:540px;top:68px;width:40%;height:49%} 
+#developementdetails {position:absolute;align:center;width:930px;border: 1px solid black;top:220px;left:20px;height:200px}
+#centerl            {position:absolute;left:20px;top:28px}
+#center            {position:absolute;left:170px;top:25x;width:135px;height:23px}
+#locationl          {position:absolute;left:20px;top:68px}
+#location           {position:absolute;left:170px;top:65px;width:135px;height:23px}  
+#contracttypel      {position:absolute;left:20px;top:110px}
+#contracttype       {position:absolute;left:170px;top:110px;width:135px;height:23px}  
+              
+</style>
 </head>
 <body>
-<div id="header-wrapper">
-    <div id="header" class="container">
-        <div id="logo">
-<h1><a href="/">HHS E3</a></h1>
+<table  width="1000px" align="center"   cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+
+<label id="welcomeuser"></label>
+<button  id="logout"><B>Log Out</B></button>
+<img id="back" src="ProjectManagementTool-UI/css/images1/images.jpg" Style="width:26px;height:28px;" onclick="goBack()" />
+<img id="home" src="ProjectManagementTool-UI/css/images1/download.jpg" Style="position:absolute;width:26px;height:32px;margin-left:50px" onclick="location.href='projectdashboard.jsp'" />
+</td>
+</tr>
+
+<tr>
+<td >
+<div id="projectdiv"><p id="projecttitle" Style="color:white">Project Add</p></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div id="add">
+<form id="form" method="post"  >
+<div >     
+     <fieldset  id="projectdetails" >
+     <legend><label><b>Project Details</b></label></legend>
+         <label id="projectcodel" >Project Code* </label>
+         <input id="projectcode" maxlength="10" name="projectcode" type="text" />
+<!--          <label id="epc"> Enter project code </label>	 -->
+<!-- 		 <br> -->
+ 		 <label id="projectnamel">Project Name* </label>
+  		 <input id="projectname" maxlength="50" name="projectname" type="text" />
+<!--   		 <label id="epn">Enter project name </label>	 -->
+<!--          <br> -->
+      	 <label id="startdatel" >Start Date* </label>
+		 <input id="startdate" maxlength="20" name="startdate" type="date" />
+<!-- 		 <label id="esd"> Select start date</label>	 -->
+<!--          <br> -->
+         <label id="enddatel" >End Date* </label>
+		 <input id="enddate" maxlength="20" name="enddate" type="date" />
+<!-- 		 <label id="eed"> Select end date</label> -->
+		 
+
+	     
+         <label  id="pdl">Project Description</label>
+         <textarea id="pd" name="pd" rows="4" cols="50"></textarea>
+     </fieldset>
 </div>
-<nav>
-    <ul>
-        <li><a href="/"><img src="/media/home.png" height="14px" /></a></li>
-        <li><a>Media</a>
-    <ul>
-        <li><a href="/media/videos">Videos</a></li>
-        <li><a href="/media/pictures">Pictures</a></li>
-        <li><a href="/media/music">Music</a></li>
-    </ul>
-        <li><a>Bullying</a>
-    <ul>
-        <li><a href="/bullying/harrassment">Harrassment</a></li>
-        <li><a href="/bullying/abuse">Abuse</a></li>
-        <li><a href="/bullying/mental">Mental Illness</a></li>
-        <li><a href="/bullying/dissability">Dissability</a></li>
-        <li><a href="/bullying/fun">For Fun</a></li>
-    </ul>
-    </li>
-        <li><a>About E3</a>
-    <ul>
-        <li><a href="/about/stories">Our Videos & Stories</a></li>
-        <li><a href="/about/presentations">Our Presentations</a></li>
-    </ul>
-    </li>
-        <li><a>About the Founders</a>
-    <ul>
-        <li><a href="/about/radio">Raider Radio</a></li>
-        <li><a href="/about/video">Video</a></li>
-        <li><a href="/about/info">Info</a></li>
-
-
-<?php
-    if(empty($_SESSION['logged_in']))
-    {
-
-    } else {
-        echo "<li><a href='#'>User</a><ul><li><a href='/upload'>Upload</a></li><li><a href='/logout.php'>Logout</a></li></ul></li>";
-    }
-    ?>
-    </ul>
-</nav>
-        </div>
-    </div>
+<div>
+     <fieldset id="developementdetails">
+     <legend><label><b>Developement Details</b></label></legend>
+     <label id="centerl">Center*</label>
+         <select id="center" name="center">
+         <option value="Select">Select</option>
+         </select>
+<!--          <label id="ec"> Select center</label> -->
+<!--          <br> -->
+         <label id="locationl">Location*</label>
+         <select id="location" name="location">
+         <option value="Select">Select</option>
+         </select>
+<!--          <label id="el"> Select location</label> -->
+<!--          <br> -->
+         <label id="contracttypel">Contract Type*</label>
+         <select id="contracttype" name="contracttype">
+         <option value="Select">Select</option>
+         </select>
+<!--          <label id="ect">Select contract type</label> -->
+<!--          <br> -->
+<!--          <label>Project Status*</label> -->
+<!--          <select id="projectstatus" name="projectstatus" > -->
+         
+<!--          </select> -->
+<!--           <label id="eps">Select project status as open</label> -->
+<!--          <br> -->
+<!--          <label>Customer Portfolio*</label> -->
+<!--          <select id="customerportfolio"  name="customerportfolio"> -->
+<!--          <option value="Select">Select</option> -->
+<!--          </select> -->
+<!--          <label id="ecp">Select customer portfolio</label> -->
+<!--          <label id="servicesl">Services Offered*</label> -->
+<!--          <select id="services" name="services"> -->
+<!--          <option value="Select">Select</option> -->
+<!--          </select> -->
+<!--          <label id="eso">Select services offered</label> -->
+<!--          <label id="techl">Technology*</label> -->
+<!--          <select id="technology" name="technology"> -->
+<!--          <option value="">Select</option> -->
+         
+<!--          </select> -->
+<!--          <label id="et">Select technology</label> -->
+<!--          <textarea id="tech" rows="4" cols="50" name="tech" > </textarea> -->
+<!--          <label id="effortl">Effort Required*</label> -->
+<!--          <input id="effortrequired" maxlength="50" name="effortrequired" type="text" /> -->
+<!--             <label id="mandays">Man-days</label> -->
+<!--          <label id="er">Enter effort required</label> -->
+      
+<!--          <label id="onsitel">Onsite*</label> -->
+<!--          <input id="onsite" name="onsite" maxlength="50" name="name" type="text" /> -->
+<!--          <label id="eon">Enter onsite effort</label> -->
+<!--          <label id="offshorel">offshore*</label> -->
+<!--          <input id="offshore" name="offshore" maxlength="50" name="name" type="text" /> -->
+<!--          <label id="eoff">Enter offshore effort</label> -->
+      </fieldset>
 </div>
-<div class="wrapper">
-    <div id="three-column" class="container"></div>	
+     
+
+
+
+</form>
+</div>
+</td>
+</tr>
+
+</tbody>
+</table> 	
+</body>
 </html>

@@ -17,6 +17,10 @@
 
 
 <style type="text/css">
+body
+{
+font-family:calibri;
+}
 #add 
  { 
 position:relative;
@@ -45,7 +49,6 @@ border: 1px solid black;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    min-width:600px
     
 }
 .modal-body {
@@ -91,7 +94,7 @@ margin:50px 0px 0px -8px;
 	}
 #title
 	{
-	color:white;font-bold:true;font-size:24px;margin-top:3px;margin-left:5px;
+	color:white;font-bold:true;font-size:24px;margin-top:3px;
 	text-align:center;
 	}
 	#lmanagerid
@@ -125,10 +128,10 @@ position:relative;
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-    width:380px;
+    width:710px;
     height:40px;
     margin-top:15px;
-    margin-left:810px;
+    margin-left:480px;
 }
 
 /* Style the buttons inside the tab */
@@ -168,8 +171,6 @@ div.tab button.active {
 
 </head>
 <body>
-	
-
 <%
 String  designation="";
 String designation1="";
@@ -227,17 +228,17 @@ String designation1="";
 <tbody>
 
 <tr>
-<td>
-<div>
-<h2 id="welcomeuser" align="left" style="margin-top: 40px;margin-left:0px;margin-bottom:20px;width:500px"> </h2>
-<button id="logout" style=" margin-left: 1060px;margin-top: 30px;margin-bottom:40px"><b>Log Out</b></button>
-</div>
-</td>
-</tr>
+	<td>
+	<div>
+	<h2 id="welcomeuser" align="left" style="margin-top: 40px;margin-left:0px;margin-bottom:20px"> </h2>
+	<button id="logout" style=" margin-left: 1060px;margin-top: 30px;margin-bottom:40px"><b>Log Out</b></button>
+	</div>
+	</td>
+	</tr>
 	 
 	
-<tr>
-<td>
+     <tr>
+	<td>
 
         <label id="managerid" ><b>Manager ID:</b></label>
 		<label id="managerid1" ></label>
@@ -245,32 +246,33 @@ String designation1="";
 		<label id="managername" style=""></label>
 		<label id="ldesignation" style=""><b>Designation: </b></label>
 		<label id="designation" style=""></label>
-</td>
-</tr>	
+    </tr>
+	</td>	
 	
 	
-<tr>
-<td>    
-<div class="tab">
-<button class="tablinks" onclick="location.href = 'managerviewemp.html';">Timesheet Approval</button>
-<button class="tablinks" onclick="location.href = 'cp.jsp';">Change Password</button>
-</div>
-</td>
-</tr> 
+	<tr>
+	<td>    
+	     <div class="tab">
+	  <button class="tablinks" onclick="location.href = 'managerviewemp.html';">Timesheet Approval</button>
+	   <button class="tablinks" onclick="location.href = 'timesheetview.html';">Timesheet View</button>
+	  <button class="tablinks" onclick="location.href = 'cp.jsp';">Change Password</button>
+	   <button class="tablinks" onclick="location.href = 'timesheetedit.html';">Timesheet (Enter/Edit)</button>
+	</div>
+	</td>
+	</tr> 
 	
-<tr>
-<td>
-<div id="nav">
-<p id="title">Project Manager Dashboard</p>
-</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div id="add">	
+	<tr>
+	<td>
+		<div id="nav">
+		<p id="title">Project Manager Dashboard</p></div>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	
+	<div id="add" >	
 		
-					<table id="example" style="width:1198px;" class="display">
+					<table id="example" style="width:1198px;font-family:Calibri;" class="display">
 				        <thead>
 				            <tr>
 				                <th align="center">SERIAL NO</th>
@@ -279,26 +281,28 @@ String designation1="";
 								<th align="center">LOCATION</th>
 				                <th align="center">START DATE</th>
 				                <th align="center">END DATE</th>
+				                 <th align="center">PROJECT MANAGER</th>
+				                 <th align="center">DELIVERY MANAGER</th>
 				                <th align="center">ESTIMATION EFFORT</th>
-				                <th align="center">CLIENT CODE</th>
 				                <th align="center">CLIENT NAME</th>
 				                <th align="center">NO OF EMPLOYEES</th>
-				                
+				                <th align="center">ACTION</th>
 				            </tr>  
 				        </thead>
 				               <tbody id="c1">
 				        </tbody>
 				    </table>
 	    			
-</div>		
-</td>	
-</tr>   
-
-
+		
+			
+			</td>	
+			</tr>   
+				</div>
 				
-<tr>
-<td> 
-<div id="myModal" class="modal">
+				<tr>
+				<td> 
+				    
+    <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
@@ -307,37 +311,29 @@ String designation1="";
    <label id="project_code1"></label>
     <label Style="margin-left:40px" id="project_name"><b>Project Name:</b></label>
     <label id="project_name1"></label>
-    
    
     <div id="nav1" Style="position:relative;margin-left:2px;width:90%;" ><p id="emptitle" >Employee Title</p></div>
 
-    <table id="popup" Style="position:relative;margin-top:8px;width:90%;margin-left:2px"  border="1">
+    <table Style="position:relative;margin-top:8px;width:90%"  border="1">
     <thead>
     <tr>
-    <th align="center">Serial No</th>
-    <th align="center">Employee Code</th>
-    <th align="center">Employee Name</th>
-    <th align="center">Percentage of Allocation</th>
-    <th align="center" >Start Time</th>
-    <th align="center">End Time</th>
-    </tr>
+    <th>Serial No<th>Employee Code</th><th>Employee Name</th><th>Percentage of Allocation</th><th>Start Time</th><th>End Time</th></tr>
     
     </thead>
     
     <tbody id="managerview">
- 
+    
+    </td>
+    </tr>
     
    
     </tbody>
     </table>
   </div>
-</div> 
-  </td>
- </tr>
 
+</div>
 
 <script>
-
 // Get the modal
 var modal = document.getElementById('myModal');
 

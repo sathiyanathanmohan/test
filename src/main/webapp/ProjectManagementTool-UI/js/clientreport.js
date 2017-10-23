@@ -108,8 +108,8 @@ $(window).load(function() {
 							console.log("User customer Details not found", msg);
 						}
 					});
+		
 		var url = "rest/webservices/report2?cus_code="+k;
-	
 		$.ajax({
 	        type: "GET",
 	        dataType:"json",
@@ -122,6 +122,7 @@ $(window).load(function() {
 
 					 if(data.object==''){
 						 $("#c1 tr").remove();
+						 alert('empty');
 						 $('#example').DataTable();
 					 }
 					 else
@@ -130,7 +131,7 @@ $(window).load(function() {
 						 var k=1;	
 						 
 						 for ( var i in object) {
-							 $("#c1").append('<tr  align="center"><td>'+k+'<td>'+object[i].project_code+'<td>'+object[i].project_name+'<td>'+object[i].location+'<td>'+object[i].count+'<td ><button  id="view" style="background-color:#0078D7;color:white;" onclick="show1('+object[i].id+')"  >view</button>');
+							 $("#c1").append('<tr  align="center"><td>'+k+'<td>'+object[i].project_code+'<td>'+object[i].project_name+'<td>'+object[i].location+'<td>'+object[i].count+'<td ><button  id="view" onclick="show1('+object[i].id+')"  >view</button>');
 							 k++;
 						 	}
 				
@@ -200,7 +201,7 @@ $(window).load(function() {
 			            for ( var i in object2) {
 		                
 			            	
-		         	$("#managerview").append('<tr align="center"><td>'+ k +'</td><td >'+object2[i].person_name.toUpperCase()+'</td><td  >'+object2[i].contact_number1+'<td>'+object2[i].contact_number2+'</td><td>'+object2[i].contact_mail+'</td></tr>');
+		         	$("#managerview").append('<tr align="center"><td>'+ k +'</td><td  >'+object2[i].person_name.toUpperCase()+'</td><td  >'+object2[i].contact_number1+'<td>'+object2[i].contact_number2+'</td><td>'+object2[i].contact_mail+'</td></tr>');
 			            				     
 		         	 k=k+1;	
 		              

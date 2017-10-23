@@ -56,7 +56,6 @@ textarea {
 #viewtimesheet        {margin-left:1%;background-color:#0078D7;color:white}
 #totalhoursl          {margin-left:8%;}
 #approvalstatusl      {margin-left:12%;}
-#projectmanagername   {margin-left:14%;} 
 
 /* table select {border:none} */
 </style>
@@ -64,7 +63,7 @@ textarea {
 <body>
 <script type="text/javascript">
 function goBack() {
-	window.history.back();
+   location.href='empdashboard.jsp';
 }
 </script>
 <table width="1000px" align="center" cellspacing="0" cellpadding="0">
@@ -75,7 +74,7 @@ function goBack() {
 <button  id="logout"><B>Log Out</B></button>
 <br>
 <img id="back" src="ProjectManagementTool-UI/css/images1/images.jpg" Style="width:26px;height:28px;margin-top:20px" onclick="goBack()" />
-<img id="home" src="ProjectManagementTool-UI/css/images1/download.jpg" Style="position:absolute;width:26px;height:32px;margin-left:30px;margin-top:20px" onclick="location.href='managerdashboard.jsp'" />
+<img id="home" src="ProjectManagementTool-UI/css/images1/download.jpg" Style="position:absolute;width:26px;height:32px;margin-left:30px;margin-top:20px" onclick="homeFunction();" />
 <br>
 <br>
 <label id="employeecode"></label>
@@ -94,7 +93,6 @@ function goBack() {
 <label id="approvalstatusl">Approval Status:<b></b></label>
    
 <label id="totalhoursl"><B>Hours:</B></label>  
-<label id="projectmanagername">Approval By:</label>
 
 </td>
 </tr>

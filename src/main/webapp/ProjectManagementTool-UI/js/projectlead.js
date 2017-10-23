@@ -31,7 +31,7 @@ $(window).load(function() {
 			$('#designation').append('<b>'+designation.toUpperCase()+'</b>');
 			$('#welcomeuser').append("<b>Welcome "+user2+" !!!</b>") ;
 			  var url = "rest/webservices/managerview?project_manager="+code;	
-			  $.ajax({ 
+			  $.ajax({
 			      type: "GET",
 			      dataType:"json",
 			      url: url,
@@ -53,7 +53,7 @@ $(window).load(function() {
 									 var pm=object[i].project_code;
 									 var pn=object[i].project_name;
 									 //alert('code'+pm);
-									 $("#c1").append('<tr  align="center"><td>'+k+'<td>'+object[i].project_code+'<td>'+object[i].project_name+'<td align="center">'+object[i].location+'<td>'+object[i].start_date+'<td>'+object[i].end_date+'<td>'+object[i].projectmanager_name+'</td>+<td>'+object[i].deliverymanager_name+'</td><td>'+object[i].effort+'<td>'+object[i].customer_code+'<td>'+object[i].company_name+'<td><a id="view" onclick="show(\'' + pn+ '\',\''+pm+'\');" href="javascript:void(0);">'+object[i].count+'</a>');
+									 $("#c1").append('<tr  align="center"><td>'+k+'<td>'+object[i].project_code+'<td>'+object[i].project_name+'<td align="center">'+object[i].location+'<td>'+object[i].start_date+'<td>'+object[i].end_date+'<td>'+object[i].effort+'<td>'+object[i].customer_code+'<td>'+object[i].company_name+'<td><a id="view" onclick="show(\'' + pn+ '\',\''+pm+'\');" href="javascript:void(0);">'+object[i].count+'</a>');
 									 k++;
 								 	}
 						
@@ -66,13 +66,12 @@ $(window).load(function() {
 					});
 		}
 		
-	}    
+	}
 	else{
 		window.location.href='index.html';
 	}
 });
 });
-
 
 	    
 	

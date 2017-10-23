@@ -6,40 +6,40 @@ import java.util.Date;
 
 public class ProjectObject {
   
-	int id;
-	String project_code;
+	public	int id;
+	public	String project_code;
 	
-	String project_name="";
-	String project_description;
-    Date start_date;
-	Date end_date;
-	String center;
-	String location;
-	String contract_type;
-	String project_status;
-	String technology;
-	String customer_portfolio;
-	int customer_id;
-	String services_offered;
-	 String offshore_effort;
-	String total_effort;
-	String onsite_effort;
-	String project_manager;
-	String delivery_manger;
-	String onsite_cooedinator="";
-	String manager_remark;
-	String general_remark;
-	String filename="";
+	public	String project_name="";
+	public	String project_description;
+	public    Date start_date;
+	public	Date end_date;
+	public	String center;
+	public	String location;
+	public	String contract_type;
+	public	String project_status;
+	public	String technology;
+	public	String customer_portfolio;
+	public	int customer_id;
+	public	String services_offered;
+	public	 String offshore_effort;
+	public	String total_effort;
+	public	String onsite_effort;
+	public	String project_manager;
+	public	String delivery_manger;
+	public	String onsite_cooedinator="";
+	public	String manager_remark;
+	public	String general_remark;
+	public	String filename="";
 	
-	InputStream file;
+	public	InputStream file;
 
-	String filedescription=" ";
-	Date created_date;
-	String created_by;
-	Date updated_date;
-	String updated_by;
-	int  status=1;
-	String remark;
+	public String filedescription=" ";
+	public	Date created_date;
+	public	String created_by;
+	public	Date updated_date;
+	public	String updated_by;
+	public	int  status=1;
+	public	String remark;
 	
 	
 	public void setid(int id)

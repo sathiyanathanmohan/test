@@ -25,7 +25,7 @@ $(window).load(function() {
 		 $('#approved_by').val(emp_code);
 	 	//	alert(emp_code); 
 		 
-//		alert(designation); 
+//		alert(designation);
 		if(designation=='admin')
 			{
 			var url = "rest/webservices/timesheetapproval?project_manager="+emp_code;
@@ -78,6 +78,7 @@ $(window).load(function() {
 						}
 					});
 			
+				
 			
 			}
 
@@ -89,12 +90,6 @@ $(window).load(function() {
 	});
 });
 	 		
-
-
-
-
-
-
 
 
 

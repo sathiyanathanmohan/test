@@ -128,10 +128,10 @@ position:relative;
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-    width:560px;
+    width:710px;
     height:40px;
     margin-top:15px;
-    margin-left:630px;
+    margin-left:480px;
 }
 
 /* Style the buttons inside the tab */
@@ -254,6 +254,7 @@ String designation1="";
 	<td>    
 	     <div class="tab">
 	  <button class="tablinks" onclick="location.href = 'managerviewemp.html';">Timesheet Approval</button>
+	   <button class="tablinks" onclick="location.href = 'timesheetview.html';">Timesheet View</button>
 	  <button class="tablinks" onclick="location.href = 'cp.jsp';">Change Password</button>
 	   <button class="tablinks" onclick="location.href = 'timesheetedit.html';">Timesheet (Enter/Edit)</button>
 	</div>
@@ -271,7 +272,7 @@ String designation1="";
 	
 	<div id="add" >	
 		
-					<table id="example" style="width:1198px;font-family:calibri;" class="display">
+					<table id="example" style="width:1198px;font-family:Calibri;" class="display">
 				        <thead>
 				            <tr>
 				                <th align="center">SERIAL NO</th>
@@ -280,19 +281,15 @@ String designation1="";
 								<th align="center">LOCATION</th>
 				                <th align="center">START DATE</th>
 				                <th align="center">END DATE</th>
-<!-- 				                <th align="center">PROJECT MANAGER</th> -->
+				                 <th align="center">PROJECT MANAGER</th>
 				                 <th align="center">DELIVERY MANAGER</th>
 				                <th align="center">ESTIMATION EFFORT</th>
-				                
 				                <th align="center">CLIENT NAME</th>
 				                <th align="center">NO OF EMPLOYEES</th>
-				                <th align="center">ALLOCATE</th>
-				                
-				                
-				                
+				                <th align="center">ACTION</th>
 				            </tr>  
-				        </thead >
-				               <tbody  id="c1">
+				        </thead>
+				               <tbody id="c1">
 				        </tbody>
 				    </table>
 	    			

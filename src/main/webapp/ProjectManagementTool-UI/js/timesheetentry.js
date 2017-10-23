@@ -48,7 +48,7 @@ var emp_code=checkCookie2(decodeURIComponent(document.cookie));
 					});
 			
 		 
-	 		var url = "rest/webservices/projectmanagername?emp_code="+emp_code;
+	 		var url = "rest/webservices/getemployee?emp_code="+emp_code;
 
 	 		$.ajax({
 	 		        type: "GET",
@@ -64,9 +64,8 @@ var emp_code=checkCookie2(decodeURIComponent(document.cookie));
                             $("#employee_name").val(object[i].first_name);
                             
 	 		            	$("#employeecode").append('<b>EmployeeCode:'+object[i].emp_code.toUpperCase()+'</B>');
-	 		            	$("#employeename").append('<b>EmployeeName:'+object[i].emp_name.toUpperCase()+'</B>');
+	 		            	$("#employeename").append('<b>EmployeeName:'+object[i].first_name.toUpperCase()+'</B>');
 	 		            	$("#designation").append('<b>Designation:'+object[i].designation.toUpperCase()+'</B>');
-	 		            	$('#projectmanagername').append('<b>Approved By:'+object[i].manager_name.toUpperCase()+'</B>');
 	 		            }
 	 					},
 	 					error : function(msg) {
@@ -74,27 +73,7 @@ var emp_code=checkCookie2(decodeURIComponent(document.cookie));
 	 					}
 	 				});
 	 		
-//	 		var url = "rest/webservices/projectmanagername?first_name="+first_name;
-//	 		$.ajax({
-//	 		        type: "GET",
-//	 		        dataType:"json",
-//	 		        url: url,
-//	 		        success: function(data) {
-//	 		            console.log("response:" + data);
-//	 						
-//	 						var object=data.object;
-//	 						
-//	 		            for ( var i in object) {
-//                            
-//                            $("#projectmanagername").append('<b>'+object[i].first_name.toUpperCase()+'</B>');
-//	 		            	
-//	 		            }
-//	 					},
-//	 					error : function(msg) {
-//	 					
-//	 					}
-//	 				});
-//	 		
+	 		
 	 		var url = "rest/webservices/allallocationemp?emp_code="+emp_code;
 
 	 		$.ajax({
