@@ -26,16 +26,23 @@ try{
 	Field[] newfields = newobject.getClass().getDeclaredFields();
 
 		Field[] oldfields = oldobject.getClass().getDeclaredFields();
+		System.out.println( newfields.length+" "+oldfields.length);
 		int m=1;
 		for(int j = 0; j < newfields.length; j++) {
 			String newname = newfields[j].getName();
 			Object newvalue = newfields[j].get(newobject);
+//			System.out.println(newname+newvalue);
 			for (int i = 0; i < oldfields.length; i++) {
 				String oldname = oldfields[i].getName();
 				Object oldvalue =  oldfields[i].get(oldobject);
+//				System.out.println(oldname+oldvalue);
 				if(newname.equals(oldname))
 				{
 
+					
+					
+					
+					
 					if(oldvalue.toString().equals(newvalue.toString())){		      
 
 					}else{
@@ -95,6 +102,7 @@ try{
 {
 //	e.printStackTrace();
 	if(exec){
+		e.printStackTrace();
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		Calendar cal = Calendar.getInstance();
 		String time=dateFormat.format(cal.getTime());

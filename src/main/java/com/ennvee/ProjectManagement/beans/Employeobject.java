@@ -3,22 +3,22 @@ package com.ennvee.ProjectManagement.beans;
 import java.util.Date;
 
 public class Employeobject {
-	int id;
-	String emp_code;
-	String first_name;
-	String last_name;
-	String location;
-	String designation;
-	long contact_phone1;
-
-	long contact_phone2;
-String emp_mail;
-    Date created_date;
-	String created_by;
-	Date updated_date;
-	String updated_by=null;
-	int  status=1;
-	String remark;
+	public	int id;
+	public	String emp_code="";
+	public	String designation="";
+	public String emp_mail="";
+	public	String first_name="";
+	public	String last_name="";
+	public	String location="";
+	public	String created_by="";
+	public	String updated_by="";
+	public 	int  status=1;
+	public	String remark="";
+	public   Date created_date=null;
+	public Date updated_date=null;
+	public	long contact_phone1;
+	public	long contact_phone2;
+	
 	public void setid(int id)
 	{
 		  this.id=id;

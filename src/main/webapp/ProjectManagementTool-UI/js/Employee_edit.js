@@ -6,6 +6,7 @@ $(document).ready(function(){
 $( window ).load(function() {	
 	var user2= checkCookie(decodeURIComponent(document.cookie));
 	var designation=checkCookie3(decodeURIComponent(document.cookie));
+	var login_emp_code=checkCookie2(decodeURIComponent(document.cookie));
 	if(user2!=null){
 		if(designation!='project_manager'&&designation!='admin')
 		{
@@ -20,7 +21,7 @@ $( window ).load(function() {
 		else{
 		 $('#welcomeuser').append("<b>Welcome  "+user2+" !!!</b>") ;
 		 
-		 
+		 $('#login_emp_code').val(login_emp_code);	
 		 
 		 
 		 

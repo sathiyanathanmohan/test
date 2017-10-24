@@ -10,6 +10,8 @@ $( window ).load(function() {
 	user2= checkCookie(decodeURIComponent(document.cookie));
 	designation=checkCookie3(decodeURIComponent(document.cookie));
 	emp_code=checkCookie2(decodeURIComponent(document.cookie));
+	var login_emp_code=checkCookie2(decodeURIComponent(document.cookie));
+
 	if(user2!=null){
 		if( designation!='admin'&&designation!='project_manager')
 		{
@@ -19,7 +21,7 @@ $( window ).load(function() {
 			$('#welcomeuser').append("<b>Welcome "+user2+" !!!</b>") ;
 
 
-
+			 $('#login_emp_code').val(login_emp_code);
 			var m,n;	 
 			var	y ;
 			function getParams(){
@@ -535,7 +537,7 @@ function save(){
 			console.log("response:" + data.object);
 
 			if(data.status==0){
-				alert(designation);
+//				alert(designation);
 				var branch_code='';
 				if(designation=='project_manager')
 				{

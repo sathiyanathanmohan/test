@@ -28,6 +28,7 @@ import java.nio.file.Paths;
 
 
 
+
 import javax.tools.JavaFileObject;
 //import javax.servlet.http.Part;
 import javax.ws.rs.Consumes;
@@ -43,6 +44,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.StreamingOutput;
 //import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 //import org.glassfish.jersey.media.multipart.FormDataParam;
+
 
 
 
@@ -79,6 +81,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+import com.sun.tools.internal.ws.processor.model.Model;
 
 
 @Path("/webservices")
@@ -461,8 +464,8 @@ public String create_employee(
 		@FormParam("emp_code") String emp_code,
 		@FormParam("emp_name") String emp_name,
 		@FormParam("emp_mail") String emp_mail,
-		@FormParam("emp_design") String emp_design	
-		
+		@FormParam("emp_design") String emp_design,
+		@FormParam("login_emp_code") String updated_by
 		)
 
 
@@ -481,7 +484,7 @@ public String create_employee(
 	emp.setdesignation(emp_design);
 	emp.setfirst_name(emp_name);
 	emp.setemp_mail(emp_mail);
-	
+	emp.setupdated_by(updated_by);
 	emp.setstatus(0);
 emp.setremark("");
 	
@@ -502,6 +505,7 @@ emp.setremark("");
 		StatusObject statusObject=new StatusObject();
 		statusObject=data.create_employee(emp);
 		status = statusObject.getStatusCode();
+		
 		errorMessage = statusObject.getStatusMessage();
 		jsonResult.addProperty("status", status);
 		jsonResult.addProperty("errorMessage", errorMessage);
@@ -530,7 +534,8 @@ public String edit_employee(
 		@FormParam("emp_name") String emp_name,
 		@FormParam("emp_mail") String emp_mail,
 		@FormParam("emp_design") String emp_design,
-		@FormParam("emp_status") int emp_status
+		@FormParam("emp_status") int emp_status,
+		@FormParam("login_emp_code") String updated_by
 		
 		)
 
@@ -550,9 +555,11 @@ public String edit_employee(
 	emp.setdesignation(emp_design);
 	emp.setfirst_name(emp_name);
 	emp.setemp_mail(emp_mail);
-	
+	emp.setupdated_by(updated_by);
 	emp.setstatus(emp_status);
 emp.setremark("");
+Models newobject=new Models();
+newobject.setemployeeobject(emp);
 	
 	
 	}catch (Exception e)
@@ -571,6 +578,15 @@ emp.setremark("");
 		StatusObject statusObject=new StatusObject();
 		statusObject=data.edit_employee(emp);
 		status = statusObject.getStatusCode();
+		if(status==0)
+		{
+			
+		ReportLog log =new ReportLog();
+		String updated_place="Employee";
+		String updated_id=String.valueOf(row_id);
+		String logg=log.log(Models.getemployeeObject(),Models.getoldemployeeObject(),updated_by,updated_place,updated_id);	
+	
+		}
 		errorMessage = statusObject.getStatusMessage();
 		jsonResult.addProperty("status", status);
 		jsonResult.addProperty("errorMessage", errorMessage);
@@ -600,7 +616,8 @@ public String project_allocation(@FormParam("empid") String emp_code,
 		@FormParam("startdate") String start_date,
 		@FormParam("enddate")  String end_date,
 		@FormParam("manager_id") String project_manager,
-		@FormParam("location") String location)
+		@FormParam("location") String location,
+		@FormParam("login_emp_code") String updated_by)
 {
 //	System.out.println(emp_name+location+project_manager);
 	int status = -1;
@@ -631,11 +648,11 @@ public String project_allocation(@FormParam("empid") String emp_code,
 	allocation.setend_date(end_date1);
 ////	allocation.setcreated_date(null);
 ////	allocation.setcreated_by("");
-////	allocation.setupdated_date(null);
-	allocation.setupdated_by("");
+//	allocation.setupdated_date(null);
+	allocation.setupdated_by(updated_by);
 	allocation.setstatus(0);
 	allocation.setremark("");
-	
+
 	
 	}catch (Exception e)
 	{
@@ -688,7 +705,7 @@ public String update_allocation(
 		@FormParam("eenddate")  String end_date,
 		@FormParam("emanager_id") String project_manager,
 		@FormParam("elocation") String location,
-		@FormParam("id") int id)
+		@FormParam("id") int id,@FormParam("login_emp_code") String updated_by)
 {
 	//System.out.println(emp_name+location+project_manager+start_date+end_date+location+emp_code+percentage_allocation);
 	int status = -1;
@@ -719,12 +736,14 @@ public String update_allocation(
 	allocation.setend_date(end_date1);
 ////	allocation.setcreated_date(null);
 ////	allocation.setcreated_by("");
-////	allocation.setupdated_date(null);
-	allocation.setupdated_by("");
+//	allocation.setupdated_date(null);
+	allocation.setupdated_by(updated_by);
 	allocation.setstatus(0);
 	allocation.setremark("");
 	
+	Models newobject=new Models();
 	
+	newobject.setallocationobject(allocation);
 	}catch (Exception e)
 	{
 		System.out.println("Error set Allocation error");
@@ -741,6 +760,15 @@ public String update_allocation(
 		StatusObject statusObject=new StatusObject();
 		statusObject=data.update_allocation(allocation);
 		status = statusObject.getStatusCode();
+		if(status==0)
+		{
+			
+		ReportLog log =new ReportLog();
+		String updated_place="Employee";
+		String updated_id=String.valueOf(id);
+		String logg=log.log(Models.getallocationObject(),Models.getoldallocationObject(),updated_by,updated_place,updated_id);	
+	
+		}
 		errorMessage = statusObject.getStatusMessage();
 		jsonResult.addProperty("status", status);
 		jsonResult.addProperty("errorMessage", errorMessage);
@@ -2598,6 +2626,76 @@ return jsonResult.toString();
 	
 
 }
+
+
+@POST
+@Path("/delete_contect_person")
+@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+@Produces(MediaType.APPLICATION_JSON)
+public String delete_contect_person( @QueryParam("id") int row_id)
+{
+
+	
+
+	 
+	int status = -1;
+	String errorMessage = " ";
+	JsonObject jsonResult = new JsonObject();
+	  CustomerObject customer=new CustomerObject();
+	try{
+			
+	
+	
+	
+	
+	
+	}
+	catch(Exception e)
+	{
+		System.out.println("Exception while all customer data is set in Object: "
+				+ e.getMessage());
+		jsonResult.addProperty("status",status );
+		jsonResult.addProperty("errorMessage", "User Data not inserted:" + e.getMessage());
+		jsonResult.addProperty("object", " ");
+		return jsonResult.toString();
+
+	}
+	try {
+	DataHandler datahandler=new DataHandler();
+	StatusObject sObject=new StatusObject();
+	 sObject = datahandler.delete_contect_person(row_id);
+
+	status = sObject.getStatusCode();
+	errorMessage = sObject.getStatusMessage();
+	jsonResult.addProperty("status", status);
+	
+	jsonResult.addProperty("errorMessage", errorMessage);
+	jsonResult.addProperty("id",sObject.getprojectid() );
+	System.out.println("Result to be returned:" + jsonResult);
+
+} catch (Exception e) {
+	jsonResult.addProperty("status", status);
+	jsonResult.addProperty("errorMessage", e.getMessage());
+	jsonResult.addProperty("object", "");
+	System.out.println("Result to be returned:" + jsonResult);
+}
+	
+return jsonResult.toString();
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @POST

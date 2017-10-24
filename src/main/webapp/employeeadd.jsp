@@ -147,7 +147,7 @@ function goBack() {
 
 
 
-
+ <input type="hidden" value=" " name="login_emp_code" id="login_emp_code"> 
 
 
 

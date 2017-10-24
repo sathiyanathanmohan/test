@@ -11,17 +11,17 @@ public class Models {
 
 	public static ProjectObject project;
 
-	public Employeobject employee;
+	public static Employeobject employee;
 
-	public Allocationobject allocation;
+	public static Allocationobject allocation;
 
 	public LoginObject oldlogin;
 
 	public static ProjectObject oldproject;
 
-	public Employeobject  oldemployee;
+	public  static Employeobject  oldemployee;
 
-	public Allocationobject oldallocation;
+	public static Allocationobject oldallocation;
 	public	String log_emp_code="";
 
 	
@@ -63,7 +63,7 @@ public void setemployeeobject(Employeobject employee)
 	this.employee=employee;
 }
 
-public Employeobject getemployeeObject()
+public static Employeobject getemployeeObject()
 {
 	return employee;
 }
@@ -73,7 +73,7 @@ public void setallocationobject(Allocationobject allocation)
 	this.allocation=allocation;
 }
 
-public Allocationobject getallocationObject()
+public static Allocationobject getallocationObject()
 {
 	return allocation;
 }
@@ -98,12 +98,12 @@ public static ProjectObject getoldprojectObject()
 	return oldproject;
 }
 
-public void setoldemployeeobject(Employeobject oldemployee)
+public static void setoldemployeeobject(Employeobject oldemployee1)
 {
-	this.oldemployee=oldemployee;
+	oldemployee=oldemployee1;
 }
 
-public Employeobject getoldemployeeObject()
+public static Employeobject getoldemployeeObject()
 {
 	return oldemployee;
 }
@@ -113,7 +113,7 @@ public void setoldallocationobject(Allocationobject oldallocation)
 	this.oldallocation=oldallocation;
 }
 
-public Allocationobject getoldallocationObject()
+public static Allocationobject getoldallocationObject()
 {
 	return oldallocation;
 }

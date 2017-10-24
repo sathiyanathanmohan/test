@@ -4,12 +4,11 @@ import java.util.Date;
 
 public class Allocationobject {
 	int id;
-	String emp_code;
-	String project_code;
-	String emp_name;
+	String emp_code="";
+	String project_code="";
+	String emp_name="";
 	int percentage_allocation=0;
-	String location;
-	String project_manager;
+		String project_manager="";
 	  Date start_date;
 	    Date end_date;
 	Date created_date;
@@ -18,7 +17,7 @@ public class Allocationobject {
 	String updated_by;
 	int  status=1;
 	String remark;
-
+	String location="";
 	
 	
 	public void setid(int id)

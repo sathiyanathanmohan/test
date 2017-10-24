@@ -92,7 +92,7 @@ $(window).load(function() {
 												   for ( var i in object) {
 								        
 								      
-													   $("#tbody").append('<tr id="'+count+'" onclick="myFunction1(this);"> <td width="14%"><input type="text" id="personname'+i+'" name="personname"> <input type="hidden" value="" name="conatctpersonid" id="conatctpersonid'+i+'">  </td><td width="23%"><input type="text" style="width:98.5%" id="personmail'+i+'" name="personmail"> </td><td width="13%"> <input type="text" id="personno1'+i+'" name="personno1"></td> <td width="13%"> <input type="text" id="personno2'+i+'" name="personno2"></td><td width="3%" ><img src="ProjectManagementTool-UI/css/images1/close.jpg" Style="width:20px;height:20px" onclick="myFunction2('+count+')" id="remove"/></td></tr>');	    
+													   $("#tbody").append('<tr id="'+count+'" onclick="myFunction1(this);"> <td width="14%"><input type="hidden" value="0" id="alredaystatus'+count+'"><input type="text" id="personname'+i+'" name="personname"> <input type="hidden" value="" name="conatctpersonid" id="conatctpersonid'+i+'">  </td><td width="23%"><input type="text" style="width:98.5%" id="personmail'+i+'" name="personmail"> </td><td width="13%"> <input type="text" id="personno1'+i+'" name="personno1"></td> <td width="13%"> <input type="text" id="personno2'+i+'" name="personno2"></td><td width="3%" ><img src="ProjectManagementTool-UI/css/images1/close.jpg" Style="width:20px;height:20px" onclick="myFunction2('+count+')" id="remove"/></td></tr>');	    
 													
 													  
 													
@@ -153,7 +153,7 @@ $().ready(function(event){
 	$('#addrow').click(function() {
 		
 		
-		$("#tbody").append('<tr id="'+count+'" onclick="myFunction1(this);"> <td width="14%"><input type="text" id="personname" name="personname" > <input type="hidden" value="2" name="conatctpersonid" id="conatctpersonid">  </td><td width="23%"><input type="text"  style="width:98.5%" id="personmail" name="personmail"> </td><td width="13%"> <input type="text"  id="personno1" name="personno1"></td> <td width="13%"> <input type="text"  id="personno2" name="personno2"></td><td width="3%" ><img src="ProjectManagementTool-UI/css/images1/close.jpg" Style="width:20px;height:20px" onclick="myFunction2('+count+')" id="remove"/></td></tr>');	    
+		$("#tbody").append('<tr id="'+count+'" onclick="myFunction1(this);"> <td width="14%"><input type="hidden" value="1" id="alredaystatus'+count+'"><input type="text" id="personname" name="personname" > <input type="hidden" value="2" name="conatctpersonid" id="conatctpersonid">  </td><td width="23%"><input type="text"  style="width:98.5%" id="personmail" name="personmail"> </td><td width="13%"> <input type="text"  id="personno1" name="personno1"></td> <td width="13%"> <input type="text"  id="personno2" name="personno2"></td><td width="3%" ><img src="ProjectManagementTool-UI/css/images1/close.jpg" Style="width:20px;height:20px" onclick="myFunction2('+count+')" id="remove"/></td></tr>');	    
 		count=count+1;
 	});
 });
@@ -167,10 +167,57 @@ function myFunction1(x) {
     
 }
 function myFunction2(x) {
-	var k='#'+x;
-   $(k).remove();
-  //  document.getElementById("tbody").deleteRow(row);
-	// document.getElementById("passwordl").rows[row].remove;
+	
+	if (confirm('Are you sure you want to delete this  from the database?')) {
+	    // Save it!
+	 
+	var sss=x-1;
+	var gg='#conatctpersonid'+sss;
+	var already='#alredaystatus'+x;
+	
+	var alredaystatus=$(already).val();
+	  var row_id=$(gg).val();
+	 
+	  if(alredaystatus==0){
+	
+	   var url6 = "rest/webservices/delete_contect_person?id="+row_id;
+	   $.ajax({
+			url: url6,
+			type: 'POST',
+			success: function (data) {
+				console.log("response:" + data);
+    
+				if(data.status==0)
+				{
+    	 
+					var k='#'+x;
+					   $(k).remove();	
+				}
+
+			},error : function(msg) {
+				event.preventDefault();
+    			console.log("User Contact persons details not found", msg);
+//    				alert("Opps! Sorry Contact Person Update Fail");	
+    		}
+});
+	
+ 
+	  }else{
+		  
+		  if(alredaystatus==1){
+				var k='#'+x;
+				   $(k).remove();
+		  }
+		  
+	  }
+	  
+	  
+	  
+	}
+	  else {
+		    // Do nothing!
+		}
+
 }
 
 var valid1=0;
@@ -191,6 +238,7 @@ $().ready(function(){
 		window.location.href='clientdashboard.jsp';
 		});
 	$("#save").click(function (event){	
+		alert("dcsad");
 		var clientcode=$('#clientcode').val().trim();
 		var clientname=$('#clientname').val().trim();
 		var zipcode=$('#zipcode').val().trim();
@@ -317,62 +365,62 @@ else
 			}
 		
 				
-				var f=$("#form").serializeArray();
-				$.each(f, function(i, field){
-					
-					if(field.name==="personname")
-						{
-						if(field.value=='')
-							{
-							valid8=valid8+0;
-							alert('Enter contact person name');
-							}
-						else
-							{
-							valid8=valid8+1;
-							}
-						}
-					if(field.name==="personmail")
-						{
-						var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
-						if(field.value=='')
-							{
-							valid9=valid9+0;
-							alert('Enter contact person email ID');
-							}
-						
-						else if(filter.test((field.value)))
-							{
-							valid9=valid9+1;
-							}
-						else
-							{
-							valid9=valid9+0;
-							alert('invalid emailId');
-							}
-						}
-					if(field.name==="personno1")
-					{
-					if(field.value=='')
-						{
-						valid10=valid10+0;
-						alert('Enter contact number');
-						}
-					
-					else if(/^\d+$/.test(+field.value))
-						{
-						valid10=valid10+1;
-						}
-					else
-						{
-						valid10=valid10+0;
-						alert('invalid contact number');
-						}
-					}
-					
-		        });
+//				var f=$("#form").serializeArray();
+//				$.each(f, function(i, field){
+//					
+//					if(field.name==="personname")
+//						{
+//						if(field.value=='')
+//							{
+//							valid8=valid8+0;
+//							alert('Enter contact person name');
+//							}
+//						else
+//							{
+//							valid8=valid8+1;
+//							}
+//						}
+//					if(field.name==="personmail")
+//						{
+//						var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+//						if(field.value=='')
+//							{
+//							valid9=valid9+0;
+//							alert('Enter contact person email ID');
+//							}
+//						
+//						else if(filter.test((field.value)))
+//							{
+//							valid9=valid9+1;
+//							}
+//						else
+//							{
+//							valid9=valid9+0;
+//							alert('invalid emailId');
+//							}
+//						}
+//					if(field.name==="personno1")
+//					{
+//					if(field.value=='')
+//						{
+//						valid10=valid10+0;
+//						alert('Enter contact number');
+//						}
+//					
+//					else if(/^\d+$/.test(+field.value))
+//						{
+//						valid10=valid10+1;
+//						}
+//					else
+//						{
+//						valid10=valid10+0;
+//						alert('invalid contact number');
+//						}
+//					}
+//					
+//		        });
 //alert('valid1'+valid1+'valid2'+valid2+'valid3'+valid3+'valid4'+valid4+'valid5'+valid5+'valid6'+valid6+'valid7'+valid7+'valid8'+valid8+'valid9'+valid9+'valid10'+valid10);
-		if(clientcode!=''&&address1!=''&&valid1==1&&valid2==1&&valid3==1&&valid4==1&&valid5==1&&valid6==1&&valid7==1&&valid8==(count-1)&&valid9==(count-1)&&valid10==(count-1))
+		if(clientcode!=''&&address1!=''&&valid1==1&&valid2==1&&valid3==1&&valid4==1&&valid5==1&&valid6==1&&valid7==1/*&&valid8==(count-1)&&valid9==(count-1)&&valid10==(count-1)*/)
 			{
 			var url6 = "rest/webservices/editcustomerdetails";
 			var myform = document.getElementById("form");
