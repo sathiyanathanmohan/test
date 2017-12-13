@@ -1,149 +1,286 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="ProjectManagementTool-UI/js/Plugins/jquery-3.2.1-jquery.min.js"></script>
-  <script src="ProjectManagementTool-UI/js/Plugins/jquery-1.10.2.js"></script>
-   <script type="text/javascript" src=" ProjectManagementTool-UI/js/Plugins/jqueryui-1.10.3-jquery-ui.js"></script>
-   
-<script  src="ProjectManagementTool-UI/js/cookies.js"></script>
+<script
+	src="ProjectManagementTool-UI/js/Plugins/jquery-3.2.1-jquery.min.js"></script>
+<script src="ProjectManagementTool-UI/js/Plugins/jquery-1.10.2.js"></script>
+<script type="text/javascript"
+	src=" ProjectManagementTool-UI/js/Plugins/jqueryui-1.10.3-jquery-ui.js"></script>
+
+<script src="ProjectManagementTool-UI/js/cookies.js"></script>
 
 <script src="ProjectManagementTool-UI/js/createcustomer.js"></script>
- 
+
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <style>
-#welcomeuser      {position:relative;left:300px;font-size:20px}
-#logout           {position:relative;left:890px;background-color:#0078D7;color:white} 
-#customerdiv      {position:relative;left:300px;top:22px;width:790px;height:25px;background-color:#0078D7}
-#customertitle    {position:relative;text-align:center;font-size:18px;top:4px;color:white}
-#overalldiv       {margin-left:300px;margin-top:23px;width:788px}
-#clientcodel      {margin-left:11px;margin-top:25px}
-#clientcode       {margin-left:47px;margin-top:10px;width:150px}
-#clientnamel      {margin-left:125px;margin-top:40px}
-#clientname       {margin-left:28px;margin-top:10px;width:150px}
-#websitel         {margin-left:10px}
-#website          {margin-left:8px;width:150px}
-#emaill           {margin-left:125px}
-#email            {margin-left:15px;width:150px}
-#phonenol         {margin-left:10px}
-#phoneno          {margin-left:28px;width:150px}
-#address1l        {margin-left:10px}
-#address1         {margin-left:28px;width:150px}
-#address2l        {margin-left:125px}
-#address2         {margin-left:22px;width:150px}
-#cityl            {margin-left:10px}
-#city             {margin-left:99px;width:150px}
-#statel           {margin-left:124px}
-#state			  {margin-left:82px;width:150px}
-#countryl         {margin-left:10px}
-#country           {margin-left:75px;width:150px}
-#zipcodel          {margin-left:125px}
-#zipcode           {margin-left:53px;width:150px}
-table, th,td {border: 1px solid black;border-collapse: collapse;}
-#save              {margin-left:270px;margin-top:8px;width:80px;height:20px;background-color:#0078D7;color:white}
-#cancel            {margin-left:70px;margin-top:8px;width:80px;height:20px;background-color:#0078D7;color:white}
+#welcomeuser {
+	position: relative;
+	left: 300px;
+	font-size: 20px
+}
+
+#logout {
+	position: relative;
+	left: 890px;
+	background-color: #0078D7;
+	color: white
+}
+
+#customerdiv {
+	position: relative;
+	left: 300px;
+	top: 22px;
+	width: 790px;
+	height: 25px;
+	background-color: #0078D7
+}
+
+#customertitle {
+	position: relative;
+	text-align: center;
+	font-size: 18px;
+	top: 4px;
+	color: white
+}
+
+#overalldiv {
+	margin-left: 300px;
+	margin-top: 23px;
+	width: 788px
+}
+
+#clientcodel {
+	margin-left: 11px;
+	margin-top: 25px
+}
+
+#clientcode {
+	margin-left: 47px;
+	margin-top: 10px;
+	width: 150px
+}
+
+#clientnamel {
+	margin-left: 125px;
+	margin-top: 40px
+}
+
+#clientname {
+	margin-left: 28px;
+	margin-top: 10px;
+	width: 150px
+}
+
+#websitel {
+	margin-left: 10px
+}
+
+#website {
+	margin-left: 8px;
+	width: 150px
+}
+
+#emaill {
+	margin-left: 125px
+}
+
+#email {
+	margin-left: 15px;
+	width: 150px
+}
+
+#phonenol {
+	margin-left: 10px
+}
+
+#phoneno {
+	margin-left: 28px;
+	width: 150px
+}
+
+#address1l {
+	margin-left: 10px
+}
+
+#address1 {
+	margin-left: 28px;
+	width: 150px
+}
+
+#address2l {
+	margin-left: 125px
+}
+
+#address2 {
+	margin-left: 22px;
+	width: 150px
+}
+
+#cityl {
+	margin-left: 10px
+}
+
+#city {
+	margin-left: 99px;
+	width: 150px
+}
+
+#statel {
+	margin-left: 124px
+}
+
+#state {
+	margin-left: 82px;
+	width: 150px
+}
+
+#countryl {
+	margin-left: 10px
+}
+
+#country {
+	margin-left: 75px;
+	width: 150px
+}
+
+#zipcodel {
+	margin-left: 125px
+}
+
+#zipcode {
+	margin-left: 53px;
+	width: 150px
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+#save {
+	margin-left: 270px;
+	margin-top: 8px;
+	width: 80px;
+	height: 20px;
+	background-color: #0078D7;
+	color: white
+}
+
+#cancel {
+	margin-left: 70px;
+	margin-top: 8px;
+	width: 80px;
+	height: 20px;
+	background-color: #0078D7;
+	color: white
+}
 </style>
 </head>
 <body>
 
-<label id="welcomeuser"><b></b></label>
-<button  id="logout"><B>Log Out</B></button>
+	<label id="welcomeuser"><b></b></label>
+	<button id="logout">
+		<B>Log Out</B>
+	</button>
 
 
-<div id="customerdiv" ><p id="customertitle">CUSTOMER ADD</p></div>
-<form id="form">
-<div id="overalldiv" Style="border: 1px solid black; ">
+	<div id="customerdiv">
+		<p id="customertitle">CUSTOMER ADD</p>
+	</div>
+	<form id="form">
+		<div id="overalldiv" Style="border: 1px solid black;">
 
-<div >     
-     <fieldset Style="border:1px solid black;width:745px;margin-left:8px;margin-top:8px;background-color:#F2F3F4   ">
-     <legend><label ><b>Client Details</b></label></legend>
-          
-         <label id="clientcodel">Client Code*</label> 
-         <input id="clientcode" maxlength="30" name="clientcode" type="text" />
-         <label id="clientnamel">Client Name*</label> 
-         <input id="clientname" maxlength="30" name="clientname" type="text" />
-         
-         <br>
-         <br>
-         
-         <label id="websitel">Company Website*</label> 
-         <input id="website" maxlength="30"  name="website"  type="text" />
-         <label id="emaill">Email Address*</label> 
-         <input id="email" maxlength="30"  name="email"  type="text" />
-         
-         <br>
-         <br>
-         
-         <label id="phonenol">Phone Number*</label>
-         <input id="phoneno" maxlength="30" name="phoneno" type="text" /> 
+			<div>
+				<fieldset
+					Style="border: 1px solid black; width: 745px; margin-left: 8px; margin-top: 8px; background-color: #F2F3F4">
+					<legend>
+						<label><b>Client Details</b></label>
+					</legend>
 
-     </fieldset>
-</div>
+					<label id="clientcodel">Client Code*</label> <input id="clientcode"
+						maxlength="30" name="clientcode" type="text" /> <label
+						id="clientnamel">Client Name*</label> <input id="clientname"
+						maxlength="30" name="clientname" type="text" /> <br> <br>
 
-<div >     
-     <fieldset Style="border:1px solid black;width:745px;margin-left:8px;margin-top:8px;background-color:#F2F3F4">
-     <legend><label ><b>Client Address</b></label></legend>
-         <label id="address1l">Address Line 1*</label> 
-         <input id="address1" maxlength="30" name="address1" type="text" />
-         <label id="address2l">Address Line 2</label> 
-         <input id="address1" maxlength="30" name="address2" type="text" />
-         
-         <br>
-         <br>
-         
-         <label id="cityl">City*</label> 
-         <input id="city" maxlength="30" name="city" type="text" />
-         <label id="statel">State*</label> 
-         <input id="state" maxlength="30"  name="state" type="text" />
-         
-         <br>
-         <br>
-         
-         <label id="countryl">Country*</label> 
-         <input id="country" maxlength="30" name="country" type="text" />
-         <label id="zipcodel">Zip Code*</label> 
-         <input id="zipcode" maxlength="30" name="zipcode" type="text" />
-         
+					<label id="websitel">Company Website*</label> <input id="website"
+						maxlength="30" name="website" type="text" /> <label id="emaill">Email
+						Address*</label> <input id="email" maxlength="30" name="email" type="text" />
 
-</fieldset>
-</div>
+					<br> <br> <label id="phonenol">Phone Number*</label> <input
+						id="phoneno" maxlength="30" name="phoneno" type="text" />
 
- <div >     
-     <fieldset Style="border:1px solid black;width:745px;margin-left:8px;margin-top:8px;">
-     <legend><label ><b>Contact Details</b></label></legend>
-     
-     
-      <table id="myTable" style="width:100%; background-color:#F2F3F4">
-        <tr>
-        <th width="14%">Contact Person</th>
-        <th  width="23%">Email Address</th> 
-        <th  width="13%">Contact Number</th>
-        <th  width="13%">Alternative Number</th>
-        <th  width="3%">..</th>
-        </tr>
-        <tbody id="tbody">
-       
-        </tbody>
-  
-  
-  </table> 	
+				</fieldset>
+			</div>
 
-        <img src="ProjectManagementTool-UI/css/images1/addicon.jpg" Style="width:20px;height:20px" id="addrow" />
+			<div>
+				<fieldset
+					Style="border: 1px solid black; width: 745px; margin-left: 8px; margin-top: 8px; background-color: #F2F3F4">
+					<legend>
+						<label><b>Client Address</b></label>
+					</legend>
+					<label id="address1l">Address Line 1*</label> <input id="address1"
+						maxlength="30" name="address1" type="text" /> <label
+						id="address2l">Address Line 2</label> <input id="address1"
+						maxlength="30" name="address2" type="text" /> <br> <br>
 
-</fieldset>
-</div>
+					<label id="cityl">City*</label> <input id="city" maxlength="30"
+						name="city" type="text" /> <label id="statel">State*</label> <input
+						id="state" maxlength="30" name="state" type="text" /> <br> <br>
 
-<div>
-
-<button  id="save"><B>Save</B></button>
-  <button type="button"   id="cancel" ><B> Cancel</B> </button>
-
-</div>
-<br>
+					<label id="countryl">Country*</label> <input id="country"
+						maxlength="30" name="country" type="text" /> <label id="zipcodel">Zip
+						Code*</label> <input id="zipcode" maxlength="30" name="zipcode"
+						type="text" />
 
 
-</div>
-</form>
+				</fieldset>
+			</div>
+
+			<div>
+				<fieldset
+					Style="border: 1px solid black; width: 745px; margin-left: 8px; margin-top: 8px;">
+					<legend>
+						<label><b>Contact Details</b></label>
+					</legend>
+
+
+					<table id="myTable" style="width: 100%; background-color: #F2F3F4">
+						<tr>
+							<th width="14%">Contact Person</th>
+							<th width="23%">Email Address</th>
+							<th width="13%">Contact Number</th>
+							<th width="13%">Alternative Number</th>
+							<th width="3%">..</th>
+						</tr>
+						<tbody id="tbody">
+
+						</tbody>
+
+
+					</table>
+
+					<img src="ProjectManagementTool-UI/css/images1/addicon.jpg"
+						Style="width: 20px; height: 20px" id="addrow" />
+
+				</fieldset>
+			</div>
+
+			<div>
+
+				<button id="save">
+					<B>Save</B>
+				</button>
+				<button type="button" id="cancel">
+					<B> Cancel</B>
+				</button>
+
+			</div>
+			<br>
+
+
+		</div>
+	</form>
 
 </body>
 </html>

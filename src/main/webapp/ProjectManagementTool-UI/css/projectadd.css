@@ -1,160 +1,536 @@
 @CHARSET "ISO-8859-1";
-#welcomeuser        {margin-top:20px;width:300px}
-#logout{
-position:absolute;
-	margin-left:870px;
-	width:130px;
-	height:30px;
-	background-color:#0078D7;
-	color:white;
-	 top:20px
-	}
-	#projectdiv
-	{
-	margin-top:30px;
-	background-color:#0078D7;
-	width:1002px;
-	height:30px;
 
-	}
-#projecttitle
-	{
-	color:white;font-bold:true;font-size:24px;margin-top:3px;
-	text-align:center;
-	}
-#add 
- { 
-
-border: 1px solid black;
-	margin:0px 0px 10px 0px;
- 	width:1000px;
-	}
-	
-
-#projectcode        {text-transform: capitalize;width:25%;height:20px;margin:12px 32px }
-#epc                {display:none;position:absolute;left:14.5%;top:26.3%;font-size:13px;color:red }
-#projectname        {text-transform: capitalize;width:25%;height:20px;margin:12px 29px}
-#epn                {display:none;position:absolute;left:14.5%;top:49%;font-size:13px;color:red }
-#startdate          {width:13%;height:20px;margin:12px 54px}
-#esd                {display:none;position:absolute;left:14.7%;top:70%;font-size:13px;color:red }
-#enddate    		{width:13%;height:20px;margin:12px 58px}
-#eed                {display:none;position:absolute;left:14.7%;top:90%;font-size:13px;color:red }
-#caldiv             {position:absolute;left:27%;top:72%;width:13%;height:7.3%;background-color:#0078D7;cursor:default}
-#cal                {position:absolute;left:3%;top:-99%;fontsize:6px;color:red}
-#nodays             {position:absolute;left:15%;top:90%}
-#estimationhours    {position:absolute;left:26%;top:90%} 
-#pdl        		{position:absolute;right:33.6%;top:35px}
-#pd          		{text-transform: capitalize;position:absolute;right:5.8%;top:75px;width:40%;height:50%}
-#center             {width:13.6%;height:23px;margin:12px 75px}
-#ec                 {display:none;position:absolute;left:14.8%;top:22.7%;font-size:13px;color:red }
-#location           {width:13.6%;height:23px;margin:12px 62px}
-#el                 {display:none;position:absolute;left:14.8%;top:39%;font-size:13px;color:red }
-#contracttype       {width:13.6%;height:23px;margin:12px 28px}
-#ect                {display:none;position:absolute;left:14.8%;top:57%;font-size:13px;color:red }
-#projectstatus      {width:13.6%;height:23px;margin:12px 31px;}
-#eps                {display:none;position:absolute;left:15%;top:74%;font-size:13px;color:red }
-#customerportfolio  {width:13.6%;height:23px;margin:12px -2px}
-#ecp                {display:none;position:absolute;left:15%;top:92%;font-size:13px;color:red }
-#services           {position:absolute;right:19%;top:30px;width:13.6%;height:8.5%}
-#servicesl          {position:absolute;right:34.5%;top:30px}
-#eso                {display:none;position:absolute;right:20.5%;top:22%;font-size:13px;color:red }
-#technology         {position:absolute;right:19%;top:80px;width:13.6%;height:8.5%}
-#techl              {position:absolute;right:37.8%;top:80px}
-#et                 {display:none;position:absolute;right:23%;top:39%;font-size:13px;color:red }
-#tech               {text-transform: capitalize;position:absolute;right:5%;top:120px;width:27%;height:15%}
-#effortl            {position:absolute;right:35%;top:180px}
-#effortrequired     {position:absolute;right:12%;top:176px;width:20.2%;height:7.8%}
-#mandays			{position:absolute;right:5%;top:180.5px;height:7.8%}
-#er                 {display:none;position:absolute;right:21.5%;top:77%;font-size:13px;color:red }
-#onsitel            {position:absolute;right:41.2%;top:226px}
-#onsite             {position:absolute;right:30%;top:226px;width:9%}
-#eon                {display:none;position:absolute;right:29.7%;top:246px;font-size:13px;color:red }
-#offshorel          {position:absolute;right:16%;top:226px}
-#offshore           {position:absolute;right:5.2%;top:226px;width:9%}
-#eoff               {display:none;position:absolute;right:3.5%;top:246px;font-size:13px;color:red }
-#projectmanager     {width:13.6%;height:23px;margin:12px 17px}
-#epm                {display:none;position:absolute;left:15.2%;top:57px;font-size:13px;color:red }
-#deliverymanager    {width:13.6%;height:23px;margin:12px 17px}
-#edm                {display:none;position:absolute;left:45.8%;top:57px;font-size:13px;color:red }
-#onsitecoordinator  {width:13.6%;height:23px;margin:12px 17px}
-#eoc                {display:none;position:absolute;right:5%;top:57px;font-size:13px;color:red }
-/* #add                {margin-left:180px;margin-top:100px;width:1000px;border: 1px solid black} */
-
-#remarks            {position:relative;top:78%;width:43%;height:15%;left:1%;border: 1px solid black}
-#supportfile        {position:absolute;left:54%;top:0px;width:42%;height:90%;border: 1px solid black}
-#filename           {position:absolute;top:10%;right:6%;cursor:pointer;color:#0e04c6}
-#browsefile         {position:absolute;top:70%;background-color:#0078D7;color:#004080}
-input[readonly] {
-    background-color:#a9a9a9  ;
+#welcomeuser {
+	margin-top: 20px;
+	width: 300px
 }
-#save               {
-	position:absolute;
-	margin-left:320px;
-	width:130px;
-	height:30px;
-	background-color:#0078D7;
-	color:white;
-	 }
-#cancel             {
-	position:absolute;
-	margin-left:560px;
-	width:130px;
-	height:30px;
-	background-color:#0078D7;
-	color:white;
-	}
-#projectdetails     {position:relative;left:1%;width:95%;border: 1px solid black}
-#developementdetails{position:relative;left:1%;width:95%;border: 1px solid black}
-#cc                  {width:13.6%;height:23px;margin:12px 22px}
-#pm{position:relative; width: 100%;
-     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-     box-sizing: border-box;text-transform: capitalize;  }
-     #general{
-     position:relative; width: 100%;
-     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-     box-sizing: border-box;
-     text-transform: capitalize;
-     
-     }
-     #filedescr{
-     
-      position:relative; width: 100%;
-     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-     box-sizing: border-box;
-     text-transform: capitalize;
-     
-     }
-     
-     
+
+#logout {
+	position: absolute;
+	margin-left: 870px;
+	width: 130px;
+	height: 30px;
+	background-color: #0078D7;
+	color: white;
+	top: 20px
+}
+
+#projectdiv {
+	margin-top: 30px;
+	background-color: #0078D7;
+	width: 1002px;
+	height: 30px;
+}
+
+#projecttitle {
+	color: white;
+	font-bold: true;
+	font-size: 24px;
+	margin-top: 3px;
+	text-align: center;
+}
+
+#add {
+	border: 1px solid black;
+	margin: 0px 0px 10px 0px;
+	width: 1000px;
+}
+
+#projectcode {
+	text-transform: capitalize;
+	width: 25%;
+	height: 20px;
+	margin: 12px 32px
+}
+
+#epc {
+	display: none;
+	position: absolute;
+	left: 14.5%;
+	top: 26.3%;
+	font-size: 13px;
+	color: red
+}
+
+#projectname {
+	text-transform: capitalize;
+	width: 25%;
+	height: 20px;
+	margin: 12px 29px
+}
+
+#epn {
+	display: none;
+	position: absolute;
+	left: 14.5%;
+	top: 49%;
+	font-size: 13px;
+	color: red
+}
+
+#startdate {
+	width: 13%;
+	height: 20px;
+	margin: 12px 54px
+}
+
+#esd {
+	display: none;
+	position: absolute;
+	left: 14.7%;
+	top: 70%;
+	font-size: 13px;
+	color: red
+}
+
+#enddate {
+	width: 13%;
+	height: 20px;
+	margin: 12px 58px
+}
+
+#eed {
+	display: none;
+	position: absolute;
+	left: 14.7%;
+	top: 90%;
+	font-size: 13px;
+	color: red
+}
+
+#caldiv {
+	position: absolute;
+	left: 27%;
+	top: 72%;
+	width: 13%;
+	height: 7.3%;
+	background-color: #0078D7;
+	cursor: default
+}
+
+#cal {
+	position: absolute;
+	left: 3%;
+	top: -99%;
+	fontsize: 6px;
+	color: red
+}
+
+#nodays {
+	position: absolute;
+	left: 15%;
+	top: 90%
+}
+
+#estimationhours {
+	position: absolute;
+	left: 26%;
+	top: 90%
+}
+
+#pdl {
+	position: absolute;
+	right: 33.6%;
+	top: 35px
+}
+
+#pd {
+	text-transform: capitalize;
+	position: absolute;
+	right: 5.8%;
+	top: 75px;
+	width: 40%;
+	height: 50%
+}
+
+#center {
+	width: 13.6%;
+	height: 23px;
+	margin: 12px 75px
+}
+
+#ec {
+	display: none;
+	position: absolute;
+	left: 14.8%;
+	top: 22.7%;
+	font-size: 13px;
+	color: red
+}
+
+#location {
+	width: 13.6%;
+	height: 23px;
+	margin: 12px 62px
+}
+
+#el {
+	display: none;
+	position: absolute;
+	left: 14.8%;
+	top: 39%;
+	font-size: 13px;
+	color: red
+}
+
+#contracttype {
+	width: 13.6%;
+	height: 23px;
+	margin: 12px 28px
+}
+
+#ect {
+	display: none;
+	position: absolute;
+	left: 14.8%;
+	top: 57%;
+	font-size: 13px;
+	color: red
+}
+
+#projectstatus {
+	width: 13.6%;
+	height: 23px;
+	margin: 12px 31px;
+}
+
+#eps {
+	display: none;
+	position: absolute;
+	left: 15%;
+	top: 74%;
+	font-size: 13px;
+	color: red
+}
+
+#customerportfolio {
+	width: 13.6%;
+	height: 23px;
+	margin: 12px -2px
+}
+
+#ecp {
+	display: none;
+	position: absolute;
+	left: 15%;
+	top: 92%;
+	font-size: 13px;
+	color: red
+}
+
+#services {
+	position: absolute;
+	right: 19%;
+	top: 30px;
+	width: 13.6%;
+	height: 8.5%
+}
+
+#servicesl {
+	position: absolute;
+	right: 34.5%;
+	top: 30px
+}
+
+#eso {
+	display: none;
+	position: absolute;
+	right: 20.5%;
+	top: 22%;
+	font-size: 13px;
+	color: red
+}
+
+#technology {
+	position: absolute;
+	right: 19%;
+	top: 80px;
+	width: 13.6%;
+	height: 8.5%
+}
+
+#techl {
+	position: absolute;
+	right: 37.8%;
+	top: 80px
+}
+
+#et {
+	display: none;
+	position: absolute;
+	right: 23%;
+	top: 39%;
+	font-size: 13px;
+	color: red
+}
+
+#tech {
+	text-transform: capitalize;
+	position: absolute;
+	right: 5%;
+	top: 120px;
+	width: 27%;
+	height: 15%
+}
+
+#effortl {
+	position: absolute;
+	right: 35%;
+	top: 180px
+}
+
+#effortrequired {
+	position: absolute;
+	right: 12%;
+	top: 176px;
+	width: 20.2%;
+	height: 7.8%
+}
+
+#mandays {
+	position: absolute;
+	right: 5%;
+	top: 180.5px;
+	height: 7.8%
+}
+
+#er {
+	display: none;
+	position: absolute;
+	right: 21.5%;
+	top: 77%;
+	font-size: 13px;
+	color: red
+}
+
+#onsitel {
+	position: absolute;
+	right: 41.2%;
+	top: 226px
+}
+
+#onsite {
+	position: absolute;
+	right: 30%;
+	top: 226px;
+	width: 9%
+}
+
+#eon {
+	display: none;
+	position: absolute;
+	right: 29.7%;
+	top: 246px;
+	font-size: 13px;
+	color: red
+}
+
+#offshorel {
+	position: absolute;
+	right: 16%;
+	top: 226px
+}
+
+#offshore {
+	position: absolute;
+	right: 5.2%;
+	top: 226px;
+	width: 9%
+}
+
+#eoff {
+	display: none;
+	position: absolute;
+	right: 3.5%;
+	top: 246px;
+	font-size: 13px;
+	color: red
+}
+
+#projectmanager {
+	width: 13.6%;
+	height: 23px;
+	margin: 12px 17px
+}
+
+#epm {
+	display: none;
+	position: absolute;
+	left: 15.2%;
+	top: 57px;
+	font-size: 13px;
+	color: red
+}
+
+#deliverymanager {
+	width: 13.6%;
+	height: 23px;
+	margin: 12px 17px
+}
+
+#edm {
+	display: none;
+	position: absolute;
+	left: 45.8%;
+	top: 57px;
+	font-size: 13px;
+	color: red
+}
+
+#onsitecoordinator {
+	width: 13.6%;
+	height: 23px;
+	margin: 12px 17px
+}
+
+#eoc {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 57px;
+	font-size: 13px;
+	color: red
+}
+/* #add                {margin-left:180px;margin-top:100px;width:1000px;border: 1px solid black} */
+#remarks {
+	position: relative;
+	top: 78%;
+	width: 43%;
+	height: 15%;
+	left: 1%;
+	border: 1px solid black
+}
+
+#supportfile {
+	position: absolute;
+	left: 54%;
+	top: 0px;
+	width: 42%;
+	height: 90%;
+	border: 1px solid black
+}
+
+#filename {
+	position: absolute;
+	top: 10%;
+	right: 6%;
+	cursor: pointer;
+	color: #0e04c6
+}
+
+#browsefile {
+	position: absolute;
+	top: 70%;
+	background-color: #0078D7;
+	color: #004080
+}
+
+input[readonly] {
+	background-color: #a9a9a9;
+}
+
+#save {
+	position: absolute;
+	margin-left: 320px;
+	width: 130px;
+	height: 30px;
+	background-color: #0078D7;
+	color: white;
+}
+
+#cancel {
+	position: absolute;
+	margin-left: 560px;
+	width: 130px;
+	height: 30px;
+	background-color: #0078D7;
+	color: white;
+}
+
+#projectdetails {
+	position: relative;
+	left: 1%;
+	width: 95%;
+	border: 1px solid black
+}
+
+#developementdetails {
+	position: relative;
+	left: 1%;
+	width: 95%;
+	border: 1px solid black
+}
+
+#cc {
+	width: 13.6%;
+	height: 23px;
+	margin: 12px 22px
+}
+
+#pm {
+	position: relative;
+	width: 100%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+	text-transform: capitalize;
+}
+
+#general {
+	position: relative;
+	width: 100%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+	text-transform: capitalize;
+}
+
+#filedescr {
+	position: relative;
+	width: 100%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+	text-transform: capitalize;
+}
+
 /* #customername        {position:absolute;left:30%;top:50%} */
 
 /* #customercode         {position:absolute;left:60%;top:50%} */
 /* #myTable, th,#data { */
 /*     border: 1px solid black;cellpadding:"13";border-spacing: 15px */
 /* } */
-#myTable  {
-   border-collapse: collapse;
-     border: 1px solid black;
+#myTable {
+	border-collapse: collapse;
+	border: 1px solid black;
 }
-#myTable td 
-{
-   border-collapse: collapse;
-     border: 1px solid black;
+
+#myTable td {
+	border-collapse: collapse;
+	border: 1px solid black;
 }
-#myTable th
-{
-   border-collapse: collapse;
-     border: 1px solid black;
-     }
-input[type="checkbox"]{
-        zoom: 1.5;
-        
+
+#myTable th {
+	border-collapse: collapse;
+	border: 1px solid black;
 }
-#customerdetails    {position:relative;left:1%;width:95%;border: 1px solid black}
-#responsibility     {position:relative;top:10px;left:1%;width:95%;border: 1px solid black}
+
+input[type="checkbox"] {
+	zoom: 1.5;
+}
+
+#customerdetails {
+	position: relative;
+	left: 1%;
+	width: 95%;
+	border: 1px solid black
+}
+
+#responsibility {
+	position: relative;
+	top: 10px;
+	left: 1%;
+	width: 95%;
+	border: 1px solid black
+}
 /* #home               { background: url("images1/download.jpg");background-size: 100% 100%;background-repeat: no-repeat;padding-top: 40px;width:40px;height:5px;color:white;margin-left:120px;} */
-
-

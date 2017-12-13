@@ -11,7 +11,7 @@ $( window ).load(function() {
 	designation=checkCookie3(decodeURIComponent(document.cookie));
 	emp_code=checkCookie2(decodeURIComponent(document.cookie));
 	var login_emp_code=checkCookie2(decodeURIComponent(document.cookie));
-
+	 $('#destusername').text(user2) ;
 	if(user2!=null){
 		if( designation!='admin'&&designation!='project_manager')
 		{

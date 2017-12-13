@@ -1,128 +1,54 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Project Management Tool</title>
-<script src="ProjectManagementTool-UI/js/Plugins/jquery-3.2.1-jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="ProjectManagementTool-UI/css/Plugins/dataTables.jqueryui.min.css">
-<link rel="stylesheet" href="ProjectManagementTool-UI/css/projectdashboard.css">
+<script
+	src="ProjectManagementTool-UI/js/Plugins/jquery-3.2.1-jquery.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="ProjectManagementTool-UI/css/Plugins/dataTables.jqueryui.min.css">
+
 <script src="ProjectManagementTool-UI/js/Plugins/jquery-1.11.1.min.js"></script>
-<script src="ProjectManagementTool-UI/js/Plugins/jquery.dataTables.min.js"></script> 
-<script type="text/javascript" src="ProjectManagementTool-UI/js/empdashboard.js"></script>
-<script type="text/javascript" src="ProjectManagementTool-UI/js/cookies.js"></script>
+<script
+	src="ProjectManagementTool-UI/js/Plugins/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+	src="ProjectManagementTool-UI/js/empdashboard.js"></script>
+<script type="text/javascript"
+	src="ProjectManagementTool-UI/js/cookies.js"></script>
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<link href="ProjectManagementTool-UI/css/Plugins/bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="ProjectManagementTool-UI/css/Plugins/bootstrap-theme.min.css"
+	rel="stylesheet">
+<link href="ProjectManagementTool-UI/css/Plugins/font-awesome.min.css"
+	rel="stylesheet">
+<link
+	href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,300italic,600,600italic,700,800,700italic,800italic'
+	rel='stylesheet' type='text/css'>
+<link
+	href="https://fonts.googleapis.com/css?family=Oswald|Roboto|Roboto+Condensed"
+	rel="stylesheet">
+<link href="ProjectManagementTool-UI/css/Plugins/accordion-menu.css"
+	rel="stylesheet">
+<link href="ProjectManagementTool-UI/css/Plugins/jquery.jscrollpane.css"
+	rel="stylesheet">
+<link href="ProjectManagementTool-UI/css/Plugins/main.css"
+	rel="stylesheet">
+<script src="ProjectManagementTool-UI/css/Plugins/js/sorttable.js"></script>
+<script src="ProjectManagementTool-UI/css/Plugins/js/bootstrap.min.js"></script>
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
- <style type="text/css">
- body
- {
- font-family:Calibri;
- }
-#add 
- { 
-position:relative;
-border: 1px solid black;
-	margin:0px 0px 0px -8px;
- 	width:1198px;
-	}
-#nav
-	{
-margin:50px 0px 0px -8px;
-	background-color:#0078D7;
-	width:1200px;
-	height:30px;
-	}
-#title
-	{
-	color:white;font-bold:true;font-size:24px;margin-top:-30px;
-	text-align:center;
-	}
-#empid
-{
-margin:10px 0px 0px 0px;
-}
-select
-	{
-	margin:0px 0px 0px 33px;
-	width:175px;
-	height:25px;
-	}
-	#lempname
-	{
-	margin:0px 0px 0px 100px;
-	}
-	#empname
-	{
-	margin:0px 0px 0px 7px;
-	height:20px;
-	width:170px;
-	}
-	#ldesignation
-	{
-	margin:0px 0px 0px 150px;
-	}
-	#designation
-	{
-	margin:0px 0px 0px 0px;
-	height:20px;
-	width:170px;
-	}
-	div.tab {
-position:relative;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    width:380px;
-    height:40px;
-    margin-top:35px;
-    margin-left:810px;
-}
-
-/* Style the buttons inside the tab */
-div.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 10px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-div.tab button:hover {
-    background-color: #0078D7;
-}
-
-/* Create an active/current tablink class */
-div.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-    color:white
-}
-</style>
-<style>
-#chartdiv {
-  width: 100%;
-  height: 500px;
-}
-</style>
 </head>
-<body>
+<body style="width: 100%">
 
 
-<%
+	<%
 String  designation="";
 String designation1="";
          Cookie cookie = null;
@@ -176,80 +102,182 @@ String designation1="";
         }
       %>
 
-      
-      
-<table id="mytable" 	width="1190px"  align="center"     cellspacing="0" cellpadding="0">
-<tbody>
 
-<tr>
-	<td>
-	<div>
-	<h2 id="welcomeuser" align="left" style="margin-top: 40px;margin-left:0px;margin-bottom:20px"> </h2>
-	<button id="logout" style=" margin-left: 1060px;margin-top: 30px;margin-bottom:40px"><b>Log Out</b></button>
+
+	<!--- Top Panel -->
+	<div class="topPane">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 col-sm-2 col-xs-12 text-center">
+					<a href="projectdashboard.jsp"><img
+						src="ProjectManagementTool-UI/css/images1/ennvee-white-logo.png"
+						class="img-responsive logo" alt="Ennvee"></a>
+				</div>
+				<div class="col-md-5 col-sm-6 col-xs-12 discoverMigration">
+					<a href="#">Project Management</a>
+				</div>
+				<div class="col-md-5 col-sm-4 col-xs-12 rightPane">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="col-md-4 col-sm-7 loginButton hidden-xs">
+								<a href="#" class="btn btn-default dropdown-toggle"
+									type="button" id="dropdownMenu1" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false"> Hi,<span
+									id="destusername"></span> <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									<li><span><i class="fa fa-tachometer"
+											aria-hidden="true"></i></span><span><a href="#">Dashboard</a></span></li>
+									<li><span><i class="fa fa-snowflake-o"
+											aria-hidden="true"></i></span><span><a href="#">Ennable</a></span></li>
+									<li><span><i class="fa fa-wpexplorer"
+											aria-hidden="true"></i></span><span><a href="#">Discoverer
+												Converter</a></span></li>
+									<li><span><i class="fa fa-superpowers"
+											aria-hidden="true"></i></span><span><a href="#">Auto
+												Custom Testing</a></span></li>
+									<li><span><i class="fa fa-rebel" aria-hidden="true"></i></span><span><a
+											href="#">NetSuite Tableau</a></span></li>
+									<li><span><i class="fa fa-unlock"
+											aria-hidden="true"></i></span><span><a href=""
+											id="desklogout1">Logout</a></span></li>
+								</ul>
+							</div>
+							<div class="col-md-4 col-sm-1 account hidden-xs">
+								<span id="seetingsIcon"><i class="fa fa-cog"
+									aria-hidden="true"></i></span><a href="#">Account Settings </a>
+							</div>
+							<div class="col-md-2 col-sm-1 support hidden-xs">
+								<span id="seetingsIcon"><i class="fa fa-question-circle"
+									aria-hidden="true"></i></span><a href="#">Support </a>
+							</div>
+							<div class="col-md-2 col-sm-1 logOut hidden-xs">
+								<span id="seetingsIcon"><i class="fa fa-lock"
+									aria-hidden="true"></i></span><a href="#" id="desklogout2">Log Out
+								</a>
+							</div>
+							<!--Mobile Menu-->
+							<div class=" row mobileMenu visible-xs ">
+								<div class="col-xs-6 mobilemenu1">
+									<a href="#" class="btn dropdown-toggle" id="dropdownMenu1"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false"> Hi,<span id="moblieusernmae"></span>
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+										<li><span><i class="fa fa-tachometer"
+												aria-hidden="true"></i></span><span><a href="#">Dashboard</a></span></li>
+										<li><span><i class="fa fa-snowflake-o"
+												aria-hidden="true"></i></span><span><a href="#">Ennable</a></span></li>
+										<li><span><i class="fa fa-wpexplorer"
+												aria-hidden="true"></i></span><span><a href="#">Discoverer
+													Converter</a></span></li>
+										<li><span><i class="fa fa-superpowers"
+												aria-hidden="true"></i></span><span><a href="#">Auto
+													Custom Testing</a></span></li>
+										<li><span><i class="fa fa-rebel"
+												aria-hidden="true"></i></span><span><a href="#">NetSuite
+													Tableau</a></span></li>
+										<li><span><i class="fa fa-unlock"
+												aria-hidden="true"></i></span><span><a href="#"
+												id="moblielogout1">Logout</a></span></li>
+									</ul>
+								</div>
+								<div class="mobileMenu2 col-xs-2">
+									<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
+								</div>
+								<div class="mobileMenu3 col-xs-2">
+									<a href="#"><i class="fa fa-question-circle"
+										aria-hidden="true"></i></a>
+								</div>
+								<div class="mobileMenu4 col-xs-2">
+									<a href="#"><i class="fa fa-lock" id="moblielogout2"
+										aria-hidden="true"></i></a>
+								</div>
+							</div>
+							<!--End Mobile Menu-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	</td>
-	</tr>
-	
-	
-	<tr>
-	<td>
-		<label id="empid" ><b>Employee ID:</b></label>
-		<label id="empid1" ></label>
-		<label id="lempname" style=""><b>Employee Name: </b></label>
-		<label id="empname" style=""></label>
-		<label id="ldesignation" style=""><b>Designation: </b></label>
-		<label id="designation" style=""></label>
-	</td>
-	</tr>
-	
-    <tr>
-	<td>    
-	     <div class="tab">
-	  <button class="tablinks" onclick="location.href = 'timesheetedit.html';">Timesheet(Entry/View)</button>
-	  <button class="tablinks" onclick="location.href = 'cp.jsp';">Change Password</button>
+	<br>
+	<br>
+	<br>
+	<br>
+	<!--- End top Panel -->
+	<!-- 		<label id="empid" ><b>Employee ID:</b></label> -->
+	<!-- 		<label id="empid1" ></label> -->
+<div>
+
+	<div class="row">
+		<div class="col-xs-4 text-center">
+			<label id="empid"><b>Employee ID:</b></label> <label id="empid1"></label>
+
+		</div>
+		<div class="col-xs-4 text-center">
+			<label id="lempname" style=""><b>Employee Name: </b></label> <label
+				id="empname" style=""></label>
+		</div>
+
+		<div class="col-xs-4 text-center">
+			<label id="ldesignation" style=""><b>Designation: </b></label> <label
+				id="designation" style=""></label>
+		</div>
 	</div>
-	</td>
-	</tr>  
-	  
-	  
-	  
-	  
-	  
-	  
-	<tr>
-	<td>
-		<div id="nav">
-		<p id="title">Employee DashBoard</p></div>
-	</td>
-	</tr>
-	
-	<tr>
-	<td>
-	<div id="add" >
-		<table id="example" style="width:1198px;" class="display">
-				        <thead>
-				            <tr>
-				                <th align="center">SERIAL NO</th>
-				                <th align="center">PROJECT CODE</th>
-				                <th align="center">PROJECT NAME</th>
-				                 <th align="center">PERCENTAGE OF ALLOCATION</th> 
-				                <th align="center">START DATE</th>
-				                <th align="center">END DATE</th>
-				                <th align="center">PROJECT MANAGER</th>
-				                 <th align="center">DELIVERY MANAGER</th>
-				            </tr>
-				        </thead>
-				               <tbody id="c1">
-				        </tbody>
-				    </table>
+	<br>
+	<br>
+
+
+
+	<div class="row col-md-12 text-right">
+		<button class="btn-info btn-md"
+			onclick="location.href = 'timesheetedit.html';">Timesheet(Entry/View)</button>
+		<button class="btn-info btn-md" onclick="location.href = 'cp.jsp';">Change
+			Password</button>
 	</div>
-	</td>
-	</tr>
-</tbody>
-</table>
 
 
 
-<canvas id="pie-chart" width="1800" height="450"></canvas>
+
+
+
+	<section>
+	 <header>
+	<div class="container">
+		<div class="row">
+			<div class=" text-center">
+				<h3 class="well well-sm">Employee DashBoard</h3>
+			</div>
+		</div>
+	</div>
+	</header> </section>
+
+
+
+	<div  >
+		<table class="table table-responsive" id="example" >
+			<thead class="blue-grey lighten-4">
+				<tr>
+					<th align="center">SERIAL NO</th>
+					<th align="center">PROJECT CODE</th>
+					<th align="center">PROJECT NAME</th>
+					<th align="center">PERCENTAGE OF ALLOCATION</th>
+					<th align="center">START DATE</th>
+					<th align="center">END DATE</th>
+					<th align="center">PROJECT MANAGER</th>
+					<th align="center">DELIVERY MANAGER</th>
+				</tr>
+			</thead>
+			<tbody id="c1">
+			</tbody>
+		</table>
+	</div>
+
+
+</div>
+
+	<canvas id="pie-chart" height="450"></canvas>
 </body>
 </html>

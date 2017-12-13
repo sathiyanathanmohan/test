@@ -1,66 +1,70 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<script src="ProjectManagementTool-UI/js/Plugins/jquery-3.2.1-jquery.min.js"></script>
-  <script src="ProjectManagementTool-UI/js/Plugins/jquery-1.10.2.js"></script>
-   <script type="text/javascript" src=" ProjectManagementTool-UI/js/Plugins/jqueryui-1.10.3-jquery-ui.js"></script>
+<script
+	src="ProjectManagementTool-UI/js/Plugins/jquery-3.2.1-jquery.min.js"></script>
+<script src="ProjectManagementTool-UI/js/Plugins/jquery-1.10.2.js"></script>
+<script type="text/javascript"
+	src=" ProjectManagementTool-UI/js/Plugins/jqueryui-1.10.3-jquery-ui.js"></script>
 <!--    <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> -->
-<script type="text/javascript" src="ProjectManagementTool-UI/js/projectedit.js"></script>
+<script type="text/javascript"
+	src="ProjectManagementTool-UI/js/projectedit.js"></script>
 <!--   <script src=js/projectadd.js></script> -->
-  <script  src="ProjectManagementTool-UI/js/cookies.js"></script>
-<link rel="stylesheet" type="text/css" href="ProjectManagementTool-UI/css/projectedit.css">
-  <script type="text/javascript">
+<script src="ProjectManagementTool-UI/js/cookies.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="ProjectManagementTool-UI/css/projectedit.css">
+<script type="text/javascript">
 function goBack() {
     window.history.back();
 }
 </script>
 <style type="text/css">
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-left: 50px;
-      padding-top: 150px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-left: 50px;
+	padding-top: 150px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 500px;
-    height:400px
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 500px;
+	height: 400px
 }
 
 /* The Close Button */
 .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}</style>
+.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+</style>
 </head>
 <body>
-<%
+	<%
 String  designation="";
 String designation1="";
          Cookie cookie = null;
@@ -113,263 +117,260 @@ String designation1="";
         	}
         }
       %>
-     
-<table  width="1002px" align="center"  >
-<tbody>
-<tr>
-<td>
-<div>
-<h2 id="welcomeuser" style="width:550px;"> </h2>
-<button id="logout"><B>Log Out</B></button>
-<img id="back" src="ProjectManagementTool-UI/css/images1/images.jpg" Style="width:26px;height:28px;" onclick="goBack()" />
-<img id="home" src="ProjectManagementTool-UI/css/images1/download.jpg" Style="position:absolute;width:26px;height:32px;margin-left:50px" onclick="location.href='projectdashboard.jsp'" />
+
+	<table width="1002px" align="center">
+		<tbody>
+			<tr>
+				<td>
+					<div>
+						<h2 id="welcomeuser" style="width: 550px;"></h2>
+						<button id="logout">
+							<B>Log Out</B>
+						</button>
+						<img id="back"
+							src="ProjectManagementTool-UI/css/images1/images.jpg"
+							Style="width: 26px; height: 28px;" onclick="goBack()" /> <img
+							id="home" src="ProjectManagementTool-UI/css/images1/download.jpg"
+							Style="position: absolute; width: 26px; height: 32px; margin-left: 50px"
+							onclick="location.href='projectdashboard.jsp'" />
 
 
-  </div>
-  <br>
-<br>
-</td>
-  </tr>      
+					</div> <br> <br>
+				</td>
+			</tr>
 
-<tr>
-<td>
-<div id="projectdiv"><p id="projecttitle" Style="color:white">Project Edit</p></div>
-</td>
-</tr>
-<tr>
-<td>
-<div id="add" width="1000px">
-<br>
-<form id="form" method="post"  >
-<div style="margin-right:2px">     
-     <fieldset  id="projectdetails" >
-     <legend><label><b>Project Details</b></label></legend>
-         <label >Project Code* </label>
-         <input id="projectcode" maxlength="10" name="projectcode" type="text" />
-         <label id="epc">Please enter project code </label>	
-		 <br>
- 		 <label >Project Name* </label>
-  		 <input id="projectname" maxlength="50" name="projectname" type="text" />
-  		 <label id="epn">Please enter project name </label>	
-         <br>
-      	 <label >Start Date* </label>
-		 <input id="startdate" maxlength="20" name="startdate" type="date" />
-		 <label id="esd">Please select start date</label>	
-         <br>
-         <label >End Date* </label>
-		 <input id="enddate" maxlength="20" name="enddate" type="date" />
-		 <label id="eed">Please select end date</label>
-		 <br>
-		 <br>
-<!-- 		 <div id="caldiv"><p id="cal" Style="color:white">Show Days/Hours</p></div> -->
-<!-- 	     <label id="nodays">No Of Days:</label> -->
-<!-- 	     <label id="estimationhours" >Estimation Hours:</label> -->
-	     
-         <label  id="pdl">Project Description</label>
-         <textarea id="pd" name="pd" rows="4" cols="50"></textarea>
-          
-         
-     </fieldset>
-</div>
+			<tr>
+				<td>
+					<div id="projectdiv">
+						<p id="projecttitle" Style="color: white">Project Edit</p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="add" width="1000px">
+						<br>
+						<form id="form" method="post">
+							<div style="margin-right: 2px">
+								<fieldset id="projectdetails">
+									<legend>
+										<label><b>Project Details</b></label>
+									</legend>
+									<label>Project Code* </label> <input id="projectcode"
+										maxlength="10" name="projectcode" type="text" /> <label
+										id="epc">Please enter project code </label> <br> <label>Project
+										Name* </label> <input id="projectname" maxlength="50"
+										name="projectname" type="text" /> <label id="epn">Please
+										enter project name </label> <br> <label>Start Date* </label> <input
+										id="startdate" maxlength="20" name="startdate" type="date" />
+									<label id="esd">Please select start date</label> <br> <label>End
+										Date* </label> <input id="enddate" maxlength="20" name="enddate"
+										type="date" /> <label id="eed">Please select end date</label>
+									<br> <br>
+									<!-- 		 <div id="caldiv"><p id="cal" Style="color:white">Show Days/Hours</p></div> -->
+									<!-- 	     <label id="nodays">No Of Days:</label> -->
+									<!-- 	     <label id="estimationhours" >Estimation Hours:</label> -->
 
-<br>
+									<label id="pdl">Project Description</label>
+									<textarea id="pd" name="pd" rows="4" cols="50"></textarea>
 
-<div style="margin-right:2px">
-     <fieldset id="developementdetails">
-     <legend><label><b>Developement Details</b></label></legend>
-         <label>Center*</label>
-         <select id="center" name="center">
-         <option >Select</option>
-         </select>
-         <label id="ec">Please select center</label>
-         <br>
-         <label>Location*</label>
-         <select id="location" name="location">
-         <option >Select</option>
-         </select>
-         <label id="el">Please select location</label>
-         <br>
-         <label>Contract Type*</label>
-         <select id="contracttype" name="contracttype">
-         <option >Select</option>
-         </select>
-         <label id="ect">Please select contract type</label>
-         <br>
-         <label>Project Status*</label>
-         <select id="projectstatus" name="projectstatus" >
-         
-         </select>
-          <label id="eps">Please select project status as open</label>
-         <br>
-         <label>Customer Portfolio*</label>
-         <select id="customerportfolio"  name="customerportfolio">
-         <option value="Select">Select</option>
-         </select>
-         <label id="ecp">Please select customer portfolio</label>
-         <label id="servicesl">Services Offered*</label>
-         <select id="services" name="services">
-         <option value="Select">Select</option>
-         </select>
-         <label id="eso">Please select services offered</label>
-         <label id="techl">Technology*</label>
-         <select id="technology" >
-         <option value="">Select</option>
-         
-         </select>
-         <label id="et">Please select technology</label>
-         <textarea id="tech" rows="4" cols="50" name="tech" > </textarea>
-         <label id="effortl">Effort Required*</label>
-         <input id="effortrequired" maxlength="50" name="effortrequired" type="text" />
-            <label id="mandays">Man-days</label>
-         <label id="er">Please enter effort required</label>
-      
-         <label id="onsitel">Onsite*</label>
-         <input id="onsite" name="onsite" maxlength="50" name="name" type="text" />
-         <label id="eon">Please enter onsite</label>
-         <label id="offshorel">offshore*</label>
-         <input id="offshore" name="offshore"maxlength="50" name="name" type="text" />
-         <label id="eoff">Please enter offshore effort</label>
-      </fieldset>
-</div>
 
-<br>
-<div style="margin-right:2px">
-     <fieldset id="customerdetails">
-     <legend><label><b>Customer Details</b></label></legend>
-     <label>Customer Code*</label>
-         <select id="cc" name="cc" >
-         <option >Select</option>
-         </select>
-        
-         <label id="customercode"></label>
-         
-         <label id="customername" ></label>
-       
-           <table id="myTable">
-     <tr>
-    <th width="5%"><b>Select</b></th>
-    <th width="20%"><b>Contact Person</b></th>
-    <th width="30%"><b>Mail id</b></th>
-    <th width="20%"><b>Contact Number</b></th>
-    <th width="20%"><b>Alternative Number</b></th>
-      <th width="20%"></th>
-  </tr>
-  <tbody id="tbody">
-  
-  </tbody>
-  
-        </table>
-     <img src="ProjectManagementTool-UI/css/images1/addicon.jpg" Style="width:20px;height:20px" id="addrow" />
-      </fieldset>
-</div>
+								</fieldset>
+							</div>
+
+							<br>
+
+							<div style="margin-right: 2px">
+								<fieldset id="developementdetails">
+									<legend>
+										<label><b>Developement Details</b></label>
+									</legend>
+									<label>Center*</label> <select id="center" name="center">
+										<option>Select</option>
+									</select> <label id="ec">Please select center</label> <br> <label>Location*</label>
+									<select id="location" name="location">
+										<option>Select</option>
+									</select> <label id="el">Please select location</label> <br> <label>Contract
+										Type*</label> <select id="contracttype" name="contracttype">
+										<option>Select</option>
+									</select> <label id="ect">Please select contract type</label> <br>
+									<label>Project Status*</label> <select id="projectstatus"
+										name="projectstatus">
+
+									</select> <label id="eps">Please select project status as open</label> <br>
+									<label>Customer Portfolio*</label> <select
+										id="customerportfolio" name="customerportfolio">
+										<option value="Select">Select</option>
+									</select> <label id="ecp">Please select customer portfolio</label> <label
+										id="servicesl">Services Offered*</label> <select id="services"
+										name="services">
+										<option value="Select">Select</option>
+									</select> <label id="eso">Please select services offered</label> <label
+										id="techl">Technology*</label> <select id="technology">
+										<option value="">Select</option>
+
+									</select> <label id="et">Please select technology</label>
+									<textarea id="tech" rows="4" cols="50" name="tech"> </textarea>
+									<label id="effortl">Effort Required*</label> <input
+										id="effortrequired" maxlength="50" name="effortrequired"
+										type="text" /> <label id="mandays">Man-days</label> <label
+										id="er">Please enter effort required</label> <label
+										id="onsitel">Onsite*</label> <input id="onsite" name="onsite"
+										maxlength="50" name="name" type="text" /> <label id="eon">Please
+										enter onsite</label> <label id="offshorel">offshore*</label> <input
+										id="offshore" name="offshore" maxlength="50" name="name"
+										type="text" /> <label id="eoff">Please enter offshore
+										effort</label>
+								</fieldset>
+							</div>
+
+							<br>
+							<div style="margin-right: 2px">
+								<fieldset id="customerdetails">
+									<legend>
+										<label><b>Customer Details</b></label>
+									</legend>
+									<label>Customer Code*</label> <select id="cc" name="cc">
+										<option>Select</option>
+									</select> <label id="customercode"></label> <label id="customername"></label>
+
+									<table id="myTable">
+										<tr>
+											<th width="5%"><b>Select</b></th>
+											<th width="20%"><b>Contact Person</b></th>
+											<th width="30%"><b>Mail id</b></th>
+											<th width="20%"><b>Contact Number</b></th>
+											<th width="20%"><b>Alternative Number</b></th>
+											<th width="20%"></th>
+										</tr>
+										<tbody id="tbody">
+
+										</tbody>
+
+									</table>
+									<img src="ProjectManagementTool-UI/css/images1/addicon.jpg"
+										Style="width: 20px; height: 20px" id="addrow" />
+								</fieldset>
+							</div>
 
 
 
 
-<div style="margin-right:2px;margin-left:2px">
-       <fieldset  id="responsibility">
-            <legend><label><b>Responsibility</b></label></legend>
-            
-            <label id="projectmanagerl">Project Manager*</label>
-            <select id="projectmanager" name="projectmanager">
-            <option value="">Select</option>
-            
-            </select>
-            <label id="epm">Please select project manager</label>
-            <label id="deliverymanagerl">Delivery Manager*</label>
-            <select id="deliverymanager" name="deliverymanager">
-            <option value="">Select</option>
-           
-            </select>
-             <label id="edm">Please select delivery manager</label>
-            <label id="">Onsite Co-ordinator</label>
-            <select id="onsitecoordinator" name="onsitecoordinator">
-            <option value="">Select</option>
-           
-            </select>
-            	
-            <label id="eoc">Please select onsite co-ordinator</label>
-            
-      </fieldset>
-</div>
+							<div style="margin-right: 2px; margin-left: 2px">
+								<fieldset id="responsibility">
+									<legend>
+										<label><b>Responsibility</b></label>
+									</legend>
 
-<br>
+									<label id="projectmanagerl">Project Manager*</label> <select
+										id="projectmanager" name="projectmanager">
+										<option value="">Select</option>
 
-<div  style="margin-right:2px;position:relative">
-    <div>
-       <fieldset  id="remarks">
-       <legend ><label><b>Remarks</b></label></legend>
-            
-            <label id="pml">Project Manager/Delivery Manager</label>
-            <textarea id="pm" name="pm" rows="4" ></textarea>
-            <br>
-            <label id="generall">General</label>
-            <textarea id="general" name="general" rows="4" cols="50"></textarea>
-       </fieldset>
-    </div>
-    <div>
-        <fieldset  id="supportfile">
-        <legend ><label><b>Support File</b></label></legend>
-            <label id="uploadfile">Upload Files*</label><br>
-            
-             <input type="button" value="Attachment upload" onclick='onclick1()'>
-             <br>
-             <span  id="filename"></span>
-             <br>
-              <label id="filedescription">File Description</label><br>
-            <textarea id="filedescr" name="filedescr" rows="4" cols="47"></textarea>
-            <br>
-       
-        </fieldset>
-        
-           
-    </div  >
+									</select> <label id="epm">Please select project manager</label> <label
+										id="deliverymanagerl">Delivery Manager*</label> <select
+										id="deliverymanager" name="deliverymanager">
+										<option value="">Select</option>
 
-          
-             
-          </div >
-          <br>
-          <div id="myModal" class="modal">
+									</select> <label id="edm">Please select delivery manager</label> <label
+										id="">Onsite Co-ordinator</label> <select
+										id="onsitecoordinator" name="onsitecoordinator">
+										<option value="">Select</option>
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-   
-    <div  id="dailydiv" Style="position:relative;margin-left:2px;width:1000px;margin-top:20px" ><p id="dailytitle">Support File</p></div>
+									</select> <label id="eoc">Please select onsite co-ordinator</label>
 
-    <table Style="margin-top:50px;margin-left:110px" align="center" >
-  <tr>
-   
-    <th width="20%" align="center" ><b>File</b></th>
-    <th width="30%" align="center"><b></b></th>
-    
-  </tr>
-    <tbody id="filetbody">
-    <tr id="filerow1">   <td><input type="file" name="file" id="file"/></td><td><img src="ProjectManagementTool-UI/css/images1/close.jpg" Style="width:20px;height:20px" onclick="myFunction66(1);" id="fileremove"/></td></tr>
-    </tbody>
-    
-    
-    
-    </table>
-    <img src="ProjectManagementTool-UI/css/images1/addicon.jpg" Style="margin-left:110Px;width:20px;height:20px" id="addfilerow" />
-  </div>
+								</fieldset>
+							</div>
 
-</div>
-        <div>
-          <input type="hidden" value="" name="id" id="id"> 
-              <input type="hidden" value="" name="emp_code" id="emp_code">       
- 
-    <button id="save">Save</button>
-            <button id="cancel" type="button"><B>Cancel</B></button>
-</div>
- <br>
-  <br>
-   
-</form>
-</div>
-</tbody>
-</table>
-<script>
+							<br>
+
+							<div style="margin-right: 2px; position: relative">
+								<div>
+									<fieldset id="remarks">
+										<legend>
+											<label><b>Remarks</b></label>
+										</legend>
+
+										<label id="pml">Project Manager/Delivery Manager</label>
+										<textarea id="pm" name="pm" rows="4"></textarea>
+										<br> <label id="generall">General</label>
+										<textarea id="general" name="general" rows="4" cols="50"></textarea>
+									</fieldset>
+								</div>
+								<div>
+									<fieldset id="supportfile">
+										<legend>
+											<label><b>Support File</b></label>
+										</legend>
+										<label id="uploadfile">Upload Files*</label><br> <input
+											type="button" value="Attachment upload" onclick='onclick1()'>
+										<br> <span id="filename"></span> <br> <label
+											id="filedescription">File Description</label><br>
+										<textarea id="filedescr" name="filedescr" rows="4" cols="47"></textarea>
+										<br>
+
+									</fieldset>
+
+
+								</div>
+
+
+
+							</div>
+							<br>
+							<div id="myModal" class="modal">
+
+								<!-- Modal content -->
+								<div class="modal-content">
+									<span class="close">&times;</span>
+
+									<div id="dailydiv"
+										Style="position: relative; margin-left: 2px; width: 1000px; margin-top: 20px">
+										<p id="dailytitle">Support File</p>
+									</div>
+
+									<table Style="margin-top: 50px; margin-left: 110px"
+										align="center">
+										<tr>
+
+											<th width="20%" align="center"><b>File</b></th>
+											<th width="30%" align="center"><b></b></th>
+
+										</tr>
+										<tbody id="filetbody">
+											<tr id="filerow1">
+												<td><input type="file" name="file" id="file" /></td>
+												<td><img
+													src="ProjectManagementTool-UI/css/images1/close.jpg"
+													Style="width: 20px; height: 20px"
+													onclick="myFunction66(1);" id="fileremove" /></td>
+											</tr>
+										</tbody>
+
+
+
+									</table>
+									<img src="ProjectManagementTool-UI/css/images1/addicon.jpg"
+										Style="margin-left: 110Px; width: 20px; height: 20px"
+										id="addfilerow" />
+								</div>
+
+							</div>
+							<div>
+								<input type="hidden" value="" name="id" id="id"> <input
+									type="hidden" value="" name="emp_code" id="emp_code">
+
+								<button id="save">Save</button>
+								<button id="cancel" type="button">
+									<B>Cancel</B>
+								</button>
+							</div>
+							<br> <br>
+
+						</form>
+					</div>
+		</tbody>
+	</table>
+	<script>
 // Get the modal
 var modal = document.getElementById('myModal');
 

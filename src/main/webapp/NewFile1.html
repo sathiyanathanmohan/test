@@ -4,295 +4,833 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <style>
-#welcomeuser       {position:absolute;font-size:20px;margin-top:20px}
-#logout            {position:relative;margin-left:865px;width:130px;height:30px;margin-top:20px;background-color:#0078D7;color:white} 
-#projectdiv        {position:relative;background-color:#0078D7;top:5px;width:1000px;height:30px;} 
-#projecttitle      {color:white;font-bold:true;font-size:24px;text-align:center;} 
-#add               {position:absolute;align:center;width:1000px;border: 1px solid black;top:150px;height:1080px}
-#projectdetails    {position:absolute;align:center;width:930px;border: 1px solid black;top:20px;left:20px;height:185px}
-#projectcodel      {position:absolute;left:20px;top:28px}
-#projectcode       {position:absolute;left:170px;top:28x;width:250px;height:20px}
-#epc               {display:none;position:absolute;left:170px;top:49px;font-size:13px;color:red }
-#projectnamel      {position:absolute;left:20px;top:68px}
-#projectname       {position:absolute;left:170px;top:68px;width:250px;height:20px}
-#epn               {display:none;position:absolute;left:170px;top:97px;font-size:13px;color:red}
-#startdatel        {position:absolute;left:20px;top:115px}
-#startdate         {position:absolute;left:170px;top:115px;width:135px;height:23px}
-#esd               {display:none;position:absolute;left:170px;top:142px;font-size:13px;color:red}
-#enddatel          {position:absolute;left:20px;top:158px}
-#enddate           {position:absolute;left:170px;top:158px;width:135px;height:23px}
-#eed               {display:none;position:absolute;left:170px;top:185px;font-size:13px;color:red}
-#pdl               {position:absolute;left:540px;top:28px}
-#pd          	   {text-transform: capitalize;position:absolute;left:540px;top:68px;width:40%;height:53%} 
-#developementdetails{position:absolute;align:center;width:930px;border: 1px solid black;top:240px;left:20px;height:226px}
-#centerl           {position:absolute;left:20px;top:28px}
-#center            {position:absolute;left:170px;top:28x;width:135px;height:23px}
-#ec                {display:none;position:absolute;left:170px;top:49px;font-size:13px;color:red}
-#locationl         {position:absolute;left:20px;top:68px}
-#location          {position:absolute;left:170px;top:68px;width:135px;height:23px} 
-#el                {display:none;position:absolute;left:170px;top:93px;font-size:13px;color:red} 
-#contracttypel     {position:absolute;left:20px;top:110px}
-#contracttype      {position:absolute;left:170px;top:110px;width:135px;height:23px}  
-#ect               {display:none;position:absolute;left:170px;top:135px;font-size:13px;color:red}
-#projectstatusl    {position:absolute;left:20px;top:153px} 
-#projectstatus     {position:absolute;left:170px;top:153px;width:135px;height:23px}
-#eps               {display:none;position:absolute;left:170px;top:175px;font-size:13px;color:red}
-#customerportfoliol{position:absolute;left:20px;top:195px}
-#customerportfolio {position:absolute;left:170px;top:195px;width:135px;height:23px}  
-#ecp               {display:none;position:absolute;left:170px;top:220px;font-size:13px;color:red}
-#servicesl         {position:absolute;left:540px;top:28px}
-#services          {position:absolute;text-transform: capitalize;left:673px;top:28px;width:135px;height:23px}
-#eso               {display:none;position:absolute;left:673px;top:50px;font-size:13px;color:red}
-#techl             {position:absolute;left:540px;top:68px}
-#technology        {position:absolute;text-transform: capitalize;left:673px;top:65px;width:135px;height:23px}  
-#et                {display:none;position:absolute;left:673px;top:88px;font-size:13px;color:red} 
-#tech              {text-transform: capitalize;position:absolute;left:673px;top:105px;width:25.5%;height:18%}
-#effortl           {position:absolute;left:542px;top:159px}
-#effortrequired    {text-transform: capitalize;position:absolute;left:673px;top:159px;width:174px;height:20px} 
-#mandays           {position:absolute;left:857px;top:163px}
-#er                {display:none;position:absolute;left:673px;top:184px;font-size:13px;color:red} 
-#onsitel           {position:absolute;left:542px;top:199px}
-#onsite            {text-transform: capitalize;position:absolute;left:620px;top:199px;width:100px;height:20px}
-#eon               {display:none;position:absolute;left:620px;top:225px;font-size:13px;color:red} 
-#offshorel         {position:absolute;left:750px;top:199px}
-#offshore          {text-transform: capitalize;position:absolute;left:820px;top:199px;width:100px;height:20px}
-#eoff              {display:none;position:absolute;left:820px;top:225px;font-size:13px;color:red} 
-#customerdetails   {position:absolute;align:center;width:930px;border: 1px solid black;top:500px;left:20px;height:120px}
-#clientcodel       {position:absolute;left:20px;top:28px}
-#cc                {position:absolute;left:170px;top:28x;width:135px;height:23px}
-#myTable           {border-collapse: collapse;border: 1px solid black;}
-#myTable td        {border-collapse: collapse; border: 1px solid black; padding:5px;text-align: center;}
-#myTable th        {background: #0078D7;border-collapse: collapse;border: 1px solid black;padding:5px;color:WHITE;}
-#responsibility    {position:absolute;align:center;width:930px;border: 1px solid black;top:653px;left:20px;height:60px}
-#projectmanagerl   {position:absolute;left:20px;top:28px}
-#projectmanager    {position:absolute;left:170px;top:28px;width:135px;height:23px} 
-#epm               {display:none;position:absolute;left:170px;top:53px;font-size:13px;color:red} 
-#deliverymanagerl  {position:absolute;left:335px;top:28px}
-#deliverymanager   {position:absolute;left:473px;top:28px;width:135px;height:23px}  
-#edm               {display:none;position:absolute;left:473px;top:53px;font-size:13px;color:red} 
-#onsitecoordinatorl{position:absolute;left:635px;top:28px}
-#onsitecoordinator {position:absolute;left:790px;top:28px;width:135px;height:23px}
-#remarks           {position:absolute;align:center;border: 1px solid black;top:745px;left:20px;height:230px;width:430px	}
-#pml               {position:absolute;left:20px;top:28px}
-#pm                {text-transform: capitalize;position:absolute;left:20px;top:55px;width:88%;height:25%} 
-#generall          {position:absolute;left:20px;top:130px}
-#general           {text-transform: capitalize;position:absolute;left:20px;top:150px;width:88%;height:25%} 
-#supportfile       {position:absolute;align:center;border: 1px solid black;top:745px;left:520px;height:230px;width:430px}
-#uploadfile        {position:absolute;left:20px;top:28px}
-#attachmentupload  {position:absolute;left:20px;top:70px}
-#filedescription   {position:absolute;left:20px;top:130px}
-#filedescr         {text-transform: capitalize;position:absolute;left:20px;top:150px;width:88%;height:25%} 
-#save              {position:absolute;left:300px;width:130px;height:30px;background-color:#0078D7;color:white;top:1030px}
-#cancel            {position:absolute;left:530px;width:130px;height:30px;background-color:#0078D7;color:white;top:1030px}
+#welcomeuser {
+	position: absolute;
+	font-size: 20px;
+	margin-top: 20px
+}
+
+#logout {
+	position: relative;
+	margin-left: 865px;
+	width: 130px;
+	height: 30px;
+	margin-top: 20px;
+	background-color: #0078D7;
+	color: white
+}
+
+#projectdiv {
+	position: relative;
+	background-color: #0078D7;
+	top: 5px;
+	width: 1000px;
+	height: 30px;
+}
+
+#projecttitle {
+	color: white;
+	font-bold: true;
+	font-size: 24px;
+	text-align: center;
+}
+
+#add {
+	position: absolute;
+	align: center;
+	width: 1000px;
+	border: 1px solid black;
+	top: 150px;
+	height: 1080px
+}
+
+#projectdetails {
+	position: absolute;
+	align: center;
+	width: 930px;
+	border: 1px solid black;
+	top: 20px;
+	left: 20px;
+	height: 185px
+}
+
+#projectcodel {
+	position: absolute;
+	left: 20px;
+	top: 28px
+}
+
+#projectcode {
+	position: absolute;
+	left: 170px;
+	top: 28x;
+	width: 250px;
+	height: 20px
+}
+
+#epc {
+	display: none;
+	position: absolute;
+	left: 170px;
+	top: 49px;
+	font-size: 13px;
+	color: red
+}
+
+#projectnamel {
+	position: absolute;
+	left: 20px;
+	top: 68px
+}
+
+#projectname {
+	position: absolute;
+	left: 170px;
+	top: 68px;
+	width: 250px;
+	height: 20px
+}
+
+#epn {
+	display: none;
+	position: absolute;
+	left: 170px;
+	top: 97px;
+	font-size: 13px;
+	color: red
+}
+
+#startdatel {
+	position: absolute;
+	left: 20px;
+	top: 115px
+}
+
+#startdate {
+	position: absolute;
+	left: 170px;
+	top: 115px;
+	width: 135px;
+	height: 23px
+}
+
+#esd {
+	display: none;
+	position: absolute;
+	left: 170px;
+	top: 142px;
+	font-size: 13px;
+	color: red
+}
+
+#enddatel {
+	position: absolute;
+	left: 20px;
+	top: 158px
+}
+
+#enddate {
+	position: absolute;
+	left: 170px;
+	top: 158px;
+	width: 135px;
+	height: 23px
+}
+
+#eed {
+	display: none;
+	position: absolute;
+	left: 170px;
+	top: 185px;
+	font-size: 13px;
+	color: red
+}
+
+#pdl {
+	position: absolute;
+	left: 540px;
+	top: 28px
+}
+
+#pd {
+	text-transform: capitalize;
+	position: absolute;
+	left: 540px;
+	top: 68px;
+	width: 40%;
+	height: 53%
+}
+
+#developementdetails {
+	position: absolute;
+	align: center;
+	width: 930px;
+	border: 1px solid black;
+	top: 240px;
+	left: 20px;
+	height: 226px
+}
+
+#centerl {
+	position: absolute;
+	left: 20px;
+	top: 28px
+}
+
+#center {
+	position: absolute;
+	left: 170px;
+	top: 28x;
+	width: 135px;
+	height: 23px
+}
+
+#ec {
+	display: none;
+	position: absolute;
+	left: 170px;
+	top: 49px;
+	font-size: 13px;
+	color: red
+}
+
+#locationl {
+	position: absolute;
+	left: 20px;
+	top: 68px
+}
+
+#location {
+	position: absolute;
+	left: 170px;
+	top: 68px;
+	width: 135px;
+	height: 23px
+}
+
+#el {
+	display: none;
+	position: absolute;
+	left: 170px;
+	top: 93px;
+	font-size: 13px;
+	color: red
+}
+
+#contracttypel {
+	position: absolute;
+	left: 20px;
+	top: 110px
+}
+
+#contracttype {
+	position: absolute;
+	left: 170px;
+	top: 110px;
+	width: 135px;
+	height: 23px
+}
+
+#ect {
+	display: none;
+	position: absolute;
+	left: 170px;
+	top: 135px;
+	font-size: 13px;
+	color: red
+}
+
+#projectstatusl {
+	position: absolute;
+	left: 20px;
+	top: 153px
+}
+
+#projectstatus {
+	position: absolute;
+	left: 170px;
+	top: 153px;
+	width: 135px;
+	height: 23px
+}
+
+#eps {
+	display: none;
+	position: absolute;
+	left: 170px;
+	top: 175px;
+	font-size: 13px;
+	color: red
+}
+
+#customerportfoliol {
+	position: absolute;
+	left: 20px;
+	top: 195px
+}
+
+#customerportfolio {
+	position: absolute;
+	left: 170px;
+	top: 195px;
+	width: 135px;
+	height: 23px
+}
+
+#ecp {
+	display: none;
+	position: absolute;
+	left: 170px;
+	top: 220px;
+	font-size: 13px;
+	color: red
+}
+
+#servicesl {
+	position: absolute;
+	left: 540px;
+	top: 28px
+}
+
+#services {
+	position: absolute;
+	text-transform: capitalize;
+	left: 673px;
+	top: 28px;
+	width: 135px;
+	height: 23px
+}
+
+#eso {
+	display: none;
+	position: absolute;
+	left: 673px;
+	top: 50px;
+	font-size: 13px;
+	color: red
+}
+
+#techl {
+	position: absolute;
+	left: 540px;
+	top: 68px
+}
+
+#technology {
+	position: absolute;
+	text-transform: capitalize;
+	left: 673px;
+	top: 65px;
+	width: 135px;
+	height: 23px
+}
+
+#et {
+	display: none;
+	position: absolute;
+	left: 673px;
+	top: 88px;
+	font-size: 13px;
+	color: red
+}
+
+#tech {
+	text-transform: capitalize;
+	position: absolute;
+	left: 673px;
+	top: 105px;
+	width: 25.5%;
+	height: 18%
+}
+
+#effortl {
+	position: absolute;
+	left: 542px;
+	top: 159px
+}
+
+#effortrequired {
+	text-transform: capitalize;
+	position: absolute;
+	left: 673px;
+	top: 159px;
+	width: 174px;
+	height: 20px
+}
+
+#mandays {
+	position: absolute;
+	left: 857px;
+	top: 163px
+}
+
+#er {
+	display: none;
+	position: absolute;
+	left: 673px;
+	top: 184px;
+	font-size: 13px;
+	color: red
+}
+
+#onsitel {
+	position: absolute;
+	left: 542px;
+	top: 199px
+}
+
+#onsite {
+	text-transform: capitalize;
+	position: absolute;
+	left: 620px;
+	top: 199px;
+	width: 100px;
+	height: 20px
+}
+
+#eon {
+	display: none;
+	position: absolute;
+	left: 620px;
+	top: 225px;
+	font-size: 13px;
+	color: red
+}
+
+#offshorel {
+	position: absolute;
+	left: 750px;
+	top: 199px
+}
+
+#offshore {
+	text-transform: capitalize;
+	position: absolute;
+	left: 820px;
+	top: 199px;
+	width: 100px;
+	height: 20px
+}
+
+#eoff {
+	display: none;
+	position: absolute;
+	left: 820px;
+	top: 225px;
+	font-size: 13px;
+	color: red
+}
+
+#customerdetails {
+	position: absolute;
+	align: center;
+	width: 930px;
+	border: 1px solid black;
+	top: 500px;
+	left: 20px;
+	height: 120px
+}
+
+#clientcodel {
+	position: absolute;
+	left: 20px;
+	top: 28px
+}
+
+#cc {
+	position: absolute;
+	left: 170px;
+	top: 28x;
+	width: 135px;
+	height: 23px
+}
+
+#myTable {
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+#myTable td {
+	border-collapse: collapse;
+	border: 1px solid black;
+	padding: 5px;
+	text-align: center;
+}
+
+#myTable th {
+	background: #0078D7;
+	border-collapse: collapse;
+	border: 1px solid black;
+	padding: 5px;
+	color: WHITE;
+}
+
+#responsibility {
+	position: absolute;
+	align: center;
+	width: 930px;
+	border: 1px solid black;
+	top: 653px;
+	left: 20px;
+	height: 60px
+}
+
+#projectmanagerl {
+	position: absolute;
+	left: 20px;
+	top: 28px
+}
+
+#projectmanager {
+	position: absolute;
+	left: 170px;
+	top: 28px;
+	width: 135px;
+	height: 23px
+}
+
+#epm {
+	display: none;
+	position: absolute;
+	left: 170px;
+	top: 53px;
+	font-size: 13px;
+	color: red
+}
+
+#deliverymanagerl {
+	position: absolute;
+	left: 335px;
+	top: 28px
+}
+
+#deliverymanager {
+	position: absolute;
+	left: 473px;
+	top: 28px;
+	width: 135px;
+	height: 23px
+}
+
+#edm {
+	display: none;
+	position: absolute;
+	left: 473px;
+	top: 53px;
+	font-size: 13px;
+	color: red
+}
+
+#onsitecoordinatorl {
+	position: absolute;
+	left: 635px;
+	top: 28px
+}
+
+#onsitecoordinator {
+	position: absolute;
+	left: 790px;
+	top: 28px;
+	width: 135px;
+	height: 23px
+}
+
+#remarks {
+	position: absolute;
+	align: center;
+	border: 1px solid black;
+	top: 745px;
+	left: 20px;
+	height: 230px;
+	width: 430px
+}
+
+#pml {
+	position: absolute;
+	left: 20px;
+	top: 28px
+}
+
+#pm {
+	text-transform: capitalize;
+	position: absolute;
+	left: 20px;
+	top: 55px;
+	width: 88%;
+	height: 25%
+}
+
+#generall {
+	position: absolute;
+	left: 20px;
+	top: 130px
+}
+
+#general {
+	text-transform: capitalize;
+	position: absolute;
+	left: 20px;
+	top: 150px;
+	width: 88%;
+	height: 25%
+}
+
+#supportfile {
+	position: absolute;
+	align: center;
+	border: 1px solid black;
+	top: 745px;
+	left: 520px;
+	height: 230px;
+	width: 430px
+}
+
+#uploadfile {
+	position: absolute;
+	left: 20px;
+	top: 28px
+}
+
+#attachmentupload {
+	position: absolute;
+	left: 20px;
+	top: 70px
+}
+
+#filedescription {
+	position: absolute;
+	left: 20px;
+	top: 130px
+}
+
+#filedescr {
+	text-transform: capitalize;
+	position: absolute;
+	left: 20px;
+	top: 150px;
+	width: 88%;
+	height: 25%
+}
+
+#save {
+	position: absolute;
+	left: 300px;
+	width: 130px;
+	height: 30px;
+	background-color: #0078D7;
+	color: white;
+	top: 1030px
+}
+
+#cancel {
+	position: absolute;
+	left: 530px;
+	width: 130px;
+	height: 30px;
+	background-color: #0078D7;
+	color: white;
+	top: 1030px
+}
 </style>
 </head>
 <body>
-<table  width="1000px" align="center"   cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td>
+	<table width="1000px" align="center" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td><label id="welcomeuser"></label>
+					<button id="logout">
+						<B>Log Out</B>
+					</button> <img id="back"
+					src="ProjectManagementTool-UI/css/images1/images.jpg"
+					Style="width: 26px; height: 28px;" onclick="goBack()" /> <img
+					id="home" src="ProjectManagementTool-UI/css/images1/download.jpg"
+					Style="position: absolute; width: 26px; height: 32px; margin-left: 50px"
+					onclick="location.href='projectdashboard.jsp'" /></td>
+			</tr>
 
-<label id="welcomeuser"></label>
-<button  id="logout"><B>Log Out</B></button>
-<img id="back" src="ProjectManagementTool-UI/css/images1/images.jpg" Style="width:26px;height:28px;" onclick="goBack()" />
-<img id="home" src="ProjectManagementTool-UI/css/images1/download.jpg" Style="position:absolute;width:26px;height:32px;margin-left:50px" onclick="location.href='projectdashboard.jsp'" />
-</td>
-</tr>
+			<tr>
+				<td>
+					<div id="projectdiv">
+						<p id="projecttitle" Style="color: white">Project Add</p>
+					</div>
+				</td>
+			</tr>
 
-<tr>
-<td >
-<div id="projectdiv"><p id="projecttitle" Style="color:white">Project Add</p></div>
-</td>
-</tr>
+			<tr>
+				<td>
+					<div id="add">
+						<form id="form" method="post">
+							<div>
+								<fieldset id="projectdetails">
+									<legend>
+										<label><b>Project Details</b></label>
+									</legend>
+									<label id="projectcodel">Project Code* </label> <input
+										id="projectcode" maxlength="10" name="projectcode" type="text" />
+									<label id="epc"> Enter project code </label> <label
+										id="projectnamel">Project Name* </label> <input
+										id="projectname" maxlength="50" name="projectname" type="text" />
+									<label id="epn">Enter project name </label> <label
+										id="startdatel">Start Date* </label> <input id="startdate"
+										maxlength="20" name="startdate" type="date" /> <label
+										id="esd"> Select start date</label> <label id="enddatel">End
+										Date* </label> <input id="enddate" maxlength="20" name="enddate"
+										type="date" /> <label id="eed"> Select end date</label> <label
+										id="pdl">Project Description</label>
+									<textarea id="pd" name="pd" rows="4" cols="50"></textarea>
+								</fieldset>
+							</div>
+							<div>
+								<fieldset id="developementdetails">
+									<legend>
+										<label><b>Developement Details</b></label>
+									</legend>
+									<label id="centerl">Center*</label> <select id="center"
+										name="center">
+										<option value="Select">Select</option>
+									</select> <label id="ec"> Select center</label> <label id="locationl">Location*</label>
+									<select id="location" name="location">
+										<option value="Select">Select</option>
+									</select> <label id="el"> Select location</label> <label
+										id="contracttypel">Contract Type*</label> <select
+										id="contracttype" name="contracttype">
+										<option value="Select">Select</option>
+									</select> <label id="ect">Select contract type</label> <label
+										id="projectstatusl">Project Status*</label> <select
+										id="projectstatus" name="projectstatus">
 
-<tr>
-<td>
-<div id="add">
-<form id="form" method="post"  >
-<div >     
-     <fieldset  id="projectdetails" >
-     <legend><label><b>Project Details</b></label></legend>
-         <label id="projectcodel" >Project Code* </label>
-         <input id="projectcode" maxlength="10" name="projectcode" type="text" />
-         <label id="epc"> Enter project code </label>	
+									</select> <label id="eps">Select project status as open</label> <label
+										id="customerportfoliol">Customer Portfolio*</label> <select
+										id="customerportfolio" name="customerportfolio">
+										<option value="Select">Select</option>
+									</select> <label id="ecp">Select customer portfolio</label> <label
+										id="servicesl">Services Offered*</label> <select id="services"
+										name="services">
+										<option value="Select">Select</option>
+									</select> <label id="eso">Select services offered</label> <label
+										id="techl">Technology*</label> <select id="technology"
+										name="technology">
+										<option value="">Select</option>
 
- 		 <label id="projectnamel">Project Name* </label>
-  		 <input id="projectname" maxlength="50" name="projectname" type="text" />
-  		 <label id="epn">Enter project name </label>	
+									</select> <label id="et">Select technology</label>
+									<textarea id="tech" rows="4" cols="50" name="tech"> </textarea>
+									<label id="effortl">Effort Required*</label> <input
+										id="effortrequired" maxlength="50" name="effortrequired"
+										type="text" /> <label id="mandays">Man-days</label> <label
+										id="er">Enter effort required</label> <label id="onsitel">Onsite*</label>
+									<input id="onsite" name="onsite" maxlength="50" name="name"
+										type="text" /> <label id="eon">Enter onsite effort</label> <label
+										id="offshorel">offshore*</label> <input id="offshore"
+										name="offshore" maxlength="50" name="name" type="text" /> <label
+										id="eoff">Enter offshore effort</label>
+								</fieldset>
+							</div>
 
-      	 <label id="startdatel" >Start Date* </label>
-		 <input id="startdate" maxlength="20" name="startdate" type="date" />
-		 <label id="esd"> Select start date</label>	
+							<div>
+								<fieldset id="customerdetails">
+									<legend>
+										<label><b>Client Details</b></label>
+									</legend>
+									<label id="clientcodel">Client Code*</label> <select id="cc"
+										name="customer_id">
+										<option value="Select">Select</option>
+									</select> <label id="customercode"></label> <label id="customername"></label>
+									<br> <br>
+									<table id="myTable">
+										<tr>
+											<th width="8%"><b>Select</b></th>
+											<th width="20%"><b>Contact Person</b></th>
+											<th width="30%"><b>Mail id</b></th>
+											<th width="20%"><b>Contact Number</b></th>
+											<th width="20%"><b>Alternative Number</b></th>
+											<th>...</th>
+										</tr>
+										<tbody id="tbody">
 
-         <label id="enddatel" >End Date* </label>
-		 <input id="enddate" maxlength="20" name="enddate" type="date" />
-		 <label id="eed"> Select end date</label>
-		 
+										</tbody>
 
-	     
-         <label  id="pdl">Project Description</label>
-         <textarea id="pd" name="pd" rows="4" cols="50"></textarea>
-     </fieldset>
-</div>
-<div>
-     <fieldset id="developementdetails">
-     <legend><label><b>Developement Details</b></label></legend>
-     <label id="centerl">Center*</label>
-         <select id="center" name="center">
-         <option value="Select">Select</option>
-         </select>
-         <label id="ec"> Select center</label>
+									</table>
 
-         <label id="locationl">Location*</label>
-         <select id="location" name="location">
-         <option value="Select">Select</option>
-         </select>
-         <label id="el"> Select location</label>
+									<img src="ProjectManagementTool-UI/css/images1/addicon.jpg"
+										Style="width: 20px; height: 20px" id="addrow" />
+								</fieldset>
+							</div>
 
-         <label id="contracttypel">Contract Type*</label>
-         <select id="contracttype" name="contracttype">
-         <option value="Select">Select</option>
-         </select>
-         <label id="ect">Select contract type</label>
+							<div>
+								<fieldset id="responsibility">
+									<legend>
+										<label><b>Responsibility</b></label>
+									</legend>
 
-         <label id="projectstatusl" >Project Status*</label>
-         <select id="projectstatus" name="projectstatus" >
-         
-         </select>
-          <label id="eps">Select project status as open</label>
+									<label id="projectmanagerl">Project Manager*</label> <select
+										id="projectmanager" name="projectmanager">
+										<option value="Select">Select</option>
 
-         <label id="customerportfoliol">Customer Portfolio*</label>
-         <select id="customerportfolio"  name="customerportfolio">
-         <option value="Select">Select</option>
-         </select>
-         <label id="ecp">Select customer portfolio</label>
-         <label id="servicesl">Services Offered*</label>
-         <select id="services" name="services">
-         <option value="Select">Select</option>
-         </select>
-         <label id="eso">Select services offered</label>
-         <label id="techl">Technology*</label>
-         <select id="technology" name="technology">
-         <option value="">Select</option>
-         
-         </select>
-         <label id="et">Select technology</label>
-         <textarea id="tech" rows="4" cols="50" name="tech" > </textarea>
-         <label id="effortl">Effort Required*</label>
-         <input id="effortrequired" maxlength="50" name="effortrequired" type="text" />
-            <label id="mandays">Man-days</label>
-         <label id="er">Enter effort required</label>
-      
-         <label id="onsitel">Onsite*</label>
-         <input id="onsite" name="onsite" maxlength="50" name="name" type="text" />
-         <label id="eon">Enter onsite effort</label>
-         <label id="offshorel">offshore*</label>
-         <input id="offshore" name="offshore" maxlength="50" name="name" type="text" />
-         <label id="eoff">Enter offshore effort</label>
-      </fieldset>
-</div>
+									</select> <label id="epm">Select project manager</label> <label
+										id="deliverymanagerl">Delivery Manager*</label> <select
+										id="deliverymanager" name="deliverymanager">
+										<option value="Select">Select</option>
 
-<div>
-     <fieldset id="customerdetails">
-     <legend><label><b>Client Details</b></label></legend>
-     <label id="clientcodel">Client Code*</label>
-         <select id="cc" name="customer_id" >
-         <option value="Select">Select</option>
-         </select>
-        
-         <label id="customercode"></label>
-         
-         <label id="customername" ></label>
-       <br>
-       <br>
- <table id="myTable">
-     <tr>
-    <th width="8%"><b>Select</b></th>
-    <th width="20%"><b>Contact Person</b></th>
-    <th width="30%"><b>Mail id</b></th>
-    <th width="20%"><b>Contact Number</b></th>
-    <th width="20%"><b>Alternative Number</b></th>
-    <th>...</th>
-  </tr>
-  <tbody id="tbody">
-  
-  </tbody>
-  
-        </table>
-        
-        <img src="ProjectManagementTool-UI/css/images1/addicon.jpg" Style="width:20px;height:20px" id="addrow" />
-      </fieldset>
-</div> 
+									</select> <label id="edm">Select delivery manager</label> <label
+										id="onsitecoordinatorl">Onsite Co-ordinator</label> <select
+										id="onsitecoordinator" name="onsitecoordinator">
+										<option value="Select">Select</option>
 
-<div >
-       <fieldset  id="responsibility">
-            <legend><label><b>Responsibility</b></label></legend>
-            
-            <label id="projectmanagerl">Project Manager*</label>
-            <select id="projectmanager" name="projectmanager">
-            <option value="Select">Select</option>
-            
-            </select>
-            <label id="epm">Select project manager</label>
-            <label id="deliverymanagerl">Delivery Manager*</label>
-            <select id="deliverymanager" name="deliverymanager">
-            <option value="Select">Select</option>
-           
-            </select>
-             <label id="edm">Select delivery manager</label>
-            <label id="onsitecoordinatorl">Onsite Co-ordinator</label>
-            <select id="onsitecoordinator" name="onsitecoordinator">
-            <option value="Select">Select</option>
-           
-            </select>
-            	
-<!--             <label id="eoc">Select onsite co-ordinator</label> -->
-            
-      </fieldset>	
-</div>
+									</select>
+
+									<!--             <label id="eoc">Select onsite co-ordinator</label> -->
+
+								</fieldset>
+							</div>
 
 
-   <div>
-       <fieldset  id="remarks">
-       <legend ><label><b>Remarks</b></label></legend>
-            
-            <label id="pml">Project Manager/Delivery Manager</label>
-            <textarea id="pm" name="pm" rows="4" cols="50"></textarea>
+							<div>
+								<fieldset id="remarks">
+									<legend>
+										<label><b>Remarks</b></label>
+									</legend>
 
-            <label id="generall">General</label>
-            <textarea id="general" name="general" rows="4" cols="50"></textarea>
-       </fieldset>
-    </div>
-    
-    <div>
-        <fieldset id="supportfile">
-        <legend ><label><b>Support File</b></label></legend>
-            <label id="uploadfile">Upload Files*</label><br>
-            
-<!--              <input type="file" name="file" id="file"/> -->
-             <input id="attachmentupload" type="button" value="Attachment upload" onclick='onclick1()'>
+									<label id="pml">Project Manager/Delivery Manager</label>
+									<textarea id="pm" name="pm" rows="4" cols="50"></textarea>
 
-              <label id="filedescription">File Description</label><br>
-            <textarea id="filedescr" name="filedescr" rows="4" cols="47"></textarea>
-            
-       
-        </fieldset>
-          
-    </div>
-    
-    <div>
- <button id="save">Save</button>
- <button id="cancel" type="button"><B>Cancel</B></button>
-</div>
- 
-        
-</form>
-</div>
-   
-</td>
-</tr>
+									<label id="generall">General</label>
+									<textarea id="general" name="general" rows="4" cols="50"></textarea>
+								</fieldset>
+							</div>
 
-</tbody>
-</table> 	
+							<div>
+								<fieldset id="supportfile">
+									<legend>
+										<label><b>Support File</b></label>
+									</legend>
+									<label id="uploadfile">Upload Files*</label><br>
+
+									<!--              <input type="file" name="file" id="file"/> -->
+									<input id="attachmentupload" type="button"
+										value="Attachment upload" onclick='onclick1()'> <label
+										id="filedescription">File Description</label><br>
+									<textarea id="filedescr" name="filedescr" rows="4" cols="47"></textarea>
+
+
+								</fieldset>
+
+							</div>
+
+							<div>
+								<button id="save">Save</button>
+								<button id="cancel" type="button">
+									<B>Cancel</B>
+								</button>
+							</div>
+
+
+						</form>
+					</div>
+
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
 </body>
 </html>

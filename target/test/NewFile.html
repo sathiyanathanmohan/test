@@ -4,147 +4,299 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <style>
-#welcomeuser       {position:absolute;font-size:20px;margin-top:20px}
-#logout            {position:relative;margin-left:865px;width:130px;height:30px;margin-top:20px;background-color:#0078D7;color:white} 
-#projectdiv        {position:relative;background-color:#0078D7;top:5px;width:1000px;height:30px;} 
-#projecttitle      {color:white;font-bold:true;font-size:24px;text-align:center;} 
-#add               {position:absolute;align:center;width:1000px;border: 1px solid black;top:150px;height:500px}
-#projectdetails    {position:absolute;align:center;width:930px;border: 1px solid black;top:10px;left:20px;height:180px}
-#projectcodel      {position:absolute;left:20px;top:28px}
-#projectcode       {position:absolute;left:170px;top:25x;width:250px;height:20px}
-#projectnamel      {position:absolute;left:20px;top:68px}
-#projectname       {position:absolute;left:170px;top:65px;width:250px;height:20px}
-#startdatel        {position:absolute;left:20px;top:110px}
-#startdate         {position:absolute;left:170px;top:110px}
-#enddatel          {position:absolute;left:20px;top:150px}
-#enddate           {position:absolute;left:170px;top:147px}
-#pdl               {position:absolute;left:540px;top:28px}
-#pd          	   {text-transform: capitalize;position:absolute;left:540px;top:68px;width:40%;height:49%} 
-#developementdetails {position:absolute;align:center;width:930px;border: 1px solid black;top:220px;left:20px;height:200px}
-#centerl            {position:absolute;left:20px;top:28px}
-#center            {position:absolute;left:170px;top:25x;width:135px;height:23px}
-#locationl          {position:absolute;left:20px;top:68px}
-#location           {position:absolute;left:170px;top:65px;width:135px;height:23px}  
-#contracttypel      {position:absolute;left:20px;top:110px}
-#contracttype       {position:absolute;left:170px;top:110px;width:135px;height:23px}  
-              
+#welcomeuser {
+	position: absolute;
+	font-size: 20px;
+	margin-top: 20px
+}
+
+#logout {
+	position: relative;
+	margin-left: 865px;
+	width: 130px;
+	height: 30px;
+	margin-top: 20px;
+	background-color: #0078D7;
+	color: white
+}
+
+#projectdiv {
+	position: relative;
+	background-color: #0078D7;
+	top: 5px;
+	width: 1000px;
+	height: 30px;
+}
+
+#projecttitle {
+	color: white;
+	font-bold: true;
+	font-size: 24px;
+	text-align: center;
+}
+
+#add {
+	position: absolute;
+	align: center;
+	width: 1000px;
+	border: 1px solid black;
+	top: 150px;
+	height: 500px
+}
+
+#projectdetails {
+	position: absolute;
+	align: center;
+	width: 930px;
+	border: 1px solid black;
+	top: 10px;
+	left: 20px;
+	height: 180px
+}
+
+#projectcodel {
+	position: absolute;
+	left: 20px;
+	top: 28px
+}
+
+#projectcode {
+	position: absolute;
+	left: 170px;
+	top: 25x;
+	width: 250px;
+	height: 20px
+}
+
+#projectnamel {
+	position: absolute;
+	left: 20px;
+	top: 68px
+}
+
+#projectname {
+	position: absolute;
+	left: 170px;
+	top: 65px;
+	width: 250px;
+	height: 20px
+}
+
+#startdatel {
+	position: absolute;
+	left: 20px;
+	top: 110px
+}
+
+#startdate {
+	position: absolute;
+	left: 170px;
+	top: 110px
+}
+
+#enddatel {
+	position: absolute;
+	left: 20px;
+	top: 150px
+}
+
+#enddate {
+	position: absolute;
+	left: 170px;
+	top: 147px
+}
+
+#pdl {
+	position: absolute;
+	left: 540px;
+	top: 28px
+}
+
+#pd {
+	text-transform: capitalize;
+	position: absolute;
+	left: 540px;
+	top: 68px;
+	width: 40%;
+	height: 49%
+}
+
+#developementdetails {
+	position: absolute;
+	align: center;
+	width: 930px;
+	border: 1px solid black;
+	top: 220px;
+	left: 20px;
+	height: 200px
+}
+
+#centerl {
+	position: absolute;
+	left: 20px;
+	top: 28px
+}
+
+#center {
+	position: absolute;
+	left: 170px;
+	top: 25x;
+	width: 135px;
+	height: 23px
+}
+
+#locationl {
+	position: absolute;
+	left: 20px;
+	top: 68px
+}
+
+#location {
+	position: absolute;
+	left: 170px;
+	top: 65px;
+	width: 135px;
+	height: 23px
+}
+
+#contracttypel {
+	position: absolute;
+	left: 20px;
+	top: 110px
+}
+
+#contracttype {
+	position: absolute;
+	left: 170px;
+	top: 110px;
+	width: 135px;
+	height: 23px
+}
 </style>
 </head>
 <body>
-<table  width="1000px" align="center"   cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td>
+	<table width="1000px" align="center" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td><label id="welcomeuser"></label>
+					<button id="logout">
+						<B>Log Out</B>
+					</button> <img id="back"
+					src="ProjectManagementTool-UI/css/images1/images.jpg"
+					Style="width: 26px; height: 28px;" onclick="goBack()" /> <img
+					id="home" src="ProjectManagementTool-UI/css/images1/download.jpg"
+					Style="position: absolute; width: 26px; height: 32px; margin-left: 50px"
+					onclick="location.href='projectdashboard.jsp'" /></td>
+			</tr>
 
-<label id="welcomeuser"></label>
-<button  id="logout"><B>Log Out</B></button>
-<img id="back" src="ProjectManagementTool-UI/css/images1/images.jpg" Style="width:26px;height:28px;" onclick="goBack()" />
-<img id="home" src="ProjectManagementTool-UI/css/images1/download.jpg" Style="position:absolute;width:26px;height:32px;margin-left:50px" onclick="location.href='projectdashboard.jsp'" />
-</td>
-</tr>
+			<tr>
+				<td>
+					<div id="projectdiv">
+						<p id="projecttitle" Style="color: white">Project Add</p>
+					</div>
+				</td>
+			</tr>
 
-<tr>
-<td >
-<div id="projectdiv"><p id="projecttitle" Style="color:white">Project Add</p></div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div id="add">
-<form id="form" method="post"  >
-<div >     
-     <fieldset  id="projectdetails" >
-     <legend><label><b>Project Details</b></label></legend>
-         <label id="projectcodel" >Project Code* </label>
-         <input id="projectcode" maxlength="10" name="projectcode" type="text" />
-<!--          <label id="epc"> Enter project code </label>	 -->
-<!-- 		 <br> -->
- 		 <label id="projectnamel">Project Name* </label>
-  		 <input id="projectname" maxlength="50" name="projectname" type="text" />
-<!--   		 <label id="epn">Enter project name </label>	 -->
-<!--          <br> -->
-      	 <label id="startdatel" >Start Date* </label>
-		 <input id="startdate" maxlength="20" name="startdate" type="date" />
-<!-- 		 <label id="esd"> Select start date</label>	 -->
-<!--          <br> -->
-         <label id="enddatel" >End Date* </label>
-		 <input id="enddate" maxlength="20" name="enddate" type="date" />
-<!-- 		 <label id="eed"> Select end date</label> -->
-		 
-
-	     
-         <label  id="pdl">Project Description</label>
-         <textarea id="pd" name="pd" rows="4" cols="50"></textarea>
-     </fieldset>
-</div>
-<div>
-     <fieldset id="developementdetails">
-     <legend><label><b>Developement Details</b></label></legend>
-     <label id="centerl">Center*</label>
-         <select id="center" name="center">
-         <option value="Select">Select</option>
-         </select>
-<!--          <label id="ec"> Select center</label> -->
-<!--          <br> -->
-         <label id="locationl">Location*</label>
-         <select id="location" name="location">
-         <option value="Select">Select</option>
-         </select>
-<!--          <label id="el"> Select location</label> -->
-<!--          <br> -->
-         <label id="contracttypel">Contract Type*</label>
-         <select id="contracttype" name="contracttype">
-         <option value="Select">Select</option>
-         </select>
-<!--          <label id="ect">Select contract type</label> -->
-<!--          <br> -->
-<!--          <label>Project Status*</label> -->
-<!--          <select id="projectstatus" name="projectstatus" > -->
-         
-<!--          </select> -->
-<!--           <label id="eps">Select project status as open</label> -->
-<!--          <br> -->
-<!--          <label>Customer Portfolio*</label> -->
-<!--          <select id="customerportfolio"  name="customerportfolio"> -->
-<!--          <option value="Select">Select</option> -->
-<!--          </select> -->
-<!--          <label id="ecp">Select customer portfolio</label> -->
-<!--          <label id="servicesl">Services Offered*</label> -->
-<!--          <select id="services" name="services"> -->
-<!--          <option value="Select">Select</option> -->
-<!--          </select> -->
-<!--          <label id="eso">Select services offered</label> -->
-<!--          <label id="techl">Technology*</label> -->
-<!--          <select id="technology" name="technology"> -->
-<!--          <option value="">Select</option> -->
-         
-<!--          </select> -->
-<!--          <label id="et">Select technology</label> -->
-<!--          <textarea id="tech" rows="4" cols="50" name="tech" > </textarea> -->
-<!--          <label id="effortl">Effort Required*</label> -->
-<!--          <input id="effortrequired" maxlength="50" name="effortrequired" type="text" /> -->
-<!--             <label id="mandays">Man-days</label> -->
-<!--          <label id="er">Enter effort required</label> -->
-      
-<!--          <label id="onsitel">Onsite*</label> -->
-<!--          <input id="onsite" name="onsite" maxlength="50" name="name" type="text" /> -->
-<!--          <label id="eon">Enter onsite effort</label> -->
-<!--          <label id="offshorel">offshore*</label> -->
-<!--          <input id="offshore" name="offshore" maxlength="50" name="name" type="text" /> -->
-<!--          <label id="eoff">Enter offshore effort</label> -->
-      </fieldset>
-</div>
-     
+			<tr>
+				<td>
+					<div id="add">
+						<form id="form" method="post">
+							<div>
+								<fieldset id="projectdetails">
+									<legend>
+										<label><b>Project Details</b></label>
+									</legend>
+									<label id="projectcodel">Project Code* </label> <input
+										id="projectcode" maxlength="10" name="projectcode" type="text" />
+									<!--          <label id="epc"> Enter project code </label>	 -->
+									<!-- 		 <br> -->
+									<label id="projectnamel">Project Name* </label> <input
+										id="projectname" maxlength="50" name="projectname" type="text" />
+									<!--   		 <label id="epn">Enter project name </label>	 -->
+									<!--          <br> -->
+									<label id="startdatel">Start Date* </label> <input
+										id="startdate" maxlength="20" name="startdate" type="date" />
+									<!-- 		 <label id="esd"> Select start date</label>	 -->
+									<!--          <br> -->
+									<label id="enddatel">End Date* </label> <input id="enddate"
+										maxlength="20" name="enddate" type="date" />
+									<!-- 		 <label id="eed"> Select end date</label> -->
 
 
 
-</form>
-</div>
-</td>
-</tr>
+									<label id="pdl">Project Description</label>
+									<textarea id="pd" name="pd" rows="4" cols="50"></textarea>
+								</fieldset>
+							</div>
+							<div>
+								<fieldset id="developementdetails">
+									<legend>
+										<label><b>Developement Details</b></label>
+									</legend>
+									<label id="centerl">Center*</label> <select id="center"
+										name="center">
+										<option value="Select">Select</option>
+									</select>
+									<!--          <label id="ec"> Select center</label> -->
+									<!--          <br> -->
+									<label id="locationl">Location*</label> <select id="location"
+										name="location">
+										<option value="Select">Select</option>
+									</select>
+									<!--          <label id="el"> Select location</label> -->
+									<!--          <br> -->
+									<label id="contracttypel">Contract Type*</label> <select
+										id="contracttype" name="contracttype">
+										<option value="Select">Select</option>
+									</select>
+									<!--          <label id="ect">Select contract type</label> -->
+									<!--          <br> -->
+									<!--          <label>Project Status*</label> -->
+									<!--          <select id="projectstatus" name="projectstatus" > -->
 
-</tbody>
-</table> 	
+									<!--          </select> -->
+									<!--           <label id="eps">Select project status as open</label> -->
+									<!--          <br> -->
+									<!--          <label>Customer Portfolio*</label> -->
+									<!--          <select id="customerportfolio"  name="customerportfolio"> -->
+									<!--          <option value="Select">Select</option> -->
+									<!--          </select> -->
+									<!--          <label id="ecp">Select customer portfolio</label> -->
+									<!--          <label id="servicesl">Services Offered*</label> -->
+									<!--          <select id="services" name="services"> -->
+									<!--          <option value="Select">Select</option> -->
+									<!--          </select> -->
+									<!--          <label id="eso">Select services offered</label> -->
+									<!--          <label id="techl">Technology*</label> -->
+									<!--          <select id="technology" name="technology"> -->
+									<!--          <option value="">Select</option> -->
+
+									<!--          </select> -->
+									<!--          <label id="et">Select technology</label> -->
+									<!--          <textarea id="tech" rows="4" cols="50" name="tech" > </textarea> -->
+									<!--          <label id="effortl">Effort Required*</label> -->
+									<!--          <input id="effortrequired" maxlength="50" name="effortrequired" type="text" /> -->
+									<!--             <label id="mandays">Man-days</label> -->
+									<!--          <label id="er">Enter effort required</label> -->
+
+									<!--          <label id="onsitel">Onsite*</label> -->
+									<!--          <input id="onsite" name="onsite" maxlength="50" name="name" type="text" /> -->
+									<!--          <label id="eon">Enter onsite effort</label> -->
+									<!--          <label id="offshorel">offshore*</label> -->
+									<!--          <input id="offshore" name="offshore" maxlength="50" name="name" type="text" /> -->
+									<!--          <label id="eoff">Enter offshore effort</label> -->
+								</fieldset>
+							</div>
+
+
+
+
+						</form>
+					</div>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
 </body>
 </html>

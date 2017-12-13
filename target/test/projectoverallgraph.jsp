@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Project Dashboard </title>
+<title>Project Dashboard</title>
 </head>
 <body>
 
-<%
+	<%
 String  designation="";
 String designation1="";
          Cookie cookie = null;
@@ -65,10 +65,8 @@ String designation1="";
 
 
 
-<iframe width="100%" height="1000" src="https://app.powerbi.com/view?r=eyJrIjoiODkwNjhmOTQtMWQ5Zi00ODIwLTg2MjEtZGU5YzY4NmIzYTZhIiwidCI6IjEwYzQzNDIzLWI2M2QtNDQwOC1iYTViLTgzYjdlYmE5ZGE2YyIsImMiOjEwfQ%3D%3D" frameborder="1" allowFullScreen="true">
-
-
-
-
+	<iframe width="100%" height="1000"
+		src="https://app.powerbi.com/view?r=eyJrIjoiODkwNjhmOTQtMWQ5Zi00ODIwLTg2MjEtZGU5YzY4NmIzYTZhIiwidCI6IjEwYzQzNDIzLWI2M2QtNDQwOC1iYTViLTgzYjdlYmE5ZGE2YyIsImMiOjEwfQ%3D%3D"
+		frameborder="1" allowFullScreen="true">
 </body>
 </html>

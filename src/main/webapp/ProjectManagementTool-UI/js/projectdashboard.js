@@ -18,7 +18,7 @@ $( window ).load(function() {
 			{
 			 location.href='managerdashboard.jsp';
 			}
-	   $('#welcomeuser').append("Welcome "+user2+" !") ;
+	   $('#destusername').text(user2) ;
 	var url = "rest/webservices/getallproject";
 	var k=1,c,d,e;
 //alert(url);

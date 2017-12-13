@@ -3,221 +3,236 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="ProjectManagementTool-UI/css/Plugins/dataTables.jqueryui.min.css"> 
+<link rel="stylesheet" type="text/css"
+	href="ProjectManagementTool-UI/css/Plugins/dataTables.jqueryui.min.css">
 <script src="ProjectManagementTool-UI/js/Plugins/jquery-1.11.1.min.js"></script>
-<script src="ProjectManagementTool-UI/js/Plugins/jquery.dataTables.min.js"></script> 
-<script src="ProjectManagementTool-UI/js/Plugins/buttons.html5.min.js"></script> 
-<script src="ProjectManagementTool-UI/js/Plugins/dataTables.buttons.min.js"></script>
+<script
+	src="ProjectManagementTool-UI/js/Plugins/jquery.dataTables.min.js"></script>
+<script src="ProjectManagementTool-UI/js/Plugins/buttons.html5.min.js"></script>
+<script
+	src="ProjectManagementTool-UI/js/Plugins/dataTables.buttons.min.js"></script>
 <script src="ProjectManagementTool-UI/js/Plugins/jszip.min.js"></script>
-<script type="text/javascript" src="ProjectManagementTool-UI/js/clientreport.js"></script>
- <script src="ProjectManagementTool-UI/js/cookies.js"></script>
-<script src="https://rawgithub.com/eligrey/FileSaver.js/master/FileSaver.js" type="text/javascript"></script>
+<script type="text/javascript"
+	src="ProjectManagementTool-UI/js/clientreport.js"></script>
+<script src="ProjectManagementTool-UI/js/cookies.js"></script>
+<script
+	src="https://rawgithub.com/eligrey/FileSaver.js/master/FileSaver.js"
+	type="text/javascript"></script>
 <style type="text/css">
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
 }
+
 .modal-body {
-    max-height: calc(100vh - 210px);
-    overflow-y: auto;
+	max-height: calc(100vh - 210px);
+	overflow-y: auto;
 }
 
 /* The Close Button */
 .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
 }
 
+#projectdiv {
+	margin: -10px 0px 30px -8px;
+	background-color: #0078D7;
+	width: 1100px;
+	height: 30px;
+	position: relative;
+}
 
+#nav {
+	margin: 0px 0px 0px -8px;
+	background-color: #0078D7;
+	width: 1102px;
+	height: 30px;
+}
 
-#projectdiv
-	{
-margin:-10px 0px 30px -8px;
-background-color:#0078D7;
-width:1100px;
-height:30px;
-position: relative;
-	}
-	#nav
-	{
-margin:0px 0px 0px -8px;
-	background-color:#0078D7;
-	width:1102px;
-	height:30px;
-	}
-#title
-	{
-	color:white;font-bold:true;font-size:24px;margin-top:3px;
-	text-align:center;
-	}
-	
-#add 
- { 
-position:relative;
-border: 1px solid black;
-	margin:0px 0px 0px -8px;
- 	width:1100px;
-	}
-	#clientid
-	{
-	margin:0px 0px 0px 0px;
-	}
-	select
-	{
-	margin:0px 0px 35px 10px;
-	width:100px;
-	height:25px;
-	}
-	#lclientname
-	{
-	position:relative;
-	left:80px;
-	}
-	#clientname
-	{
-	position:relative;
-		left:80px;
-	}
-	#llocation
-	{
-		position:relative;
-		left:200px;
-	}
-	#location
-	{
-	position:relative;
-		left:200px;
-	}
-	#lperson
-	{
-		position:relative;
-		left:300px;
-	}
-	#person
-	{
-		position:relative;
-		left:300px;
-	}
-	#nav1
-	{
-margin:50px 0px 0px -8px;
-	background-color:#0078D7;
-	width:1200px;
-	height:30px;
-	}
-#emptitle
-{
-color:white;font-bold:true;font-size:24px;margin-top:3px;
-	text-align:center;
+#title {
+	color: white;
+	font-bold: true;
+	font-size: 24px;
+	margin-top: 3px;
+	text-align: center;
+}
+
+#add {
+	position: relative;
+	border: 1px solid black;
+	margin: 0px 0px 0px -8px;
+	width: 1100px;
+}
+
+#clientid {
+	margin: 0px 0px 0px 0px;
+}
+
+select {
+	margin: 0px 0px 35px 10px;
+	width: 100px;
+	height: 25px;
+}
+
+#lclientname {
+	position: relative;
+	left: 80px;
+}
+
+#clientname {
+	position: relative;
+	left: 80px;
+}
+
+#llocation {
+	position: relative;
+	left: 200px;
+}
+
+#location {
+	position: relative;
+	left: 200px;
+}
+
+#lperson {
+	position: relative;
+	left: 300px;
+}
+
+#person {
+	position: relative;
+	left: 300px;
+}
+
+#nav1 {
+	margin: 50px 0px 0px -8px;
+	background-color: #0078D7;
+	width: 1200px;
+	height: 30px;
+}
+
+#emptitle {
+	color: white;
+	font-bold: true;
+	font-size: 24px;
+	margin-top: 3px;
+	text-align: center;
 }
 </style>
 </head>
 <body>
-<table id="mytable" 	width="1100px"  align="center"     cellspacing="0" cellpadding="0">
-<tbody>
-	
-	<tr>
-	<td>
-	<label id="clientid"><b>Client Code :</b></label>
-		<select  id="clientid1" >
-		<option >Select</option>
-		</select>
-		<label id="lclientname" ><b>Client Name :</b></label>
-		<label id="clientname" ></label>
-		<label id="llocation" ><b>Location:</b></label>
-		<label id="location" ></label>
-		<label id="lperson" ><b>No of Contact Persons:</b></label>
-		<a id="person" onclick="show();" href="javascript:void(0);"></a>
-	</td>
-	</tr>
-	<tr>
-	<td>
-		
-		<div id="nav">
-		<p id="title">Client Report</p></div>
-	
-	</td>
-	</tr>
-	
-	<tr>
-	<td>
-		<div id="add" >
-		<table id="example" style="width:1100px;" class="display">
-				        <thead>
-				            <tr>
-				                <th align="center">SERIAL NO</th>
-				                <th align="center">PROJECT ID</th>
-				                <th align="center">PROJECT NAME</th>
-				                <th align="center">LOCATION</th>
-				              <th align="center">NO OF<br> CONTACT PERSONS</th>
-				              <th align="center">ACTION</th>
-				            </tr>
-				        </thead>
-				               <tbody id="c1">
-				        </tbody>
-				    </table>
+	<table id="mytable" width="1100px" align="center" cellspacing="0"
+		cellpadding="0">
+		<tbody>
+
+			<tr>
+				<td><label id="clientid"><b>Client Code :</b></label> <select
+					id="clientid1">
+						<option>Select</option>
+				</select> <label id="lclientname"><b>Client Name :</b></label> <label
+					id="clientname"></label> <label id="llocation"><b>Location:</b></label>
+					<label id="location"></label> <label id="lperson"><b>No
+							of Contact Persons:</b></label> <a id="person" onclick="show();"
+					href="javascript:void(0);"></a></td>
+			</tr>
+			<tr>
+				<td>
+
+					<div id="nav">
+						<p id="title">Client Report</p>
+					</div>
+
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<div id="add">
+						<table id="example" style="width: 1100px;" class="display">
+							<thead>
+								<tr>
+									<th align="center">SERIAL NO</th>
+									<th align="center">PROJECT ID</th>
+									<th align="center">PROJECT NAME</th>
+									<th align="center">LOCATION</th>
+									<th align="center">NO OF<br> CONTACT PERSONS
+									</th>
+									<th align="center">ACTION</th>
+								</tr>
+							</thead>
+							<tbody id="c1">
+							</tbody>
+						</table>
+					</div>
+
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<button id="excel" class='excelButton'>EXCEL</button>
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="close">&times;</span>
+			<div id="nav1"
+				Style="position: relative; margin-left: 2px; width: 90%;">
+				<p id="emptitle">Conduct Persons</p>
+			</div>
+
+			<table Style="position: relative; margin-top: 8px; width: 90%"
+				border="1">
+				<thead>
+					<tr>
+						<th>Serial No
+						<th>Person Name</th>
+						<th>Conduct Number1</th>
+						<th>Conduct Number2</th>
+						<th>Mail ID</th>
+					</tr>
+
+				</thead>
+
+				<tbody id="managerview">
+
+					</td>
+					</tr>
+
+
+				</tbody>
+			</table>
 		</div>
-	
-	</td>
-	</tr>
-</tbody>
-</table>
-<button id="excel" class='excelButton'>EXCEL</button>
-<div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close" id="close">&times;</span>
-    <div id="nav1" Style="position:relative;margin-left:2px;width:90%;" ><p id="emptitle" >Conduct Persons</p></div>
+	</div>
 
-    <table Style="position:relative;margin-top:8px;width:90%"  border="1">
-    <thead>
-    <tr>
-    <th>Serial No<th>Person Name</th><th>Conduct Number1</th><th>Conduct Number2</th><th>Mail ID</th></tr>
-    
-    </thead>
-    
-    <tbody id="managerview">
-    
-    </td>
-    </tr>
-    
-   
-    </tbody>
-    </table>
-  </div>
-
-</div>
-
-<script>
+	<script>
 // Get the modal
 var modal = document.getElementById('myModal');
 

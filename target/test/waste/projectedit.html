@@ -4,229 +4,209 @@
 <meta charset="ISO-8859-1">
 <title>Project Management Tool</title>
 
-<script src="ProjectManagementTool-UI/js/Plugins/jquery-3.2.1-jquery.min.js"></script>
-  <script src="ProjectManagementTool-UI/js/Plugins/jquery-1.10.2.js"></script>
-   <script type="text/javascript" src=" ProjectManagementTool-UI/js/Plugins/jqueryui-1.10.3-jquery-ui.js"></script>
+<script
+	src="ProjectManagementTool-UI/js/Plugins/jquery-3.2.1-jquery.min.js"></script>
+<script src="ProjectManagementTool-UI/js/Plugins/jquery-1.10.2.js"></script>
+<script type="text/javascript"
+	src=" ProjectManagementTool-UI/js/Plugins/jqueryui-1.10.3-jquery-ui.js"></script>
 <!--    <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> -->
-<script type="text/javascript" src="ProjectManagementTool-UI/js/projectedit.js"></script>
+<script type="text/javascript"
+	src="ProjectManagementTool-UI/js/projectedit.js"></script>
 <!--   <script src=js/projectadd.js></script> -->
-  <script  src="ProjectManagementTool-UI/js/cookies.js"></script>
-<link rel="stylesheet" type="text/css" href="ProjectManagementTool-UI/css/projectedit.css">
-  
+<script src="ProjectManagementTool-UI/js/cookies.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="ProjectManagementTool-UI/css/projectedit.css">
+
 </head>
 <body>
 
-<!-- <button id="home" onclick="location.href='projectdashboard.html'"></button> -->
-<div>
-<h2 id="welcomeuser" ALIGN="left"> </h2>
-<input id="logout" type="button" value="Log Out">
-</div>
-<br>
-<br>
+	<!-- <button id="home" onclick="location.href='projectdashboard.html'"></button> -->
+	<div>
+		<h2 id="welcomeuser" ALIGN="left"></h2>
+		<input id="logout" type="button" value="Log Out">
+	</div>
+	<br>
+	<br>
 
-<div id="projectdiv"><p id="projecttitle" Style="color:white">Project Edit</p></div>
-<div id="add" >
+	<div id="projectdiv">
+		<p id="projecttitle" Style="color: white">Project Edit</p>
+	</div>
+	<div id="add">
 
-<br>
-<form id="form" method="post"  >
-<div style="margin-right:2px">     
-     <fieldset  id="projectdetails" >
-     <legend><label><b>Project Details</b></label></legend>
-         <label >Project Code* </label>
-         <input id="projectcode" maxlength="10" name="projectcode" type="text" />
-         <label id="epc">Please enter project code </label>	
-		 <br>
- 		 <label >Project Name* </label>
-  		 <input id="projectname" maxlength="50" name="projectname" type="text" />
-  		 <label id="epn">Please enter project name </label>	
-         <br>
-      	 <label >Start Date* </label>
-		 <input id="startdate" maxlength="20" name="startdate" type="date" />
-		 <label id="esd">Please select start date</label>	
-         <br>
-         <label >End Date* </label>
-		 <input id="enddate" maxlength="20" name="enddate" type="date" />
-		 <label id="eed">Please select end date</label>
-		 <br>
-		 <br>
-<!-- 		 <div id="caldiv"><p id="cal" Style="color:white">Show Days/Hours</p></div> -->
-	     <label id="nodays">No Of Days:</label>
-	     <label id="estimationhours" >Estimation Hours:</label>
-	     
-         <label  id="pdl">Project Description</label>
-         <textarea id="pd" name="pd" rows="4" cols="50"></textarea>
-          
-         
-     </fieldset>
-</div>
+		<br>
+		<form id="form" method="post">
+			<div style="margin-right: 2px">
+				<fieldset id="projectdetails">
+					<legend>
+						<label><b>Project Details</b></label>
+					</legend>
+					<label>Project Code* </label> <input id="projectcode"
+						maxlength="10" name="projectcode" type="text" /> <label id="epc">Please
+						enter project code </label> <br> <label>Project Name* </label> <input
+						id="projectname" maxlength="50" name="projectname" type="text" />
+					<label id="epn">Please enter project name </label> <br> <label>Start
+						Date* </label> <input id="startdate" maxlength="20" name="startdate"
+						type="date" /> <label id="esd">Please select start date</label> <br>
+					<label>End Date* </label> <input id="enddate" maxlength="20"
+						name="enddate" type="date" /> <label id="eed">Please
+						select end date</label> <br> <br>
+					<!-- 		 <div id="caldiv"><p id="cal" Style="color:white">Show Days/Hours</p></div> -->
+					<label id="nodays">No Of Days:</label> <label id="estimationhours">Estimation
+						Hours:</label> <label id="pdl">Project Description</label>
+					<textarea id="pd" name="pd" rows="4" cols="50"></textarea>
 
-<br>
 
-<div style="margin-right:2px">
-     <fieldset id="developementdetails">
-     <legend><label><b>Developement Details</b></label></legend>
-         <label>Center*</label>
-         <select id="center" name="center">
-         <option >Select</option>
-         </select>
-         <label id="ec">Please select center</label>
-         <br>
-         <label>Location*</label>
-         <select id="location" name="location">
-         <option >Select</option>
-         </select>
-         <label id="el">Please select location</label>
-         <br>
-         <label>Contract Type*</label>
-         <select id="contracttype" name="contracttype">
-         <option >Select</option>
-         </select>
-         <label id="ect">Please select contract type</label>
-         <br>
-         <label>Project Status*</label>
-         <select id="projectstatus" name="projectstatus" >
-         
-         </select>
-          <label id="eps">Please select project status as open</label>
-         <br>
-         <label>Customer Portfolio*</label>
-         <select id="customerportfolio"  name="customerportfolio">
-         <option value="Select">Select</option>
-         </select>
-         <label id="ecp">Please select customer portfolio</label>
-         <label id="servicesl">Services Offered*</label>
-         <select id="services" name="services">
-         <option value="Select">Select</option>
-         </select>
-         <label id="eso">Please select services offered</label>
-         <label id="techl">Technology*</label>
-         <select id="technology" name="technology">
-         <option value="Select">Select</option>
-         
-         </select>
-         <label id="et">Please select technology</label>
-         <textarea id="tech" rows="4" cols="50" name="tech" > </textarea>
-         <label id="effortl">Effort Required*</label>
-         <input id="effortrequired" maxlength="50" name="effortrequired" type="text" />
-            <label id="mandays">Man-days</label>
-         <label id="er">Please enter effort required</label>
-      
-         <label id="onsitel">Onsite*</label>
-         <input id="onsite" name="onsite" maxlength="50" name="name" type="text" />
-         <label id="eon">Please enter onsite</label>
-         <label id="offshorel">offshore*</label>
-         <input id="offshore" name="offshore"maxlength="50" name="name" type="text" />
-         <label id="eoff">Please enter offshore effort</label>
-      </fieldset>
-</div>
+				</fieldset>
+			</div>
 
-<br>
-<div style="margin-right:2px">
-     <fieldset id="customerdetails">
-     <legend><label><b>Customer Details</b></label></legend>
-     <label>Customer Code*</label>
-         <select id="cc" name="cc" >
-         <option >Select</option>
-         </select>
-        
-         <label id="customercode"></label>
-         
-         <label id="customername" ></label>
-       
-           <table id="myTable">
-     <tr>
-    <th width="5%"><b>Select</b></th>
-    <th width="20%"><b>Contact Person</b></th>
-    <th width="30%"><b>Mail id</b></th>
-    <th width="20%"><b>Contact Number</b></th>
-    <th width="20%"><b>Alternative Number</b></th>
-      <th width="20%"></th>
-  </tr>
-  <tbody id="tbody">
-  
-  </tbody>
-  
-        </table>
-     <img src="ProjectManagementTool-UI/css/images1/addicon.jpg" Style="width:20px;height:20px" id="addrow" />
-      </fieldset>
-</div>
+			<br>
+
+			<div style="margin-right: 2px">
+				<fieldset id="developementdetails">
+					<legend>
+						<label><b>Developement Details</b></label>
+					</legend>
+					<label>Center*</label> <select id="center" name="center">
+						<option>Select</option>
+					</select> <label id="ec">Please select center</label> <br> <label>Location*</label>
+					<select id="location" name="location">
+						<option>Select</option>
+					</select> <label id="el">Please select location</label> <br> <label>Contract
+						Type*</label> <select id="contracttype" name="contracttype">
+						<option>Select</option>
+					</select> <label id="ect">Please select contract type</label> <br> <label>Project
+						Status*</label> <select id="projectstatus" name="projectstatus">
+
+					</select> <label id="eps">Please select project status as open</label> <br>
+					<label>Customer Portfolio*</label> <select id="customerportfolio"
+						name="customerportfolio">
+						<option value="Select">Select</option>
+					</select> <label id="ecp">Please select customer portfolio</label> <label
+						id="servicesl">Services Offered*</label> <select id="services"
+						name="services">
+						<option value="Select">Select</option>
+					</select> <label id="eso">Please select services offered</label> <label
+						id="techl">Technology*</label> <select id="technology"
+						name="technology">
+						<option value="Select">Select</option>
+
+					</select> <label id="et">Please select technology</label>
+					<textarea id="tech" rows="4" cols="50" name="tech"> </textarea>
+					<label id="effortl">Effort Required*</label> <input
+						id="effortrequired" maxlength="50" name="effortrequired"
+						type="text" /> <label id="mandays">Man-days</label> <label
+						id="er">Please enter effort required</label> <label id="onsitel">Onsite*</label>
+					<input id="onsite" name="onsite" maxlength="50" name="name"
+						type="text" /> <label id="eon">Please enter onsite</label> <label
+						id="offshorel">offshore*</label> <input id="offshore"
+						name="offshore" maxlength="50" name="name" type="text" /> <label
+						id="eoff">Please enter offshore effort</label>
+				</fieldset>
+			</div>
+
+			<br>
+			<div style="margin-right: 2px">
+				<fieldset id="customerdetails">
+					<legend>
+						<label><b>Customer Details</b></label>
+					</legend>
+					<label>Customer Code*</label> <select id="cc" name="cc">
+						<option>Select</option>
+					</select> <label id="customercode"></label> <label id="customername"></label>
+
+					<table id="myTable">
+						<tr>
+							<th width="5%"><b>Select</b></th>
+							<th width="20%"><b>Contact Person</b></th>
+							<th width="30%"><b>Mail id</b></th>
+							<th width="20%"><b>Contact Number</b></th>
+							<th width="20%"><b>Alternative Number</b></th>
+							<th width="20%"></th>
+						</tr>
+						<tbody id="tbody">
+
+						</tbody>
+
+					</table>
+					<img src="ProjectManagementTool-UI/css/images1/addicon.jpg"
+						Style="width: 20px; height: 20px" id="addrow" />
+				</fieldset>
+			</div>
 
 
 
 
-<div style="margin-right:2px;margin-left:2px">
-       <fieldset  id="responsibility">
-            <legend><label><b>Responsibility</b></label></legend>
-            
-            <label id="projectmanagerl">Project Manager*</label>
-            <select id="projectmanager" name="projectmanager">
-            <option value="Select">Select</option>
-            
-            </select>
-            <label id="epm">Please select project manager</label>
-            <label id="deliverymanagerl">Delivery Manager*</label>
-            <select id="deliverymanager" name="deliverymanager">
-            <option value="Select">Select</option>
-           
-            </select>
-             <label id="edm">Please select delivery manager</label>
-            <label id="">Onsite Co-ordinator*</label>
-            <select id="onsitecoordinator" name="onsitecoordinator">
-            <option value="Select">Select</option>
-           
-            </select>
-            	
-            <label id="eoc">Please select onsite co-ordinator</label>
-            
-      </fieldset>
-</div>
+			<div style="margin-right: 2px; margin-left: 2px">
+				<fieldset id="responsibility">
+					<legend>
+						<label><b>Responsibility</b></label>
+					</legend>
 
-<br>
+					<label id="projectmanagerl">Project Manager*</label> <select
+						id="projectmanager" name="projectmanager">
+						<option value="Select">Select</option>
 
-<div  style="margin-right:2px;position:relative">
-    <div>
-       <fieldset  id="remarks">
-       <legend ><label><b>Remarks</b></label></legend>
-            
-            <label id="pml">Project Manager/Delivery Manager</label>
-            <textarea id="pm" name="pm" rows="4" ></textarea>
-            <br>
-            <label id="generall">General</label>
-            <textarea id="general" name="general" rows="4" cols="50"></textarea>
-       </fieldset>
-    </div>
-    <div>
-        <fieldset  id="supportfile">
-        <legend ><label><b>Support File</b></label></legend>
-            <label id="uploadfile">Upload Files*</label><br>
-            
-             <input type="file" name="file" id="file"/>
-             <br>
-             <span  id="filename"></span>
-             <br>
-              <label id="filedescription">File Description</label><br>
-            <textarea id="filedescr" name="filedescr" rows="4" cols="47"></textarea>
-            <br>
-       
-        </fieldset>
-        
-           
-    </div  >
+					</select> <label id="epm">Please select project manager</label> <label
+						id="deliverymanagerl">Delivery Manager*</label> <select
+						id="deliverymanager" name="deliverymanager">
+						<option value="Select">Select</option>
 
-          
-             
-          </div >
-          <br>
-        <div>
-    <button id="save">Save</button>
-            <button id="cancel" type="button"><B>Cancel</B></button>
-</div>
- <br>
-  <br>
-     <input type="hidden" value="" name="id" id="id">   
- 
-</form>
-</div>
+					</select> <label id="edm">Please select delivery manager</label> <label
+						id="">Onsite Co-ordinator*</label> <select id="onsitecoordinator"
+						name="onsitecoordinator">
+						<option value="Select">Select</option>
+
+					</select> <label id="eoc">Please select onsite co-ordinator</label>
+
+				</fieldset>
+			</div>
+
+			<br>
+
+			<div style="margin-right: 2px; position: relative">
+				<div>
+					<fieldset id="remarks">
+						<legend>
+							<label><b>Remarks</b></label>
+						</legend>
+
+						<label id="pml">Project Manager/Delivery Manager</label>
+						<textarea id="pm" name="pm" rows="4"></textarea>
+						<br> <label id="generall">General</label>
+						<textarea id="general" name="general" rows="4" cols="50"></textarea>
+					</fieldset>
+				</div>
+				<div>
+					<fieldset id="supportfile">
+						<legend>
+							<label><b>Support File</b></label>
+						</legend>
+						<label id="uploadfile">Upload Files*</label><br> <input
+							type="file" name="file" id="file" /> <br> <span
+							id="filename"></span> <br> <label id="filedescription">File
+							Description</label><br>
+						<textarea id="filedescr" name="filedescr" rows="4" cols="47"></textarea>
+						<br>
+
+					</fieldset>
+
+
+				</div>
+
+
+
+			</div>
+			<br>
+			<div>
+				<button id="save">Save</button>
+				<button id="cancel" type="button">
+					<B>Cancel</B>
+				</button>
+			</div>
+			<br> <br> <input type="hidden" value="" name="id" id="id">
+
+		</form>
+	</div>
 
 </body>
 </html>

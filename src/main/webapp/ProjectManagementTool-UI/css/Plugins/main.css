@@ -1,0 +1,4059 @@
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	background: url('../images/brillant_@2X.png') repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'open sans';
+}
+
+table th {
+	background: #e9e0d0;
+}
+
+section {
+	background: #f1f1f1;
+}
+
+header h3 {
+	padding-bottom: 20px !important;
+}
+
+.preAssessmentScreen {
+	display: none !important;
+}
+
+.well {
+	background: none;
+	border: none;
+	box-shadow: none;
+	margin-bottom: 0;
+}
+/* sush new changes 14-08-2017*/
+.topPane {
+	background: #0078D7;
+	color: #fff;
+}
+
+.topPane .container {
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+.topPane .container .logo {
+	width: 80%;
+	margin-bottom: 10px;
+}
+
+.topPane .container .discoverMigration {
+	padding-top: 0px
+}
+
+.topPane .container .discoverMigration a {
+	color: #e4e6e7;
+	text-decoration: none;
+	font-size: 20px;
+	box-shadow: none;
+	font-weight: normal;
+}
+
+.topPane .container .rightPane .loginButton {
+	padding-left: 0px;
+}
+
+.topPane .container .rightPane .loginButton a {
+	background: transparent;
+	box-shadow: none;
+	text-shadow: none;
+	border: none;
+	color: white;
+	font-size: 15px;
+}
+
+.topPane .container .rightPane .loginButton a span {
+	padding-left: 3px;
+	color: white;
+}
+
+.topPane .container .rightPane .loginButton a .caret {
+	padding: 0px;
+}
+
+.topPane .container .rightPane .loginButton .dropdown-menu {
+	color: #2d3f52;
+	top: 53px;
+	width: 200px;
+}
+
+.topPane .container .rightPane .loginButton .dropdown-menu>li {
+	padding: 5px 10px;
+}
+
+.topPane .container .rightPane .loginButton .dropdown-menu a {
+	color: #2d3f52;
+}
+
+.topPane .container .rightPane .loginButton .dropdown-menu i {
+	padding: 3px 5px;
+	font-size: 12px;
+	color: #2d3f52;
+}
+
+.topPane i {
+	color: #fff;
+}
+
+.topPane .container .rightPane  .account {
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+}
+
+.topPane .container .rightPane  .account #seetingsIcon i {
+	font-size: 15px;
+	padding-top: 8px;
+	color: #fff;
+}
+
+.topPane .container .rightPane  .account a {
+	color: white;
+	text-decoration: none;
+	font-size: 15px;
+	padding-left: 5px;
+}
+
+.topPane .container .rightPane  .support {
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+}
+
+.topPane .container .rightPane  .support #seetingsIcon i {
+	font-size: 15px;
+	padding-top: 8px;
+	color: #fff;
+}
+
+.topPane .container .rightPane  .support a {
+	color: white;
+	text-decoration: none;
+	font-size: 15px;
+	padding-left: 5px;
+}
+
+.topPane .container .rightPane  .logOut {
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+}
+
+.topPane .container .rightPane  .logOut #seetingsIcon i {
+	font-size: 15px;
+	padding-top: 8px;
+	color: #fff;
+}
+
+.topPane .container .rightPane  .logOut a {
+	color: white;
+	text-decoration: none;
+	font-size: 15px;
+	padding-left: 5px;
+}
+
+header .headerBlock .assesmentBlocks button {
+	width: 200px;
+	height: 120px;
+	border: none;
+	border-radius: 0;
+	text-shadow: none;
+	box-shadow: none;
+	background: #5287df;
+	color: white;
+}
+
+header .headerBlock .assesmentBlocks .blocks {
+	padding: 60px 0px 25px 0px;
+	text-align: center;
+}
+
+.middlePane.discoverAssesmentBlock {
+	float: left;
+	background: white;
+	min-height: auto !important;
+	padding-top: 10px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	width: 100%;
+	float: left;
+	padding-bottom: 0px;
+	border-radius: 5px;
+}
+
+.middlePane.discoverAssesmentBlock .discoverParameterBlock {
+	padding: 10px;
+}
+
+/* sush new chnages 14-08-2017 ends*/
+/*header{ border-bottom: 4px solid #ff594d;   padding: 10px 20px;  background: #34495e; color:#fff; }
+header .text-center img{margin:25px 15px; width: 85%;}*/
+.container.outer {
+	max-width: 1170px;
+	min-height: 500px;
+	margin: 30px auto 30px auto;
+	background: #fff;
+	color: #593442;
+	border: none;
+	padding: 0;
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.discoverBlock {
+	width: 100%;
+	float: left;
+	min-height: 750px;
+	padding: 0px;
+}
+
+.discoverBlock .discoverParameterBlock {
+	width: 100%;
+}
+
+.discoverBlock .discoverParameterBlock img {
+	position: absolute;
+	top: 45px;
+	left: 68px;
+}
+
+.discoverBlock .discoverParameterBlock h3 {
+	text-align: center;
+	padding-top: 73px;
+}
+
+.discoverForm {
+	padding: 30px 30px 10px;
+	background: white;
+}
+
+.middlePane  .discoverForm .row.parameterButtons {
+	padding: 30px;
+}
+
+.breadcrumbs ul {
+	background: #5287df;
+	color: #fff;
+	padding: 5px 0;
+	width: 800px;
+	margin: 0 auto;
+	border-radius: 10px 10px 0 0;
+}
+
+.breadcrumbs ul li {
+	width: 24.5%;
+	text-align: center;
+	padding-bottom: 3px;
+}
+
+.breadcrumbs ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	cursor: not-allowed;
+}
+
+.breadcrumbs ul li a i {
+	padding: 0 10px;
+}
+
+.breadcrumbs ul li a:hover {
+	color: #fff;
+}
+
+.breadcrumbs ul li a.active {
+	color: #000;
+	cursor: pointer;
+}
+
+.middlePane {
+	padding-bottom: 50px;
+	padding-top: 0px;
+	min-height: 500px;
+}
+
+.discoverParameterBlock {
+	background: white !important;
+	float: left;
+	width: 100%;
+	margin-bottom: 0px;
+	border-radius: 5px;
+}
+
+.login {
+	margin-bottom: 0;
+}
+
+.login .form-group {
+	padding: 0 200px;
+}
+
+.login .spacing {
+	margin-left: 4px;
+}
+
+.login input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+.login a {
+	color: #2d3f52;
+	text-decoration: none;
+}
+
+.registerLink {
+	margin: 30px 0 0 0;
+	font-size: 18px;
+}
+
+.login.registerLink .leftSpacing {
+	padding-left: 40px;
+}
+
+.discoverBlock .discoverParameterBlock  .discoverForm .form-group {
+	width: 50%;
+	float: left;
+	padding-top: 50px;
+}
+
+.discoverBlock .discoverParameterBlock  .discoverForm .form-group label
+	{
+	width: 30%;
+	float: left;
+	text-align: right;
+	padding-top: 6px;
+}
+
+.discoverBlock .discoverParameterBlock  .discoverForm .form-group input
+	{
+	width: 311px;
+	float: left;
+	margin-left: 15px;
+}
+
+.discoverBlock .discoverParameterBlock  .discoverForm .radioButtons {
+	float: left;
+	padding-left: 11%;
+	padding-top: 30px;
+}
+
+.discoverBlock .discoverParameterBlock  .discoverForm .radioButtons .radio-inline
+	{
+	padding-left: 58px;
+}
+
+.discoverBlock .discoverParameterBlock  .discoverForm .buttons {
+	float: left;
+	width: 100%;
+	padding-top: 6%;
+	text-align: center;
+}
+
+.discoverBlock .discoverParameterBlock  .discoverForm .buttons input {
+	width: 100px;
+	height: 40px;
+	border-radius: 5px;
+	box-shadow: none;
+	text-shadow: none;
+	color: white;
+}
+
+.btn {
+	min-width: 100px;
+}
+
+.actionBtn {
+	padding: 0 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+	float: left;
+}
+
+.maroonButton {
+	background: #5287df;
+	border: 1px solid #5287df;
+	font-size: 18px;
+	color: #fff !important;
+}
+
+.orangeButton {
+	background: #9ba6b0;
+	border: 1px solid #9ba6b0;
+	font-size: 18px;
+	color: #fff !important;
+}
+
+.discoverParameterBlock .tableTotal {
+	width: 95% !important;
+	margin: 30px 30px 30px 30px;
+	border: 1px solid #ccc;
+}
+
+.discoverParameterBlock .tableTotal thead tr th {
+	width: 30%;
+	text-align: center;
+	border-right: 1px solid #ccc;
+}
+
+.discoverParameterBlock .tableTotal tbody tr td {
+	width: 30%;
+	text-align: center;
+	border-right: 1px solid #ccc;
+}
+
+.discoverParameterBlock .detailedTable {
+	width: 95% !important;
+	margin: 30px 30px 0 0;
+	border: 1px solid #ccc;
+}
+
+.discoverParameterBlock .detailedTable thead tr th {
+	width: 363px;
+	text-align: center;
+	border-right: 1px solid #ccc;
+}
+
+.discoverParameterBlock .detailedTable tbody tr td {
+	width: 368px;
+	text-align: center;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.discoverParameterBlock .detailedTable tbody {
+	width: 100%;
+	display: block;
+}
+
+.discoverParameterBlock .detailedTable thead {
+	width: 100%;
+	display: block;
+}
+
+.discoverParameterBlock .detailedTable thead tr th:last-child {
+	border-right: none !important;
+}
+
+.discoverParameterBlock .detailedTable thead tr th {
+	border-bottom: none;
+}
+
+.middlePane .getSqlBtn {
+	margin-left: 550px;
+	margin-bottom: 20px;
+	height: 40px;
+	border-radius: 5px;
+	width: 100px;
+}
+
+.discoverParameterBlock .detailedTable thead tr {
+	background: #e7d4b5
+}
+
+.discoverParameterBlock .tableTotal thead tr {
+	background: #e7d4b5
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+	background:
+}
+
+.table>thead>tr>th {
+	border-bottom: none;
+}
+
+.discoverParameterBlock .technicalDetailsForm .form-control {
+	width: 70%;
+}
+
+.discoverParameterBlock .technicalDetailsForm .form-group label {
+	width: 150px;
+	float: left;
+}
+
+.discoverParameterBlock .technicalDetailsForm {
+	width: 100%;
+	float: left;
+}
+
+.discoverParameterBlock .technicalDetailsForm .buttons {
+	margin-left: 465px;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.discoverParameterBlock .technicalDetailsForm .buttons input {
+	width: 100px;
+	height: 40px;
+	border-radius: 5px;
+	box-shadow: none;
+	text-shadow: none;
+	color: white;
+}
+
+.discoverParameterBlock .technicalDetailsForm .buttons .r12Install {
+	margin-right: 20px;
+	outline: none;
+}
+
+.discoverParameterBlock .technicalDetailsForm .buttons .r12Cancel {
+	outline: none;
+}
+
+.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(1)
+	{
+	width: 19.5%;
+}
+
+.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(2)
+	{
+	width: 20%;
+}
+
+.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(3)
+	{
+	width: 20.4%;
+}
+
+.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(4)
+	{
+	width: 19.3%;
+}
+
+.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(5)
+	{
+	width: 20.8%;
+}
+
+.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(1)
+	{
+	width: 332px;
+}
+
+.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(2)
+	{
+	width: 342px;
+}
+
+.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(3)
+	{
+	width: 360px;
+}
+
+.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(4)
+	{
+	width: 340px;
+}
+
+.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(5)
+	{
+	width: 330px;
+}
+/*.middlePane  .assessmentBtn input{width: 100px;height: 40px;border-radius: 5px;box-shadow: none;text-shadow: none;color: white; outline:none;}
+.middlePane  .assessmentBtn {margin-left:450px; float:left;padding-top: 20px;padding-bottom: 20px;}*/
+.discoverParameterBlock.assesmentSummary .assessmentBtn input {
+	width: 100px;
+	height: 40px;
+	border-radius: 5px;
+	box-shadow: none;
+	text-shadow: none;
+	color: white;
+	outline: none;
+}
+
+.discoverParameterBlock.assesmentSummary .assessmentBtn {
+	margin-left: 450px;
+	float: left;
+	padding-bottom: 30px;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(1)
+	{
+	width: 5.6% !important;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(2)
+	{
+	width: 6.5%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(3)
+	{
+	width: 6.15%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(4)
+	{
+	width: 7.2%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(5)
+	{
+	width: 13.3%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(6)
+	{
+	width: 8.8% !important;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(7)
+	{
+	width: 6.65%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(8)
+	{
+	width: 8.9%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(9)
+	{
+	width: 7.35%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(10)
+	{
+	width: 6.5%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(11)
+	{
+	width: 8.1%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(12)
+	{
+	width: 7.4%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(13)
+	{
+	width: 8%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(1)
+	{
+	min-width: 74px;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(2)
+	{
+	min-width: 86px;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(3)
+	{
+	min-width: 82px;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(4)
+	{
+	min-width: 96px;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(5)
+	{
+	min-width: 100px;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(6)
+	{
+	min-width: 118px;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(7)
+	{
+	min-width: 87px;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(8)
+	{
+	min-width: 118px;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(9)
+	{
+	min-width: 98px;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(10)
+	{
+	min-width: 86px;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(11)
+	{
+	min-width: 107px;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(12)
+	{
+	min-width: 100px;
+}
+
+.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(13)
+	{
+	min-width: 100px;
+}
+
+.discoverParameterBlock .assessmentDetailsBtn {
+	width: 100%;
+	text-align: center;
+	float: left;
+	padding: 0 20px 30px;
+}
+
+.middlePane .discoverParameterBlock  .assessmentDetailsBtn input {
+	width: 100px;
+	height: 40px;
+	border-radius: 5px;
+	box-shadow: none;
+	text-shadow: none;
+	color: white;
+	outline: none;
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(1)
+	{
+	width: 14.7%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(2)
+	{
+	width: 14.7%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(3)
+	{
+	width: 10.9%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(4)
+	{
+	width: 13.75%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(5)
+	{
+	width: 14.7%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(6)
+	{
+	width: 14.7%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(7)
+	{
+	width: 17%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(1)
+	{
+	width: 15%
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(2)
+	{
+	width: 15%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(3)
+	{
+	width: 11%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(4)
+	{
+	width: 14%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(5)
+	{
+	width: 15%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(6)
+	{
+	width: 15%;
+}
+
+.discoverParameterBlock .assessmentDetailsTableWhoColumns  tbody tr td:nth-child(7)
+	{
+	width: 15%: !important;
+}
+
+.discoverParameterBlock .selectCategory {
+	float: left;
+	padding-top: 10px;
+	margin: 30px 10%;
+	padding-bottom: 10px;
+	border: 1px solid #e9e0d0;
+	width: 80%;
+	background: #e9e0d0;
+	text-align: left;
+	border-radius: 3px;
+}
+
+.discoverParameterBlock .selectCategory  select {
+	width: 325px !important;
+	height: 34px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.discoverParameterBlock   .list {
+	margin-top: 15px;
+}
+
+.discoverParameterBlock   .list h5 {
+	font-weight: 600;
+}
+
+.discoverParameterBlock   .list .objectLists {
+	width: 88%;
+	margin: auto 11%;
+	padding: 0;
+}
+
+.discoverParameterBlock   .list .objectLists img {
+	position: absolute;
+	top: 240px;
+	left: 452px;
+	width: 30px;
+}
+
+.discoverParameterBlock   .list .objectLists h5 {
+	padding-left: 10px;
+}
+
+.discoverParameterBlock   .list .objectLists .multipleOptions {
+	width: 89%;
+	float: left;
+	padding: 17px 25px 30px;
+	border: 1px solid #e9e0d0;
+	background: #e9e0d0;
+	min-height: 455px;
+	border-radius: 3px;
+}
+
+.discoverParameterBlock   .list .objectLists  .multipleOptions .ms-container
+	{
+	width: 100%;
+	float: left;
+	height: 100%;
+}
+
+.discoverParameterBlock   .list .objectLists  .multipleOptions .ms-container .ms-selectable .ms-list
+	{
+	width: 100%;
+	height: 400px;
+}
+
+.discoverParameterBlock   .list .objectLists  .multipleOptions .ms-container .ms-selectable .ms-list li
+	{
+	padding: 5px 10px;
+}
+
+.discoverParameterBlock   .list .objectLists  .multipleOptions .ms-container .ms-selection .ms-list
+	{
+	width: 100%;
+	height: 400px;
+}
+
+.discoverParameterBlock   .list .objectLists  .multipleOptions .ms-container .ms-selection .ms-list li
+	{
+	padding: 5px 10px;
+}
+
+.discoverParameterBlock   .list .objectLists  .multipleOptions  .dragFrom
+	{
+	width: 56%;
+	float: left;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+.discoverParameterBlock   .list .objectLists  .multipleOptions  .dropHere
+	{
+	width: 44%;
+	float: left;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+.discoverParameterBlock  .remediationBtn {
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 30px;
+}
+
+.discoverParameterBlock  .remediationBtn input {
+	width: 100px;
+	height: 30px;
+	height: 40px;
+	border-radius: 5px;
+}
+
+.discoverParameterBlock  .remediationTable thead tr {
+	width: 100%;
+	float: left;
+}
+
+.discoverParameterBlock  .remediationTable thead tr th:first-child {
+	width: 50%;
+	float: left;
+}
+
+.discoverParameterBlock  .remediationTable thead tr th:last-child {
+	width: 50% !important;
+	float: left;
+}
+
+.discoverParameterBlock .remediationTable tbody tr {
+	width: 100%;
+	float: left;
+}
+
+.discoverParameterBlock .remediationTable tbody tr td {
+	width: 50%;
+	float: left;
+}
+
+.discoverParameterBlock .testAutomationTool .form-control {
+	width: 300p;
+}
+
+.discoverParameterBlock .testAutomationTool  .dbGroup .form-group {
+	padding-left: 40px;
+}
+
+.discoverParameterBlock .testAutomationTool .row .dbGroup  .test {
+	float: left;
+	width: 100px;
+	margin-left: 36%;
+	color: white;
+	outline: none;
+	border-radius: 5px;
+}
+
+.discoverParameterBlock .testAutomationTool .row  .hostGroup .test {
+	float: left;
+	width: 100px;
+	margin-left: 28%;
+	color: white;
+	outline: none;
+	border-radius: 5px;
+}
+
+.discoverParameterBlock .testAutomationTool .buttons .testSubmit {
+	width: 100px;
+	border: 1px solid #5287df;
+}
+
+.discoverParameterBlock .testAutomationTool .buttons .testCancel {
+	width: 100px;
+	border: 1px solid #9ba6b0;
+}
+
+.discoverParameterBlock .testAutomationTool .buttons {
+	margin-bottom: 25px;
+}
+
+.discoverParameterBlock .automationTable {
+	width: auto !important;
+}
+
+.discoverParameterBlock .automationTable tbody {
+	width: auto;
+	margin-right: 0px !important;
+}
+
+.discoverParameterBlock .automationTable thead tr {
+	width: auto;
+	float: left;
+}
+
+.discoverParameterBlock .automationTable thead tr th,
+	.discoverParameterBlock .automationTable tr td {
+	min-width: 150px;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(1) {
+	width: 50px;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(2) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(3) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(4) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(5) {
+	width: 300px !important;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(6) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(7) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(8) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(9) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(10) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(11) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(12) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(13) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable thead tr th:nth-child(14) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(1) {
+	width: 50px;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(2) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(3) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(4) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(5) {
+	width: 300px !important;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(6) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(7) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(8) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(9) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(10) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(11) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(12) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(13) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable tbody tr td:nth-child(14) {
+	width: 150px;
+}
+
+.discoverParameterBlock .automationTable  tbody tr td .form-control {
+	height: 30px;
+	padding-top: 5px;
+	border: 1px solid #eae8e8;
+	width: 100%;
+	box-shadow: none;
+	margin: 0px;
+	padding-right: 13px;
+}
+
+.discoverParameterBlock .automationTable  tbody tr td button {
+	width: 100%;
+	height: 30px;
+	padding: 0px
+}
+
+.testAutoBlock .buttons.automationBtn {
+	margin-bottom: 25px;
+	margin-top: 12px;
+	float: right;
+}
+
+.testAutoBlock .buttons.automationBtn input {
+	margin-right: 10px;
+	color: black;
+}
+
+header .dropdown {
+	position: absolute !important;
+	right: 27px;
+	top: 20px;
+	margin: 15px;
+}
+
+header {
+	position: relative;
+}
+
+header .dropdown button {
+	background: #ff594d;
+	color: #fff;
+	outline: none !important;
+	border: none;
+}
+
+header .dropdown button:hover {
+	background: #ff594d;
+	color: #fff;
+	outline: none !important;
+	border: none;
+}
+
+header .dropdown.open button {
+	background: #ff594d;
+	color: #fff;
+	outline: none !important;
+	border: none;
+}
+
+.btn-default:active:hover, .btn-default.active:hover, .open>.dropdown-toggle.btn-default:hover,
+	.btn-default:active:focus, .btn-default.active:focus, .open>.dropdown-toggle.btn-default:focus,
+	.btn-default.focus:active, .btn-default.active.focus, .open>.dropdown-toggle.btn-default.focus
+	{
+	background: #ff594d;
+	color: #fff;
+	outline: none !important;
+	border: none;
+}
+
+header .dropdown-menu {
+	min-width: 158px !important;
+	left: auto;
+	right: 0;
+}
+
+header .dropdown-menu li span {
+	padding: 0px 3px 0px 5px;
+}
+
+header .dropdown-menu li {
+	float: left;
+	width: 100%;
+	padding: 5px 0px 5px 0px;
+}
+
+header .dropdown-menu li span a {
+	color: #000;
+}
+
+.dashboardMiddlePane>div {
+	width: 21.95%;
+	border: 1px solid #ddd;
+	min-height: 150px;
+	text-align: center;
+	padding: 15px;
+	margin: 15px;
+	border-radius: 3px;
+	-webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
+.dashboardMiddlePane>div:hover {
+	background: #eaeaf0;
+	box-shadow: none;
+}
+
+.dashboardMiddlePane>div:hover i {
+	color: #2d3f52;
+}
+
+.dashboardMiddlePane>div.boughtApplication:hover i {
+	color: #f7b251;
+}
+
+.dashboardMiddlePane .productIcon {
+	font-size: 42px;
+	padding: 30px 0 20px;
+}
+
+.dashboardMiddlePane .productName {
+	font-size: 18px;
+	padding: 15px 0;
+}
+
+.dashboardMiddlePane a {
+	color: #000;
+}
+
+.outer .subscribeMod .modal-content {
+	text-align: center;
+}
+
+.outer .subscribeMod .modal-content .modal-body a {
+	color: #2d3f52
+}
+
+.testAutomationTool .alert.alert-success {
+	float: left;
+	height: 40px;
+	padding: 8px;
+	text-align: center;
+	margin-left: 522px;
+	margin-bottom: 0px !important;
+}
+
+.discoverParameterBlock .selectCategory .form-group {
+	width: 50%;
+	float: left;
+}
+
+.discoverParameterBlock .selectCategory label {
+	float: left;
+	margin: 5px 10px 0px 27px;
+}
+
+.discoverParameterBlock .selectCategory .form-group input {
+	width: 70.5%;
+}
+
+.discoverForm .checkbox {
+	text-align: center;
+	margin-left: 11.5%;
+}
+
+footer {
+	min-height: 27px;
+	border-color: transparent;
+	border-width: 0px;
+	background-color: #2d3f52;
+	color: #f1f1f1;
+}
+
+footer p {
+	color: #969EA2;
+	text-align: center;
+	font-weight: 400;
+	color: #fff !important;
+	padding-top: 10px;
+}
+
+footer .footerlist {
+	padding-top: 10px;
+}
+
+footer .footerlist li a {
+	color: #fff !important;
+}
+
+footer .footerlist li {
+	text-decoration: none;
+}
+
+footer .footerlist li a:hover {
+	text-decoration: none;
+	color: #FF594D !important;
+}
+
+.footerBlock {
+	padding: 0;
+}
+
+footer .footerRow {
+	margin: 0;
+}
+
+.middlePane .registrationForm .checkbox a {
+	text-decoration: underline;
+}
+
+.middlePane .registrationForm .checkbox a {
+	text-decoration: underline;
+}
+
+.discoverParameterBlock .detailedTable thead tr th:last-child {
+	width: 383px;
+}
+
+.login .col-md-offset-4 {
+	margin-left: 34.1%;
+}
+
+.login .registerButtons {
+	width: 44.6%;
+}
+
+.login .registerResetButtons {
+	width: 44.6%;
+}
+
+.login .registerButtons input {
+	width: 100%;
+	margin: 0px;
+}
+
+.middlePane .login .loginPageButtons .maroonButton {
+	margin-left: 0px;
+	width: 170px;
+}
+
+.middlePane .login .loginPageButtons .orangeButton {
+	margin-left: 13px;
+	width: 170px;
+}
+
+.middlePane .registerLink {
+	margin-top: 10px;
+}
+
+.middlePane .registerLink .leftSpacing {
+	padding-left: 143px;
+}
+
+.middlePane .registerLink .leftSpacing {
+	padding-left: 12px;
+}
+
+.middlePane .login .forgotPassword a {
+	text-decoration: underline;
+}
+
+.middlePane .registerLink .leftSpacing a {
+	text-decoration: underline;
+}
+
+/* sush new chnages 14-08-2017*/
+.discoverParameterBlock .assesmentTableBlock thead tr th:nth-child(1) {
+	width: 317px;
+}
+
+.discoverParameterBlock .assesmentTableBlock thead tr th:nth-child(2) {
+	width: 364px;
+}
+
+.discoverParameterBlock .assesmentTableBlock thead tr th:nth-child(3) {
+	width: 414px;
+}
+
+.discoverParameterBlock .assesmentTableBlock tbody tr td:nth-child(1) {
+	width: 320px;
+}
+
+.discoverParameterBlock .assesmentTableBlock tbody tr td:nth-child(2) {
+	width: 366px;
+}
+
+.discoverParameterBlock .assesmentTableBlock tbody tr td:nth-child(3) {
+	width: 398px;
+}
+
+.discoverParameterBlock .assesmentTableBlock  tbody tr td .form-control
+	{
+	height: 30px;
+	padding-top: 5px;
+	border: 1px solid #eae8e8;
+	width: 100%;
+	box-shadow: none;
+	margin: 0px;
+	padding-right: 13px;
+}
+
+.discoverParameterBlock .assesmentTableBlock  tbody tr td button {
+	width: 100%;
+	height: 30px;
+	padding: 0px
+}
+
+.discoverParameterBlock .assesment .assesmentReportButtons {
+	margin: 0px;
+	text-align: center;
+	float: none;
+}
+
+.discoverParameterBlock .assesment .assesmentReportButtons input {
+	background: #5287df;
+}
+
+.discoverParameterBlock .assesmentTableBlock {
+	margin-bottom: 20px;
+}
+
+footer .left {
+	padding-top: 15px;
+}
+
+footer .left a {
+	color: #f1f1f1;
+}
+
+footer .right {
+	padding-top: 15px;
+}
+
+footer .right a {
+	color: #f1f1f1;
+}
+
+.middlePane .discoverParameterBlock.testAutoBlock {
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+.discoverParameterBlock .testAutomationTool .automationButtons {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.discoverParameterBlock.assesmentScreenBlock {
+	padding: 25px 25px 0;
+}
+
+.discoverParameterBlock .row.installationScreenBlock {
+	padding: 25px;
+}
+
+.login .btn {
+	min-width: 160px;
+}
+
+.registrationForm.login .btn {
+	min-width: 160px;
+}
+
+.discoverForm .row.parameterFilePath .col-md-3 input {
+	width: 100%;
+}
+
+.discoverForm .row.parameterFilePath .upload input {
+	background: #5287df;
+	border: 1px solid #5287df;
+	font-size: 17px;
+	color: #fff !important;
+}
+
+.discoverForm .row.parameterFilePath .input-file {
+	position: relative;
+}
+
+.discoverForm .row.parameterFilePath .input-group .form-control {
+	height: 37px;
+}
+
+.discoverForm .row.parameterFilePath .input-file .input-group-addon {
+	border: 0px;
+	padding: 0px;
+}
+
+.discoverForm .row.parameterFilePath .input-file .input-group-addon .btn
+	{
+	border-radius: 0 4px 4px 0;
+	background: #5287df;
+	border: 1px solid #5287df;
+	font-size: 17px;
+	color: #fff !important;
+}
+
+.discoverForm .row.parameterFilePath .input-file .input-group-addon input
+	{
+	cursor: pointer;
+	position: absolute;
+	width: 72px;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	filter: alpha(opacity = 0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	opacity: 0;
+	background-color: transparent;
+	color: transparent;
+}
+
+.actionBtn.parameterScreenBtn .col-md-2 {
+	width: 12%;
+}
+
+.actionBtn.parameterScreenBtn {
+	margin-top: 0px;
+}
+
+.actionBtn.assesmentBtn .col-md-2 {
+	width: 14%;
+}
+
+.discoverParameterBlock .row.installationScreenBlock .installationScreen .parameterFilePath .path .col-md-9
+	{
+	width: 72%;
+	padding-left: 29px;
+}
+
+.discoverParameterBlock .row.installationScreenBlock .installationScreen .parameterFilePath .path .col-md-9 .form-control
+	{
+	width: 100%;
+	height: 37px;
+}
+
+.discoverParameterBlock .row.installationScreenBlock .installationScreen .parameterFilePath .path .form-group label
+	{
+	text-align: right;
+	width: 150px;
+	padding: 0 3px;
+	line-height: 2.5;
+}
+
+.discoverParameterBlock .row.installationScreenBlock .installationScreen .parameterFilePath .path .input-file
+	{
+	position: relative;
+}
+
+.discoverParameterBlock .row.installationScreenBlock .installationScreen .parameterFilePath .upload input
+	{
+	background: #5287df;
+	border: 1px solid #5287df;
+	font-size: 17px;
+	color: #fff !important;
+}
+
+.discoverParameterBlock .row.installationScreenBlock .installationScreen .parameterFilePath .path .input-file .input-group-addon
+	{
+	border: 0px;
+	padding: 0px;
+}
+
+.discoverParameterBlock .row.installationScreenBlock .installationScreen .parameterFilePath .path .input-file .input-group-addon .btn
+	{
+	border-radius: 0 4px 4px 0;
+	background: #5287df;
+	border: 1px solid #5287df;
+	font-size: 17px;
+	color: #fff !important;
+}
+
+.discoverParameterBlock .row.installationScreenBlock .installationScreen .parameterFilePath .path .input-file .input-group-addon input
+	{
+	cursor: pointer;
+	position: absolute;
+	width: 72px;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	filter: alpha(opacity = 0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	opacity: 0;
+	background-color: transparent;
+	color: transparent;
+}
+
+.actionBtn.assesmentSummary .col-md-2 {
+	width: 12%;
+}
+
+.discoverParameterBlock.assesmentDetailsBlock .table-responsive {
+	width: 98%;
+}
+
+.progress {
+	float: left;
+	width: 80%;
+	margin: 20px 0px 30px 10%;
+}
+/* sush new chnages 14-08-2017*/
+.paraMeterBtn {
+	margin-left: 10px;
+}
+
+.loader {
+	width: 100%;
+	margin: 20px 0 40px 27px;
+	float: left;
+}
+
+.bar {
+	height: 20px;
+	width: 360px;
+	margin: 0 auto;
+}
+
+.bar span {
+	display: inline-block;
+	height: 20px;
+	width: 100%;
+	border: 1px solid #1f57b5;
+	border-bottom-color: #5789dd;
+	background-color: #fff;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	background-image: -webkit-linear-gradient(-45deg, rgba(87, 137, 221, 1)
+		25%, transparent 25%, transparent 50%, rgba(87, 137, 221, 1) 50%,
+		rgba(87, 137, 221, 1) 75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(-45deg, rgba(87, 137, 221, 1) 25%,
+		transparent 25%, transparent 50%, rgba(87, 137, 221, 1) 50%,
+		rgba(87, 137, 221, 1) 75%, transparent 75%, transparent);
+	background-image: -ms-linear-gradient(-45deg, rgba(87, 137, 221, 1) 25%,
+		transparent 25%, transparent 50%, rgba(87, 137, 221, 1) 50%,
+		rgba(87, 137, 221, 1) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(-45deg, rgba(87, 137, 221, 1) 25%,
+		transparent 25%, transparent 50%, rgba(87, 137, 221, 1) 50%,
+		rgba(87, 137, 221, 1) 75%, transparent 75%, transparent);
+	-webkit-background-size: 50px 50px;
+	-moz-background-size: 50px 50px;
+	-ms-background-size: 50px 50px;
+	background-size: 50px 50px;
+	-webkit-animation: move 2s linear infinite;
+	-moz-animation: move 2s linear infinite;
+	-ms-animation: move 2s linear infinite;
+	animation: move 2s linear infinite;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	border-radius: 20px;
+	overflow: hidden;
+	-webkit-box-shadow: inset 0 10px 0 rgba(255, 255, 255, .2);
+	-moz-box-shadow: inset 0 10px 0 rgba(255, 255, 255, .2);
+	-ms-box-shadow: inset 0 10px 0 rgba(255, 255, 255, .2);
+	box-shadow: inset 0 10px 0 rgba(255, 255, 255, .2);
+}
+
+.bar>span:after {
+	display: none;
+}
+
+@
+-webkit-keyframes move { 0% {
+	background-position: 0 0;
+}
+
+100%
+{
+background-position
+:
+ 
+50
+px
+ 
+50
+px
+;
+
+  
+}
+}
+@
+-moz-keyframes move { 0% {
+	background-position: 0 0;
+}
+
+100%
+{
+background-position
+:
+ 
+50
+px
+ 
+50
+px
+;
+
+  
+}
+}
+@
+-ms-keyframes move { 0% {
+	background-position: 0 0;
+}
+
+100%
+{
+background-position
+:
+ 
+50
+px
+ 
+50
+px
+;
+
+  
+}
+}
+@
+keyframes move { 0% {
+	background-position: 0 0;
+}
+
+100%
+{
+background-position
+:
+ 
+50
+px
+ 
+50
+px
+;
+
+  
+}
+}
+.successTickMark {
+	padding: 0 15px;
+	color: green;
+}
+
+.successMessage .glyphicon-ok {
+	padding: 0 15px;
+	color: green;
+}
+/*--------------------------------------------------------------------------------------*/
+/*                                   MOBILE  STYLES                                     */
+/*--------------------------------------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+	.discoverParameterBlock img {
+		position: absolute;
+		top: 31px;
+		left: 55px;
+	}
+	.discoverParameterBlock h3 {
+		padding-top: 126px;
+		font-size: 19px;
+	}
+	.discoverParameterBlock {
+		margin: 30px;
+		width: 89%;
+	}
+	.discoverParameterBlock  .discoverForm .form-group {
+		width: 100%;
+	}
+	.discoverParameterBlock  .discoverForm .form-group input {
+		width: 300px;
+		float: left;
+		margin-left: 30px;
+	}
+	.discoverParameterBlock  .discoverForm .form-group.destDirectory label {
+		width: 47%;
+	}
+	.discoverParameterBlock  .discoverForm {
+		margin-top: 0px;
+	}
+	.discoverParameterBlock .getSqlBtn {
+		margin-left: 154px;
+	}
+	.discoverParameterBlock .tableTotal {
+		width: 90% !important;
+		margin: 0px 30px 30px 20px;
+	}
+	.discoverParameterBlock .detailedTable {
+		width: 90% !important;
+		margin: 0px 30px 30px 20px;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons {
+		margin: 5px 0 0 18%;
+	}
+	.discoverParameterBlock  .assessmentBtn {
+		margin-left: 15px;
+	}
+	.discoverParameterBlock .selectCategory {
+		width: 100%;
+		margin: 2px;
+		float: left;
+	}
+	.discoverParameterBlock   .list {
+		margin-left: 0%;
+		width: 100%;
+	}
+	.discoverParameterBlock   .list .objectLists {
+		width: 100%;
+	}
+	.discoverParameterBlock   .list .objectLists .multipleOptions {
+		width: 100%;
+	}
+	.discoverParameterBlock   .list .objectLists .multipleOptions img {
+		top: 240px;
+		left: 164px;
+		width: 16px;
+	}
+	.discoverParameterBlock  .remediationBtn  .closeBtn {
+		float: left;
+		width: 50%;
+	}
+	.discoverParameterBlock  .remediationBtn  .deatilsBtn {
+		float: left;
+		width: 50%;
+	}
+	.discoverParameterBlock .testAutomationTool  .dbGroup .form-group {
+		padding-left: 0px;
+	}
+	.container.outer {
+		margin: 10px;
+		padding-bottom: 15px;
+	}
+	.discoverForm {
+		margin: 10px 10px 25px 10px;
+	}
+	.logo {
+		display: inline;
+		max-height: 75px
+	}
+	.breadcrumbs ul {
+		width: 100%;
+	}
+	.breadcrumbs ul li {
+		width: 100%;
+	}
+	.middlePane {
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+	.discoverParameterBlock .technicalDetailsForm .form-control {
+		width: 100%;
+	}
+	.middlePane .discoverForm .parameterButtons .install {
+		width: 50%;
+		float: left;
+		padding: 0px;
+	}
+	.middlePane .discoverForm .parameterButtons .cancel {
+		width: 50%;
+		float: left;
+		padding: 0px;
+	}
+	.middlePane .discoverForm .parameterButtons .install input {
+		width: 60%;
+		float: right;
+	}
+	.middlePane .discoverForm .parameterButtons .cancel input {
+		width: 60%;
+	}
+	footer .footerlist ul {
+		margin-left: 40px;
+	}
+	header .text-center img {
+		margin: 6px 18px;
+		width: 52%;
+		float: left;
+	}
+	.well h3 {
+		margin: 0px;
+	}
+	header .dropdown {
+		right: 0;
+		top: 17px;
+		margin: 15px;
+	}
+	footer .footerlist ul {
+		margin-left: 0px;
+		text-align: center;
+	}
+	.discoverParameterBlock {
+		margin: 0px;
+		width: 100%;
+		border: none;
+	}
+	.discoverParameterBlock .tableTotal {
+		width: 100% !important;
+		margin: 0px 0px 30px 0px;
+	}
+	.discoverParameterBlock .detailedTable {
+		width: 100% !important;
+		margin: 0px 0px 30px 0px;
+	}
+	.discoverParameterBlock .getSqlBtn {
+		margin-left: 100px;
+	}
+	.discoverParameterBlock .technicalDetailsForm .installationScreenBlock  .installationScreen .buttons
+		{
+		margin-left: 60px;
+	}
+	.discoverParameterBlock.assesmentDetailsBlock {
+		margin: 0px !important;
+	}
+	.discoverParameterBlock .detailedTable.assessmentDetailsTableTwo {
+		margin: 0px;
+		margin: 0px 0px 30px 11px;
+	}
+	.discoverParameterBlock.assesmentDetailsBlock {
+		margin: 4px !important;
+		margin-bottom: 20px !important;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(1)
+		{
+		width: 81px !important;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(2)
+		{
+		width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(3)
+		{
+		width: 85px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(4)
+		{
+		width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(5)
+		{
+		width: 201px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(1)
+		{
+		min-width: 81px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(2)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(3)
+		{
+		min-width: 85px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(4)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(5)
+		{
+		min-width: 200px;
+	}
+	.discoverParameterBlock .detailedTable.assessmentDetailsTableTwo {
+		margin: 0px;
+	}
+	.discoverParameterBlock.assesmentDetailsBlock {
+		width: 97%;
+		padding: 20px;
+	}
+	.table-responsive {
+		overflow-y: hidden;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(1)
+		{
+		width: 130px !important;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(2)
+		{
+		width: 111px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(3)
+		{
+		width: 112px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(4)
+		{
+		width: 115px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(5)
+		{
+		width: 111px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(6)
+		{
+		width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(7)
+		{
+		width: 200px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(1)
+		{
+		min-width: 130px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(2)
+		{
+		min-width: 111px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(3)
+		{
+		min-width: 112px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(4)
+		{
+		min-width: 117px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(5)
+		{
+		min-width: 111px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(6)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(7)
+		{
+		min-width: 200px;
+	}
+	.breadcrumbs .row {
+		margin: 0px !important;
+	}
+	.breadcrumbs ul li {
+		text-align: left !important;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(1)
+		{
+		width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(2)
+		{
+		width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(3)
+		{
+		width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(4)
+		{
+		width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(5)
+		{
+		width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(1)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(2)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(3)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(4)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(5)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .detailedTable {
+		margin-bottom: 0px;
+	}
+	.discoverParameterBlock.assesmentSummary  .assessmentBtn {
+		text-align: center;
+		margin-top: 30px;
+		margin-left: 0px;
+		float: none;
+		padding-bottom: 0px;
+	}
+	.discoverParameterBlock  .remediationBtn  .closeBtn {
+		margin-left: 22px;
+		width: 100%;
+	}
+	.discoverParameterBlock .detailedTable.reportScreen thead tr th:nth-child(1)
+		{
+		width: 115px;
+	}
+	.discoverParameterBlock .detailedTable.reportScreen thead tr th:nth-child(2)
+		{
+		width: 107px;
+	}
+	.discoverParameterBlock .detailedTable.reportScreen thead tr th:nth-child(3)
+		{
+		width: 109px;
+	}
+	.discoverParameterBlock .detailedTable.reportScreen tbody tr td:nth-child(1)
+		{
+		width: 110px;
+	}
+	.middlePane .getSqlBtn {
+		margin: 15px 0px 0px 132px;
+	}
+	.login .form-group {
+		padding: 0px;
+	}
+	.discoverForm .checkbox {
+		margin-left: 0px;
+	}
+	.login .registerButtons {
+		width: 41%;
+		margin: 0px 0px 10px 26px;
+	}
+	.login .registerResetButtons {
+		width: 41%;
+		margin: 0px 0px 10px 10px;
+	}
+	.login .form-group {
+		padding: 0px;
+	}
+	.login.registerLink .leftSpacing {
+		padding-left: 15px;
+		font-size: 17px;
+	}
+	.login .loginPageButtons {
+		width: 90%;
+		margin: 8px 0px 0px 19px;
+	}
+	.discoverParameterBlock   .list .objectLists {
+		margin: 0px;
+	}
+	.discoverParameterBlock.upgradeRemediationBlock  select {
+		width: 262px !important;
+		line-height: 1.42857143;
+		color: #555;
+		background-color: #fff;
+		background-image: none;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+	}
+	.dashboardMiddlePane>div {
+		width: 100%;
+		margin: 15px 0;
+	}
+	.dashboardMiddlePane {
+		padding: 0 45px;
+	}
+	.discoverParameterBlock .selectCategory .form-group {
+		padding-left: 17px;
+	}
+	.discoverParameterBlock .selectCategory label {
+		margin: 0px;
+	}
+	.discoverParameterBlock .selectCategory .form-group input {
+		width: 88.5%;
+	}
+	.login .spacing {
+		margin-left: 0px;
+	}
+	.login .col-md-offset-4 {
+		margin: 0px !important;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons.assesmentScreenButtonsBlock
+		{
+		text-align: center;
+		width: 100%;
+		margin-left: 0px;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons.automationButtons
+		{
+		width: 100%;
+		text-align: center;
+		margin-left: 0px;
+	}
+	.discoverForm .parameterButtons {
+		width: 100%;
+		text-align: center;
+		margin-left: 0px;
+	}
+	.middlePane .login .loginPageButtons {
+		width: 40%;
+	}
+	.login .loginPageButtons {
+		margin: 8px 0px 0px 23px;
+	}
+	.middlePane .login .loginPageButtons .maroonButton {
+		margin-left: 0px;
+		width: 140px;
+	}
+	.middlePane .login .loginPageButtons .orangeButton {
+		margin-left: 0px;
+		width: 132px;
+	}
+	.login.registerLink .leftSpacing {
+		padding-left: 16px;
+	}
+	.middlePane {
+		width: 98%;
+		padding-bottom: 0px;
+	}
+	.discoverParameterBlock .technicalDetailsForm {
+		margin-bottom: 0px;
+	}
+	.assesmentReportBlock {
+		padding-bottom: 15px;
+	}
+	.upgradeDetails {
+		width: 100% !important;
+	}
+	.discoverParameterBlock  .remediationBtn {
+		padding-bottom: 0px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(1) {
+		width: 100px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(2) {
+		width: 100px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(3) {
+		width: 300px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(4) {
+		width: 300px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(5) {
+		width: 300px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(6) {
+		width: 100px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(7) {
+		width: 101px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(1) {
+		min-width: 100px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(2) {
+		min-width: 100px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(3) {
+		min-width: 300px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(4) {
+		min-width: 300px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(5) {
+		min-width: 300px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(6) {
+		min-width: 100px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(7) {
+		min-width: 100px;
+	}
+	.testAutoBlock .buttons.automationBtn input {
+		margin-right: 9px;
+		color: black;
+	}
+	.testAutoBlock .buttons.automationBtn {
+		float: left;
+		width: 100%;
+		margin: 0px 0px 10px 4px;
+	}
+	.discoverParameterBlock .assesmentTableBlock .automationTable thead tr th:nth-child(1)
+		{
+		width: 115px;
+	}
+	.discoverParameterBlock .assesmentTableBlock .automationTable thead tr th:nth-child(2)
+		{
+		width: 100px;
+	}
+	.discoverParameterBlock .assesmentTableBlock .automationTable thead tr th:nth-child(3)
+		{
+		width: 260px;
+	}
+	.discoverParameterBlock .assesmentTableBlock .automationTable tbody tr td:nth-child(1)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .assesmentTableBlock .automationTable tbody tr td:nth-child(2)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .assesmentTableBlock .automationTable tbody tr td:nth-child(3)
+		{
+		min-width: 260px;
+	}
+
+	/* sush 14-08-2017*/
+	.topPane .container .discoverMigration {
+		text-align: center;
+	}
+	.mobileMenu {
+		margin-bottom: 1px;
+	}
+	.topPane .container {
+		padding-bottom: 0px;
+	}
+	body .mobileMenu {
+		height: 35px;
+		border: 1px solid #fff;
+		background: #fff;
+		margin-top: 5px;
+	}
+	body .mobileMenu a {
+		color: #000;
+	}
+	body .mobileMenu a:hover {
+		color: #000;
+	}
+	body .mobileMenu .dropdown-menu {
+		width: 100% !important;
+	}
+	body .mobileMenu .dropdown-menu a {
+		color: #000;
+	}
+	body .mobileMenu .dropdown-menu a:hover {
+		color: #000;
+	}
+	body .mobileMenu a i {
+		padding-top: 10px;
+		color: #000;
+	}
+	header .headerBlock .assesmentBlocks button {
+		width: 70%;
+	}
+	header .headerBlock .assesmentBlocks .blocks {
+		padding: 40px 0px 0 0px;
+	}
+	body .mobileMenu .mobilemenu1 button {
+		padding-left: 5px;
+	}
+	body .mobileMenu .mobilemenu1 .dropdown-menu {
+		position: absolute;
+		top: 34px;
+		left: 12px;
+		width: 34px;
+		min-width: 136px;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons {
+		margin: 0px;
+	}
+	footer .left {
+		text-align: center !important;
+	}
+	footer .right {
+		width: 100%;
+	}
+	.pull-right {
+		text-align: center !important;
+		float: none !important;
+	}
+	.testAutoBlock .buttons.automationBtn input {
+		margin: 0px;
+	}
+	.middlePane .discoverParameterBlock.testAutoBlock {
+		padding: 12px;
+	}
+	.middlePane.testAutomationTool {
+		width: 100%;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons.automationButtons
+		{
+		padding-top: 20px;
+	}
+	.assesmentReport {
+		width: 100% !important;
+		padding: 20px;
+		margin: 0px !important;
+	}
+	.assesmentReportBlock {
+		padding-bottom: 30px;
+		width: 100%;
+		float: left;
+	}
+	.middlePane  .discoverForm .row.parameterButtons {
+		padding: 10px 0 10px 0;
+	}
+	.discoverParameterBlock.assessmentDetailsWhoColumnsBlock .assessmentDetailsBtn
+		{
+		padding: 0px 20px 10px 20px;
+	}
+	.discoverParameterBlock.assesmentSummary {
+		width: 100%;
+		margin: 0px;
+		padding: 25px;
+	}
+	.discoverParameterBlock.assesmentSummary .assessmentBtn input {
+		margin: 0px;
+	}
+	.discoverParameterBlock.assesmentSummary .assessmentBtn  .r12Next {
+		margin-right: 5px;
+	}
+	.discoverParameterBlock.assesmentSummary .assessmentBtn  .r12Details {
+		margin-left: 5px;
+	}
+	.discoverParameterBlock.summaryRemediation {
+		width: 100%;
+		margin: 0px;
+		padding: 20px;
+		float: left;
+	}
+	.discoverParameterBlock.upgradeRemediationBlock {
+		margin: 0px;
+		padding: 20px;
+		width: 100%;
+		margin-bottom: 25px;
+	}
+	.login {
+		padding: 30px 8px 10px !important;
+	}
+	.middlePane .discoverParameterBlock.testAutoBlock .row.actionBtn .col-xs-offset-0
+		{
+		padding-left: 14%;
+	}
+	.middlePane.discoverAssesmentBlock .actionBtn .col-xs-offset-3 {
+		padding-left: 14%;
+	}
+	.discoverParameterBlock.assessmentDetailsWhoColumnsBlock .actionBtn .col-xs-offset-3
+		{
+		padding-left: 15%;
+	}
+	.discoverParameterBlock.assesmentSummary .actionBtn .col-xs-offset-0 {
+		padding-left: 11%;
+	}
+	.login .actionBtn {
+		padding: 0;
+		margin-top: 3px;
+		margin-bottom: 10px;
+	}
+	.login .btn {
+		min-width: 100%;
+	}
+	.login .registerLink {
+		margin-top: 0;
+		padding-top: 0 !important;
+		float: left;
+	}
+	.registrationForm.login .btn {
+		min-width: 100px;
+	}
+	.discoverForm .row.parameterFilePath .col-md-3 input {
+		width: 48%;
+		float: left;
+		margin-left: 4px;
+		margin-bottom: 20px;
+	}
+	.discoverForm .row.parameterFilePath .upload {
+		width: 100%;
+		float: left
+	}
+	.discoverForm .row.parameterFilePath .upload input {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.actionBtn.parameterScreenBtn .back {
+		float: left;
+		width: 100%;
+		margin-top: 20px;
+		margin-left: 26%;
+	}
+	/* */
+}
+
+@media screen and (max-device-width: 767px) and (orientation: landscape)
+	{
+	.container {
+		padding-left: 15px;
+	}
+	.discoverParameterBlock  .discoverForm .form-group.destDirectory label {
+		width: 56%;
+	}
+	.discoverParameterBlock  .discoverForm .form-group input {
+		width: 223px;
+	}
+	.discoverParameterBlock  .discoverForm .form-group {
+		width: 47%;
+	}
+	.discoverParameterBlock  .discoverForm .form-group {
+		margin-left: 18px;
+	}
+	.discoverParameterBlock h3 {
+		padding-top: 126px;
+		font-size: 19px;
+	}
+	.discoverParameterBlock .getSqlBtn {
+		margin-left: 266px;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons {
+		margin-left: 30%;
+	}
+	.discoverParameterBlock  .assessmentBtn {
+		margin-left: 15px;
+	}
+	.discoverParameterBlock   .list .objectLists .multipleOptions img {
+		left: 301px;
+		width: 25px;
+	}
+	.middlePane .parameterButtons .cancel {
+		margin-right: 0px;
+		width: 46%;
+	}
+	.middlePane .parameterButtons .install {
+		width: 46%;
+	}
+	header .text-center img {
+		margin: 10px 18px;
+		width: 35%;
+		float: left;
+	}
+	footer .footerlist ul {
+		margin-left: 0px;
+		text-align: center;
+	}
+	.discoverParameterBlock .getSqlBtn {
+		margin-left: 249px;
+	}
+	.discoverParameterBlock {
+		width: 94%;
+	}
+	.breadcrumbs ul li {
+		width: 45%;
+	}
+	.breadcrumbs ul {
+		width: 600px;
+	}
+	.middlePane {
+		margin-top: 0px;
+	}
+	.discoverParameterBlock .technicalDetailsForm .installationScreenBlock  .installationScreen .buttons
+		{
+		margin-left: 32%;
+	}
+	.discoverParameterBlock {
+		margin: 9px;
+		width: 97%;
+	}
+	.testAutoBlock {
+		margin: 9px;
+		width: 99%;
+		float: left;
+	}
+	.discoverParameterBlock .detailedTable {
+		margin: 0px;
+	}
+	.discoverParameterBlock.assesmentDetailsBlock {
+		margin: 0px !important;
+	}
+	.discoverParameterBlock .detailedTable.assessmentDetailsTableTwo {
+		margin: 0px;
+		margin: 0px 0px 30px 11px;
+	}
+	.discoverParameterBlock.assesmentDetailsBlock {
+		margin: 6px !important;
+		margin-bottom: 20px !important;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(1)
+		{
+		width: 120px !important;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(2)
+		{
+		width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(3)
+		{
+		width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(4)
+		{
+		width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(5)
+		{
+		width: 251px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(1)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(2)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(3)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(4)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(5)
+		{
+		min-width: 250px;
+	}
+	.discoverParameterBlock .detailedTable.assessmentDetailsTableTwo {
+		margin: 0px;
+	}
+	.discoverParameterBlock.assesmentDetailsBlock {
+		width: 100%;
+	}
+	.table-responsive {
+		overflow-y: hidden;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(1)
+		{
+		width: 130px !important;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(2)
+		{
+		width: 111px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(3)
+		{
+		width: 112px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(4)
+		{
+		width: 115px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(5)
+		{
+		width: 111px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(6)
+		{
+		width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(7)
+		{
+		width: 200px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(1)
+		{
+		min-width: 130px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(2)
+		{
+		min-width: 111px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(3)
+		{
+		min-width: 112px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(4)
+		{
+		min-width: 117px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(5)
+		{
+		min-width: 111px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(6)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(7)
+		{
+		min-width: 200px;
+	}
+	.breadcrumbs ul li {
+		width: 40%;
+		float: left;
+	}
+	.breadcrumbs ul {
+		width: 100%;
+		float: left !important;
+	}
+	.middlePane {
+		padding-bottom: 0px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(1)
+		{
+		width: 124px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(2)
+		{
+		width: 125px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(3)
+		{
+		width: 126px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(4)
+		{
+		width: 125px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(5)
+		{
+		width: 125px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(1)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(2)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(3)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(4)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(5)
+		{
+		min-width: 100px;
+	}
+	.discoverParameterBlock .detailedTable.reportScreen thead tr th:nth-child(1)
+		{
+		width: 117px;
+	}
+	.discoverParameterBlock .detailedTable.reportScreen thead tr th:nth-child(2)
+		{
+		width: 255px;
+	}
+	.discoverParameterBlock .detailedTable.reportScreen thead tr th:nth-child(3)
+		{
+		width: 256px;
+	}
+	.middlePane .getSqlBtn {
+		margin-left: 41%;
+	}
+	.login .registerButtons {
+		width: 46%;
+		margin: 0px 0px 10px 25px;
+		float: left
+	}
+	.login .registerResetButtons {
+		width: 46%;
+		margin: 0px 0px 10px 10px;
+		float: left
+	}
+	.login .loginPageButtons .btn-block {
+		margin-left: 10px;
+	}
+	.discoverForm .checkbox {
+		text-align: left;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons.automationButtons
+		{
+		width: 100%;
+		text-align: center;
+		margin: 0px 0 0 0%;
+	}
+	/*.middlePane .parameterButtons .cancel{width:41%;}
+.middlePane .parameterButtons .install{padding-left: 214px;width: 50%;margin-left:0px;}
+.middlePane .parameterButtons .install input{width:100%;}
+.middlePane .parameterButtons .cancel input{width:45%;}*/
+	.middlePane .login .loginPageButtons {
+		width: 21%;
+	}
+	.discoverParameterBlock .technicalDetailsForm {
+		margin-bottom: 0px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(1) {
+		width: 100px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(2) {
+		width: 100px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(3) {
+		width: 300px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(4) {
+		width: 300px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(5) {
+		width: 300px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(6) {
+		width: 100px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(7) {
+		width: 101px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(1) {
+		min-width: 100px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(2) {
+		min-width: 100px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(3) {
+		min-width: 300px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(4) {
+		min-width: 300px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(5) {
+		min-width: 300px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(6) {
+		min-width: 100px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(7) {
+		min-width: 100px;
+	}
+	.testAutoBlock .buttons.automationBtn input {
+		margin-right: 9px;
+		color: black;
+	}
+	.testAutoBlock .buttons.automationBtn {
+		text-align: center;
+		width: 100%;
+		margin: 0px;
+	}
+	.discoverParameterBlock .assesmentTableBlock .automationTable thead tr th:nth-child(1)
+		{
+		width: 154px;
+	}
+	.discoverParameterBlock .assesmentTableBlock .automationTable thead tr th:nth-child(2)
+		{
+		width: 151px;
+	}
+	.discoverParameterBlock .assesmentTableBlock .automationTable thead tr th:nth-child(3)
+		{
+		width: 287px;
+	}
+	.discoverParameterBlock .assesment .assesmentReportButtons {
+		margin-left: 0px;
+	}
+	.assesmentReport {
+		width: 100% !important;
+		padding: 20px;
+		margin: 0px !important;
+	}
+	.assesmentReportBlock {
+		padding-bottom: 30px;
+		width: 100%;
+		float: left;
+	}
+	.discoverParameterBlock.assessmentDetailsWhoColumnsBlock .assessmentDetailsBtn
+		{
+		padding: 0px 20px 10px 20px;
+	}
+	.discoverParameterBlock.assesmentSummary  .assessmentBtn {
+		margin-top: 0px;
+	}
+	.discoverParameterBlock.assesmentSummary {
+		margin-bottom: 20px;
+	}
+	.discoverParameterBlock.summaryRemediation {
+		width: 100%;
+		margin: 0px;
+		padding: 20px;
+		float: left;
+	}
+	.discoverParameterBlock.upgradeRemediationBlock {
+		margin: 0px;
+		padding: 20px;
+		width: 100%;
+		margin-bottom: 25px;
+	}
+	.discoverForm .row.actionBtn .col-xs-offset-0 {
+		padding-left: 29%;
+	}
+	.assesmentReport  .row.actionBtn .col-xs-offset-3 {
+		padding-left: 18%;
+	}
+	.middlePane .discoverParameterBlock.testAutoBlock .row.actionBtn .col-xs-offset-0
+		{
+		padding-left: 31%;
+	}
+	.middlePane.discoverAssesmentBlock .actionBtn .col-xs-offset-3 {
+		padding-left: 16%;
+	}
+	.discoverParameterBlock.assesmentScreenBlock .actionBtn .col-xs-offset-0
+		{
+		padding-left: 29%;
+	}
+	.discoverParameterBlock  .row.installationScreenBlock .actionBtn .col-xs-offset-0
+		{
+		padding-left: 29%;
+	}
+	.discoverParameterBlock.assesmentDetailsBlock .actionBtn .col-xs-offset-3
+		{
+		padding-left: 19%;
+	}
+	.discoverParameterBlock.assessmentDetailsWhoColumnsBlock .actionBtn .col-xs-offset-3
+		{
+		padding-left: 19%;
+	}
+	.discoverParameterBlock.assesmentSummary .actionBtn .col-xs-offset-0 {
+		padding-left: 30%;
+	}
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*                                   TABLET  STYLES                                     */
+/*--------------------------------------------------------------------------------------*/
+@media ( min-width : 768px) and (max-width: 970px) {
+	.discoverParameterBlock h3 {
+		padding-top: 92px;
+	}
+	.container {
+		width: 727px;
+	}
+	.discoverParameterBlock  .discoverForm .form-group {
+		width: 47%;
+	}
+	.discoverParameterBlock  .discoverForm .form-group {
+		margin-left: 20px;
+	}
+	.discoverParameterBlock  .discoverForm .form-group.destDirectory label {
+		width: 45%;
+	}
+	.discoverParameterBlock {
+		margin: 30px;
+		width: 95%;
+	}
+	.discoverParameterBlock .getSqlBtn {
+		margin-left: 320px !important;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons {
+		margin-left: 200px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(1)
+		{
+		width: 166px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(2)
+		{
+		width: 102px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(3)
+		{
+		width: 125px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(4)
+		{
+		width: 203px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(5)
+		{
+		width: 595px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(1)
+		{
+		width: 182px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(2)
+		{
+		width: 200px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(3)
+		{
+		width: 200px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(4)
+		{
+		width: 239px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(5)
+		{
+		width: 359px;
+	}
+	.discoverParameterBlock   .list .objectLists img {
+		left: 225px;
+	}
+	.discoverParameterBlock  .remediationBtn  .closeBtn {
+		float: left;
+		width: 50%;
+	}
+	.discoverParameterBlock  .remediationBtn  .deatilsBtn {
+		float: left;
+		width: 50%;
+	}
+	.dashboardMiddlePane>div {
+		width: 21%;
+	}
+	.breadcrumbs ul {
+		width: 705px !important;
+	}
+	.breadcrumbs ul li a {
+		font-size: 15px;
+	}
+	.middlePane .discoverForm .parameterButtons .cancel {
+		width: 50%;
+	}
+	.middlePane .discoverForm .parameterButtons .install {
+		padding-left: 0px;
+		width: 50%;
+	}
+	.middlePane .discoverForm .parameterButtons .install input {
+		width: 60%;
+		margin: 0px;
+		float: right;
+	}
+	.middlePane .discoverForm .parameterButtons .cancel input {
+		width: 60%;
+		margin: 0px;
+	}
+	header .dropdown {
+		top: 0px;
+		right: 0px;
+	}
+	.discoverParameterBlock {
+		margin: 18px;
+		width: 95%;
+	}
+	.discoverParameterBlock .tableTotal {
+		width: 100% !important;
+		margin: 0px 0px 0px 0px;
+	}
+	.discoverParameterBlock .detailedTable {
+		width: 100% !important;
+		margin: 20px 0px 30px 0px;
+	}
+	.discoverParameterBlock .getSqlBtn {
+		margin-left: 293px !important;
+	}
+	.discoverParameterBlock .technicalDetailsForm .installationScreenBlock  .installationScreen .localDb
+		{
+		padding-left: 20px;
+	}
+	.discoverParameterBlock .technicalDetailsForm .installationScreenBlock  .installationScreen .DestinationDb
+		{
+		padding-left: 30px;
+	}
+	.discoverParameterBlock .technicalDetailsForm .installationScreenBlock  .installationScreen .form-group input
+		{
+		width: 100%;
+	}
+	.discoverParameterBlock .technicalDetailsForm .installationScreenBlock  .installationScreen .buttons
+		{
+		margin-left: 3%;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(1)
+		{
+		width: 150px !important;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(2)
+		{
+		width: 150px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(3)
+		{
+		width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(4)
+		{
+		width: 150px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(5)
+		{
+		width: 280px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(1)
+		{
+		min-width: 150px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(2)
+		{
+		min-width: 150px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(3)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(4)
+		{
+		min-width: 150px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(5)
+		{
+		min-width: 280px;
+	}
+	.discoverParameterBlock .detailedTable.assessmentDetailsTableTwo {
+		margin: 0px;
+	}
+	.discoverParameterBlock.assesmentDetailsBlock {
+		width: 100%;
+		margin: 0px;
+		padding: 20px;
+		margin-bottom: 25px;
+	}
+	.table-responsive {
+		overflow-y: hidden;
+	}
+	.discoverParameterBlock.assesmentDetailsBlock  .assessmentDetailsBtn {
+		margin-top: 10px;
+		float: left;
+		margin-bottom: 0px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(1)
+		{
+		width: 130px !important;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(2)
+		{
+		width: 111px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(3)
+		{
+		width: 112px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(4)
+		{
+		width: 115px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(5)
+		{
+		width: 111px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(6)
+		{
+		width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(7)
+		{
+		width: 200px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(1)
+		{
+		min-width: 130px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(2)
+		{
+		min-width: 111px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(3)
+		{
+		min-width: 112px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(4)
+		{
+		min-width: 115px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(5)
+		{
+		min-width: 111px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(6)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(7)
+		{
+		min-width: 200px;
+	}
+	.testAutomationTool .alert.alert-success {
+		margin-left: 245px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(1)
+		{
+		width: 136px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(2)
+		{
+		width: 137px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(3)
+		{
+		width: 139px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(4)
+		{
+		width: 138px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(5)
+		{
+		width: 138px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(1)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(2)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(3)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(4)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(5)
+		{
+		min-width: 120px;
+	}
+	.middlePane  .assessmentBtn {
+		margin-left: 0px;
+		float: none;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.discoverParameterBlock  .remediationBtn  .closeBtn {
+		width: 100%;
+		float: none;
+	}
+	.discoverParameterBlock   .list .objectLists img {
+		left: 324px;
+	}
+	.discoverParameterBlock .detailedTable.reportScreen thead tr th:nth-child(1)
+		{
+		width: 223px;
+	}
+	.discoverParameterBlock .detailedTable.reportScreen thead tr th:nth-child(2)
+		{
+		width: 232px;
+	}
+	.discoverParameterBlock .detailedTable.reportScreen thead tr th:nth-child(3)
+		{
+		width: 233px;
+	}
+	.login .form-group {
+		padding: 0px;
+	}
+	.discoverForm .checkbox {
+		margin-left: 0px;
+	}
+	.middlePane .getSqlBtn {
+		margin-left: 41%;
+	}
+	.login .registerButtons {
+		width: 40%;
+		margin: 0px 0px 10px 65px;
+		float: left
+	}
+	.login .registerResetButtons {
+		width: 40%;
+		margin: 0px 0px 10px 15px;
+		float: left
+	}
+	.login.registerLink .leftSpacing {
+		padding-left: 55px;
+		font-size: 18px;
+	}
+	.login .loginPageButtons {
+		width: 94%;
+		margin: 8px 0px 0px 19px;
+	}
+	.dashboardMiddlePane>div {
+		width: 44%;
+	}
+	header .well-sm {
+		text-align: left;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons {
+		margin-left: 3%;
+		width: 100%;
+	}
+	.discoverParameterBlock .selectCategory {
+		float: left;
+		margin-left: 6px;
+		margin-right: 0px;
+		width: 98%;
+	}
+	.discoverParameterBlock   .list .objectLists {
+		margin-left: 22px;
+		width: 99%;
+	}
+	.discoverParameterBlock   .list .objectLists .multipleOptions {
+		width: 95%;
+	}
+	.discoverParameterBlock .selectCategory label {
+		margin: 0px;
+	}
+	.discoverParameterBlock .selectCategory .form-group input {
+		width: 87.5%;
+	}
+	.discoverParameterBlock .selectCategory .form-group {
+		padding-left: 22px;
+	}
+	.discoverForm .checkbox {
+		text-align: left;
+	}
+	.login .col-md-offset-4 {
+		margin-left: 0px;
+		width: 100%;
+	}
+	.discoverParameterBlock .technicalDetailsForm .form-control {
+		width: 90%;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons .r12Install {
+		width: 20%;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons .r12Cancel {
+		width: 20%;
+		margin-left: 3%;
+	}
+	.discoverParameterBlock .technicalDetailsForm .installationScreenBlock  .installationScreen .buttons
+		{
+		margin-left: 10px;
+		width: 99%;
+		margin-bottom: 26px;
+		text-align: center;
+	}
+	.discoverParameterBlock .technicalDetailsForm  .buttons.assesmentScreenButtonsBlock .r12Install
+		{
+		margin: 0px;
+		width: 20%;
+	}
+	.discoverParameterBlock .technicalDetailsForm  .buttons.assesmentScreenButtonsBlock .r12Cancel
+		{
+		width: 20%;
+		margin-left: 3%;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons.assesmentScreenButtonsBlock
+		{
+		width: 100%;
+		margin-left: 0px;
+		text-align: center;
+		margin-top: 25px;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons.automationButtons
+		{
+		width: 100%;
+		text-align: center;
+		margin-left: 0px;
+	}
+	.discoverForm .parameterButtons {
+		width: 100%;
+		text-align: center;
+		margin-left: 0px;
+	}
+	.login .loginPageButtons {
+		float: left;
+		width: 27%;
+	}
+	.middlePane .login .loginPageButtons .maroonButton {
+		margin-left: 44px;
+	}
+	.login.registerLink .leftSpacing {
+		padding-left: 66px;
+	}
+	.middlePane {
+		padding-bottom: 0px;
+		padding-top: 0px;
+	}
+	.discoverParameterBlock .technicalDetailsForm {
+		margin-bottom: 0px;
+	}
+	.assesmentReportBlock {
+		padding-bottom: 30px;
+	}
+	.discoverParameterBlock .technicalDetailsForm .dbGroup {
+		padding-left: 7px;
+	}
+	.testAutomationTool .alert.alert-success {
+		margin-left: 252px;
+		margin-top: 25px;
+	}
+	.discoverParameterBlock .assesmentScreenPageBlock .form-control {
+		width: 70%;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(1) {
+		width: 100px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(2) {
+		width: 100px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(3) {
+		width: 300px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(4) {
+		width: 300px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(5) {
+		width: 300px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(6) {
+		width: 100px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(7) {
+		width: 101px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(1) {
+		min-width: 100px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(2) {
+		min-width: 100px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(3) {
+		min-width: 300px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(4) {
+		min-width: 300px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(5) {
+		min-width: 300px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(6) {
+		min-width: 100px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(7) {
+		min-width: 100px;
+	}
+	.testAutoBlock .buttons.automationBtn input {
+		margin-right: 9px;
+		color: black;
+	}
+	.testAutoBlock .buttons.automationBtn {
+		text-align: center;
+		width: 100%;
+		margin: 0px;
+		padding: 10px 0 20px 0;
+	}
+	.topPane .container .rightPane  .account a {
+		display: none;
+	}
+	.topPane .container .rightPane  .support a {
+		display: none;
+	}
+	.topPane .container .rightPane  .logOut a {
+		display: none;
+	}
+	header .headerBlock .assesmentBlocks .blocks {
+		padding: 56px 0px 0px 0px;
+	}
+	.topPane .container .logo {
+		width: 100%;
+	}
+	header .headerBlock .assesmentBlocks button {
+		width: 80%;
+	}
+	header .headerBlock .assesmentBlocks .blocks:nth-child(3) {
+		padding-bottom: 35px;
+	}
+	.discoverParameterBlock .assesmentTableBlock thead tr th:nth-child(1) {
+		width: 154px;
+	}
+	.discoverParameterBlock .assesmentTableBlock thead tr th:nth-child(2) {
+		width: 161px;
+	}
+	.discoverParameterBlock .assesmentTableBlock thead tr th:nth-child(3) {
+		width: 322px;
+	}
+	header .well-sm {
+		text-align: center;
+	}
+	.assesmentReport {
+		width: 100% !important;
+		padding: 20px;
+		margin: 0px !important;
+	}
+	.assesmentReportBlock {
+		padding-bottom: 30px;
+		width: 100%;
+	}
+	.middlePane  .discoverForm .row.parameterButtons {
+		float: left;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns {
+		margin: 0px 0px 30px 0px;
+	}
+	.discoverParameterBlock.assessmentDetailsWhoColumnsBlock {
+		margin: 0px;
+		width: 100%;
+		padding: 25px;
+		margin-bottom: 20px;
+	}
+	.discoverParameterBlock.assessmentDetailsWhoColumnsBlock  .assessmentDetailsBtn
+		{
+		padding: 0px;
+	}
+	.discoverParameterBlock.assesmentSummary {
+		margin: 0px;
+		width: 100%;
+		padding: 25px;
+		margin-bottom: 20px;
+	}
+	.discoverParameterBlock.assesmentSummary .assessmentBtn {
+		margin-left: 0px;
+		float: none;
+		padding: 0px;
+	}
+	.discoverParameterBlock.summaryRemediation {
+		width: 100%;
+		margin: 0px;
+		padding: 20px;
+		float: left;
+	}
+	.discoverParameterBlock.summaryRemediation {
+		width: 100%;
+		margin: 0px;
+		padding: 20px;
+		float: left;
+	}
+	.discoverParameterBlock.upgradeRemediationBlock {
+		margin: 0px;
+		padding: 20px;
+		width: 100%;
+		margin-bottom: 25px;
+	}
+	.discoverForm .row.parameterFilePath .upload {
+		margin-top: 25px;
+	}
+	.actionBtn.parameterScreenBtn .col-md-2 {
+		width: 20%;
+	}
+	.actionBtn.parameterScreenBtn .col-md-6 {
+		width: 45%;
+	}
+	.discoverParameterBlock .row.installationScreenBlock .installationScreen .parameterFilePath .path .col-md-9
+		{
+		width: 100%;
+		padding-left: 32px;
+	}
+	.discoverParameterBlock .row.installationScreenBlock .installationScreen .parameterFilePath .upload
+		{
+		margin-top: 25px;
+	}
+	.actionBtn.assesmentSummary .col-md-2 {
+		width: 22%;
+	}
+	.actionBtn.assesmentSummary .col-md-offset-4 {
+		margin-left: 21%;
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width:
+	1024px) and (orientation: landscape) {
+	.discoverParameterBlock {
+		margin: 30px !important;
+		width: 95% !important;
+	}
+	.discoverParameterBlock h3 {
+		padding-top: 92px;
+	}
+	.discoverParameterBlock  .discoverForm .form-group {
+		width: 49%;
+	}
+	.discoverParameterBlock .getSqlBtn {
+		margin-left: 454px !important;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons {
+		margin-left: 36%;
+	}
+	.discoverParameterBlock   .list .objectLists img {
+		left: 302px;
+	}
+	.dashboardMiddlePane>div {
+		width: 21%;
+	}
+	.discoverParameterBlock {
+		float: left;
+		margin-top: 22px !important;
+		width: 100%;
+	}
+	.discoverParameterBlock .tableTotal {
+		width: 100% !important;
+		margin: 0px 0px 30px 10px;
+	}
+	.discoverParameterBlock .detailedTable {
+		width: 100% !important;
+		margin: 15px 0px 30px 10px;
+	}
+	.discoverParameterBlock .getSqlBtn {
+		margin-left: 415px !important;
+	}
+	.discoverParameterBlock .technicalDetailsForm .installationScreenBlock  .installationScreen .localDb
+		{
+		padding-left: 0px;
+		width: 45%;
+	}
+	.discoverParameterBlock .technicalDetailsForm .installationScreenBlock  .installationScreen .DestinationDb
+		{
+		padding-left: 35px;
+	}
+	.discoverParameterBlock .technicalDetailsForm .installationScreenBlock  .installationScreen .form-group input
+		{
+		width: 100%;
+	}
+	.discoverParameterBlock .technicalDetailsForm .installationScreenBlock  .installationScreen .buttons
+		{
+		margin-left: 29%;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(1)
+		{
+		width: 156px !important;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(2)
+		{
+		width: 156px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(3)
+		{
+		width: 112px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(4)
+		{
+		width: 165px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo thead tr th:nth-child(5)
+		{
+		width: 339px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(1)
+		{
+		min-width: 153px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(2)
+		{
+		min-width: 156px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(3)
+		{
+		min-width: 113px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(4)
+		{
+		min-width: 165px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableTwo tbody tr td:nth-child(5)
+		{
+		min-width: 338px;
+	}
+	.discoverParameterBlock .detailedTable.assessmentDetailsTableTwo {
+		margin: 0px;
+	}
+	.assesmentDetailsBlock {
+		width: 100% !important;
+		margin: 0px !important;
+		margin-top: 25px !important;
+		margin-bottom: 25px !important;
+		padding: 25px !important;
+	}
+	.table-responsive {
+		overflow-y: hidden;
+	}
+	.middlePane .assesmentDetailsBlock  .assessmentDetailsBtn {
+		padding: 25px 0 0 0;
+		margin: 0px;
+		float: left;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(1)
+		{
+		width: 121px !important;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(2)
+		{
+		width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(3)
+		{
+		width: 103px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(4)
+		{
+		width: 121px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(5)
+		{
+		width: 124px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(6)
+		{
+		width: 129px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns thead tr th:nth-child(7)
+		{
+		width: 200px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(1)
+		{
+		min-width: 108px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(2)
+		{
+		min-width: 106px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(3)
+		{
+		min-width: 103px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(4)
+		{
+		min-width: 115px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(5)
+		{
+		min-width: 111px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(6)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns tbody tr td:nth-child(7)
+		{
+		min-width: 200px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(1)
+		{
+		width: 180px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(2)
+		{
+		width: 184px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(3)
+		{
+		width: 189px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(4)
+		{
+		width: 184px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable thead tr th:nth-child(5)
+		{
+		width: 181px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(1)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(2)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(3)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(4)
+		{
+		min-width: 120px;
+	}
+	.discoverParameterBlock .assessmentDetailsTable tbody tr td:nth-child(5)
+		{
+		min-width: 120px;
+	}
+	.middlePane  .assessmentBtn {
+		margin-left: 0px;
+		float: none;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.discoverParameterBlock   .list .objectLists img {
+		left: 447px;
+	}
+	.discoverParameterBlock .detailedTable.reportScreen thead tr th:nth-child(1)
+		{
+		width: 305px;
+	}
+	.discoverParameterBlock .detailedTable.reportScreen thead tr th:nth-child(2)
+		{
+		width: 309px;
+	}
+	.discoverParameterBlock .detailedTable.reportScreen thead tr th:nth-child(3)
+		{
+		width: 310px;
+	}
+	.login .form-group {
+		padding: 0px;
+	}
+	.middlePane .getSqlBtn {
+		margin-left: 41%;
+		margin-top: 20px;
+	}
+	.discoverForm .checkbox {
+		margin-left: 23px;
+		text-align: center;
+	}
+	.login .registerButtons {
+		width: 44%;
+		width: 50%;
+		margin: 15px 0px 0 0px;
+		float: left;
+		float: left
+	}
+	.dashboardMiddlePane>div {
+		width: 44%;
+	}
+	.parameterButtons .col-md-offset-4 {
+		margin-left: 33.33%;
+	}
+	.discoverParameterBlock .technicalDetailsForm {
+		width: 100%;
+		float: left;
+		margin: 0px;
+	}
+	.discoverParameterBlock .selectCategory {
+		float: left;
+		margin: 0px;
+		width: 94%;
+	}
+	.login .registerButtons {
+		width: 25%;
+		margin: 0px 0px 10px 28%;
+		float: left
+	}
+	.login .registerResetButtons {
+		width: 25%;
+		margin: 0px 0px 10px 0%;
+		float: left
+	}
+	.radio label, .checkbox label {
+		padding-left: 40px;
+	}
+	.login .col-md-offset-4 {
+		margin-left: 0px;
+		width: 100%;
+	}
+	.discoverParameterBlock .technicalDetailsForm .form-control {
+		width: 95%
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons .r12Install {
+		width: 20%;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons .r12Cancel {
+		width: 20%;
+		margin-left: 3%;
+	}
+	.discoverParameterBlock .technicalDetailsForm .installationScreenBlock  .installationScreen .buttons
+		{
+		margin-left: 30%;
+		width: 70%;
+	}
+	.discoverParameterBlock .technicalDetailsForm  .buttons.assesmentScreenButtonsBlock .r12Install
+		{
+		margin-left: 16px;
+		width: 15%;
+	}
+	.discoverParameterBlock .technicalDetailsForm  .buttons.assesmentScreenButtonsBlock .r12Cancel
+		{
+		width: 15%;
+		margin-left: 0px;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons.assesmentScreenButtonsBlock
+		{
+		width: 98%;
+		margin-left: 0px !important;
+		text-align: center;
+	}
+	.discoverParameterBlock .technicalDetailsForm .buttons.automationButtons
+		{
+		width: 100%;
+		text-align: center;
+		margin-left: 0px;
+	}
+	.middlePane .login .loginPageButtons .maroonButton {
+		margin-left: 233px;
+		width: 170px;
+	}
+	.middlePane .login .loginPageButtons .orangeButton {
+		margin-left: 45px;
+	}
+	.middlePane .registerLink .leftSpacing {
+		padding-left: 246px;
+	}
+	.middlePane {
+		padding: 10px 0px 0 0;
+		float: left;
+		width: 98%;
+	}
+	.discoverParameterBlock .technicalDetailsForm {
+		margin-bottom: 0px;
+	}
+	.assesmentReportBlock {
+		padding-bottom: 30px;
+		width: 100%;
+	}
+	.discoverParameterBlock .technicalDetailsForm .dbGroup {
+		padding-left: 33px;
+	}
+	.discoverParameterBlock .assesmentScreenPageBlock .form-control {
+		width: 100%;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns {
+		width: 95% !important;
+		margin: 0px;
+		float: left;
+	}
+	/*.assesmentSummary{width:95%!important;float:left;margin-left:18px!important;margin-bottom:10px!important;}*/
+	.upgradeDetails {
+		width: 92% !important;
+	}
+	.discoverParameterBlock   .list .objectLists {
+		width: 98%;
+		margin: 0px;
+	}
+	.discoverParameterBlock   .list .objectLists .multipleOptions {
+		width: 95%;
+	}
+	.discoverParameterBlock   .list .objectLists  h4 {
+		width: 100%;
+		float: left;
+		margin-left: 16px;
+	}
+	.discoverParameterBlock  .remediationBtn {
+		width: 100%;
+		float: left;
+		padding-bottom: 0px;
+		margin: 0px;
+	}
+	.login {
+		float: left;
+		width: 95%;
+		margin: 0px 50px;
+	}
+	.testAutoBlock {
+		margin-left: 10px !important;
+		width: 99% !important;
+		margin-right: 0px !important;
+	}
+	.assesmentReport {
+		width: 100% !important;
+		padding: 20px;
+		margin: 0px !important;
+	}
+	.assesmentScreenBlock {
+		width: 98% !important;
+	}
+	.summaryRemediation {
+		width: 97% !important;
+		margin-left: 15px !important;
+	}
+	.discoverParameterBlock .selectCategory  select {
+		width: 313px !important;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(1) {
+		width: 100px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(2) {
+		width: 100px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(3) {
+		width: 300px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(4) {
+		width: 300px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(5) {
+		width: 300px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(6) {
+		width: 100px;
+	}
+	.discoverParameterBlock .automationTable thead tr th:nth-child(7) {
+		width: 101px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(1) {
+		min-width: 100px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(2) {
+		min-width: 100px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(3) {
+		min-width: 300px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(4) {
+		min-width: 300px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(5) {
+		min-width: 300px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(6) {
+		min-width: 100px;
+	}
+	.discoverParameterBlock .automationTable tbody tr td:nth-child(7) {
+		min-width: 100px;
+	}
+	.testAutoBlock .buttons.automationBtn input {
+		margin-right: 9px;
+		color: black;
+	}
+	.testAutoBlock .buttons.automationBtn {
+		text-align: center;
+		width: 100%;
+		margin: 0px;
+		padding: 10px 0 20px 0;
+	}
+	.rightPane {
+		padding: 0px;
+	}
+	.rightPane .col-md-12 {
+		padding: 0px;
+	}
+	.discoverParameterBlock .assesmentTableBlock thead tr th:nth-child(1) {
+		width: 238px;
+	}
+	.discoverParameterBlock .assesmentTableBlock thead tr th:nth-child(2) {
+		width: 269px;
+	}
+	.discoverParameterBlock .assesmentTableBlock thead tr th:nth-child(3) {
+		width: 363px;
+	}
+	.discoverParameterBlock .assesment .assesmentReportButtons {
+		margin-left: 0px;
+	}
+	.discoverParameterBlock .assessmentDetailsTableWhoColumns {
+		margin: 0px 0px 30px 0px !important;
+	}
+	.discoverParameterBlock.assessmentDetailsWhoColumnsBlock {
+		margin: 25px 0px 25px 0px !important;
+		width: 100% !important;
+		padding: 25px;
+	}
+	.discoverParameterBlock.assessmentDetailsWhoColumnsBlock  .assessmentDetailsBtn
+		{
+		padding: 0px;
+	}
+	.discoverParameterBlock.assesmentSummary {
+		width: 100% !important;
+		padding: 25px;
+		margin: 20px 0 30px 0 !important;
+	}
+	.discoverParameterBlock.assesmentSummary .assessmentBtn {
+		margin-left: 0px;
+		float: none;
+		padding: 0px;
+	}
+	.discoverParameterBlock.summaryRemediation {
+		width: 100%;
+		margin: 0px;
+		padding: 20px;
+		float: left;
+	}
+	.discoverParameterBlock.upgradeRemediationBlock {
+		margin: 0px 0px 25px 0px !important;
+		padding: 20px;
+		width: 100% !important;
+	}
+	.actionBtn.parameterScreenBtn .col-md-2 {
+		width: 16%;
+	}
+	.actionBtn.parameterScreenBtn .col-md-6 {
+		width: 45%;
+	}
+	.discoverParameterBlock .row.installationScreenBlock .installationScreen .parameterFilePath .path .col-md-9
+		{
+		padding-left: 15px;
+		width: 90%;
+	}
+	.discoverParameterBlock .row.installationScreenBlock .installationScreen .parameterFilePath .upload
+		{
+		margin-top: 25px;
+	}
+	.actionBtn.assesmentSummary .col-md-2 {
+		width: 15%;
+	}
+	.actionBtn.assesmentSummary .col-md-offset-4 {
+		margin-left: 31%;
+	}
+}

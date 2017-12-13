@@ -3,136 +3,195 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Time Sheet</title>
-<script src="ProjectManagementTool-UI/js/Plugins/jquery-3.2.1-jquery.min.js"></script>
-  <script src="ProjectManagementTool-UI/js/Plugins/jquery-1.10.2.js"></script>
-   <script type="text/javascript" src=" ProjectManagementTool-UI/js/Plugins/jqueryui-1.10.3-jquery-ui.js"></script>
-   
-<script  src="ProjectManagementTool-UI/js/cookies.js"></script>
+<script
+	src="ProjectManagementTool-UI/js/Plugins/jquery-3.2.1-jquery.min.js"></script>
+<script src="ProjectManagementTool-UI/js/Plugins/jquery-1.10.2.js"></script>
+<script type="text/javascript"
+	src=" ProjectManagementTool-UI/js/Plugins/jqueryui-1.10.3-jquery-ui.js"></script>
+
+<script src="ProjectManagementTool-UI/js/cookies.js"></script>
 
 <script src="ProjectManagementTool-UI/js/timesheetentry.js"></script>
 
 <style>
-#welcomeuser       {position:absolute;font-size:20px;margin-top:20px}
-#logout            {position:relative;margin-left:1210px;width:130px;height:30px;margin-top:20px;background-color:#0078D7;color:white} 
- #timesheetdiv     {background-color:#0078D7;margin-top:55px;width:1350px;height:35px;} 
- #timesheettitle   {color:white;font-bold:true;font-size:24px;text-align:center;} 
- #overalldiv       {width:1350px;margin-top:1px}
- 
-#employeename      {margin-left:120px;}
-#designation       {margin-left:150px;}
- 
- #myTable  {border: 1px solid black;border-collapse: collapse;text-align: center}
+#welcomeuser {
+	position: absolute;
+	font-size: 20px;
+	margin-top: 20px
+}
+
+#logout {
+	position: relative;
+	margin-left: 1210px;
+	width: 130px;
+	height: 30px;
+	margin-top: 20px;
+	background-color: #0078D7;
+	color: white
+}
+
+#timesheetdiv {
+	background-color: #0078D7;
+	margin-top: 55px;
+	width: 1350px;
+	height: 35px;
+}
+
+#timesheettitle {
+	color: white;
+	font-bold: true;
+	font-size: 24px;
+	text-align: center;
+}
+
+#overalldiv {
+	width: 1350px;
+	margin-top: 1px
+}
+
+#employeename {
+	margin-left: 120px;
+}
+
+#designation {
+	margin-left: 150px;
+}
+
+#myTable {
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: center
+}
+
 #myTable td {
-    border:   1px solid black;
-      border-collapse: collapse; 
-  
+	border: 1px solid black;
+	border-collapse: collapse;
 }
+
 #myTable th {
-    border:   1px solid black;
-      border-collapse: collapse; 
-   
+	border: 1px solid black;
+	border-collapse: collapse;
 }
+
 textarea {
-    border:  1px solid black;
-    width: 100%;
-    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
-       -moz-box-sizing: border-box; /* FF1+ */
-            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+	border: 1px solid black;
+	width: 100%;
+	-webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+	-moz-box-sizing: border-box; /* FF1+ */
+	box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
 }
-#save              {margin-left:530px;width:110px;height:25px;background-color:#0078D7;color:white}
-#cancel            {margin-left:60px;width:110px;height:25px;background-color:#0078D7;color:white}
- 
- 
+
+#save {
+	margin-left: 530px;
+	width: 110px;
+	height: 25px;
+	background-color: #0078D7;
+	color: white
+}
+
+#cancel {
+	margin-left: 60px;
+	width: 110px;
+	height: 25px;
+	background-color: #0078D7;
+	color: white
+}
 </style>
 </head>
 <body>
-<script type="text/javascript">
+	<script type="text/javascript">
 function goBack() {
     window.history.back();
 }
 </script>
-<table width="1000px" align="center" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td>
-<label id="welcomeuser"></label>
-<button  id="logout"><B>Log Out</B></button>
-<br>
-<img id="back" src="ProjectManagementTool-UI/css/images1/images.jpg" Style="width:26px;height:28px;margin-top:40px" onclick="goBack()" />
-<img id="home" src="ProjectManagementTool-UI/css/images1/download.jpg" Style="position:absolute;width:26px;height:32px;margin-left:30px;margin-top:40px" onclick="location.href='projectdashboard.html'" />
-<br>
-<br>
-<label id="employeecode"></label>
-<label id="employeename"></label>
-<label id="designation"></label>
+	<table width="1000px" align="center" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td><label id="welcomeuser"></label>
+					<button id="logout">
+						<B>Log Out</B>
+					</button> <br> <img id="back"
+					src="ProjectManagementTool-UI/css/images1/images.jpg"
+					Style="width: 26px; height: 28px; margin-top: 40px"
+					onclick="goBack()" /> <img id="home"
+					src="ProjectManagementTool-UI/css/images1/download.jpg"
+					Style="position: absolute; width: 26px; height: 32px; margin-left: 30px; margin-top: 40px"
+					onclick="location.href='projectdashboard.html'" /> <br> <br>
+					<label id="employeecode"></label> <label id="employeename"></label>
+					<label id="designation"></label></td>
+			</tr>
 
-</td>
-</tr>
+			<tr>
+				<td>
+					<div id="timesheetdiv">
+						<p id="timesheettitle">Timesheet Entry</p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
 
-<tr>
-<td >
-<div id="timesheetdiv" ><p id="timesheettitle">Timesheet Entry</p></div>
-</td>
-</tr>
-<tr>
-<td >
+					<form id="form">
+						<div id="overalldiv" Style="border: 1px solid black;">
 
-<form id="form">
-<div id="overalldiv" Style="border: 1px solid black;">
-
-<input type="hidden" name="employee_code" id="employee_code">
-<input type="hidden" name="employee_name"  id="employee_name">
-
+							<input type="hidden" name="employee_code" id="employee_code">
+							<input type="hidden" name="employee_name" id="employee_name">
 
 
-<div >     
-      
-       
-      <table id="myTable" style="width:100%;">
-        <tr>
-        <th   >Project Code</th> 
-        <th   >Project Name</th> 
-        
-       
-	      <th   >Date</th> 
-	       
-	       <th   >Activity Code</th>
-	       <th  width="30%" >Work Description</th>
-	       <th >Start Time</th> 
-	       <th   >End Time</th> 
-           <th    >Hours</th>
-          <th  >Approved status</th> 
-          <th   >...</th> 
-        </tr>
-        <tbody id="tbody">
-       
-        </tbody>
-  
-  
-  </table> 	
 
-        <img src="ProjectManagementTool-UI/css/images1/addicon.jpg" Style="width:20px;height:20px" id="addrow" />
-        
-</div>
-</div>
-<br>
-<div>
-<span id="day_hours"></span>
+							<div>
 
-<button  id="save"><B>Submit</B></button>
-<button  id="cancel"><B>Cancel</B></button>
 
- 
+								<table id="myTable" style="width: 100%;">
+									<tr>
+										<th>Project Code</th>
+										<th>Project Name</th>
 
-</div>
-<br>
 
-</form>
-</td>
-</tr>
+										<th>Date</th>
 
-</tbody>
-</table>
+										<th>Activity Code</th>
+										<th width="30%">Work Description</th>
+										<th>Start Time</th>
+										<th>End Time</th>
+										<th>Hours</th>
+										<th>Approved status</th>
+										<th>...</th>
+									</tr>
+									<tbody id="tbody">
+
+									</tbody>
+
+
+								</table>
+
+								<img src="ProjectManagementTool-UI/css/images1/addicon.jpg"
+									Style="width: 20px; height: 20px" id="addrow" />
+
+							</div>
+						</div>
+						<br>
+						<div>
+							<span id="day_hours"></span>
+
+							<button id="save">
+								<B>Submit</B>
+							</button>
+							<button id="cancel">
+								<B>Cancel</B>
+							</button>
+
+
+
+						</div>
+						<br>
+
+					</form>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
 
 </body>
 </html>

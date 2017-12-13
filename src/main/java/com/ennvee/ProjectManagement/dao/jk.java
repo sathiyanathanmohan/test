@@ -24,9 +24,8 @@ import javax.jcr.SimpleCredentials;
 import org.apache.jackrabbit.commons.JcrUtils;
 
 
-
 public class jk {
-
+	private String hello;
 	public void jackRabbit(String filePath, String projectname) {
 	String fileLocation = filePath;
 

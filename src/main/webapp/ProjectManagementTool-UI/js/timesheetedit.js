@@ -22,7 +22,7 @@ designation=checkCookie3(decodeURIComponent(document.cookie));
 	}
 	else{
 	
-		 $('#welcomeuser').append("<b>Welcome "+user2.charAt(0).toUpperCase() + user2.slice(1)+" !!!</b>") ;
+		 $('#destusername').text(user2) ;
 		 var today = new Date();
 		 var dd = today.getDate();
 		 var mm = today.getMonth()+1; //January is 0!
@@ -51,7 +51,7 @@ designation=checkCookie3(decodeURIComponent(document.cookie));
 								
 								var object=data.object;
 								activitycode='';
-								activitycode='<Select style="width:99%" name="acitivity"><option>Select</option>'
+								activitycode='<Select style="width:99%"  class="form-control" name="acitivity"><option>Select</option>'
 				            for ( var i in object) {
 
 				            	$("#projectstatus")
@@ -246,8 +246,8 @@ $().ready(function(event){
 		else
 			{
 		if(app!='Approved'){
-		$("#tbody").append('<tr id="'+rowcount+'" onclick="myFunction1(this)"><td><td><input type="hidden" value="0" name="rowid" id="rowid'+rowcount+'"><select id="mySelect" name="mySelect" onchange="myFunction(this)"><option val="Select">Select</option>'+projectappend+'</select><td><td>'+activitycode+'<td><input type="text" name="workactivity" style="width:99%"><td><input type="time" id="starttime'+rowcount+'"  oninput="myFunction6('+rowcount+')" name="starttime">'
-				+'<td><input type="time" id="endtime'+rowcount+'"  oninput="myFunction7('+rowcount+')" name="endttime"><td><input type="hidden" id="hour'+rowcount+'" name="hour"><span id="hourlabel'+rowcount+'"></span><td ><img src="ProjectManagementTool-UI/css/images1/close.jpg" Style="width:20px;height:20px" onclick="myFunction3('+rowcount+')" id="remove"/></td></tr>');	    
+		$("#tbody").append('<tr id="'+rowcount+'" onclick="myFunction1(this)"><td><td><input type="hidden" value="0" name="rowid" id="rowid'+rowcount+'"><select  class="form-control" id="mySelect" name="mySelect" onchange="myFunction(this)"><option val="Select">Select</option>'+projectappend+'</select><td><td>'+activitycode+'<td><input type="text"   class="form-control" name="workactivity" style="width:99%"><td><input type="time" id="starttime'+rowcount+'"   class="form-control" oninput="myFunction6('+rowcount+')" name="starttime">'
+				+'<td><input  type="time"  class="form-control" id="endtime'+rowcount+'"  oninput="myFunction7('+rowcount+')" name="endttime"><td><input type="hidden" id="hour'+rowcount+'" name="hour"><span id="hourlabel'+rowcount+'"></span><td ><img src="ProjectManagementTool-UI/css/images1/close.jpg" Style="width:20px;height:20px" onclick="myFunction3('+rowcount+')" id="remove"/></td></tr>');	    
 		rowcount=rowcount+1;
 		call2();
 		}
@@ -760,7 +760,7 @@ var url5 = "rest/webservices/get_timesheet_one_emp?emp_code="+$("#employee_code"
       									
       									var object6=data.object;
       									activitycode='';
-      									activitycode='<Select  Style="height:30px;width:98%" id="acitivity'+rowcount+'" name="acitivity"><option value="'+activitycodetimesheet+'">'+activitycodetimesheet+'</option>';
+      									activitycode='<Select  class="form-control"  Style="height:30px;width:98%" id="acitivity'+rowcount+'" name="acitivity"><option value="'+activitycodetimesheet+'">'+activitycodetimesheet+'</option>';
       					            for ( var i in object6) {
                                        if(object6[i].item!=activitycodetimesheet)
       					            	{
@@ -775,18 +775,10 @@ var url5 = "rest/webservices/get_timesheet_one_emp?emp_code="+$("#employee_code"
       							});
       			     	  	
       			     	  	
-      			     	  	
-      			     	  	
-      			     	  	
-      			     	  	
-      			     	  	
-      			     	  	
-      			     
-		      
-		            	
-       		$("#tbody").append('<tr id="'+rowcount+'" onclick="myFunction1(this)"><td ><td><input type="hidden" id="rowid'+rowcount+'" name="rowid" value="'+object[i].id+'"> <select id="mySelect" Style="height:30px;width:98%" onchange="myFunction(this)"><option>Select</option>'+projectappend+'</select><td id="change'+rowcount+'"><input type="hidden" value="'+object[i].project_code+'" name="project_code" >'+project_name9+'<td>'+activitycode+
-       				'<td><textarea name="workactivity" >'+object[i].work_description+'</textarea></td><td><input type="time" value="'+object[i].start_time+'" id="starttime'+rowcount+'"  oninput="myFunction6('+rowcount+')"  Style="height:30px;width:98%" name="starttime">'
-       				+'<td><input type="time"  Style="height:30px" value="'+object[i].end_time+'" id="endtime'+rowcount+'"  oninput="myFunction7('+rowcount+')" name="endttime"><td><input type="hidden" value="'+object[i].total_hours+'" id="hour'+rowcount+'" name="hour"><span id="hourlabel'+rowcount+'"><label>'+object[i].total_hours+'</label></span> <td ><img src="ProjectManagementTool-UI/css/images1/close.jpg" Style="width:20px;height:20px" onclick="myFunction3('+rowcount+')" id="remove"/></td></tr>');	    
+   
+       		$("#tbody").append('<tr id="'+rowcount+'" onclick="myFunction1(this)"><td ><td><input  class="form-control" type="hidden" id="rowid'+rowcount+'" name="rowid" value="'+object[i].id+'"> <select id="mySelect"  class="form-control" Style="height:30px;width:98%" onchange="myFunction(this)"><option>Select</option>'+projectappend+'</select><td id="change'+rowcount+'"><input type="hidden" value="'+object[i].project_code+'" name="project_code" >'+project_name9+'<td>'+activitycode+
+       				'<td><input type="text" name="workactivity" value="'+object[i].work_description+'"  class="form-control"></td><td><input type="time"   class="form-control" value="'+object[i].start_time+'" id="starttime'+rowcount+'"  oninput="myFunction6('+rowcount+')"  Style="height:30px;width:98%" name="starttime">'
+       				+'<td><input type="time"   class="form-control" Style="height:30px" value="'+object[i].end_time+'" id="endtime'+rowcount+'"  oninput="myFunction7('+rowcount+')" name="endttime"><td><input type="hidden" value="'+object[i].total_hours+'" id="hour'+rowcount+'" name="hour"><span id="hourlabel'+rowcount+'"><label>'+object[i].total_hours+'</label></span> <td ><img src="ProjectManagementTool-UI/css/images1/close.jpg" Style="width:20px;height:20px" onclick="myFunction3('+rowcount+')" id="remove"/></td></tr>');	    
        		
        		$('#approved_status').val(object[i].approved_status);
        		

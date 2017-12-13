@@ -8,6 +8,7 @@ $( window ).load(function() {
 	var login_emp_code=checkCookie2(decodeURIComponent(document.cookie));
 
 	if(user2!=null){
+		  $('#destusername').text(user2) ;
 		if(designation!='project_manager'&&designation!='admin')
 		{
 		 location.href='timesheetedit.html';

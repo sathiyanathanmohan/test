@@ -2,18 +2,26 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Project Management Tool</title>
 
-<link rel="stylesheet" href="ProjectManagementTool-UI/css/Plugins/Allocation-dataTables.jqueryui.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="ProjectManagementTool-UI/css/Plugins/Allocation-dataTables.jqueryui.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="ProjectManagementTool-UI/js/projectallocation.js"></script>
-<script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
-<script type="text/javascript" src="ProjectManagementTool-UI/js/Plugins/alloc.jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="ProjectManagementTool-UI/js/Plugins/dataTables.jqueryui.min.js"></script>
-<script type="text/javascript" src="ProjectManagementTool-UI/js/cookies.js"></script>
-<link rel="stylesheet" href="ProjectManagementTool-UI/css/projectallocation.css">
+<script type="text/javascript"
+	src="ProjectManagementTool-UI/js/projectallocation.js"></script>
+<script type="text/javascript"
+	src=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript"
+	src="ProjectManagementTool-UI/js/Plugins/alloc.jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+	src="ProjectManagementTool-UI/js/Plugins/dataTables.jqueryui.min.js"></script>
+<script type="text/javascript"
+	src="ProjectManagementTool-UI/js/cookies.js"></script>
+<link rel="stylesheet"
+	href="ProjectManagementTool-UI/css/projectallocation.css">
 
 
 <script type="text/javascript">
@@ -44,151 +52,157 @@ function goBack() {
 </head>
 <body>
 
-<table width="965" align="center"   cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td>
+	<table width="965" align="center" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td>
 
-	<h2 id="welcomeuser" ALIGN="left" style="width:550px;"> </h2>
-	<button id="logout"><B>Log Out</B></button>
-<img id="back" src="ProjectManagementTool-UI/css/images1/images.jpg" Style="width:26px;height:28px;margin-top:5px" onclick="goBack()" />
-<img id="home" src="ProjectManagementTool-UI/css/images1/download.jpg" Style="position:absolute;width:26px;height:32px;margin-left:30px;margin-top:5px" onclick="location.href='projectdashboard.jsp'" />
-	<label id="headtag"></label>
-</td>
-</tr>
-<tr>
-<td>
-	<div id="nav">
-	<p id="title">Project Allocation</p></div> 
-</td>
-</tr>
-<tr>
-<td>
-<div id="content" style="border: 1px solid black;">
-	<br>
-	<br>
-	<form id="form">
-	
-	 <input type="hidden" value="" name="pro_code" id="pro_code"/>
-	<div id="row"> 
-	<label id="lempid">Employee ID * </label>
-	<select id="empid" name="empid">
-	         <option value="Select">Select</option>
-	         
-	        </select>
-	      
-	<label id="len">Employee Name</label>
-	<input id="en" readonly="readonly" maxlength="50" type="text" name="emp_name">
-	<br><label style="color:red;margin-left:200px" id="erroremp">Please selcet employee Id</label><br>
-	<br>
-	</div>
-	<div id="row">  
-	<label id="lloc">Location</label>
-	<input id="loc" readonly="readonly" maxlength="50" type="text" name="location">
-	<label id="lpoa">Percentage of Allocation*</label>
-	<input id="poa" maxlength="3" type="text" name="percentage">
-	<span id="verifydiv" style="border:1px solid black;background-color:#0078D7;margin-left:-2px">
-	<label id="verify" style="margin-top:2%">Verify</label>
-	</span>
-	<br><label style="color:red;margin-left:800px" id="errorpercentage">percentage</label>
-	<br>
-	<br>
-	</div>
-	<div id="row"> 
-	<label id="lstartdate">Start Date*</label>
-	<input id="startdate" name="startdate" maxlength="20" type="date" />
-	<label id="lenddate">End Date*</label>
-	<input id="enddate"  name="enddate"  maxlength="20"  type="date" />
-	<br><label style="color:red;margin-left:200px" id="errorstart">start</label>
-	<label style="color:red;margin-left:570px" id="errorend">end</label><br>
-	<br>
-	</div>
-	<div id="row"> 
-	<label id="lman">Team-Lead*</label>
-	<select id="managerid"  name="manager_id">
-	         <option value="Select">Select</option>
-	       
-	        </select>
-	<br><label style="color:red;margin-left:200px" id="errormanager">you must select ManagerID</label><br>
-	</div>
-	<button id="save" type="button" ><b>Save</b></button>
-	<button id="cancel" type="button"><b>Cancel</b></button>
-	</form>
-	</div>
-</td>
-</tr>
-<tr>
-<td>
-	<div id="contentedit" style="border: 1px solid black;">
-		<br>
-		<br>
-		<form id="edit">
-		 <input type="hidden" value="" name="epro_code" id="epro_code"/>
-		<input type="hidden" value="" name="id" id="id"/>
-		<label id="leempid">Employee ID * </label>
-		<select id="eempid" name="eemp_id">
-		     </select>
-		       
-		<label id="leen">Employee Name</label>
-		<input id="een" readonly="readonly" maxlength="50" type="text" name="eempname"><br>
-		
-		<br>
-		<br>
-		<label id="leloc">Location</label>
-		<input id="eloc" readonly="readonly" maxlength="50" type="text" name="elocation">
-		<label id="lepoa">Percentage of Allocation</label>
-		<input id="epoa" maxlength="3" type="text" name="epercentage">
-		<span id="everifydiv" style="border:1px solid black;background-color:#0078D7;margin-left:-2px">
-		<label id="everify" style="margin-top:20px">Verify</label>
-		</span>
-		<br>
-		<br>
-		<br>
-		<label id="lestartdate">Start Date</label>
-		<input id="estartdate" maxlength="20" type="date" name="estartdate" />
-		<label id="leenddate">End Date</label>
-		<input id="eenddate" maxlength="20"  type="date" name="eenddate"/>
-		<br><br>
-		<br>
-		<label id="leman">Manager</label>
-		<select id="emanagerid" name="emanager_id">     
-		        </select>
-		<br><br>
-		<button id="esave" type="button" ><b>Save</b></button>
-		<button id="ecancel" type="button"><b>Cancel</b></button>
-		
-		</form>
-	</div>
-</td>
-</tr>
-<tr>
-<td>
-	<button id="show" " >Allocate</button>
-</td>
-</tr>
+					<h2 id="welcomeuser" ALIGN="left" style="width: 550px;"></h2>
+					<button id="logout">
+						<B>Log Out</B>
+					</button> <img id="back"
+					src="ProjectManagementTool-UI/css/images1/images.jpg"
+					Style="width: 26px; height: 28px; margin-top: 5px"
+					onclick="goBack()" /> <img id="home"
+					src="ProjectManagementTool-UI/css/images1/download.jpg"
+					Style="position: absolute; width: 26px; height: 32px; margin-left: 30px; margin-top: 5px"
+					onclick="location.href='projectdashboard.jsp'" /> <label
+					id="headtag"></label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="nav">
+						<p id="title">Project Allocation</p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="content" style="border: 1px solid black;">
+						<br> <br>
+						<form id="form">
 
-<tr>
-<td>
-	<div id="table" style="margin-top:30;border: 1px solid black;cellspacing:0; width:965px" >
-	<table  class="display" id="example" style="cellspacing:0;width:99.8%;margin-left:0px;margin-right:0.1%;" >
-	<thead>
-	<tr>
-	<th>EMPLOYEE ID</th>
-	<th>EMPLOYEE NAME</th>
-	<th>LOCATION</th>
-	<th>PERCENTAGE OF ALLOCATION</th>
-	<th>START DATE</th>
-	<th>END DATE</th>
-	<th>MANAGER ID</th>
-	</tr>
-	</thead >
-	 <tbody id="c1">
-	  </tbody>
+							<input type="hidden" value="" name="pro_code" id="pro_code" />
+							<div id="row">
+								<label id="lempid">Employee ID * </label> <select id="empid"
+									name="empid">
+									<option value="Select">Select</option>
+
+								</select> <label id="len">Employee Name</label> <input id="en"
+									readonly="readonly" maxlength="50" type="text" name="emp_name">
+								<br>
+								<label style="color: red; margin-left: 200px" id="erroremp">Please
+									selcet employee Id</label><br> <br>
+							</div>
+							<div id="row">
+								<label id="lloc">Location</label> <input id="loc"
+									readonly="readonly" maxlength="50" type="text" name="location">
+								<label id="lpoa">Percentage of Allocation*</label> <input
+									id="poa" maxlength="3" type="text" name="percentage"> <span
+									id="verifydiv"
+									style="border: 1px solid black; background-color: #0078D7; margin-left: -2px">
+									<label id="verify" style="margin-top: 2%">Verify</label>
+								</span> <br>
+								<label style="color: red; margin-left: 800px"
+									id="errorpercentage">percentage</label> <br> <br>
+							</div>
+							<div id="row">
+								<label id="lstartdate">Start Date*</label> <input id="startdate"
+									name="startdate" maxlength="20" type="date" /> <label
+									id="lenddate">End Date*</label> <input id="enddate"
+									name="enddate" maxlength="20" type="date" /> <br>
+								<label style="color: red; margin-left: 200px" id="errorstart">start</label>
+								<label style="color: red; margin-left: 570px" id="errorend">end</label><br>
+								<br>
+							</div>
+							<div id="row">
+								<label id="lman">Team-Lead*</label> <select id="managerid"
+									name="manager_id">
+									<option value="Select">Select</option>
+
+								</select> <br>
+								<label style="color: red; margin-left: 200px" id="errormanager">you
+									must select ManagerID</label><br>
+							</div>
+							<button id="save" type="button">
+								<b>Save</b>
+							</button>
+							<button id="cancel" type="button">
+								<b>Cancel</b>
+							</button>
+						</form>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="contentedit" style="border: 1px solid black;">
+						<br> <br>
+						<form id="edit">
+							<input type="hidden" value="" name="epro_code" id="epro_code" />
+							<input type="hidden" value="" name="id" id="id" /> <label
+								id="leempid">Employee ID * </label> <select id="eempid"
+								name="eemp_id">
+							</select> <label id="leen">Employee Name</label> <input id="een"
+								readonly="readonly" maxlength="50" type="text" name="eempname"><br>
+
+							<br> <br> <label id="leloc">Location</label> <input
+								id="eloc" readonly="readonly" maxlength="50" type="text"
+								name="elocation"> <label id="lepoa">Percentage
+								of Allocation</label> <input id="epoa" maxlength="3" type="text"
+								name="epercentage"> <span id="everifydiv"
+								style="border: 1px solid black; background-color: #0078D7; margin-left: -2px">
+								<label id="everify" style="margin-top: 20px">Verify</label>
+							</span> <br> <br> <br> <label id="lestartdate">Start
+								Date</label> <input id="estartdate" maxlength="20" type="date"
+								name="estartdate" /> <label id="leenddate">End Date</label> <input
+								id="eenddate" maxlength="20" type="date" name="eenddate" /> <br>
+							<br> <br> <label id="leman">Manager</label> <select
+								id="emanagerid" name="emanager_id">
+							</select> <br>
+							<br>
+							<button id="esave" type="button">
+								<b>Save</b>
+							</button>
+							<button id="ecancel" type="button">
+								<b>Cancel</b>
+							</button>
+
+						</form>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button id="show"" >Allocate</button>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<div id="table"
+						style="margin-top: 30; border: 1px solid black; cellspacing: 0; width: 965px">
+						<table class="display" id="example"
+							style="cellspacing: 0; width: 99.8%; margin-left: 0px; margin-right: 0.1%;">
+							<thead>
+								<tr>
+									<th>EMPLOYEE ID</th>
+									<th>EMPLOYEE NAME</th>
+									<th>LOCATION</th>
+									<th>PERCENTAGE OF ALLOCATION</th>
+									<th>START DATE</th>
+									<th>END DATE</th>
+									<th>MANAGER ID</th>
+								</tr>
+							</thead>
+							<tbody id="c1">
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</tbody>
 	</table>
-	</div>
-</td>
-</tr>
-</tbody>
-</table>
 </body>
 </html>

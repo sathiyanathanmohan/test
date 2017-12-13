@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Project Management Tool</title>
-
-<link rel="stylesheet" href="ProjectManagementTool-UI/css/Plugins/Allocation-dataTables.jqueryui.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>Project Allocation</title>
+<!-- <meta charset="utf-8"> -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<link rel="stylesheet"
+	href="ProjectManagementTool-UI/css/Plugins/Allocation-dataTables.jqueryui.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="ProjectManagementTool-UI/js/projectallocation.js"></script>
-<script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
-<script type="text/javascript" src="ProjectManagementTool-UI/js/Plugins/alloc.jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="ProjectManagementTool-UI/js/Plugins/dataTables.jqueryui.min.js"></script>
-<script type="text/javascript" src="ProjectManagementTool-UI/js/cookies.js"></script>
-<link rel="stylesheet" href="ProjectManagementTool-UI/css/projectallocation.css">
+<script type="text/javascript"
+	src="ProjectManagementTool-UI/js/projectallocation.js"></script>
+<script type="text/javascript"
+	src=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript"
+	src="ProjectManagementTool-UI/js/Plugins/alloc.jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+	src="ProjectManagementTool-UI/js/Plugins/dataTables.jqueryui.min.js"></script>
+<script type="text/javascript"
+	src="ProjectManagementTool-UI/js/cookies.js"></script>
+<link href="ProjectManagementTool-UI/css/Plugins/bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="ProjectManagementTool-UI/css/Plugins/bootstrap-theme.min.css"
+	rel="stylesheet">
+<link href="ProjectManagementTool-UI/css/Plugins/font-awesome.min.css"
+	rel="stylesheet">
+<link
+	href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,300italic,600,600italic,700,800,700italic,800italic'
+	rel='stylesheet' type='text/css'>
+<link
+	href="https://fonts.googleapis.com/css?family=Oswald|Roboto|Roboto+Condensed"
+	rel="stylesheet">
+<link href="ProjectManagementTool-UI/css/Plugins/accordion-menu.css"
+	rel="stylesheet">
+<link href="ProjectManagementTool-UI/css/Plugins/jquery.jscrollpane.css"
+	rel="stylesheet">
+<link href="ProjectManagementTool-UI/css/Plugins/main.css"
+	rel="stylesheet">
+
+<script src="ProjectManagementTool-UI/css/Plugins/js/sorttable.js"></script>
+<script src="ProjectManagementTool-UI/css/Plugins/js/bootstrap.min.js"></script>
+
+
+
+
+<!-- <link rel="stylesheet" href="ProjectManagementTool-UI/css/projectallocation.css"> -->
 
 
 <script type="text/javascript">
@@ -31,7 +65,7 @@ $(document).ready(function(){
 	        $("#contentedit").hide();
 	    });
 	
-// 	  $('#example').DataTable();
+// 	 Â $('#example').DataTable();
 });
 
 function goBack() {
@@ -43,156 +77,395 @@ function goBack() {
 
 </head>
 <body>
+	<!--- Top Panel -->
+	<div class="topPane">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 col-sm-2 col-xs-12 text-center">
+					<a href="projectdashboard.jsp"><img
+						src="ProjectManagementTool-UI/css/images1/ennvee-white-logo.png"
+						class="img-responsive logo" alt="Ennvee"></a>
+				</div>
+				<div class="col-md-5 col-sm-6 col-xs-12 discoverMigration">
+					<a href="#">Project Management</a>
+				</div>
+				<div class="col-md-5 col-sm-4 col-xs-12 rightPane">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="col-md-4 col-sm-7 loginButton hidden-xs">
+								<a href="#" class="btn btn-default dropdown-toggle"
+									type="button" id="dropdownMenu1" data-toggle="dropdown"
+									aria-expanded="false"> Hi,<span id="destusername"></span> <span
+									class="caret"></span>
+								</a>
+								<ul class="dropdown-menu multi-level" role="menu"
+									aria-labelledby="dropdownMenu">
+									<li><span><i class="fa fa-tachometer"
+											aria-hidden="true"></i></span><span><a href="#">Dashboard</a></span></li>
+									<li><span><i class="fa fa-snowflake-o"
+											aria-hidden="true"></i></span><span><a href="#">Client</a></span></li>
+									<li><span><i class="fa fa-wpexplorer"
+											aria-hidden="true"></i></span><span><a href="#">Employee
+												Converter</a></span></li>
+									<li><span><i class="fa fa-superpowers"
+											aria-hidden="true"></i></span><span><a href="#">TimeSheet
+										</a></span></li>
+									<li><span><i class="fa fa-unlock"
+											aria-hidden="true"></i></span><span><a href=""
+											id="desklogout1">Logout</a></span></li>
 
-<table width="965" align="center"   cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td>
 
-	<h2 id="welcomeuser" ALIGN="left" style="width:550px;"> </h2>
-	<button id="logout"><B>Log Out</B></button>
-<img id="back" src="ProjectManagementTool-UI/css/images1/images.jpg" Style="width:26px;height:28px;margin-top:5px" onclick="goBack()" />
-<img id="home" src="ProjectManagementTool-UI/css/images1/download.jpg" Style="position:absolute;width:26px;height:32px;margin-left:30px;margin-top:5px" onclick="location.href='projectdashboard.jsp'" />
-	<label id="headtag"></label>
-</td>
-</tr>
-<tr>
-<td>
-	<div id="nav">
-	<p id="title">Project Allocation</p></div> 
-</td>
-</tr>
-<tr>
-<td>
-<div id="content" style="border: 1px solid black;">
-	<br>
-	<br>
-	<form id="form">
-	
-	 <input type="hidden" value="" name="pro_code" id="pro_code"/>
-	<div id="row"> 
-	<label id="lempid">Employee ID * </label>
-	<select id="empid" name="empid">
-	         <option value="Select">Select</option>
-	         
-	        </select>
-	      
-	<label id="len">Employee Name</label>
-	<input id="en" readonly="readonly" maxlength="50" type="text" name="emp_name">
-	<br><label style="color:red;margin-left:200px" id="erroremp">Please selcet employee Id</label><br>
-	<br>
-	</div>
-	<div id="row">  
-	<label id="lloc">Location</label>
-	<input id="loc" readonly="readonly" maxlength="50" type="text" name="location">
-	<label id="lpoa">Percentage of Allocation*</label>
-	<input id="poa" maxlength="3" type="text" name="percentage">
-	<span id="verifydiv" style="border:1px solid black;background-color:#0078D7;margin-left:-2px">
-	<label id="verify" style="margin-top:2%">Verify</label>
-	</span>
-	<br><label style="color:red;margin-left:800px" id="errorpercentage">percentage</label>
-	<br>
-	<br>
-	</div>
-	<div id="row"> 
-	<label id="lstartdate">Start Date*</label>
-	<input id="startdate" name="startdate" maxlength="20" type="date" />
-	<label id="lenddate">End Date*</label>
-	<input id="enddate"  name="enddate"  maxlength="20"  type="date" />
-	<br><label style="color:red;margin-left:200px" id="errorstart">start</label>
-	<label style="color:red;margin-left:570px" id="errorend">end</label><br>
-	<br>
-	</div>
-	<div id="row"> 
-	<label id="lman">Team-Lead*</label>
-	<select id="managerid"  name="manager_id">
-	         <option value="Select">Select</option>
-	       
-	        </select>
-	<br><label style="color:red;margin-left:200px" id="errormanager">you must select ManagerID</label><br>
-	</div>
-	<input type="hidden" value=" " name="login_emp_code" id="login_emp_code"> 
-	
-	<button id="save" type="button" ><b>Save</b></button>
-	<button id="cancel" type="button"><b>Cancel</b></button>
-	</form>
-	</div>
-</td>
-</tr>
-<tr>
-<td>
-	<div id="contentedit" style="border: 1px solid black;">
-		<br>
-		<br>
-		<form id="edit">
-		 <input type="hidden" value="" name="epro_code" id="epro_code"/>
-		<input type="hidden" value="" name="id" id="id"/>
-		<label id="leempid">Employee ID * </label>
-		<select id="eempid" name="eemp_id">
-		     </select>
-		       
-		<label id="leen">Employee Name</label>
-		<input id="een" readonly="readonly" maxlength="50" type="text" name="eempname"><br>
-		
-		<br>
-		<br>
-		<label id="leloc">Location</label>
-		<input id="eloc" readonly="readonly" maxlength="50" type="text" name="elocation">
-		<label id="lepoa">Percentage of Allocation</label>
-		<input id="epoa" maxlength="3" type="text" name="epercentage">
-		<span id="everifydiv" style="border:1px solid black;background-color:#0078D7;margin-left:-2px">
-		<label id="everify" style="margin-top:20px">Verify</label>
-		</span>
-		<br>
-		<br>
-		<br>
-		<label id="lestartdate">Start Date</label>
-		<input id="estartdate" maxlength="20" type="date" name="estartdate" />
-		<label id="leenddate">End Date</label>
-		<input id="eenddate" maxlength="20"  type="date" name="eenddate"/>
-		<br><br>
-		<br>
-		<label id="leman">Manager</label>
-		<select id="emanagerid" name="emanager_id">     
-		        </select>
-		<br><br>
-		<input type="hidden" value=" " name="login_emp_code" id="login_emp_code"> 
-		
-		<button id="esave" type="button" ><b>Save</b></button>
-		<button id="ecancel" type="button"><b>Cancel</b></button>
-		
-		</form>
-	</div>
-</td>
-</tr>
-<tr>
-<td>
-	<button id="show" " >Allocate</button>
-</td>
-</tr>
 
-<tr>
-<td>
-	<div id="table" style="margin-top:30;border: 1px solid black;cellspacing:0; width:965px" >
-	<table  class="display" id="example" style="cellspacing:0;width:99.8%;margin-left:0px;margin-right:0.1%;" >
-	<thead>
-	<tr>
-	<th>EMPLOYEE ID</th>
-	<th>EMPLOYEE NAME</th>
-	<th>LOCATION</th>
-	<th>PERCENTAGE OF ALLOCATION</th>
-	<th>START DATE</th>
-	<th>END DATE</th>
-	<th>MANAGER ID</th>
-	</tr>
-	</thead >
-	 <tbody id="c1">
-	  </tbody>
-	</table>
+
+
+
+								</ul>
+							</div>
+
+							<div class="col-md-2 col-sm-1 logOut hidden-xs">
+								<span id="seetingsIcon"><i class="fa fa-lock"
+									aria-hidden="true"></i></span><a href="#" id="desklogout2">Log Out
+								</a>
+							</div>
+							<!--Mobile Menu-->
+							<div class=" row mobileMenu visible-xs ">
+								<div class="col-xs-6 mobilemenu1">
+									<a href="#" class="btn dropdown-toggle" id="dropdownMenu1"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false"> Hi,<span id="moblieusernmae"></span>
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+										<li><span><i class="fa fa-tachometer"
+												aria-hidden="true"></i></span><span><a href="#">Dashboard</a></span></li>
+										<li><span><i class="fa fa-snowflake-o"
+												aria-hidden="true"></i></span><span><a href="#">Ennable</a></span></li>
+										<li><span><i class="fa fa-wpexplorer"
+												aria-hidden="true"></i></span><span><a href="#">Discoverer
+													Converter</a></span></li>
+										<li><span><i class="fa fa-superpowers"
+												aria-hidden="true"></i></span><span><a href="#">Auto
+													Custom Testing</a></span></li>
+										<li><span><i class="fa fa-rebel"
+												aria-hidden="true"></i></span><span><a href="#">NetSuite
+													Tableau</a></span></li>
+										<li><span><i class="fa fa-unlock"
+												aria-hidden="true"></i></span><span><a href="#"
+												id="moblielogout1">Logout</a></span></li>
+									</ul>
+								</div>
+								<div class="mobileMenu2 col-xs-2">
+									<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
+								</div>
+								<div class="mobileMenu3 col-xs-2">
+									<a href="#"><i class="fa fa-question-circle"
+										aria-hidden="true"></i></a>
+								</div>
+								<div class="mobileMenu4 col-xs-2">
+									<a href="#"><i class="fa fa-lock" id="moblielogout2"
+										aria-hidden="true"></i></a>
+								</div>
+							</div>
+							<!--End Mobile Menu-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-</td>
-</tr>
-</tbody>
-</table>
+	<br>
+	<br>
+
+	<section>
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+						<h3 class="well well-sm">Project Allocation</h3>
+					</div>
+				</div>
+			</div>
+		</header>
+	</section>
+
+	<section>
+		<div class="container" style="width: 100%">
+			<div class="middlePane">
+				<label id="headtag"></label>
+				<div class="discoverParameterBlock">
+
+					<div id="content" style="display: none;">
+						<br>
+						<form id="form" class="technicalDetailsForm">
+							<div class="form-group row">
+								<div class="col-md-6 col-sm-6 col-xs-12 localDb">
+									<input type="hidden" value="" name="pro_code" id="pro_code" />
+
+									<div class="form-group">
+										<label for="empid">Employee ID * :</label> <select id="empid"
+											name="empid" class="form-control">
+											<option value="Select">Select</option>
+
+										</select>
+										<!-- 								  	<label id="len">Employee Name</label> -->
+									</div>
+
+									<div class="form-group">
+
+										<label id="len" for="en">Employee Name</label> <input id="en"
+											readonly="readonly" class="form-control" maxlength="50"
+											type="text" name="emp_name">
+										<!-- 	<label style="color:red;margin-left:200px" id="erroremp">Please selcet employee Id</label> -->
+									</div>
+
+									<div class="form-group">
+
+										<label id="len" for="loc">Location</label> <input id="loc"
+											readonly="readonly" class="form-control" maxlength="50"
+											type="text" name="location">
+										<!-- 	<label style="color:red;margin-left:200px" id="erroremp">Please selcet employee Id</label> -->
+									</div>
+
+
+
+
+
+
+									<div class="form-group">
+										<label id="lman" for="managerid">Team-Lead*</label> <select
+											id="managerid" class="form-control" name="manager_id">
+											<option value="Select">Select</option>
+
+										</select>
+										<!-- 	<label style="color:red;margin-left:200px" id="errormanager">you must select ManagerID</label> -->
+
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-12 DestinationDb">
+
+
+
+
+
+
+									<div class="form-group">
+										<label for='startdate' id="lstartdate">Start Date*</label> <input
+											id="startdate" name="startdate" maxlength="20" type="date"
+											class="form-control" />
+
+										<!-- 	<label style="color:red;margin-left:200px" id="errorstart">start</label> -->
+										<!-- 	<label style="color:red;margin-left:200px" id="erroremp">Please selcet employee Id</label> -->
+									</div>
+
+									<div class="form-group">
+										<label for='enddate' id="lenddate">End Date*</label> <input
+											type="date" id="enddate" name="enddate" maxlength="20"
+											class="form-control" />
+
+										<!-- 	<label style="color:red;margin-left:570px" id="errorend">end</label> -->
+										<input type="hidden" value=" " name="login_emp_code"
+											id="login_emp_code">
+									</div>
+
+
+									<!--    <div class="col-md-6 col-sm-6 col-xs-12 localDb"> -->
+									<div class="row">
+										<div class="form-group col-xs-6">
+											<label id="lpoa" for="poa">Percentage of Allocation*
+											</label> <input id="poa" maxlength="3" type="text" name="percentage"
+												class="form-control" style="width: 120px">
+										</div>
+
+
+										<!-- 	<div class="col-md-6 col-sm-6 col-xs-12 DestinationDb">   -->
+										<div class="form-group" class="form-group col-xs-6">
+											<input type="Button" id="verify" class="btn btn-info"
+												value="Verify">
+										</div>
+
+
+									</div>
+
+
+								</div>
+
+
+
+								<div class="row actionBtn">
+									<div class="col-md-12 text-center">
+										<button id="save" type="button" class="btn btn-primary">
+											<b>Save</b>
+										</button>
+										<button id="cancel" type="button" class="btn btn-danger">
+											<b>Cancel</b>
+										</button>
+									</div>
+								</div>
+
+							</div>
+						</form>
+					</div>
+
+
+
+
+
+
+
+					<div id="contentedit" style="display: none;">
+
+
+
+						<br>
+						<form id="form" class="technicalDetailsForm">
+							<input type="hidden" value="" name="epro_code" id="epro_code" />
+							<input type="hidden" value="" name="id" id="id" />
+							<div class="form-group row">
+								<div class="col-md-6 col-sm-6 col-xs-12 localDb">
+									<input type="hidden" value="" name="pro_code" id="pro_code" />
+
+									<div class="form-group">
+										<label for="eempid">Employee ID * :</label> <select
+											id="eempid" name="eemp_id" class="form-control">
+										</select>
+
+										<!-- 								  	<label id="len">Employee Name</label> -->
+									</div>
+
+									<div class="form-group">
+
+										<label id="elen" for="een">Employee Name</label> <input
+											id="een" readonly="readonly" class="form-control"
+											maxlength="50" type="text" name="eemp_name">
+										<!-- 	<label style="color:red;margin-left:200px" id="erroremp">Please selcet employee Id</label> -->
+									</div>
+
+									<div class="form-group">
+
+										<label id="elen" for="eloc">Location</label> <input id="eloc"
+											readonly="readonly" class="form-control" maxlength="50"
+											type="text" name="elocation">
+										<!-- 	<label style="color:red;margin-left:200px" id="erroremp">Please selcet employee Id</label> -->
+									</div>
+
+
+
+
+
+									<div class="form-group">
+										<label id="elman" for="emanagerid">Team-Lead*</label> <select
+											id="emanagerid" class="form-control" name="emanager_id">
+											<option value="Select">Select</option>
+
+										</select>
+										<!-- 	<label style="color:red;margin-left:200px" id="errormanager">you must select ManagerID</label> -->
+
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-12 DestinationDb">
+
+
+
+									<div class="form-group">
+										<label for='estartdate' id="elstartdate">Start Date*</label>
+										<input id="estartdate" name="estartdate" maxlength="20"
+											type="date" class="form-control" />
+
+										<!-- 	<label style="color:red;margin-left:200px" id="errorstart">start</label> -->
+										<!-- 	<label style="color:red;margin-left:200px" id="erroremp">Please selcet employee Id</label> -->
+									</div>
+
+
+
+
+
+
+
+									<div class="form-group">
+										<label for='eenddate' id="elenddate">End Date*</label> <input
+											type="date" id="eenddate" name="eenddate" maxlength="20"
+											class="form-control" />
+
+										<!-- 	<label style="color:red;margin-left:570px" id="errorend">end</label> -->
+										<input type="hidden" value=" " name="login_emp_code"
+											id="login_emp_code">
+									</div>
+
+									<div class="row">
+										<div class="form-group col-xs-6">
+											<label id="elpoa" for="epoa">Percentage of
+												Allocation* </label> <input id="epoa" maxlength="3" type="text"
+												name="epercentage" class="form-control" style="width: 120px">
+										</div>
+
+
+										<div class="form-group col-xs-6">
+											<input type="Button" id="everify" class="btn btn-info"
+												value="Verify">
+										</div>
+
+
+									</div>
+
+
+								</div>
+
+
+
+								<div class="row actionBtn">
+									<div class="col-md-12 text-center">
+										<button id="esave" type="button" class="btn btn-primary">
+											<b>Save</b>
+										</button>
+										<button id="ecancel" type="button" class="btn btn-danger">
+											<b>Cancel</b>
+										</button>
+									</div>
+								</div>
+
+							</div>
+						</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</div>
+
+					<button id="show" class="btn btn-link pull-right">Allocate</button>
+
+
+
+					<div id="table" style="width: 100%" class="table-responsive">
+						<table class="display" id="example"
+							style="cellspacing: 0; width: 99.8%; margin-left: 0px; margin-right: 0.1%;">
+							<thead>
+								<tr>
+									<th>EMPLOYEE ID</th>
+									<th>EMPLOYEE NAME</th>
+									<th>LOCATION</th>
+									<th>PERCENTAGE OF ALLOCATION</th>
+									<th>START DATE</th>
+									<th>END DATE</th>
+									<th>MANAGER ID</th>
+								</tr>
+							</thead>
+							<tbody id="c1">
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
 </html>

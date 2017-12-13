@@ -1,63 +1,134 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Manager Time Sheet</title>
 <style>
- #welcomeuser       {position:absolute;font-size:20px;margin-top:20px}
-#logout            {position:relative;margin-left:1210px;width:130px;height:30px;margin-top:20px;background-color:#0078D7;color:white} 
- #timesheetdiv     {background-color:#0078D7;margin-top:28px;width:1350px;height:35px;} 
- #timesheettitle   {color:white;font-bold:true;font-size:24px;text-align:center;} 
- #overalldiv       {width:1350px;margin-top:1px}
- 
-#employeename      {margin-left:120px;}
-#designation       {margin-left:150px;}
- 
+#welcomeuser {
+	position: absolute;
+	font-size: 20px;
+	margin-top: 20px
+}
+
+#logout {
+	position: relative;
+	margin-left: 1210px;
+	width: 130px;
+	height: 30px;
+	margin-top: 20px;
+	background-color: #0078D7;
+	color: white
+}
+
+#timesheetdiv {
+	background-color: #0078D7;
+	margin-top: 28px;
+	width: 1350px;
+	height: 35px;
+}
+
+#timesheettitle {
+	color: white;
+	font-bold: true;
+	font-size: 24px;
+	text-align: center;
+}
+
+#overalldiv {
+	width: 1350px;
+	margin-top: 1px
+}
+
+#employeename {
+	margin-left: 120px;
+}
+
+#designation {
+	margin-left: 150px;
+}
+
 /*  #clienttable, th  {border: 0.2px solid black;border-collapse: collapse;text-align: center} */
-#myTable  {border: 1px solid black;border-collapse: collapse;text-align: center}
+#myTable {
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: center
+}
+
 #myTable td {
-    border:   1px solid black;
-      border-collapse: collapse; 
-  
+	border: 1px solid black;
+	border-collapse: collapse;
 }
+
 #myTable th {
-    border:   1px solid black;
-      border-collapse: collapse; 
-   
+	border: 1px solid black;
+	border-collapse: collapse;
 }
-#addimage{
-display:block;
+
+#addimage {
+	display: block;
 }
+
 textarea {
- border:  1px ;
-    width: 100%;
-    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
-       -moz-box-sizing: border-box; /* FF1+ */
-            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
-            
+	border: 1px;
+	width: 100%;
+	-webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+	-moz-box-sizing: border-box; /* FF1+ */
+	box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
 }
-#temp                 {margin-left:410px;width:110px;height:25px;background-color:#0078D7;color:white}
-#save                 {margin-left:60px;width:110px;height:25px;background-color:#0078D7;color:white}
-#cancel               {margin-left:60px;width:110px;height:25px;background-color:#0078D7;color:white}
-#startdate            {;margin-left:4%;}
+
+#temp {
+	margin-left: 410px;
+	width: 110px;
+	height: 25px;
+	background-color: #0078D7;
+	color: white
+}
+
+#save {
+	margin-left: 60px;
+	width: 110px;
+	height: 25px;
+	background-color: #0078D7;
+	color: white
+}
+
+#cancel {
+	margin-left: 60px;
+	width: 110px;
+	height: 25px;
+	background-color: #0078D7;
+	color: white
+}
+
+#startdate {;
+	margin-left: 4%;
+}
 /* #startdatel        {position:absolute;margin-left:24%;margin-top:27px} */
 /* #startdate         {position:absolute;margin-left:30%;margin-top:25px} */
 /* #enddatel          {position:absolute;margin-left:44%;margin-top:27px} */
 /* #enddate           {position:absolute;margin-left:50%;margin-top:25px} */
+#viewtimesheet {
+	margin-left: 1%;
+	background-color: #0078D7;
+	color: white
+}
 
+#totalhoursl {
+	margin-left: 8%;
+}
 
-#viewtimesheet        {margin-left:1%;background-color:#0078D7;color:white}
-#totalhoursl          {margin-left:8%;}
-#approvalstatusl      {margin-left:12%;}
+#approvalstatusl {
+	margin-left: 12%;
+}
 
 /* table select {border:none} */
 </style>
 
 </head>
 <body>
-<%
+	<%
 String  designation="";
 String designation1="";
          Cookie cookie = null;
@@ -110,104 +181,107 @@ String designation1="";
         	}
         }
       %>
-<script type="text/javascript">
+	<script type="text/javascript">
 function goBack() {
    location.href='empdashboard.jsp';
 }
 </script>
-<table width="1000px" align="center" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td>
-<label id="welcomeuser"></label>
-<button  id="logout"><B>Log Out</B></button>
-<br>
-<img id="back" src="ProjectManagementTool-UI/css/images1/images.jpg" Style="width:26px;height:28px;margin-top:20px" onclick="goBack()" />
-<img id="home" src="ProjectManagementTool-UI/css/images1/download.jpg" Style="position:absolute;width:26px;height:32px;margin-left:30px;margin-top:20px" onclick="homeFunction();" />
-<br>
-<br>
-<label id="employeecode"></label>
-<label id="employeename"></label>
-<label id="designation"></label>
-<br>
-<br>
+	<table width="1000px" align="center" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td><label id="welcomeuser"></label>
+					<button id="logout">
+						<B>Log Out</B>
+					</button> <br> <img id="back"
+					src="ProjectManagementTool-UI/css/images1/images.jpg"
+					Style="width: 26px; height: 28px; margin-top: 20px"
+					onclick="goBack()" /> <img id="home"
+					src="ProjectManagementTool-UI/css/images1/download.jpg"
+					Style="position: absolute; width: 26px; height: 32px; margin-left: 30px; margin-top: 20px"
+					onclick="homeFunction();" /> <br> <br> <label
+					id="employeecode"></label> <label id="employeename"></label> <label
+					id="designation"></label> <br> <br> <label
+					id="startdatel"><b>Date:</b></label> <input type="date"
+					id="startdate" min='1899-01-01' max='2000-13-13'> <!-- <label id="startdatel">Start Date:</label> -->
+					<!-- <input type="date"  id="startdate" value=""> --> <!-- <label id="enddatel">End Date:</label> -->
+					<!-- <input type="date" id="enddate" value=""> --> <!-- <button  id="viewtimesheet"><B>View Timesheet</B></button> -->
+					<label id="approvalstatusl">Approval Status:<b></b></label> <label
+					id="totalhoursl"><B>Hours:</B></label></td>
+			</tr>
 
-<label id="startdatel"><b>Date:</b></label>
-<input type="date"  id="startdate" min='1899-01-01' max='2000-13-13'>
-<!-- <label id="startdatel">Start Date:</label> -->
-<!-- <input type="date"  id="startdate" value=""> -->
-<!-- <label id="enddatel">End Date:</label> -->
-<!-- <input type="date" id="enddate" value=""> -->
-<!-- <button  id="viewtimesheet"><B>View Timesheet</B></button> -->
-<label id="approvalstatusl">Approval Status:<b></b></label>
-   
-<label id="totalhoursl"><B>Hours:</B></label>  
+			<tr>
+				<td>
+					<div id="timesheetdiv">
+						<p id="timesheettitle">Daily Time sheet</p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
 
-</td>
-</tr>
+					<form id="form">
+						<div id="overalldiv" Style="border: 1px solid black;">
 
-<tr>
-<td >
-<div id="timesheetdiv" ><p id="timesheettitle">Daily Time sheet</p></div>
-</td>
-</tr>
-<tr>
-<td >
-
-<form id="form">
-<div id="overalldiv" Style="border: 1px solid black;">
-
-<input type="hidden" name="employee_code" id="employee_code">
-<input type="hidden" name="employee_name"  id="employee_name">
-<!-- <input type="hidden" value=""  id="approved_status" name="approved_status"> -->
+							<input type="hidden" name="employee_code" id="employee_code">
+							<input type="hidden" name="employee_name" id="employee_name">
+							<!-- <input type="hidden" value=""  id="approved_status" name="approved_status"> -->
 
 
-<div >     
-      
-       
-      <table id="myTable" style="width:100%;">
-        <tr>
-        <th   >Sequence No</th> 
-        <th   >Project Code</th> 
-        <th   >Project Name</th> 
-        
-       
-	    
-	       <th   >Activity Code</th>
-	       <th  width="30%" >Work Description</th>
-	       <th >Start Time</th> 
-	       <th   >End Time</th> 
-           <th    >Hours</th>
-<!--           <th  >Approved status</th>  -->
-          <th   >...</th> 
-        </tr>
-        <tbody id="tbody">
-       
-        </tbody>
-  
-  
-  </table> 	
-
-   <div  id="addimage">   <img src="ProjectManagementTool-UI/css/images1/addicon.jpg" Style="width:20px;height:20px" id="addrow" /> </div>  
-        
-</div>
-</div>
-<br>
-<div>
-<button  id="temp"><B>Save</B></button>
-<button  id="save"><B>Submit</B></button>
-<button  id="cancel"><B>Cancel</B></button>
+							<div>
 
 
-</div>
-<br>
-<input type="hidden" value=""  id="day_hour" name="day_hour">
-</form>
-</td>
-</tr>
+								<table id="myTable" style="width: 100%;">
+									<tr>
+										<th>Sequence No</th>
+										<th>Project Code</th>
+										<th>Project Name</th>
 
-</tbody>
-</table>
+
+
+										<th>Activity Code</th>
+										<th width="30%">Work Description</th>
+										<th>Start Time</th>
+										<th>End Time</th>
+										<th>Hours</th>
+										<!--           <th  >Approved status</th>  -->
+										<th>...</th>
+									</tr>
+									<tbody id="tbody">
+
+									</tbody>
+
+
+								</table>
+
+								<div id="addimage">
+									<img src="ProjectManagementTool-UI/css/images1/addicon.jpg"
+										Style="width: 20px; height: 20px" id="addrow" />
+								</div>
+
+							</div>
+						</div>
+						<br>
+						<div>
+							<button id="temp">
+								<B>Save</B>
+							</button>
+							<button id="save">
+								<B>Submit</B>
+							</button>
+							<button id="cancel">
+								<B>Cancel</B>
+							</button>
+
+
+						</div>
+						<br> <input type="hidden" value="" id="day_hour"
+							name="day_hour">
+					</form>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
 
 
 </body>

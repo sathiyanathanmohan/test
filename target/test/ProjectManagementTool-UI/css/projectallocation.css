@@ -1,318 +1,308 @@
 @CHARSET "ISO-8859-1";
-#welcomeuser        {margin-top:0px;width:300px;}
-#logout             {position:absolute;top:14px;margin-left:858px;width:100px;height:25px;background-color:#0078D7;color:white}
-#welcome{
-	margin-top:10px;
-	
-	}
-#headtag
-{
-	margin-top:40px;
-	margin-left:70px
+
+#welcomeuser {
+	margin-top: 0px;
+	width: 300px;
 }
-#container
-{
-	align:center;
+
+#logout {
+	position: absolute;
+	top: 14px;
+	margin-left: 858px;
+	width: 100px;
+	height: 25px;
+	background-color: #0078D7;
+	color: white
+}
+
+#welcome {
+	margin-top: 10px;
+}
+
+#headtag {
+	margin-top: 40px;
+	margin-left: 70px
+}
+
+#container {
+	align: center;
 }
 /* #logout{ */
-	
+
 /* 	width:8%; */
 /* 	background-color:#0078D7; */
 /* 	color:white; */
 /* 	height:3%; */
 /* 	} */
-	
-	#verify
-	{
-	color:white;
-	}
-	#everify
-	{
-	color:white;
-	}
+#verify {
+	color: white;
+}
+
+#everify {
+	color: white;
+}
 /* 	#home         { background: url("images1/home1.jpg");background-size: 100% 100%;background-repeat: no-repeat;padding-top: 40px;width:40px;height:5px;color:white;} */
-	
-#nav
-	{
-	margin-top:20px;
-	margin-bottom:-25px;
-	background-color:#0078D7;
-	width:965px;
-	height:30px;
-
-	}
-#title
-	{
-	color:white;font-bold:true;font-size:24px;margin-top:3px;
-	text-align:center;
-	}
-	#frame
-{
-	border: 1px solid black; 
-	   margin:5px 100px 10px 100px;
-}
-#row
-{
-	margin-top:0px;
+#nav {
+	margin-top: 20px;
+	margin-bottom: -25px;
+	background-color: #0078D7;
+	width: 965px;
+	height: 30px;
 }
 
-#content
-{
-display:none;
-	margin:2px 0px 0px 0px;
-	width:963px;
-	}
-	
-#lempid
-{
-	margin-left:50px;
-	
-	}
-	#len
-{
-	margin-left:100px;
-	
-	}
-	#lloc
-{
-	margin-left:50px;
-	
-	}
-	#lpoa
-{
-	margin-left:100px;
-	
-	}
-	#lman
-{
-	margin-left:50px;
-	
-	}
-	#lstartdate
-{
-	margin-left:50px;
-	
-	}
-	#lenddate
-{
-	margin-left:100px;
-	
-	}
-#loc
-{
-	margin-left:98px;
-	width:200px;
-	height:20px;
-	}
-#en
-{
-	margin-left:73px;
-	width:200px;
-	height:20px;
-	}
-#poa
-{
-	position:static;
-	margin-left:17px;
-	width:155px;
-	height:20px;
-	}
-#empid
-{
-	margin-left:60px;
-	width:203px;
-	height:28px;	
-	}
-#managerid
-{
-	margin-left:75px;
-	width:205px;
-	height:25px;
-	}
-#startdate
-{
-	margin-left:82px;
-	width:200px;
-	height:21px;
-	}
-	#enddate
-{
-	margin-left:110px;
-	width:200px;
-	height:21px;
-	}
-#save
-{
-	background-color:#0078D7;
-	margin-bottom:30px;
-	margin-top:10px;
-	margin-left:400px;
-	width:100px;
-	height:25px;
-	color:white;
-	}
-#cancel
-{
-	background-color:#0078D7;
-	margin-bottom:30px;
-	margin-left:50px;
-	width:100px;
-	height:25px;
-	color:white;
-	}
-	
-#contentedit
-{
-display:none;
-	margin:-20px 0px 0px 0px;
-	width:963px;
-	}
-	
-#leempid
-{
-	margin-left:50px;
-	
-	}
-	#leen
-{
-	margin-left:100px;
-	
-	}
-	#leloc
-{
-	margin-left:50px;
-	
-	}
-	#lepoa
-{
-	margin-left:100px;
-	
-	}
-	#leman
-{
-	margin-left:50px;
-	
-	}
-	#lestartdate
-{
-	margin-left:50px;
-	
-	}
-	#leenddate
-{
-	margin-left:100px;
-	
-	}
-#eloc
-{
-	margin-left:98px;
-	width:200px;
-	height:20px;
-	}
-#een
-{
-	margin-left:73px;
-	width:200px;
-	height:20px;
-	}
-#epoa
-{
-	margin-left:26px;
-	width:145px;
-	height:20px;
-	}
-#eempid
-{
-	margin-left:60px;
-	width:203px;
-	height:28px;	
-	}
-#emanagerid
-{
-	margin-left:95px;
-	width:205px;
-	height:25px;
-	}
-#estartdate
-{
-	margin-left:90px;
-	width:200px;
-	height:21px;
-	}
-	#eenddate
-{
-	margin-left:124px;
-	width:200px;
-	height:21px;
-	}
-#esave
-{
-	background-color:#0078D7;
-	margin-bottom:30px;
-	margin-top:10px;
-	margin-left:400px;
-	width:100px;
-	height:25px;
-	color:white;
-	}
-#ecancel
-{
-	background-color:#0078D7;
-	margin-bottom:30px;
-	margin-left:50px;
-	width:100px;
-	height:25px;
-	color:white;
-	}
-	
+#title {
+	color: white;
+	font-bold: true;
+	font-size: 24px;
+	margin-top: 3px;
+	text-align: center;
+}
+
+#frame {
+	border: 1px solid black;
+	margin: 5px 100px 10px 100px;
+}
+
+#row {
+	margin-top: 0px;
+}
+
+#content {
+	display: none;
+	margin: 2px 0px 0px 0px;
+	width: 963px;
+}
+
+#lempid {
+	margin-left: 50px;
+}
+
+#len {
+	margin-left: 100px;
+}
+
+#lloc {
+	margin-left: 50px;
+}
+
+#lpoa {
+	margin-left: 100px;
+}
+
+#lman {
+	margin-left: 50px;
+}
+
+#lstartdate {
+	margin-left: 50px;
+}
+
+#lenddate {
+	margin-left: 100px;
+}
+
+#loc {
+	margin-left: 98px;
+	width: 200px;
+	height: 20px;
+}
+
+#en {
+	margin-left: 73px;
+	width: 200px;
+	height: 20px;
+}
+
+#poa {
+	position: static;
+	margin-left: 17px;
+	width: 155px;
+	height: 20px;
+}
+
+#empid {
+	margin-left: 60px;
+	width: 203px;
+	height: 28px;
+}
+
+#managerid {
+	margin-left: 75px;
+	width: 205px;
+	height: 25px;
+}
+
+#startdate {
+	margin-left: 82px;
+	width: 200px;
+	height: 21px;
+}
+
+#enddate {
+	margin-left: 110px;
+	width: 200px;
+	height: 21px;
+}
+
+#save {
+	background-color: #0078D7;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	margin-left: 400px;
+	width: 100px;
+	height: 25px;
+	color: white;
+}
+
+#cancel {
+	background-color: #0078D7;
+	margin-bottom: 30px;
+	margin-left: 50px;
+	width: 100px;
+	height: 25px;
+	color: white;
+}
+
+#contentedit {
+	display: none;
+	margin: -20px 0px 0px 0px;
+	width: 963px;
+}
+
+#leempid {
+	margin-left: 50px;
+}
+
+#leen {
+	margin-left: 100px;
+}
+
+#leloc {
+	margin-left: 50px;
+}
+
+#lepoa {
+	margin-left: 100px;
+}
+
+#leman {
+	margin-left: 50px;
+}
+
+#lestartdate {
+	margin-left: 50px;
+}
+
+#leenddate {
+	margin-left: 100px;
+}
+
+#eloc {
+	margin-left: 98px;
+	width: 200px;
+	height: 20px;
+}
+
+#een {
+	margin-left: 73px;
+	width: 200px;
+	height: 20px;
+}
+
+#epoa {
+	margin-left: 26px;
+	width: 145px;
+	height: 20px;
+}
+
+#eempid {
+	margin-left: 60px;
+	width: 203px;
+	height: 28px;
+}
+
+#emanagerid {
+	margin-left: 95px;
+	width: 205px;
+	height: 25px;
+}
+
+#estartdate {
+	margin-left: 90px;
+	width: 200px;
+	height: 21px;
+}
+
+#eenddate {
+	margin-left: 124px;
+	width: 200px;
+	height: 21px;
+}
+
+#esave {
+	background-color: #0078D7;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	margin-left: 400px;
+	width: 100px;
+	height: 25px;
+	color: white;
+}
+
+#ecancel {
+	background-color: #0078D7;
+	margin-bottom: 30px;
+	margin-left: 50px;
+	width: 100px;
+	height: 25px;
+	color: white;
+}
+
 td {
-	align:"center"; 
-	 vertical-align:middle;
-	font-size:15px;
-    padding: 11px;
-      
+	align: "center";
+	vertical-align: middle;
+	font-size: 15px;
+	padding: 11px;
 }
-#l1
-{
-	margin-left:200px;
-	
-}
-#l2,#l4
-{
-margin-left:5px;
-}
-#l3
-{
-	
-	margin-left:220px;
-}
-#show{
-	 text-align: center;
-margin-left:883px;
- font-weight: bold;
-   color: white;
-  background-color:#0078D7;
- width:8%;
-  height:3%;
 
+#l1 {
+	margin-left: 200px;
 }
-#erroremp
-{
-	display:none;
+
+#l2, #l4 {
+	margin-left: 5px;
 }
-#errormanager
-{
-	display:none;
+
+#l3 {
+	margin-left: 220px;
 }
-#errorstart
-{
-	display:none;
+
+#show {
+	text-align: center;
+	margin-left: 883px;
+	font-weight: bold;
+	color: white;
+	background-color: #0078D7;
+	width: 8%;
+	height: 3%;
 }
-#errorend
-{
-	display:none;
+
+#erroremp {
+	display: none;
 }
-#errorpercentage
-{
-	display:none;
+
+#errormanager {
+	display: none;
+}
+
+#errorstart {
+	display: none;
+}
+
+#errorend {
+	display: none;
+}
+
+#errorpercentage {
+	display: none;
 }
